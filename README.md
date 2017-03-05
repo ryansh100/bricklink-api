@@ -77,3 +77,9 @@ const bricklink = new Client({
     "token_secret": "<TokenSecret>"
   });
 ```
+
+## Documentation
+
+Full API documentation is available at:
+
+[https://ryansh100.github.io/bricklink-api](https://ryansh100.github.io/bricklink-api)
