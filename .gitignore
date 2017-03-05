@@ -1,0 +1,7 @@
+**/*node_modules
+dist
+doc
+credentials.json
+credentials.local.json
+.nyc_output
+coverage

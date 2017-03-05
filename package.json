@@ -1,0 +1,80 @@
+{
+  "name": "bricklink-api",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "nyc ava",
+    "build": "babel src --presets babel-preset-es2015 --out-dir dist",
+    "prepublish": "npm run build",
+    "report": "nyc report --reporter=html"
+  },
+  "description": "A node module for connecting to the Bricklink API.",
+  "main": "./dist/client.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryansh100/bricklink-api.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "javascript",
+    "module",
+    "bricklink",
+    "api",
+    "oauth2"
+  ],
+  "author": "Ryan Hafer",
+  "license": "SEE LICENCE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/ryansh100/bricklink-api/issues"
+  },
+  "homepage": "https://github.com/ryansh100/bricklink-api#readme",
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-cli": "^6.23.0",
+    "babel-plugin-module-resolver": "^2.5.0",
+    "babel-plugin-root-import": "^5.0.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "nyc": "^10.1.2"
+  },
+  "dependencies": {
+    "core-js": "^2.4.1",
+    "https-proxy-agent": "^1.0.0",
+    "oauth-signature": "^1.3.1",
+    "request": "^2.80.0"
+  },
+  "ava": {
+    "files": [
+      "spec/**/*spec.js"
+    ],
+    "source": [
+      "src/**/*.es6"
+    ],
+    "concurrency": 3,
+    "failFast": true,
+    "tap": true,
+    "powerAssert": false,
+    "require": [
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@ava/stage-4"
+    ],
+    "plugins": [
+      [
+        "babel-plugin-root-import",
+        {
+          "rootPathSuffix": "src"
+        }
+      ]
+    ],
+    "sourceMaps": "inline"
+  },
+  "nyc": {
+    "extension": [
+      ".es6"
+    ]
+  }
+}

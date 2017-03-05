@@ -1,0 +1,155 @@
+import request from 'request';
+
+import {OAuthHelper} from './oAuthHelper.es6';
+import {CatalogItem} from './catalogItem/catalogItem.es6';
+import {PriceGuide} from './catalogItem/priceGuide.es6';
+import {KnownColor} from './catalogItem/knownColor.es6';
+import {ItemImage} from './catalogItem/itemImage.es6';
+import {Subset} from './catalogItem/subsets.es6';
+import {Superset} from './catalogItem/supersets.es6';
+
+/**
+ * Create a client to perform
+ */
+export class Client {
+  /**
+   * Create an instance of the Bricklin Node Client.
+   * @param {object} options Options that are used to create a new client.
+   * @param {string} [options.token] The `TokenValue` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
+   * @param {string} [options.token_secret] The `TokenSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
+   * @param {string} [options.consumer_key] The `ConsumerKey` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
+   * @param {string} [options.consumer_secret] The `ConsumerSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
+   * @param {string} [options.endpoint='https://api.bricklink.com/api/store/v1/'] The url of the Bricklink API.
+   * @param {Agent} [options.agent=null] An Http(s) agent for proxy, etc.
+   */
+  constructor(options){
+    options = options || {};
+
+    /** @type {string} */
+    this.token = options.token || '';
+    /** @type {string} */
+    this.token_secret = options.token_secret || '';
+    /** @type {string} */
+    this.consumer_key = options.consumer_key || '';
+    /** @type {string} */
+    this.consumer_secret = options.consumer_secret || '';
+    /** @type {string} */
+    this.endpoint = options.endpoint || 'https://api.bricklink.com/api/store/v1/';
+    /** @type {Agent} */
+    this.agent = options.agent || null;
+  }
+
+  /**
+   * Performs a bricklink request and the callback upon success.
+   * @param {Request} req The request to perform.
+   * @return {Promise} The data that has been return from the API request and any callbacks.
+   */
+  send(req) {
+    let init = {
+      uri: this.endpoint + req.uri.replace(/^\//,'') + req.params.toQueryString(),
+      method: req.method,
+      headers: {}
+    }
+
+    let oauthHelper = new OAuthHelper(this.consumer_key, this.token);
+    oauthHelper.sign(init.uri, req, this.consumer_secret, this.token_secret);
+
+    if(this.agent){
+      init['agent'] = this.agent;
+    }
+
+    init.headers['authorization'] = oauthHelper.header;
+
+    let promise = new Promise( (resolve, reject) => {
+      request(init, (er, rep, body) => {
+        if(er){
+          reject(er);
+        }
+        let data = JSON.parse(body);
+        if(data.meta.code >= 300) {
+          console.error(init.uri);
+          console.error(data.meta);
+        }
+        resolve(data.data);
+      });
+    });
+
+    if(req.callback){
+      promise.then(req.callback);
+    }
+    return promise;
+  }
+
+  /**
+   * Get a catalog item by type and identification number.
+   * @param {string} itemType An item type as can be foud at {@link ItemType}.
+   * @param {string} itemNumber An item identification number.
+   * @return {Promise<CatalogItem>} A promise that resolves to a catalog item.
+   */
+  getCatalogItem(itemType, itemNumber) {
+    let req = CatalogItem.get(itemType, itemNumber);
+
+    return this.send(req);
+  }
+
+  /**
+   * Get the price guide for a given catalog item.
+   * @param {string} itemType An item type as can be foud at {@link ItemType}.
+   * @param {string} itemNumber An item identification number.
+   * @param {object} params Options for the price guide as outlined in {@link PriceGuideOptions}.
+   * @return {Promise<PriceGuide>} A promise that resolves to a price guide.
+   */
+  getPriceGuide(itemType, itemNumber, params) {
+    let req = PriceGuide.get(itemType, itemNumber, params);
+
+    return this.send(req);
+  }
+
+  /**
+   * Get known colors for a catalog item.
+   * @param {string} itemType An item type as can be foud at {@link ItemType}.
+   * @param {string} itemNumber An item identification number.
+   * @return {Promise<Array>} A promise that resolves to a list of {@link KnownColor}.
+   */
+  getKnownColors(itemType, itemNumber) {
+    let req = KnownColor.get(itemType, itemNumber);
+
+    return this.send(req);
+  }
+
+  /**
+   * Can get an image for a specific image color of a known catalog item.
+   * @param {string} itemType An item type as can be foud at {@link ItemType}.
+   * @param {string} itemNumber An item identification number.
+   * @param {number} colorId The color id of the item.
+   * @return {Promise<ItemImage>} A promise that resolves to an Item Image.
+   */
+  getItemImage(itemType, itemNumber, colorId) {
+    let req = ItemImage.get(itemType, itemNumber, colorId);
+    return this.send(req);
+  }
+
+  /**
+   * Gets a subset of a catalog item.
+   * @param {string} itemType An item type as can be foud at {@link ItemType}.
+   * @param {string} itemNumber An item identification number.
+   * @param {object} [params] Options for the price guide as outlined in {@link SubsetOptions}.
+   * @return {Promise<Array>} A promise that resolves to a  list of {@link Subset}.
+   */
+  getItemSubset(itemType, itemNumber, params) {
+    let req = Subset.get(itemType, itemNumber, params);
+    return this.send(req);
+  }
+
+  /**
+   * Gets a superset of a catalog item.
+   * @param {string} itemType An item type as can be foud at {@link ItemType}.
+   * @param {string} itemNumber An item identification number.
+   * @param {object} [params] Options for the price guide as outlined in {@link SupersetOptions}.
+   * @return {Promise<Array>} A promise that resolves to a  list of {@link Superset}.
+   */
+  getItemSuperset(itemType, itemNumber, params) {
+    let req = Superset.get(itemType, itemNumber, params);
+    return this.send(req);
+  }
+}
