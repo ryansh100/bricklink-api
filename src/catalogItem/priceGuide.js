@@ -1,5 +1,5 @@
-import {Request, RequestParams} from '../request.es6';
-import {CatalogItem} from './catalogItem.es6';
+import {Request, RequestParams} from '../request';
+import {CatalogItem} from './catalogItem';
 
 /**
  * Specific sale price details for a givent item.

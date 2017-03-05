@@ -1,8 +1,8 @@
 import test from 'ava';
 import FileSystem from 'fs';
 import HttpsProxyAgent from 'https-proxy-agent';
-import {Client} from '../src/client.es6';
-import {ItemType} from '../src/itemType.es6';
+import {Client} from '../src/client';
+import {ItemType} from '../src/itemType';
 
 let config = JSON.parse(FileSystem.readFileSync(
   __dirname + '/../credentials.local.json',

@@ -1,12 +1,12 @@
 import request from 'request';
 
-import {OAuthHelper} from './oAuthHelper.es6';
-import {CatalogItem} from './catalogItem/catalogItem.es6';
-import {PriceGuide} from './catalogItem/priceGuide.es6';
-import {KnownColor} from './catalogItem/knownColor.es6';
-import {ItemImage} from './catalogItem/itemImage.es6';
-import {Subset} from './catalogItem/subsets.es6';
-import {Superset} from './catalogItem/supersets.es6';
+import {OAuthHelper} from './oAuthHelper';
+import {CatalogItem} from './catalogItem/catalogItem';
+import {PriceGuide} from './catalogItem/priceGuide';
+import {KnownColor} from './catalogItem/knownColor';
+import {ItemImage} from './catalogItem/itemImage';
+import {Subset} from './catalogItem/subsets';
+import {Superset} from './catalogItem/supersets';
 
 /**
  * Create a client to perform

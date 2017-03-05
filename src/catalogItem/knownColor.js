@@ -1,4 +1,4 @@
-import {Request} from '../request.es6';
+import {Request} from '../request';
 
 /**
  * Represents a known color object.
