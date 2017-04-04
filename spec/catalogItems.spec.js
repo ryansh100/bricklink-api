@@ -1,9 +1,7 @@
 import test from 'ava';
 import FileSystem from 'fs';
 import HttpsProxyAgent from 'https-proxy-agent';
-import {Client} from '../src/client';
-import {ItemType} from '../src/itemType';
-import {Condition} from '../src/condition';
+import {Client, ItemType, Condition} from '../src/';
 
 let BL;
 test.before(t => {

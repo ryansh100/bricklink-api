@@ -15,8 +15,8 @@ You are required to have a Bricklink account and register your IP address from
 which your application will be using the API.
 
 ```javascript
-var Client = require('bricklink-api');
-var ItemType = require('bricklink-api/itemType');
+var Client = require('bricklink-api').Client;
+var ItemType = require('bricklink-api').ItemType;
 var bricklink = new Client({
     "consumer_key": "<ConsumerKey>",
     "consumer_secret": "<ConsumerSecret>",
@@ -30,13 +30,12 @@ bricklink.getCatalogItem(ItemType.Part, '3001')
   });
 ```
 
-## ES7 Support
+## ES6 Support
 
 Read basic usage.
 
 ```javascript
-import {Client} from 'bricklink-api/client';
-import {ItemType} from 'bricklink-api/itemType';
+import {Client, ItemType} from 'bricklink-api';
 
 const bricklink = new Client({
     "consumer_key": "<ConsumerKey>",
@@ -65,7 +64,7 @@ client configuration options.
 
 ```javascript
 import HttpsProxyAgent from 'https-proxy-agent';
-import {Client} from 'bricklink-api/client';
+import {Client} from 'bricklink-api';
 
 const proxy = new HttpsProxyAgent('http://217.33.216.114:8080');
 
@@ -83,3 +82,7 @@ const bricklink = new Client({
 Full API documentation is available at:
 
 [https://ryansh100.github.io/bricklink-api](https://ryansh100.github.io/bricklink-api)
+
+## Changelog
+
+- 2017/04/03: Update to make more intuitive imports.

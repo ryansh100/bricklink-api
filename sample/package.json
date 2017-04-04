@@ -1,0 +1,15 @@
+{
+  "name": "bricklink-api-sample",
+  "version": "1.0.0",
+  "description": "Sample script for bricklink api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bricklink-api": "^1.0.0"
+  }
+}
