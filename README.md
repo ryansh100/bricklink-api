@@ -15,8 +15,10 @@ You are required to have a Bricklink account and register your IP address from
 which your application will be using the API.
 
 ```javascript
-var Client = require('bricklink-api').Client;
-var ItemType = require('bricklink-api').ItemType;
+var api = require('bricklink-api');
+var Client = api.Client,
+    ItemType = api.ItemType;
+
 var bricklink = new Client({
     "consumer_key": "<ConsumerKey>",
     "consumer_secret": "<ConsumerSecret>",
@@ -28,6 +30,15 @@ bricklink.getCatalogItem(ItemType.Part, '3001')
   .then(function(part){
     console.log(part);
   });
+
+\\ Alternate Usage:
+
+var CatalogItem = api.CatalogItem;
+var req = CatalogItem.get(ItemType.Part, '3001');
+bricklink.send(req)
+  .then(function(part){
+    console.log(part);
+  });
 ```
 
 ## ES6 Support
@@ -35,7 +46,7 @@ bricklink.getCatalogItem(ItemType.Part, '3001')
 Read basic usage.
 
 ```javascript
-import {Client, ItemType} from 'bricklink-api';
+import {Client, ItemType, CatalogItem} from 'bricklink-api';
 
 const bricklink = new Client({
     "consumer_key": "<ConsumerKey>",
@@ -45,6 +56,12 @@ const bricklink = new Client({
   });
 
 bricklink.getCatalogItem(ItemType.Part, '3001')
+  .then(part => console.log(part));
+
+\\ Alternate Usage:
+
+let req = CatalogItem.get(ItemType.Part, '3001');
+bricklink.send(req)
   .then(part => console.log(part));
 ```
 
@@ -83,6 +100,6 @@ Full API documentation is available at:
 
 [https://ryansh100.github.io/bricklink-api](https://ryansh100.github.io/bricklink-api)
 
-## Changelog
+## Change Log
 
-- 2017/04/03: Update to make more intuitive imports.
+- 2017/04/03: Fix bugs with require of dictionaries. Update to make more intuitive imports. Add support for color and category lookup.

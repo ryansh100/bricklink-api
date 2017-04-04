@@ -48,7 +48,15 @@ export class Subset{
     this.entries = entries.map(e => new SubsetEntry(e));
   }
   /**
-   * Method to get a known
+   * Method to get a subset of a catalog item.
+   *
+   * Usage:
+   *
+   * ```
+   * var req = Subset.get(ItemType.Set, '6020-1', {break_minifigs: true});
+   * client.send(req).then(subset => console.log(subset));
+   * ```
+   *
    * @param {string} itemType Catalog item type
    * @param {string} itemNumber Catalog item number
    * @param {object} options Options that conform to {@link SubsetOptions}.

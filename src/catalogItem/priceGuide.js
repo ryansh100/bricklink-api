@@ -62,6 +62,14 @@ export class PriceGuide {
 
   /**
    * Method to get a known catalog item's price guide
+   *
+   * Usage:
+   *
+   * ```
+   * var req = PriceGuide.get(ItemType.Part, '3001', {new_or_used: Condition.Used});
+   * client.send(req).then(guide => console.log(guide));
+   * ```
+   *
    * @param {string} itemType Catalog item type as found at {@link ItemType}.
    * @param {string} itemNumber Catalog item number
    * @param {object} [params] Params as outlined in {@link PriceGuideOptions}.

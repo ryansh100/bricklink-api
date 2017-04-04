@@ -9,7 +9,5 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "bricklink-api": "^1.0.0"
-  }
+  "devDependencies": {}
 }

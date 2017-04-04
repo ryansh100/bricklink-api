@@ -44,7 +44,15 @@ export class Superset{
   }
 
   /**
-   * Method to get a known
+   * Method to get a superset of a catalog item
+   *
+   * Usage:
+   *
+   * ```
+   * var req = Superset.get(ItemType.Part, '4593');
+   * client.send(req).then(superset => console.log(superset));
+   * ```
+   *
    * @param {string} itemType Catalog item type
    * @param {string} itemNumber Catalog item number
    * @param {object} options Options that conform to {@link SupersetOptions}.

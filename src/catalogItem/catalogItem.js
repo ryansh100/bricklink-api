@@ -45,6 +45,14 @@ export class CatalogItem {
 
   /**
    * Method to get a known catalog item
+   *
+   * Usage:
+   *
+   * ```
+   * var req = CatalogItem.get(ItemType.Part, '3001');
+   * client.send(req).then(item => console.log(item));
+   * ```
+   *
    * @param {string} itemType Catalog item type i.e. - MINIFIG, PART, SET, BOOK, GEAR, CATALOG, INSTRUCTION, UNSORTED_LOT, ORIGINAL_BOX
    * @param {string} itemNumber Catalog item number
    * @return {Request} A request that is ready to execute with a client.
