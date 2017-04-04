@@ -25,7 +25,15 @@ export class ItemImage{
   }
 
   /**
-   * Method to get a known
+   * Method to get an image of a catalog item.
+   *
+   * Usage:
+   *
+   * ```
+   * var req = ItemImage.get(ItemType.Part, '3001', 0);
+   * client.send(req).then(image => console.log(image));
+   * ```
+   *
    * @param {string} itemType Catalog item type
    * @param {string} itemNumber Catalog item number
    * @param {number} colorId Catalog item's color id.

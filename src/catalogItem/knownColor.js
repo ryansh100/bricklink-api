@@ -17,8 +17,17 @@ export class KnownColor {
     /** @type {number} */
     this.quantity = data.quantity || 0;
   }
+  
   /**
-   * Method to get a known
+   * Method to get a list of known color_id for a given catalog item.
+   *
+   * Usage:
+   *
+   * ```
+   * var req = KnownColor.get(ItemType.Part, '3001');
+   * client.send(req).then(colors => console.log(colors));
+   * ```
+   *
    * @param {string} itemType Catalog item type
    * @param {string} itemNumber Catalog item number
    * @return {Request} A request that resolves to a list of {@link KnownColor}.

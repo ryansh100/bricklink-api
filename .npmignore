@@ -1,1 +1,9 @@
 src/
+doc/
+.nyc_output/
+sample/
+coverage/
+spec/
+.esdoc.json
+credentials.json
+credentials.local.json

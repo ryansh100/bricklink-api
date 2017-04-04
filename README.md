@@ -15,8 +15,10 @@ You are required to have a Bricklink account and register your IP address from
 which your application will be using the API.
 
 ```javascript
-var Client = require('bricklink-api');
-var ItemType = require('bricklink-api/itemType');
+var api = require('bricklink-api');
+var Client = api.Client,
+    ItemType = api.ItemType;
+
 var bricklink = new Client({
     "consumer_key": "<ConsumerKey>",
     "consumer_secret": "<ConsumerSecret>",
@@ -28,15 +30,23 @@ bricklink.getCatalogItem(ItemType.Part, '3001')
   .then(function(part){
     console.log(part);
   });
+
+\\ Alternate Usage:
+
+var CatalogItem = api.CatalogItem;
+var req = CatalogItem.get(ItemType.Part, '3001');
+bricklink.send(req)
+  .then(function(part){
+    console.log(part);
+  });
 ```
 
-## ES7 Support
+## ES6 Support
 
 Read basic usage.
 
 ```javascript
-import {Client} from 'bricklink-api/client';
-import {ItemType} from 'bricklink-api/itemType';
+import {Client, ItemType, CatalogItem} from 'bricklink-api';
 
 const bricklink = new Client({
     "consumer_key": "<ConsumerKey>",
@@ -46,6 +56,12 @@ const bricklink = new Client({
   });
 
 bricklink.getCatalogItem(ItemType.Part, '3001')
+  .then(part => console.log(part));
+
+\\ Alternate Usage:
+
+let req = CatalogItem.get(ItemType.Part, '3001');
+bricklink.send(req)
   .then(part => console.log(part));
 ```
 
@@ -65,7 +81,7 @@ client configuration options.
 
 ```javascript
 import HttpsProxyAgent from 'https-proxy-agent';
-import {Client} from 'bricklink-api/client';
+import {Client} from 'bricklink-api';
 
 const proxy = new HttpsProxyAgent('http://217.33.216.114:8080');
 
@@ -83,3 +99,7 @@ const bricklink = new Client({
 Full API documentation is available at:
 
 [https://ryansh100.github.io/bricklink-api](https://ryansh100.github.io/bricklink-api)
+
+## Change Log
+
+- 2017/04/03: Fix bugs with require of dictionaries. Update to make more intuitive imports. Add support for color and category lookup.

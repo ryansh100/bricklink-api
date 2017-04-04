@@ -1,3 +1,6 @@
+/**
+ * Static dictionary of common catalog item types to improve code readability.
+ */
 export class ItemType {
   /** @type {string} */
   static get Set() { return 'SET'; }
