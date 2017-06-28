@@ -1,6 +1,6 @@
 {
   "name": "bricklink-api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "scripts": {
     "test": "nyc ava",
     "build": "babel src --presets babel-preset-es2015 --out-dir dist",
@@ -8,7 +8,7 @@
     "report": "nyc report --reporter=html"
   },
   "description": "A node module for connecting to the Bricklink API.",
-  "main": "./dist/client.js",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ryansh100/bricklink-api.git"
