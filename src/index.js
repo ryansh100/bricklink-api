@@ -3,11 +3,11 @@ export {ItemType} from './itemType';
 export {Condition} from './condition';
 
 export {CatalogItem} from './catalogItem/catalogItem';
-export {ItemImage} from './catalogItem/catalogItem';
-export {KnownColor} from './catalogItem/catalogItem';
-export {PriceGuide} from './catalogItem/catalogItem';
-export {Subset} from './catalogItem/catalogItem';
-export {Superset} from './catalogItem/catalogItem';
+export {ItemImage} from './catalogItem/itemImage';
+export {KnownColor} from './catalogItem/knownColor';
+export {PriceGuide} from './catalogItem/priceGuide';
+export {Subset} from './catalogItem/subsets';
+export {Superset} from './catalogItem/supersets';
 
 export {Color} from './color/color';
 
