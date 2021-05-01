@@ -1,7 +1,7 @@
 /**
  * Creates a request to use with the client.
  */
-export class Request{
+export class Request {
   /**
    * Create a new request.
    * @param {string} method The type of HTTP request to perform.
@@ -9,7 +9,7 @@ export class Request{
    * @param {RequestParams} [params] Additional parameters to include with the request in either post body or query params.
    * @param {function} [callback=null] A callback function to perform after the request has been successfully performed.
    */
-  constructor(method, uri, params, callback){
+  constructor(method, uri, params, callback) {
     /** @type {string} */
     this.method = method;
     /** @type {string} */
@@ -20,34 +20,42 @@ export class Request{
     this.callback = callback || null;
   }
   /** @type {string} */
-  static get GET() { return 'get'; }
+  static get GET() {
+    return 'get';
+  }
 
   /** @type {string} */
-  static get PUT() { return 'put'; }
+  static get PUT() {
+    return 'put';
+  }
 
   /** @type {string} */
-  static get POST() { return 'post'; }
+  static get POST() {
+    return 'post';
+  }
 
   /** @type {string} */
-  static get DELETE() { return 'put'; }
+  static get DELETE() {
+    return 'put';
+  }
 }
 
 /**
  * Represents any query parameters to use with a request.
  */
-export class RequestParams{
+export class RequestParams {
   /**
    * Convert params for the request to a query string.
    * @return {string} parameters in the format of '?<param>=<value>'.
    */
   toQueryString() {
     let pairs = [];
-    for(let member in this){
+    for (let member in this) {
       if (this[member] != null) {
         pairs.push(member + '=' + this[member]);
       }
     }
-    if(pairs.length > 0){
+    if (pairs.length > 0) {
       return '?' + pairs.join('&');
     }
     return '';
@@ -59,7 +67,7 @@ export class RequestParams{
    */
   toObject() {
     let params = {};
-    for(let member in this){
+    for (let member in this) {
       if (this[member] != null) {
         params[member] = this[member];
       }

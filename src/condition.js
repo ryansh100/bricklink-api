@@ -6,8 +6,12 @@
  */
 export class Condition {
   /** @type {string} */
-  static get New() { return 'N'; }
+  static get New() {
+    return 'N';
+  }
 
   /** @type {string} */
-  static get Used() { return 'U'; }
+  static get Used() {
+    return 'U';
+  }
 }

@@ -1,3 +1,3 @@
 import debug from 'debug';
 
-export const logger = debug("bricklink-api");
+export const logger = debug('bricklink-api');

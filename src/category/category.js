@@ -1,4 +1,4 @@
-import {Request} from '../request';
+import { Request } from '../request';
 
 /**
  * Represents a Category
@@ -38,7 +38,7 @@ export class Category {
     let method = Request.GET;
     let uri = `/categories/${categoryId}`;
 
-    return new Request(method, uri, null, data => new Category(data));
+    return new Request(method, uri, null, (data) => new Category(data));
   }
 
   /**
@@ -56,6 +56,8 @@ export class Category {
     let method = Request.GET;
     let uri = `/categories`;
 
-    return new Request(method, uri, null, data => data.map(d => new Category(d)));
+    return new Request(method, uri, null, (data) =>
+      data.map((d) => new Category(d)),
+    );
   }
 }

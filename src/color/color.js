@@ -1,4 +1,4 @@
-import {Request} from '../request';
+import { Request } from '../request';
 
 /**
  * Represents a color object
@@ -41,7 +41,7 @@ export class Color {
     let method = Request.GET;
     let uri = `/colors/${colorId}`;
 
-    return new Request(method, uri, null, data => new Color(data));
+    return new Request(method, uri, null, (data) => new Color(data));
   }
 
   /**
@@ -60,6 +60,8 @@ export class Color {
     let method = Request.GET;
     let uri = `/colors`;
 
-    return new Request(method, uri, null, data => data.map(d => new Color(d)));
+    return new Request(method, uri, null, (data) =>
+      data.map((d) => new Color(d)),
+    );
   }
 }

@@ -1,15 +1,15 @@
-import {Request, RequestParams} from '../request';
-import {CatalogItem} from './catalogItem';
+import { Request, RequestParams } from '../request';
+import { CatalogItem } from './catalogItem';
 
 /**
  * Specific sale price details for a givent item.
  */
-export class PriceDetail{
+export class PriceDetail {
   /**
    * Create a Price Detail instance.
    * @param {object} [data] Data returned from an API response.
    */
-  constructor(data){
+  constructor(data) {
     data = data || {};
     /** @type {number} */
     this.quantity = data.quantity || 0;
@@ -36,7 +36,7 @@ export class PriceGuide {
    * Create a new instance of a price guide.
    * @param {object} [data] Data returned from an API response.
    */
-  constructor(data){
+  constructor(data) {
     /** @type {Item} item The item that belongs to the price guide. */
     this.item = data.item ? new CatalogItem(data.item) : new Item();
     /** @type {string} new_or_used Whether or not the price guide is new or used condition. */
@@ -56,8 +56,9 @@ export class PriceGuide {
     /** @type {number} */
     this.total_quantity = data.total_quantity || 0;
     /** @type {PriceDetail[]} */
-    this.price_detail = data.price_detail ?
-      data.price_detail.map(detail => new PriceDetail(detail)) : [];
+    this.price_detail = data.price_detail
+      ? data.price_detail.map((detail) => new PriceDetail(detail))
+      : [];
   }
 
   /**
@@ -89,7 +90,7 @@ export class PriceGuide {
 /**
  * Price guide option request params.
  */
-export class PriceGuideOptions extends RequestParams{
+export class PriceGuideOptions extends RequestParams {
   /**
    * Create an instance of Price Guide options.
    * @param {object} data Optional parameter data.
@@ -101,7 +102,7 @@ export class PriceGuideOptions extends RequestParams{
    * @param {string|null} [data.currency_code=null]
    * @param {string} [data.vat='N']
    */
-  constructor(data){
+  constructor(data) {
     super(data);
 
     data = data || {};

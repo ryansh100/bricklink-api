@@ -1,4 +1,4 @@
-import {Request} from '../request';
+import { Request } from '../request';
 
 /**
  * Represents a known color object.
@@ -17,7 +17,7 @@ export class KnownColor {
     /** @type {number} */
     this.quantity = data.quantity || 0;
   }
-  
+
   /**
    * Method to get a list of known color_id for a given catalog item.
    *
@@ -37,7 +37,7 @@ export class KnownColor {
     let uri = `/items/${itemType}/${itemNumber}/colors`;
 
     return new Request(method, uri, null, (data) => {
-      return data.map(color => new KnownColor(color));
+      return data.map((color) => new KnownColor(color));
     });
   }
 }

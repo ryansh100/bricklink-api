@@ -20,28 +20,28 @@ export class OAuthHelper {
     /** @type {string} */
     this.signature = '';
     /** @type {number} */
-    this.timestamp = Math.round(Date.now()/1000).toString();
+    this.timestamp = Math.round(Date.now() / 1000).toString();
   }
 
-  get parameters(){
+  get parameters() {
     return {
-      oauth_consumer_key : this.consumerKey,
-      oauth_token : this.token,
-      oauth_nonce : this.nonce,
-      oauth_timestamp : this.timestamp,
-      oauth_signature_method : 'HMAC-SHA1',
-      oauth_version : '1.0'
+      oauth_consumer_key: this.consumerKey,
+      oauth_token: this.token,
+      oauth_nonce: this.nonce,
+      oauth_timestamp: this.timestamp,
+      oauth_signature_method: 'HMAC-SHA1',
+      oauth_version: '1.0',
     };
   }
 
-  get header(){
+  get header() {
     let str = 'OAuth ';
 
-    let params = Object.assign({'realm': ''}, this.parameters);
+    let params = Object.assign({ realm: '' }, this.parameters);
     params['oauth_signature'] = this.signature;
 
     let keys = Object.keys(params);
-    let pairs = keys.map( (k) => {
+    let pairs = keys.map((k) => {
       return k + '="' + params[k] + '"';
     });
 
@@ -49,19 +49,25 @@ export class OAuthHelper {
     return str;
   }
 
-  get queryString(){
+  get queryString() {
     let params = Object.assign({}, this.parameters);
     params['oauth_signature'] = this.signature;
     let str = JSON.stringify(params);
-    return "Authorization=" + str;
+    return 'Authorization=' + str;
   }
 
   /**
    * Sign the request with oath headers and sets the signature member of the OauthHelper instance.
    */
-  sign(url, request, consumerSecret, tokenSecret){
+  sign(url, request, consumerSecret, tokenSecret) {
     let params = Object.assign({}, this.parameters, request.params.toObject());
 
-    this.signature = oauthSignature.generate(request.method, url, params, consumerSecret, tokenSecret);
+    this.signature = oauthSignature.generate(
+      request.method,
+      url,
+      params,
+      consumerSecret,
+      tokenSecret,
+    );
   }
 }

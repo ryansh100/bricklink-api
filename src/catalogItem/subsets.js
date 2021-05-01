@@ -1,10 +1,10 @@
-import {Request, RequestParams} from '../request';
-import {CatalogItem} from './catalogItem';
+import { Request, RequestParams } from '../request';
+import { CatalogItem } from './catalogItem';
 
 /**
  * Represents a subset entry.
  */
-export class SubsetEntry{
+export class SubsetEntry {
   /**
    * Create an instance of a subset entry
    * @param {object} [data] The API response data
@@ -31,21 +31,21 @@ export class SubsetEntry{
 /**
  * Represents a subset item. A subset item can have more than one matching entry due to alternate parts.
  */
-export class Subset{
+export class Subset {
   /**
    * Create an instance of a subset item.
    * @param {object} [data] The response data from API request.
    * @param {number} [data.match_no] The number of matching entries or 0 if there is no matching of alternative item.
    * @param {object} [data.entries] The specific entries for the subset item.
    */
-  constructor(data){
+  constructor(data) {
     data = data || {};
     /** @type {number} */
     this.match_no = data.match_no || 0;
 
     let entries = data.entries || [];
     /** @type {SubsetEntry[]} */
-    this.entries = entries.map(e => new SubsetEntry(e));
+    this.entries = entries.map((e) => new SubsetEntry(e));
   }
   /**
    * Method to get a subset of a catalog item.
@@ -68,7 +68,7 @@ export class Subset{
     let uri = `/items/${itemType}/${itemNumber}/subsets`;
 
     return new Request(method, uri, options, (data) => {
-      return data.map( e => new Subset(e) );
+      return data.map((e) => new Subset(e));
     });
   }
 }
@@ -86,7 +86,7 @@ export class SubsetOptions extends RequestParams {
    * @param {boolean} [data.break_minifigs]	Indicates whether the result breaks down minifigs as parts
    * @param {boolean} [data.break_subsets] Indicates whether the result breaks down sets in set
    */
-  constructor(data){
+  constructor(data) {
     super(data);
     data = data || {};
     /** @type {number|null} */

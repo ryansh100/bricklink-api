@@ -41,7 +41,9 @@
     "dotenv": "^8.2.0",
     "esdoc": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
   },
   "dependencies": {
     "core-js": "^2.4.1",
@@ -67,6 +69,11 @@
   },
   "engines": {
     "node": ">=5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "nyc": {
     "extension": [
