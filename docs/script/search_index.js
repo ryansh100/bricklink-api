@@ -1,374 +1,1328 @@
 window.esdocSearchIndex = [
   [
-    "dist/.external-ecmascript.js~array",
+    "bricklink-api/src/catalogitem/catalogitem.js~catalogitem",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html",
+    "<span>CatalogItem</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/catalogItem.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/category/category.js~category",
+    "class/src/category/category.js~Category.html",
+    "<span>Category</span> <span class=\"search-result-import-path\">bricklink-api/src/category/category.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/client.js~client",
+    "class/src/client.js~Client.html",
+    "<span>Client</span> <span class=\"search-result-import-path\">bricklink-api/src/client.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/color/color.js~color",
+    "class/src/color/color.js~Color.html",
+    "<span>Color</span> <span class=\"search-result-import-path\">bricklink-api/src/color/color.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/condition.js~condition",
+    "class/src/condition.js~Condition.html",
+    "<span>Condition</span> <span class=\"search-result-import-path\">bricklink-api/src/condition.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/catalogitem/itemimage.js~itemimage",
+    "class/src/catalogItem/itemImage.js~ItemImage.html",
+    "<span>ItemImage</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/itemImage.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/itemtype.js~itemtype",
+    "class/src/itemType.js~ItemType.html",
+    "<span>ItemType</span> <span class=\"search-result-import-path\">bricklink-api/src/itemType.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/catalogitem/knowncolor.js~knowncolor",
+    "class/src/catalogItem/knownColor.js~KnownColor.html",
+    "<span>KnownColor</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/knownColor.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/oauthhelper.js~oauthhelper",
+    "class/src/oAuthHelper.js~OAuthHelper.html",
+    "<span>OAuthHelper</span> <span class=\"search-result-import-path\">bricklink-api/src/oAuthHelper.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/catalogitem/priceguide.js~pricedetail",
+    "class/src/catalogItem/priceGuide.js~PriceDetail.html",
+    "<span>PriceDetail</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/priceGuide.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/catalogitem/priceguide.js~priceguide",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html",
+    "<span>PriceGuide</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/priceGuide.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/catalogitem/priceguide.js~priceguideoptions",
+    "class/src/catalogItem/priceGuide.js~PriceGuideOptions.html",
+    "<span>PriceGuideOptions</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/priceGuide.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/request.js~request",
+    "class/src/request.js~Request.html",
+    "<span>Request</span> <span class=\"search-result-import-path\">bricklink-api/src/request.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/request.js~requestparams",
+    "class/src/request.js~RequestParams.html",
+    "<span>RequestParams</span> <span class=\"search-result-import-path\">bricklink-api/src/request.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/catalogitem/subsets.js~subset",
+    "class/src/catalogItem/subsets.js~Subset.html",
+    "<span>Subset</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/subsets.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/catalogitem/subsets.js~subsetentry",
+    "class/src/catalogItem/subsets.js~SubsetEntry.html",
+    "<span>SubsetEntry</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/subsets.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/catalogitem/subsets.js~subsetoptions",
+    "class/src/catalogItem/subsets.js~SubsetOptions.html",
+    "<span>SubsetOptions</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/subsets.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/catalogitem/supersets.js~superset",
+    "class/src/catalogItem/supersets.js~Superset.html",
+    "<span>Superset</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/supersets.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/catalogitem/supersets.js~supersetentry",
+    "class/src/catalogItem/supersets.js~SupersetEntry.html",
+    "<span>SupersetEntry</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/supersets.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/catalogitem/supersets.js~supersetoptions",
+    "class/src/catalogItem/supersets.js~SupersetOptions.html",
+    "<span>SupersetOptions</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/supersets.js</span>",
+    "class"
+  ],
+  [
+    "bricklink-api/src/logger.js~logger",
+    "variable/index.html#static-variable-logger",
+    "<span>logger</span> <span class=\"search-result-import-path\">bricklink-api/src/logger.js</span>",
+    "variable"
+  ],
+  [
+    "src/.external-ecmascript.js~array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
-    "dist/.external-ecmascript.js~Array",
+    "src/.external-ecmascript.js~Array",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~arraybuffer",
+    "src/.external-ecmascript.js~arraybuffer",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
-    "dist/.external-ecmascript.js~ArrayBuffer",
+    "src/.external-ecmascript.js~ArrayBuffer",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~boolean",
+    "src/.external-ecmascript.js~boolean",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
-    "dist/.external-ecmascript.js~Boolean",
+    "src/.external-ecmascript.js~Boolean",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~dataview",
+    "src/.external-ecmascript.js~dataview",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
-    "dist/.external-ecmascript.js~DataView",
+    "src/.external-ecmascript.js~DataView",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~date",
+    "src/.external-ecmascript.js~date",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
-    "dist/.external-ecmascript.js~Date",
+    "src/.external-ecmascript.js~Date",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~error",
+    "src/.external-ecmascript.js~error",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
-    "dist/.external-ecmascript.js~Error",
+    "src/.external-ecmascript.js~Error",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~evalerror",
+    "src/.external-ecmascript.js~evalerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
-    "dist/.external-ecmascript.js~EvalError",
+    "src/.external-ecmascript.js~EvalError",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~float32array",
+    "src/.external-ecmascript.js~float32array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
-    "dist/.external-ecmascript.js~Float32Array",
+    "src/.external-ecmascript.js~Float32Array",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~float64array",
+    "src/.external-ecmascript.js~float64array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
-    "dist/.external-ecmascript.js~Float64Array",
+    "src/.external-ecmascript.js~Float64Array",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~function",
+    "src/.external-ecmascript.js~function",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
-    "dist/.external-ecmascript.js~Function",
+    "src/.external-ecmascript.js~Function",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~generator",
+    "src/.external-ecmascript.js~generator",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
-    "dist/.external-ecmascript.js~Generator",
+    "src/.external-ecmascript.js~Generator",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~generatorfunction",
+    "src/.external-ecmascript.js~generatorfunction",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
-    "dist/.external-ecmascript.js~GeneratorFunction",
+    "src/.external-ecmascript.js~GeneratorFunction",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~infinity",
+    "src/.external-ecmascript.js~infinity",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
-    "dist/.external-ecmascript.js~Infinity",
+    "src/.external-ecmascript.js~Infinity",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~int16array",
+    "src/.external-ecmascript.js~int16array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
-    "dist/.external-ecmascript.js~Int16Array",
+    "src/.external-ecmascript.js~Int16Array",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~int32array",
+    "src/.external-ecmascript.js~int32array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
-    "dist/.external-ecmascript.js~Int32Array",
+    "src/.external-ecmascript.js~Int32Array",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~int8array",
+    "src/.external-ecmascript.js~int8array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
-    "dist/.external-ecmascript.js~Int8Array",
+    "src/.external-ecmascript.js~Int8Array",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~internalerror",
+    "src/.external-ecmascript.js~internalerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
-    "dist/.external-ecmascript.js~InternalError",
+    "src/.external-ecmascript.js~InternalError",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~json",
+    "src/.external-ecmascript.js~json",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
-    "dist/.external-ecmascript.js~JSON",
+    "src/.external-ecmascript.js~JSON",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~map",
+    "src/.external-ecmascript.js~map",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
-    "dist/.external-ecmascript.js~Map",
+    "src/.external-ecmascript.js~Map",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~nan",
+    "src/.external-ecmascript.js~nan",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
-    "dist/.external-ecmascript.js~NaN",
+    "src/.external-ecmascript.js~NaN",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~number",
+    "src/.external-ecmascript.js~number",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
-    "dist/.external-ecmascript.js~Number",
+    "src/.external-ecmascript.js~Number",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~object",
+    "src/.external-ecmascript.js~object",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
-    "dist/.external-ecmascript.js~Object",
+    "src/.external-ecmascript.js~Object",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~promise",
+    "src/.external-ecmascript.js~promise",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
-    "dist/.external-ecmascript.js~Promise",
+    "src/.external-ecmascript.js~Promise",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~proxy",
+    "src/.external-ecmascript.js~proxy",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
-    "dist/.external-ecmascript.js~Proxy",
+    "src/.external-ecmascript.js~Proxy",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~rangeerror",
+    "src/.external-ecmascript.js~rangeerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
-    "dist/.external-ecmascript.js~RangeError",
+    "src/.external-ecmascript.js~RangeError",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~referenceerror",
+    "src/.external-ecmascript.js~referenceerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
-    "dist/.external-ecmascript.js~ReferenceError",
+    "src/.external-ecmascript.js~ReferenceError",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~reflect",
+    "src/.external-ecmascript.js~reflect",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
-    "dist/.external-ecmascript.js~Reflect",
+    "src/.external-ecmascript.js~Reflect",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~regexp",
+    "src/.external-ecmascript.js~regexp",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
-    "dist/.external-ecmascript.js~RegExp",
+    "src/.external-ecmascript.js~RegExp",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~set",
+    "src/.external-ecmascript.js~set",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
-    "dist/.external-ecmascript.js~Set",
+    "src/.external-ecmascript.js~Set",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~string",
+    "src/.external-ecmascript.js~string",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
-    "dist/.external-ecmascript.js~String",
+    "src/.external-ecmascript.js~String",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~symbol",
+    "src/.external-ecmascript.js~symbol",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
-    "dist/.external-ecmascript.js~Symbol",
+    "src/.external-ecmascript.js~Symbol",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~syntaxerror",
+    "src/.external-ecmascript.js~syntaxerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
-    "dist/.external-ecmascript.js~SyntaxError",
+    "src/.external-ecmascript.js~SyntaxError",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~typeerror",
+    "src/.external-ecmascript.js~typeerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
-    "dist/.external-ecmascript.js~TypeError",
+    "src/.external-ecmascript.js~TypeError",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~urierror",
+    "src/.external-ecmascript.js~urierror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
-    "dist/.external-ecmascript.js~URIError",
+    "src/.external-ecmascript.js~URIError",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~uint16array",
+    "src/.external-ecmascript.js~uint16array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
-    "dist/.external-ecmascript.js~Uint16Array",
+    "src/.external-ecmascript.js~Uint16Array",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~uint32array",
+    "src/.external-ecmascript.js~uint32array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
-    "dist/.external-ecmascript.js~Uint32Array",
+    "src/.external-ecmascript.js~Uint32Array",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~uint8array",
+    "src/.external-ecmascript.js~uint8array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
-    "dist/.external-ecmascript.js~Uint8Array",
+    "src/.external-ecmascript.js~Uint8Array",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~uint8clampedarray",
+    "src/.external-ecmascript.js~uint8clampedarray",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
-    "dist/.external-ecmascript.js~Uint8ClampedArray",
+    "src/.external-ecmascript.js~Uint8ClampedArray",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~weakmap",
+    "src/.external-ecmascript.js~weakmap",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
-    "dist/.external-ecmascript.js~WeakMap",
+    "src/.external-ecmascript.js~WeakMap",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~weakset",
+    "src/.external-ecmascript.js~weakset",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
-    "dist/.external-ecmascript.js~WeakSet",
+    "src/.external-ecmascript.js~WeakSet",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~boolean",
+    "src/.external-ecmascript.js~boolean",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
-    "dist/.external-ecmascript.js~boolean",
+    "src/.external-ecmascript.js~boolean",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~function",
+    "src/.external-ecmascript.js~function",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
-    "dist/.external-ecmascript.js~function",
+    "src/.external-ecmascript.js~function",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~null",
+    "src/.external-ecmascript.js~null",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
-    "dist/.external-ecmascript.js~null",
+    "src/.external-ecmascript.js~null",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~number",
+    "src/.external-ecmascript.js~number",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
-    "dist/.external-ecmascript.js~number",
+    "src/.external-ecmascript.js~number",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~object",
+    "src/.external-ecmascript.js~object",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
-    "dist/.external-ecmascript.js~object",
+    "src/.external-ecmascript.js~object",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~string",
+    "src/.external-ecmascript.js~string",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
-    "dist/.external-ecmascript.js~string",
+    "src/.external-ecmascript.js~string",
     "external"
   ],
   [
-    "dist/.external-ecmascript.js~undefined",
+    "src/.external-ecmascript.js~undefined",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
-    "dist/.external-ecmascript.js~undefined",
+    "src/.external-ecmascript.js~undefined",
     "external"
   ],
   [
-    "dist/catalogitem/catalogitem.js",
-    "file/dist/catalogItem/catalogItem.js.html",
-    "dist/catalogItem/catalogItem.js",
+    "src/catalogitem/catalogitem.js",
+    "file/src/catalogItem/catalogItem.js.html",
+    "src/catalogItem/catalogItem.js",
     "file"
   ],
   [
-    "dist/catalogitem/itemimage.js",
-    "file/dist/catalogItem/itemImage.js.html",
-    "dist/catalogItem/itemImage.js",
+    "src/catalogitem/catalogitem.js~catalogitem#alternate_no",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-alternate_no",
+    "src/catalogItem/catalogItem.js~CatalogItem#alternate_no",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#category_id",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-category_id",
+    "src/catalogItem/catalogItem.js~CatalogItem#category_id",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#constructor",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-constructor-constructor",
+    "src/catalogItem/catalogItem.js~CatalogItem#constructor",
+    "method"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#description",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-description",
+    "src/catalogItem/catalogItem.js~CatalogItem#description",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#dim_x",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-dim_x",
+    "src/catalogItem/catalogItem.js~CatalogItem#dim_x",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#dim_y",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-dim_y",
+    "src/catalogItem/catalogItem.js~CatalogItem#dim_y",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#dim_z",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-dim_z",
+    "src/catalogItem/catalogItem.js~CatalogItem#dim_z",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#image_url",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-image_url",
+    "src/catalogItem/catalogItem.js~CatalogItem#image_url",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#is_obsolete",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-is_obsolete",
+    "src/catalogItem/catalogItem.js~CatalogItem#is_obsolete",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#language_code",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-language_code",
+    "src/catalogItem/catalogItem.js~CatalogItem#language_code",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#name",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-name",
+    "src/catalogItem/catalogItem.js~CatalogItem#name",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#no",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-no",
+    "src/catalogItem/catalogItem.js~CatalogItem#no",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#thumbnail_url",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-thumbnail_url",
+    "src/catalogItem/catalogItem.js~CatalogItem#thumbnail_url",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#type",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-type",
+    "src/catalogItem/catalogItem.js~CatalogItem#type",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#weight",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-weight",
+    "src/catalogItem/catalogItem.js~CatalogItem#weight",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem#year_released",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#instance-member-year_released",
+    "src/catalogItem/catalogItem.js~CatalogItem#year_released",
+    "member"
+  ],
+  [
+    "src/catalogitem/catalogitem.js~catalogitem.get",
+    "class/src/catalogItem/catalogItem.js~CatalogItem.html#static-method-get",
+    "src/catalogItem/catalogItem.js~CatalogItem.get",
+    "method"
+  ],
+  [
+    "src/catalogitem/itemimage.js",
+    "file/src/catalogItem/itemImage.js.html",
+    "src/catalogItem/itemImage.js",
     "file"
   ],
   [
-    "dist/catalogitem/knowncolor.js",
-    "file/dist/catalogItem/knownColor.js.html",
-    "dist/catalogItem/knownColor.js",
+    "src/catalogitem/itemimage.js~itemimage#color_id",
+    "class/src/catalogItem/itemImage.js~ItemImage.html#instance-member-color_id",
+    "src/catalogItem/itemImage.js~ItemImage#color_id",
+    "member"
+  ],
+  [
+    "src/catalogitem/itemimage.js~itemimage#constructor",
+    "class/src/catalogItem/itemImage.js~ItemImage.html#instance-constructor-constructor",
+    "src/catalogItem/itemImage.js~ItemImage#constructor",
+    "method"
+  ],
+  [
+    "src/catalogitem/itemimage.js~itemimage#no",
+    "class/src/catalogItem/itemImage.js~ItemImage.html#instance-member-no",
+    "src/catalogItem/itemImage.js~ItemImage#no",
+    "member"
+  ],
+  [
+    "src/catalogitem/itemimage.js~itemimage#thumbnail_url",
+    "class/src/catalogItem/itemImage.js~ItemImage.html#instance-member-thumbnail_url",
+    "src/catalogItem/itemImage.js~ItemImage#thumbnail_url",
+    "member"
+  ],
+  [
+    "src/catalogitem/itemimage.js~itemimage#type",
+    "class/src/catalogItem/itemImage.js~ItemImage.html#instance-member-type",
+    "src/catalogItem/itemImage.js~ItemImage#type",
+    "member"
+  ],
+  [
+    "src/catalogitem/itemimage.js~itemimage.get",
+    "class/src/catalogItem/itemImage.js~ItemImage.html#static-method-get",
+    "src/catalogItem/itemImage.js~ItemImage.get",
+    "method"
+  ],
+  [
+    "src/catalogitem/knowncolor.js",
+    "file/src/catalogItem/knownColor.js.html",
+    "src/catalogItem/knownColor.js",
     "file"
   ],
   [
-    "dist/catalogitem/priceguide.js",
-    "file/dist/catalogItem/priceGuide.js.html",
-    "dist/catalogItem/priceGuide.js",
+    "src/catalogitem/knowncolor.js~knowncolor#color_id",
+    "class/src/catalogItem/knownColor.js~KnownColor.html#instance-member-color_id",
+    "src/catalogItem/knownColor.js~KnownColor#color_id",
+    "member"
+  ],
+  [
+    "src/catalogitem/knowncolor.js~knowncolor#constructor",
+    "class/src/catalogItem/knownColor.js~KnownColor.html#instance-constructor-constructor",
+    "src/catalogItem/knownColor.js~KnownColor#constructor",
+    "method"
+  ],
+  [
+    "src/catalogitem/knowncolor.js~knowncolor#quantity",
+    "class/src/catalogItem/knownColor.js~KnownColor.html#instance-member-quantity",
+    "src/catalogItem/knownColor.js~KnownColor#quantity",
+    "member"
+  ],
+  [
+    "src/catalogitem/knowncolor.js~knowncolor.get",
+    "class/src/catalogItem/knownColor.js~KnownColor.html#static-method-get",
+    "src/catalogItem/knownColor.js~KnownColor.get",
+    "method"
+  ],
+  [
+    "src/catalogitem/priceguide.js",
+    "file/src/catalogItem/priceGuide.js.html",
+    "src/catalogItem/priceGuide.js",
     "file"
   ],
   [
-    "dist/catalogitem/subsets.js",
-    "file/dist/catalogItem/subsets.js.html",
-    "dist/catalogItem/subsets.js",
+    "src/catalogitem/priceguide.js~pricedetail#buyer_country_code",
+    "class/src/catalogItem/priceGuide.js~PriceDetail.html#instance-member-buyer_country_code",
+    "src/catalogItem/priceGuide.js~PriceDetail#buyer_country_code",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~pricedetail#constructor",
+    "class/src/catalogItem/priceGuide.js~PriceDetail.html#instance-constructor-constructor",
+    "src/catalogItem/priceGuide.js~PriceDetail#constructor",
+    "method"
+  ],
+  [
+    "src/catalogitem/priceguide.js~pricedetail#date_ordered",
+    "class/src/catalogItem/priceGuide.js~PriceDetail.html#instance-member-date_ordered",
+    "src/catalogItem/priceGuide.js~PriceDetail#date_ordered",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~pricedetail#quantity",
+    "class/src/catalogItem/priceGuide.js~PriceDetail.html#instance-member-quantity",
+    "src/catalogItem/priceGuide.js~PriceDetail#quantity",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~pricedetail#seller_country_code",
+    "class/src/catalogItem/priceGuide.js~PriceDetail.html#instance-member-seller_country_code",
+    "src/catalogItem/priceGuide.js~PriceDetail#seller_country_code",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~pricedetail#shipping_available",
+    "class/src/catalogItem/priceGuide.js~PriceDetail.html#instance-member-shipping_available",
+    "src/catalogItem/priceGuide.js~PriceDetail#shipping_available",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~pricedetail#unit_price",
+    "class/src/catalogItem/priceGuide.js~PriceDetail.html#instance-member-unit_price",
+    "src/catalogItem/priceGuide.js~PriceDetail#unit_price",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguide#avg_price",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-member-avg_price",
+    "src/catalogItem/priceGuide.js~PriceGuide#avg_price",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguide#constructor",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-constructor-constructor",
+    "src/catalogItem/priceGuide.js~PriceGuide#constructor",
+    "method"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguide#currency_code",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-member-currency_code",
+    "src/catalogItem/priceGuide.js~PriceGuide#currency_code",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguide#item",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-member-item",
+    "src/catalogItem/priceGuide.js~PriceGuide#item",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguide#max_price",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-member-max_price",
+    "src/catalogItem/priceGuide.js~PriceGuide#max_price",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguide#min_price",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-member-min_price",
+    "src/catalogItem/priceGuide.js~PriceGuide#min_price",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguide#new_or_used",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-member-new_or_used",
+    "src/catalogItem/priceGuide.js~PriceGuide#new_or_used",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguide#price_detail",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-member-price_detail",
+    "src/catalogItem/priceGuide.js~PriceGuide#price_detail",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguide#qty_avg_price",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-member-qty_avg_price",
+    "src/catalogItem/priceGuide.js~PriceGuide#qty_avg_price",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguide#total_quantity",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-member-total_quantity",
+    "src/catalogItem/priceGuide.js~PriceGuide#total_quantity",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguide#unit_quantity",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-member-unit_quantity",
+    "src/catalogItem/priceGuide.js~PriceGuide#unit_quantity",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguide.get",
+    "class/src/catalogItem/priceGuide.js~PriceGuide.html#static-method-get",
+    "src/catalogItem/priceGuide.js~PriceGuide.get",
+    "method"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguideoptions#color_id",
+    "class/src/catalogItem/priceGuide.js~PriceGuideOptions.html#instance-member-color_id",
+    "src/catalogItem/priceGuide.js~PriceGuideOptions#color_id",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguideoptions#constructor",
+    "class/src/catalogItem/priceGuide.js~PriceGuideOptions.html#instance-constructor-constructor",
+    "src/catalogItem/priceGuide.js~PriceGuideOptions#constructor",
+    "method"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguideoptions#country_code",
+    "class/src/catalogItem/priceGuide.js~PriceGuideOptions.html#instance-member-country_code",
+    "src/catalogItem/priceGuide.js~PriceGuideOptions#country_code",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguideoptions#currency_code",
+    "class/src/catalogItem/priceGuide.js~PriceGuideOptions.html#instance-member-currency_code",
+    "src/catalogItem/priceGuide.js~PriceGuideOptions#currency_code",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguideoptions#guide_type",
+    "class/src/catalogItem/priceGuide.js~PriceGuideOptions.html#instance-member-guide_type",
+    "src/catalogItem/priceGuide.js~PriceGuideOptions#guide_type",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguideoptions#new_or_used",
+    "class/src/catalogItem/priceGuide.js~PriceGuideOptions.html#instance-member-new_or_used",
+    "src/catalogItem/priceGuide.js~PriceGuideOptions#new_or_used",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguideoptions#region",
+    "class/src/catalogItem/priceGuide.js~PriceGuideOptions.html#instance-member-region",
+    "src/catalogItem/priceGuide.js~PriceGuideOptions#region",
+    "member"
+  ],
+  [
+    "src/catalogitem/priceguide.js~priceguideoptions#vat",
+    "class/src/catalogItem/priceGuide.js~PriceGuideOptions.html#instance-member-vat",
+    "src/catalogItem/priceGuide.js~PriceGuideOptions#vat",
+    "member"
+  ],
+  [
+    "src/catalogitem/subsets.js",
+    "file/src/catalogItem/subsets.js.html",
+    "src/catalogItem/subsets.js",
     "file"
   ],
   [
-    "dist/catalogitem/supersets.js",
-    "file/dist/catalogItem/supersets.js.html",
-    "dist/catalogItem/supersets.js",
+    "src/catalogitem/subsets.js~subset#constructor",
+    "class/src/catalogItem/subsets.js~Subset.html#instance-constructor-constructor",
+    "src/catalogItem/subsets.js~Subset#constructor",
+    "method"
+  ],
+  [
+    "src/catalogitem/subsets.js~subset#entries",
+    "class/src/catalogItem/subsets.js~Subset.html#instance-member-entries",
+    "src/catalogItem/subsets.js~Subset#entries",
+    "member"
+  ],
+  [
+    "src/catalogitem/subsets.js~subset#match_no",
+    "class/src/catalogItem/subsets.js~Subset.html#instance-member-match_no",
+    "src/catalogItem/subsets.js~Subset#match_no",
+    "member"
+  ],
+  [
+    "src/catalogitem/subsets.js~subset.get",
+    "class/src/catalogItem/subsets.js~Subset.html#static-method-get",
+    "src/catalogItem/subsets.js~Subset.get",
+    "method"
+  ],
+  [
+    "src/catalogitem/subsets.js~subsetentry#color_id",
+    "class/src/catalogItem/subsets.js~SubsetEntry.html#instance-member-color_id",
+    "src/catalogItem/subsets.js~SubsetEntry#color_id",
+    "member"
+  ],
+  [
+    "src/catalogitem/subsets.js~subsetentry#constructor",
+    "class/src/catalogItem/subsets.js~SubsetEntry.html#instance-constructor-constructor",
+    "src/catalogItem/subsets.js~SubsetEntry#constructor",
+    "method"
+  ],
+  [
+    "src/catalogitem/subsets.js~subsetentry#extra_quantity",
+    "class/src/catalogItem/subsets.js~SubsetEntry.html#instance-member-extra_quantity",
+    "src/catalogItem/subsets.js~SubsetEntry#extra_quantity",
+    "member"
+  ],
+  [
+    "src/catalogitem/subsets.js~subsetentry#is_alternate",
+    "class/src/catalogItem/subsets.js~SubsetEntry.html#instance-member-is_alternate",
+    "src/catalogItem/subsets.js~SubsetEntry#is_alternate",
+    "member"
+  ],
+  [
+    "src/catalogitem/subsets.js~subsetentry#item",
+    "class/src/catalogItem/subsets.js~SubsetEntry.html#instance-member-item",
+    "src/catalogItem/subsets.js~SubsetEntry#item",
+    "member"
+  ],
+  [
+    "src/catalogitem/subsets.js~subsetentry#quantity",
+    "class/src/catalogItem/subsets.js~SubsetEntry.html#instance-member-quantity",
+    "src/catalogItem/subsets.js~SubsetEntry#quantity",
+    "member"
+  ],
+  [
+    "src/catalogitem/subsets.js~subsetoptions#box",
+    "class/src/catalogItem/subsets.js~SubsetOptions.html#instance-member-box",
+    "src/catalogItem/subsets.js~SubsetOptions#box",
+    "member"
+  ],
+  [
+    "src/catalogitem/subsets.js~subsetoptions#break_minifigs",
+    "class/src/catalogItem/subsets.js~SubsetOptions.html#instance-member-break_minifigs",
+    "src/catalogItem/subsets.js~SubsetOptions#break_minifigs",
+    "member"
+  ],
+  [
+    "src/catalogitem/subsets.js~subsetoptions#break_subsets",
+    "class/src/catalogItem/subsets.js~SubsetOptions.html#instance-member-break_subsets",
+    "src/catalogItem/subsets.js~SubsetOptions#break_subsets",
+    "member"
+  ],
+  [
+    "src/catalogitem/subsets.js~subsetoptions#color_id",
+    "class/src/catalogItem/subsets.js~SubsetOptions.html#instance-member-color_id",
+    "src/catalogItem/subsets.js~SubsetOptions#color_id",
+    "member"
+  ],
+  [
+    "src/catalogitem/subsets.js~subsetoptions#constructor",
+    "class/src/catalogItem/subsets.js~SubsetOptions.html#instance-constructor-constructor",
+    "src/catalogItem/subsets.js~SubsetOptions#constructor",
+    "method"
+  ],
+  [
+    "src/catalogitem/subsets.js~subsetoptions#instruction",
+    "class/src/catalogItem/subsets.js~SubsetOptions.html#instance-member-instruction",
+    "src/catalogItem/subsets.js~SubsetOptions#instruction",
+    "member"
+  ],
+  [
+    "src/catalogitem/supersets.js",
+    "file/src/catalogItem/supersets.js.html",
+    "src/catalogItem/supersets.js",
     "file"
   ],
   [
-    "dist/category/category.js",
-    "file/dist/category/category.js.html",
-    "dist/category/category.js",
+    "src/catalogitem/supersets.js~superset#color_id",
+    "class/src/catalogItem/supersets.js~Superset.html#instance-member-color_id",
+    "src/catalogItem/supersets.js~Superset#color_id",
+    "member"
+  ],
+  [
+    "src/catalogitem/supersets.js~superset#constructor",
+    "class/src/catalogItem/supersets.js~Superset.html#instance-constructor-constructor",
+    "src/catalogItem/supersets.js~Superset#constructor",
+    "method"
+  ],
+  [
+    "src/catalogitem/supersets.js~superset#entries",
+    "class/src/catalogItem/supersets.js~Superset.html#instance-member-entries",
+    "src/catalogItem/supersets.js~Superset#entries",
+    "member"
+  ],
+  [
+    "src/catalogitem/supersets.js~superset.get",
+    "class/src/catalogItem/supersets.js~Superset.html#static-method-get",
+    "src/catalogItem/supersets.js~Superset.get",
+    "method"
+  ],
+  [
+    "src/catalogitem/supersets.js~supersetentry#appear_as",
+    "class/src/catalogItem/supersets.js~SupersetEntry.html#instance-member-appear_as",
+    "src/catalogItem/supersets.js~SupersetEntry#appear_as",
+    "member"
+  ],
+  [
+    "src/catalogitem/supersets.js~supersetentry#constructor",
+    "class/src/catalogItem/supersets.js~SupersetEntry.html#instance-constructor-constructor",
+    "src/catalogItem/supersets.js~SupersetEntry#constructor",
+    "method"
+  ],
+  [
+    "src/catalogitem/supersets.js~supersetentry#item",
+    "class/src/catalogItem/supersets.js~SupersetEntry.html#instance-member-item",
+    "src/catalogItem/supersets.js~SupersetEntry#item",
+    "member"
+  ],
+  [
+    "src/catalogitem/supersets.js~supersetentry#quantity",
+    "class/src/catalogItem/supersets.js~SupersetEntry.html#instance-member-quantity",
+    "src/catalogItem/supersets.js~SupersetEntry#quantity",
+    "member"
+  ],
+  [
+    "src/catalogitem/supersets.js~supersetoptions#color_id",
+    "class/src/catalogItem/supersets.js~SupersetOptions.html#instance-member-color_id",
+    "src/catalogItem/supersets.js~SupersetOptions#color_id",
+    "member"
+  ],
+  [
+    "src/catalogitem/supersets.js~supersetoptions#constructor",
+    "class/src/catalogItem/supersets.js~SupersetOptions.html#instance-constructor-constructor",
+    "src/catalogItem/supersets.js~SupersetOptions#constructor",
+    "method"
+  ],
+  [
+    "src/category/category.js",
+    "file/src/category/category.js.html",
+    "src/category/category.js",
     "file"
   ],
   [
-    "dist/client.js",
-    "file/dist/client.js.html",
-    "dist/client.js",
+    "src/category/category.js~category#category_id",
+    "class/src/category/category.js~Category.html#instance-member-category_id",
+    "src/category/category.js~Category#category_id",
+    "member"
+  ],
+  [
+    "src/category/category.js~category#category_name",
+    "class/src/category/category.js~Category.html#instance-member-category_name",
+    "src/category/category.js~Category#category_name",
+    "member"
+  ],
+  [
+    "src/category/category.js~category#constructor",
+    "class/src/category/category.js~Category.html#instance-constructor-constructor",
+    "src/category/category.js~Category#constructor",
+    "method"
+  ],
+  [
+    "src/category/category.js~category#parent_id",
+    "class/src/category/category.js~Category.html#instance-member-parent_id",
+    "src/category/category.js~Category#parent_id",
+    "member"
+  ],
+  [
+    "src/category/category.js~category.all",
+    "class/src/category/category.js~Category.html#static-method-all",
+    "src/category/category.js~Category.all",
+    "method"
+  ],
+  [
+    "src/category/category.js~category.get",
+    "class/src/category/category.js~Category.html#static-method-get",
+    "src/category/category.js~Category.get",
+    "method"
+  ],
+  [
+    "src/client.js",
+    "file/src/client.js.html",
+    "src/client.js",
     "file"
   ],
   [
-    "dist/color/color.js",
-    "file/dist/color/color.js.html",
-    "dist/color/color.js",
+    "src/client.js~client#constructor",
+    "class/src/client.js~Client.html#instance-constructor-constructor",
+    "src/client.js~Client#constructor",
+    "method"
+  ],
+  [
+    "src/client.js~client#consumer_key",
+    "class/src/client.js~Client.html#instance-member-consumer_key",
+    "src/client.js~Client#consumer_key",
+    "member"
+  ],
+  [
+    "src/client.js~client#consumer_secret",
+    "class/src/client.js~Client.html#instance-member-consumer_secret",
+    "src/client.js~Client#consumer_secret",
+    "member"
+  ],
+  [
+    "src/client.js~client#endpoint",
+    "class/src/client.js~Client.html#instance-member-endpoint",
+    "src/client.js~Client#endpoint",
+    "member"
+  ],
+  [
+    "src/client.js~client#getcatalogitem",
+    "class/src/client.js~Client.html#instance-method-getCatalogItem",
+    "src/client.js~Client#getCatalogItem",
+    "method"
+  ],
+  [
+    "src/client.js~client#getitemimage",
+    "class/src/client.js~Client.html#instance-method-getItemImage",
+    "src/client.js~Client#getItemImage",
+    "method"
+  ],
+  [
+    "src/client.js~client#getitemsubset",
+    "class/src/client.js~Client.html#instance-method-getItemSubset",
+    "src/client.js~Client#getItemSubset",
+    "method"
+  ],
+  [
+    "src/client.js~client#getitemsuperset",
+    "class/src/client.js~Client.html#instance-method-getItemSuperset",
+    "src/client.js~Client#getItemSuperset",
+    "method"
+  ],
+  [
+    "src/client.js~client#getknowncolors",
+    "class/src/client.js~Client.html#instance-method-getKnownColors",
+    "src/client.js~Client#getKnownColors",
+    "method"
+  ],
+  [
+    "src/client.js~client#getpriceguide",
+    "class/src/client.js~Client.html#instance-method-getPriceGuide",
+    "src/client.js~Client#getPriceGuide",
+    "method"
+  ],
+  [
+    "src/client.js~client#send",
+    "class/src/client.js~Client.html#instance-method-send",
+    "src/client.js~Client#send",
+    "method"
+  ],
+  [
+    "src/client.js~client#token",
+    "class/src/client.js~Client.html#instance-member-token",
+    "src/client.js~Client#token",
+    "member"
+  ],
+  [
+    "src/client.js~client#token_secret",
+    "class/src/client.js~Client.html#instance-member-token_secret",
+    "src/client.js~Client#token_secret",
+    "member"
+  ],
+  [
+    "src/color/color.js",
+    "file/src/color/color.js.html",
+    "src/color/color.js",
     "file"
   ],
   [
-    "dist/condition.js",
-    "file/dist/condition.js.html",
-    "dist/condition.js",
+    "src/color/color.js~color#color_code",
+    "class/src/color/color.js~Color.html#instance-member-color_code",
+    "src/color/color.js~Color#color_code",
+    "member"
+  ],
+  [
+    "src/color/color.js~color#color_id",
+    "class/src/color/color.js~Color.html#instance-member-color_id",
+    "src/color/color.js~Color#color_id",
+    "member"
+  ],
+  [
+    "src/color/color.js~color#color_name",
+    "class/src/color/color.js~Color.html#instance-member-color_name",
+    "src/color/color.js~Color#color_name",
+    "member"
+  ],
+  [
+    "src/color/color.js~color#color_type",
+    "class/src/color/color.js~Color.html#instance-member-color_type",
+    "src/color/color.js~Color#color_type",
+    "member"
+  ],
+  [
+    "src/color/color.js~color#constructor",
+    "class/src/color/color.js~Color.html#instance-constructor-constructor",
+    "src/color/color.js~Color#constructor",
+    "method"
+  ],
+  [
+    "src/color/color.js~color.all",
+    "class/src/color/color.js~Color.html#static-method-all",
+    "src/color/color.js~Color.all",
+    "method"
+  ],
+  [
+    "src/color/color.js~color.get",
+    "class/src/color/color.js~Color.html#static-method-get",
+    "src/color/color.js~Color.get",
+    "method"
+  ],
+  [
+    "src/condition.js",
+    "file/src/condition.js.html",
+    "src/condition.js",
     "file"
   ],
   [
-    "dist/index.js",
-    "file/dist/index.js.html",
-    "dist/index.js",
+    "src/condition.js~condition.new",
+    "class/src/condition.js~Condition.html#static-get-New",
+    "src/condition.js~Condition.New",
+    "member"
+  ],
+  [
+    "src/condition.js~condition.used",
+    "class/src/condition.js~Condition.html#static-get-Used",
+    "src/condition.js~Condition.Used",
+    "member"
+  ],
+  [
+    "src/index.js",
+    "file/src/index.js.html",
+    "src/index.js",
     "file"
   ],
   [
-    "dist/itemtype.js",
-    "file/dist/itemType.js.html",
-    "dist/itemType.js",
+    "src/itemtype.js",
+    "file/src/itemType.js.html",
+    "src/itemType.js",
     "file"
   ],
   [
-    "dist/logger.js",
-    "file/dist/logger.js.html",
-    "dist/logger.js",
+    "src/itemtype.js~itemtype.book",
+    "class/src/itemType.js~ItemType.html#static-get-Book",
+    "src/itemType.js~ItemType.Book",
+    "member"
+  ],
+  [
+    "src/itemtype.js~itemtype.box",
+    "class/src/itemType.js~ItemType.html#static-get-Box",
+    "src/itemType.js~ItemType.Box",
+    "member"
+  ],
+  [
+    "src/itemtype.js~itemtype.catalog",
+    "class/src/itemType.js~ItemType.html#static-get-Catalog",
+    "src/itemType.js~ItemType.Catalog",
+    "member"
+  ],
+  [
+    "src/itemtype.js~itemtype.gear",
+    "class/src/itemType.js~ItemType.html#static-get-Gear",
+    "src/itemType.js~ItemType.Gear",
+    "member"
+  ],
+  [
+    "src/itemtype.js~itemtype.instruction",
+    "class/src/itemType.js~ItemType.html#static-get-Instruction",
+    "src/itemType.js~ItemType.Instruction",
+    "member"
+  ],
+  [
+    "src/itemtype.js~itemtype.minifigure",
+    "class/src/itemType.js~ItemType.html#static-get-Minifigure",
+    "src/itemType.js~ItemType.Minifigure",
+    "member"
+  ],
+  [
+    "src/itemtype.js~itemtype.part",
+    "class/src/itemType.js~ItemType.html#static-get-Part",
+    "src/itemType.js~ItemType.Part",
+    "member"
+  ],
+  [
+    "src/itemtype.js~itemtype.set",
+    "class/src/itemType.js~ItemType.html#static-get-Set",
+    "src/itemType.js~ItemType.Set",
+    "member"
+  ],
+  [
+    "src/itemtype.js~itemtype.unsortedlot",
+    "class/src/itemType.js~ItemType.html#static-get-UnsortedLot",
+    "src/itemType.js~ItemType.UnsortedLot",
+    "member"
+  ],
+  [
+    "src/logger.js",
+    "file/src/logger.js.html",
+    "src/logger.js",
     "file"
   ],
   [
-    "dist/oauthhelper.js",
-    "file/dist/oAuthHelper.js.html",
-    "dist/oAuthHelper.js",
+    "src/oauthhelper.js",
+    "file/src/oAuthHelper.js.html",
+    "src/oAuthHelper.js",
     "file"
   ],
   [
-    "dist/request.js",
-    "file/dist/request.js.html",
-    "dist/request.js",
+    "src/oauthhelper.js~oauthhelper#constructor",
+    "class/src/oAuthHelper.js~OAuthHelper.html#instance-constructor-constructor",
+    "src/oAuthHelper.js~OAuthHelper#constructor",
+    "method"
+  ],
+  [
+    "src/oauthhelper.js~oauthhelper#consumerkey",
+    "class/src/oAuthHelper.js~OAuthHelper.html#instance-member-consumerKey",
+    "src/oAuthHelper.js~OAuthHelper#consumerKey",
+    "member"
+  ],
+  [
+    "src/oauthhelper.js~oauthhelper#header",
+    "class/src/oAuthHelper.js~OAuthHelper.html#instance-get-header",
+    "src/oAuthHelper.js~OAuthHelper#header",
+    "member"
+  ],
+  [
+    "src/oauthhelper.js~oauthhelper#nonce",
+    "class/src/oAuthHelper.js~OAuthHelper.html#instance-member-nonce",
+    "src/oAuthHelper.js~OAuthHelper#nonce",
+    "member"
+  ],
+  [
+    "src/oauthhelper.js~oauthhelper#parameters",
+    "class/src/oAuthHelper.js~OAuthHelper.html#instance-get-parameters",
+    "src/oAuthHelper.js~OAuthHelper#parameters",
+    "member"
+  ],
+  [
+    "src/oauthhelper.js~oauthhelper#querystring",
+    "class/src/oAuthHelper.js~OAuthHelper.html#instance-get-queryString",
+    "src/oAuthHelper.js~OAuthHelper#queryString",
+    "member"
+  ],
+  [
+    "src/oauthhelper.js~oauthhelper#sign",
+    "class/src/oAuthHelper.js~OAuthHelper.html#instance-method-sign",
+    "src/oAuthHelper.js~OAuthHelper#sign",
+    "method"
+  ],
+  [
+    "src/oauthhelper.js~oauthhelper#signature",
+    "class/src/oAuthHelper.js~OAuthHelper.html#instance-member-signature",
+    "src/oAuthHelper.js~OAuthHelper#signature",
+    "member"
+  ],
+  [
+    "src/oauthhelper.js~oauthhelper#timestamp",
+    "class/src/oAuthHelper.js~OAuthHelper.html#instance-member-timestamp",
+    "src/oAuthHelper.js~OAuthHelper#timestamp",
+    "member"
+  ],
+  [
+    "src/oauthhelper.js~oauthhelper#token",
+    "class/src/oAuthHelper.js~OAuthHelper.html#instance-member-token",
+    "src/oAuthHelper.js~OAuthHelper#token",
+    "member"
+  ],
+  [
+    "src/request.js",
+    "file/src/request.js.html",
+    "src/request.js",
     "file"
+  ],
+  [
+    "src/request.js~request#callback",
+    "class/src/request.js~Request.html#instance-member-callback",
+    "src/request.js~Request#callback",
+    "member"
+  ],
+  [
+    "src/request.js~request#constructor",
+    "class/src/request.js~Request.html#instance-constructor-constructor",
+    "src/request.js~Request#constructor",
+    "method"
+  ],
+  [
+    "src/request.js~request#method",
+    "class/src/request.js~Request.html#instance-member-method",
+    "src/request.js~Request#method",
+    "member"
+  ],
+  [
+    "src/request.js~request#params",
+    "class/src/request.js~Request.html#instance-member-params",
+    "src/request.js~Request#params",
+    "member"
+  ],
+  [
+    "src/request.js~request#uri",
+    "class/src/request.js~Request.html#instance-member-uri",
+    "src/request.js~Request#uri",
+    "member"
+  ],
+  [
+    "src/request.js~request.delete",
+    "class/src/request.js~Request.html#static-get-DELETE",
+    "src/request.js~Request.DELETE",
+    "member"
+  ],
+  [
+    "src/request.js~request.get",
+    "class/src/request.js~Request.html#static-get-GET",
+    "src/request.js~Request.GET",
+    "member"
+  ],
+  [
+    "src/request.js~request.post",
+    "class/src/request.js~Request.html#static-get-POST",
+    "src/request.js~Request.POST",
+    "member"
+  ],
+  [
+    "src/request.js~request.put",
+    "class/src/request.js~Request.html#static-get-PUT",
+    "src/request.js~Request.PUT",
+    "member"
+  ],
+  [
+    "src/request.js~requestparams#toobject",
+    "class/src/request.js~RequestParams.html#instance-method-toObject",
+    "src/request.js~RequestParams#toObject",
+    "method"
+  ],
+  [
+    "src/request.js~requestparams#toquerystring",
+    "class/src/request.js~RequestParams.html#instance-method-toQueryString",
+    "src/request.js~RequestParams#toQueryString",
+    "method"
   ]
 ]

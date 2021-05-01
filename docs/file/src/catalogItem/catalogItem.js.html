@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/catalogItem/catalogItem.js | bricklink-api</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A node module for connecting to the Bricklink API."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bricklink-api"><meta property="twitter:description" content="A node module for connecting to the Bricklink API."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ryansh100/bricklink-api"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/client.js~Client.html">Client</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/condition.js~Condition.html">Condition</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/itemType.js~ItemType.html">ItemType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/oAuthHelper.js~OAuthHelper.html">OAuthHelper</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~RequestParams.html">RequestParams</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-logger">logger</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#catalogitem">catalogItem</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/catalogItem.js~CatalogItem.html">CatalogItem</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/itemImage.js~ItemImage.html">ItemImage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/knownColor.js~KnownColor.html">KnownColor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/priceGuide.js~PriceDetail.html">PriceDetail</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/priceGuide.js~PriceGuide.html">PriceGuide</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/priceGuide.js~PriceGuideOptions.html">PriceGuideOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/subsets.js~Subset.html">Subset</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/subsets.js~SubsetEntry.html">SubsetEntry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/subsets.js~SubsetOptions.html">SubsetOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/supersets.js~Superset.html">Superset</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/supersets.js~SupersetEntry.html">SupersetEntry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/supersets.js~SupersetOptions.html">SupersetOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#category">category</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/category/category.js~Category.html">Category</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#color">color</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/color/color.js~Color.html">Color</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/catalogItem/catalogItem.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { Request } from &apos;../request&apos;;
+
+/**
+ * Represents a Catalog Item.
+ */
+export class CatalogItem {
+  /**
+   * Create a new instance of a Catalog Item
+   * @param {object} [data] Data typically returned from an API response.
+   */
+  constructor(data) {
+    data = data || {};
+
+    /** @type {string} */
+    this.no = data.no || &apos;&apos;;
+    /** @type {string} */
+    this.name = data.name || &apos;&apos;;
+    /** @type {string} */
+    this.type = data.type || &apos;&apos;;
+    /** @type {number} */
+    this.category_id = data.category_id || data.categoryID || 0;
+    /** @type {string} */
+    this.alternate_no = data.alternate_no || &apos;&apos;;
+    /** @type {string} */
+    this.image_url = data.image_url || &apos;&apos;;
+    /** @type {string} */
+    this.thumbnail_url = data.thumbnail_url || &apos;&apos;;
+    /** @type {number} */
+    this.weight = data.weight || &apos;&apos;;
+    /** @type {string} */
+    this.dim_x = data.dim_x || &apos;&apos;;
+    /** @type {string} */
+    this.dim_y = data.dim_y || &apos;&apos;;
+    /** @type {string} */
+    this.dim_z = data.dim_z || &apos;&apos;;
+    /** @type {string} */
+    this.year_released = data.year_released || &apos;&apos;;
+    /** @type {string} */
+    this.description = data.description || &apos;&apos;;
+    /** @type {boolean} */
+    this.is_obsolete = data.is_obsolete || false;
+    /** @type {string} */
+    this.language_code = data.language_code || &apos;&apos;;
+  }
+
+  /**
+   * Method to get a known catalog item
+   *
+   * Usage:
+   *
+   * ```
+   * var req = CatalogItem.get(ItemType.Part, &apos;3001&apos;);
+   * client.send(req).then(item =&gt; console.log(item));
+   * ```
+   *
+   * @param {string} itemType Catalog item type i.e. - MINIFIG, PART, SET, BOOK, GEAR, CATALOG, INSTRUCTION, UNSORTED_LOT, ORIGINAL_BOX
+   * @param {string} itemNumber Catalog item number
+   * @return {Request} A request that is ready to execute with a client.
+   */
+  static get(itemType, itemNumber) {
+    let method = Request.GET;
+    let uri = `/items/${itemType}/${itemNumber}`;
+
+    return new Request(method, uri, null, (data) =&gt; {
+      let item = new CatalogItem(data);
+      return item;
+    });
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
