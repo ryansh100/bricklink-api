@@ -20,7 +20,6 @@ export class Client {
    * @param {string} [options.consumer_key] The `ConsumerKey` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
    * @param {string} [options.consumer_secret] The `ConsumerSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
    * @param {string} [options.endpoint='https://api.bricklink.com/api/store/v1/'] The url of the Bricklink API.
-   * @param {Agent} [options.agent=null] An Http(s) agent for proxy, etc.
    */
   constructor(options){
     options = options || {};
@@ -35,8 +34,6 @@ export class Client {
     this.consumer_secret = options.consumer_secret || '';
     /** @type {string} */
     this.endpoint = options.endpoint || 'https://api.bricklink.com/api/store/v1/';
-    /** @type {Agent} */
-    this.agent = options.agent || null;
   }
 
   /**
@@ -53,10 +50,6 @@ export class Client {
 
     let oauthHelper = new OAuthHelper(this.consumer_key, this.token);
     oauthHelper.sign(init.uri, req, this.consumer_secret, this.token_secret);
-
-    if(this.agent){
-      init['agent'] = this.agent;
-    }
 
     init.headers['authorization'] = oauthHelper.header;
 
