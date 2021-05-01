@@ -1,12 +1,12 @@
 import request from 'request';
-import {OAuthHelper} from './oAuthHelper';
-import {CatalogItem} from './catalogItem/catalogItem';
-import {PriceGuide} from './catalogItem/priceGuide';
-import {KnownColor} from './catalogItem/knownColor';
-import {ItemImage} from './catalogItem/itemImage';
-import {Subset} from './catalogItem/subsets';
-import {Superset} from './catalogItem/supersets';
-import {logger} from './logger';
+import { OAuthHelper } from './oAuthHelper';
+import { CatalogItem } from './catalogItem/catalogItem';
+import { PriceGuide } from './catalogItem/priceGuide';
+import { KnownColor } from './catalogItem/knownColor';
+import { ItemImage } from './catalogItem/itemImage';
+import { Subset } from './catalogItem/subsets';
+import { Superset } from './catalogItem/supersets';
+import { logger } from './logger';
 
 /**
  * Create a client to perform
@@ -21,7 +21,7 @@ export class Client {
    * @param {string} [options.consumer_secret] The `ConsumerSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
    * @param {string} [options.endpoint='https://api.bricklink.com/api/store/v1/'] The url of the Bricklink API.
    */
-  constructor(options){
+  constructor(options) {
     options = options || {};
 
     /** @type {string} */
@@ -33,7 +33,8 @@ export class Client {
     /** @type {string} */
     this.consumer_secret = options.consumer_secret || '';
     /** @type {string} */
-    this.endpoint = options.endpoint || 'https://api.bricklink.com/api/store/v1/';
+    this.endpoint =
+      options.endpoint || 'https://api.bricklink.com/api/store/v1/';
   }
 
   /**
@@ -43,29 +44,38 @@ export class Client {
    */
   send(req) {
     let init = {
-      uri: this.endpoint + req.uri.replace(/^\//,'') + req.params.toQueryString(),
+      uri:
+        this.endpoint + req.uri.replace(/^\//, '') + req.params.toQueryString(),
       method: req.method,
-      headers: {}
-    }
+      headers: {},
+    };
 
     let oauthHelper = new OAuthHelper(this.consumer_key, this.token);
     oauthHelper.sign(init.uri, req, this.consumer_secret, this.token_secret);
 
     init.headers['authorization'] = oauthHelper.header;
 
-    let promise = new Promise( (resolve, reject) => {
+    let promise = new Promise((resolve, reject) => {
       request(init, (er, _, body) => {
-        if(er){
+        if (er) {
           reject(er);
         }
         try {
           let response = JSON.parse(body);
-          if(response.meta.code >= 300) {
-            const error = new Error('Received an error from the BrickLink servers');
-            logger(JSON.stringify({ 
-              reqestURI: init.uri,
-              responseMetadata: response.meta
-            }, null, 2))
+          if (response.meta.code >= 300) {
+            const error = new Error(
+              'Received an error from the BrickLink servers',
+            );
+            logger(
+              JSON.stringify(
+                {
+                  reqestURI: init.uri,
+                  responseMetadata: response.meta,
+                },
+                null,
+                2,
+              ),
+            );
             throw error;
           }
           resolve(response.data);
@@ -76,7 +86,7 @@ export class Client {
       });
     });
 
-    if(req.callback){
+    if (req.callback) {
       return promise.then(req.callback);
     }
     return promise;

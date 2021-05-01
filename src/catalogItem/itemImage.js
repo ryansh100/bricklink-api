@@ -1,9 +1,9 @@
-import {Request} from '../request';
+import { Request } from '../request';
 
 /**
  * Represents an image for a specific color of a catalog item.
  */
-export class ItemImage{
+export class ItemImage {
   /**
    * Create an instance of Item Image
    * @param {object} data The API response data
