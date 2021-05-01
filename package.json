@@ -1,16 +1,11 @@
 {
   "name": "bricklink-api",
   "version": "1.2.3",
-  "scripts": {
-    "test": "nyc ava",
-    "test:ci": "nyc ava -c 1",
-    "build": "babel src -d dist",
-    "docs": "esdoc",
-    "prepublish": "npm run build && npm run docs",
-    "report": "nyc report --reporter=html"
-  },
   "description": "A node module for connecting to the Bricklink API.",
   "main": "./dist/index.js",
+  "files": [
+    "dist/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ryansh100/bricklink-api.git"
@@ -30,6 +25,15 @@
     "url": "https://github.com/ryansh100/bricklink-api/issues"
   },
   "homepage": "https://github.com/ryansh100/bricklink-api#readme",
+  "scripts": {
+    "test": "nyc ava",
+    "test:ci": "nyc ava -c 1",
+    "build": "babel src -d dist",
+    "docs": "esdoc",
+    "prepare": "husky install",
+    "prepublish": "npm run build",
+    "report": "nyc report --reporter=html"
+  },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
     "@babel/cli": "^7.13.16",
@@ -72,7 +76,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --staged && esdocs"
     }
   },
   "nyc": {
