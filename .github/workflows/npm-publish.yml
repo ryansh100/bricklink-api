@@ -17,6 +17,11 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run test:ci
+        env:
+          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+          TOKEN: ${{ secrets.TOKEN }}
+          TOKEN_SECRET: ${{ secrets.TOKEN_SECRET }}
 
   publish-npm:
     needs: build
