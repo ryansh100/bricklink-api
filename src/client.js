@@ -1,5 +1,4 @@
 import request from 'request';
-
 import {OAuthHelper} from './oAuthHelper';
 import {CatalogItem} from './catalogItem/catalogItem';
 import {PriceGuide} from './catalogItem/priceGuide';
@@ -7,6 +6,7 @@ import {KnownColor} from './catalogItem/knownColor';
 import {ItemImage} from './catalogItem/itemImage';
 import {Subset} from './catalogItem/subsets';
 import {Superset} from './catalogItem/supersets';
+import {logger} from './logger';
 
 /**
  * Create a client to perform
@@ -54,21 +54,30 @@ export class Client {
     init.headers['authorization'] = oauthHelper.header;
 
     let promise = new Promise( (resolve, reject) => {
-      request(init, (er, rep, body) => {
+      request(init, (er, _, body) => {
         if(er){
           reject(er);
         }
-        let data = JSON.parse(body);
-        if(data.meta.code >= 300) {
-          console.error(init.uri);
-          console.error(data.meta);
+        try {
+          let response = JSON.parse(body);
+          if(response.meta.code >= 300) {
+            const error = new Error('Received an error from the BrickLink servers');
+            logger(JSON.stringify({ 
+              reqestURI: init.uri,
+              responseMetadata: response.meta
+            }, null, 2))
+            throw error;
+          }
+          resolve(response.data);
+        } catch (error) {
+          logger(error.message);
+          reject(error);
         }
-        resolve(data.data);
       });
     });
 
     if(req.callback){
-      promise.then(req.callback);
+      return promise.then(req.callback);
     }
     return promise;
   }

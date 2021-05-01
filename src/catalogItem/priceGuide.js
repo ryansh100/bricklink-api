@@ -81,7 +81,7 @@ export class PriceGuide {
     let uri = `items/${itemType}/${itemNumber}/price`;
 
     return new Request(method, uri, params, (data) => {
-      return new CatalogItem(data);
+      return new PriceGuide(data);
     });
   }
 }
