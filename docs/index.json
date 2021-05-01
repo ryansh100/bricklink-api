@@ -1,0 +1,5517 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "dist/catalogItem/catalogItem.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.CatalogItem = void 0;\n\nvar _request = require(\"../request\");\n\n/**\r\n * Represents a Catalog Item.\r\n */\nclass CatalogItem {\n  /**\r\n   * Create a new instance of a Catalog Item\r\n   * @param {object} [data] Data typically returned from an API response.\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {string} */\n\n    this.no = data.no || '';\n    /** @type {string} */\n\n    this.name = data.name || '';\n    /** @type {string} */\n\n    this.type = data.type || '';\n    /** @type {number} */\n\n    this.category_id = data.category_id || data.categoryID || 0;\n    /** @type {string} */\n\n    this.alternate_no = data.alternate_no || '';\n    /** @type {string} */\n\n    this.image_url = data.image_url || '';\n    /** @type {string} */\n\n    this.thumbnail_url = data.thumbnail_url || '';\n    /** @type {number} */\n\n    this.weight = data.weight || '';\n    /** @type {string} */\n\n    this.dim_x = data.dim_x || '';\n    /** @type {string} */\n\n    this.dim_y = data.dim_y || '';\n    /** @type {string} */\n\n    this.dim_z = data.dim_z || '';\n    /** @type {string} */\n\n    this.year_released = data.year_released || '';\n    /** @type {string} */\n\n    this.description = data.description || '';\n    /** @type {boolean} */\n\n    this.is_obsolete = data.is_obsolete || false;\n    /** @type {string} */\n\n    this.language_code = data.language_code || '';\n  }\n  /**\r\n   * Method to get a known catalog item\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = CatalogItem.get(ItemType.Part, '3001');\r\n   * client.send(req).then(item => console.log(item));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type i.e. - MINIFIG, PART, SET, BOOK, GEAR, CATALOG, INSTRUCTION, UNSORTED_LOT, ORIGINAL_BOX\r\n   * @param {string} itemNumber Catalog item number\r\n   * @return {Request} A request that is ready to execute with a client.\r\n   */\n\n\n  static get(itemType, itemNumber) {\n    let method = _request.Request.GET;\n    let uri = `/items/${itemType}/${itemNumber}`;\n    return new _request.Request(method, uri, null, data => {\n      let item = new CatalogItem(data);\n      return item;\n    });\n  }\n\n}\n\nexports.CatalogItem = CatalogItem;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/catalogItem/catalogItem.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "variable",
+    "name": "_request",
+    "memberof": "dist/catalogItem/catalogItem.js",
+    "static": true,
+    "longname": "dist/catalogItem/catalogItem.js~_request",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/catalogItem.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "class",
+    "name": "CatalogItem",
+    "memberof": "dist/catalogItem/catalogItem.js",
+    "static": true,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/catalogItem.js",
+    "importStyle": null,
+    "description": "Represents a Catalog Item.",
+    "lineNumber": 13,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#constructor",
+    "access": "public",
+    "description": "Create a new instance of a Catalog Item",
+    "lineNumber": 18,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "Data typically returned from an API response."
+      }
+    ]
+  },
+  {
+    "__docId__": 52,
+    "kind": "member",
+    "name": "no",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#no",
+    "access": "public",
+    "description": null,
+    "lineNumber": 22,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "member",
+    "name": "name",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#name",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "member",
+    "name": "type",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#type",
+    "access": "public",
+    "description": null,
+    "lineNumber": 28,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "member",
+    "name": "category_id",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#category_id",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "member",
+    "name": "alternate_no",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#alternate_no",
+    "access": "public",
+    "description": null,
+    "lineNumber": 34,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "member",
+    "name": "image_url",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#image_url",
+    "access": "public",
+    "description": null,
+    "lineNumber": 37,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "member",
+    "name": "thumbnail_url",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#thumbnail_url",
+    "access": "public",
+    "description": null,
+    "lineNumber": 40,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "member",
+    "name": "weight",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#weight",
+    "access": "public",
+    "description": null,
+    "lineNumber": 43,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "member",
+    "name": "dim_x",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#dim_x",
+    "access": "public",
+    "description": null,
+    "lineNumber": 46,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "member",
+    "name": "dim_y",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#dim_y",
+    "access": "public",
+    "description": null,
+    "lineNumber": 49,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "member",
+    "name": "dim_z",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#dim_z",
+    "access": "public",
+    "description": null,
+    "lineNumber": 52,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "member",
+    "name": "year_released",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#year_released",
+    "access": "public",
+    "description": null,
+    "lineNumber": 55,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "member",
+    "name": "description",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#description",
+    "access": "public",
+    "description": null,
+    "lineNumber": 58,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "member",
+    "name": "is_obsolete",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#is_obsolete",
+    "access": "public",
+    "description": null,
+    "lineNumber": 61,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "member",
+    "name": "language_code",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "static": false,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem#language_code",
+    "access": "public",
+    "description": null,
+    "lineNumber": 64,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "get",
+    "memberof": "dist/catalogItem/catalogItem.js~CatalogItem",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/catalogItem/catalogItem.js~CatalogItem.get",
+    "access": "public",
+    "description": "Method to get a known catalog item\n\nUsage:\n\n```\nvar req = CatalogItem.get(ItemType.Part, '3001');\nclient.send(req).then(item => console.log(item));\n```",
+    "lineNumber": 82,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemType",
+        "description": "Catalog item type i.e. - MINIFIG, PART, SET, BOOK, GEAR, CATALOG, INSTRUCTION, UNSORTED_LOT, ORIGINAL_BOX"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemNumber",
+        "description": "Catalog item number"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Request"
+      ],
+      "spread": false,
+      "description": "A request that is ready to execute with a client."
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "file",
+    "name": "dist/catalogItem/itemImage.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.ItemImage = void 0;\n\nvar _request = require(\"../request\");\n\n/**\r\n * Represents an image for a specific color of a catalog item.\r\n */\nclass ItemImage {\n  /**\r\n   * Create an instance of Item Image\r\n   * @param {object} data The API response data\r\n   * @param {number} [data.color_id=0] Color Id of the image.\r\n   * @param {string} [data.thumbnail_url=''] The Url of the thumbnail image.\r\n   * @param {string} [data.type=''] The type of catalog item as correspondeing to {@link ItemType}.\r\n   * @param {string} [data.no=''] The catalog item's identification number.\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {number} */\n\n    this.color_id = data.color_id || 0;\n    /** @type {string} */\n\n    this.thumbnail_url = data.thumbnail_url || '';\n    /** @type {string} */\n\n    this.type = data.type || '';\n    /** @type {string} */\n\n    this.no = data.no || '';\n  }\n  /**\r\n   * Method to get an image of a catalog item.\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = ItemImage.get(ItemType.Part, '3001', 0);\r\n   * client.send(req).then(image => console.log(image));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {number} colorId Catalog item's color id.\r\n   */\n\n\n  static get(itemType, itemNumber, colorId) {\n    let method = _request.Request.GET;\n    let uri = `/items/${itemType}/${itemNumber}/images/${colorId}`;\n    return new _request.Request(method, uri, null, data => {\n      return new ItemImage(data);\n    });\n  }\n\n}\n\nexports.ItemImage = ItemImage;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/catalogItem/itemImage.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 69,
+    "kind": "variable",
+    "name": "_request",
+    "memberof": "dist/catalogItem/itemImage.js",
+    "static": true,
+    "longname": "dist/catalogItem/itemImage.js~_request",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/itemImage.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 70,
+    "kind": "class",
+    "name": "ItemImage",
+    "memberof": "dist/catalogItem/itemImage.js",
+    "static": true,
+    "longname": "dist/catalogItem/itemImage.js~ItemImage",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/itemImage.js",
+    "importStyle": null,
+    "description": "Represents an image for a specific color of a catalog item.",
+    "lineNumber": 13,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 71,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/catalogItem/itemImage.js~ItemImage",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/catalogItem/itemImage.js~ItemImage#constructor",
+    "access": "public",
+    "description": "Create an instance of Item Image",
+    "lineNumber": 22,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "The API response data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "0",
+        "defaultRaw": 0,
+        "name": "data.color_id",
+        "description": "Color Id of the image."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "''",
+        "defaultRaw": "''",
+        "name": "data.thumbnail_url",
+        "description": "The Url of the thumbnail image."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "''",
+        "defaultRaw": "''",
+        "name": "data.type",
+        "description": "The type of catalog item as correspondeing to {@link ItemType}."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "''",
+        "defaultRaw": "''",
+        "name": "data.no",
+        "description": "The catalog item's identification number."
+      }
+    ]
+  },
+  {
+    "__docId__": 72,
+    "kind": "member",
+    "name": "color_id",
+    "memberof": "dist/catalogItem/itemImage.js~ItemImage",
+    "static": false,
+    "longname": "dist/catalogItem/itemImage.js~ItemImage#color_id",
+    "access": "public",
+    "description": null,
+    "lineNumber": 26,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "member",
+    "name": "thumbnail_url",
+    "memberof": "dist/catalogItem/itemImage.js~ItemImage",
+    "static": false,
+    "longname": "dist/catalogItem/itemImage.js~ItemImage#thumbnail_url",
+    "access": "public",
+    "description": null,
+    "lineNumber": 29,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "member",
+    "name": "type",
+    "memberof": "dist/catalogItem/itemImage.js~ItemImage",
+    "static": false,
+    "longname": "dist/catalogItem/itemImage.js~ItemImage#type",
+    "access": "public",
+    "description": null,
+    "lineNumber": 32,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "member",
+    "name": "no",
+    "memberof": "dist/catalogItem/itemImage.js~ItemImage",
+    "static": false,
+    "longname": "dist/catalogItem/itemImage.js~ItemImage#no",
+    "access": "public",
+    "description": null,
+    "lineNumber": 35,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "method",
+    "name": "get",
+    "memberof": "dist/catalogItem/itemImage.js~ItemImage",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/catalogItem/itemImage.js~ItemImage.get",
+    "access": "public",
+    "description": "Method to get an image of a catalog item.\n\nUsage:\n\n```\nvar req = ItemImage.get(ItemType.Part, '3001', 0);\nclient.send(req).then(image => console.log(image));\n```",
+    "lineNumber": 53,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemType",
+        "description": "Catalog item type"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemNumber",
+        "description": "Catalog item number"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "colorId",
+        "description": "Catalog item's color id."
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "file",
+    "name": "dist/catalogItem/knownColor.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.KnownColor = void 0;\n\nvar _request = require(\"../request\");\n\n/**\r\n * Represents a known color object.\r\n */\nclass KnownColor {\n  /**\r\n   * Create a new instance of a known color\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.color_id=0] The color id.\r\n   * @param {number} [data.quantity=0] The quantity of items with this known color.\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {number} */\n\n    this.color_id = data.color_id || 0;\n    /** @type {number} */\n\n    this.quantity = data.quantity || 0;\n  }\n  /**\r\n   * Method to get a list of known color_id for a given catalog item.\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = KnownColor.get(ItemType.Part, '3001');\r\n   * client.send(req).then(colors => console.log(colors));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @return {Request} A request that resolves to a list of {@link KnownColor}.\r\n   */\n\n\n  static get(itemType, itemNumber) {\n    let method = _request.Request.GET;\n    let uri = `/items/${itemType}/${itemNumber}/colors`;\n    return new _request.Request(method, uri, null, data => {\n      return data.map(color => new KnownColor(color));\n    });\n  }\n\n}\n\nexports.KnownColor = KnownColor;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/catalogItem/knownColor.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 78,
+    "kind": "variable",
+    "name": "_request",
+    "memberof": "dist/catalogItem/knownColor.js",
+    "static": true,
+    "longname": "dist/catalogItem/knownColor.js~_request",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/knownColor.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 79,
+    "kind": "class",
+    "name": "KnownColor",
+    "memberof": "dist/catalogItem/knownColor.js",
+    "static": true,
+    "longname": "dist/catalogItem/knownColor.js~KnownColor",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/knownColor.js",
+    "importStyle": null,
+    "description": "Represents a known color object.",
+    "lineNumber": 13,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 80,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/catalogItem/knownColor.js~KnownColor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/catalogItem/knownColor.js~KnownColor#constructor",
+    "access": "public",
+    "description": "Create a new instance of a known color",
+    "lineNumber": 20,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "API response data."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "0",
+        "defaultRaw": 0,
+        "name": "data.color_id",
+        "description": "The color id."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "0",
+        "defaultRaw": 0,
+        "name": "data.quantity",
+        "description": "The quantity of items with this known color."
+      }
+    ]
+  },
+  {
+    "__docId__": 81,
+    "kind": "member",
+    "name": "color_id",
+    "memberof": "dist/catalogItem/knownColor.js~KnownColor",
+    "static": false,
+    "longname": "dist/catalogItem/knownColor.js~KnownColor#color_id",
+    "access": "public",
+    "description": null,
+    "lineNumber": 24,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "member",
+    "name": "quantity",
+    "memberof": "dist/catalogItem/knownColor.js~KnownColor",
+    "static": false,
+    "longname": "dist/catalogItem/knownColor.js~KnownColor#quantity",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "method",
+    "name": "get",
+    "memberof": "dist/catalogItem/knownColor.js~KnownColor",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/catalogItem/knownColor.js~KnownColor.get",
+    "access": "public",
+    "description": "Method to get a list of known color_id for a given catalog item.\n\nUsage:\n\n```\nvar req = KnownColor.get(ItemType.Part, '3001');\nclient.send(req).then(colors => console.log(colors));\n```",
+    "lineNumber": 45,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemType",
+        "description": "Catalog item type"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemNumber",
+        "description": "Catalog item number"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Request"
+      ],
+      "spread": false,
+      "description": "A request that resolves to a list of {@link KnownColor}."
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "file",
+    "name": "dist/catalogItem/priceGuide.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.PriceGuideOptions = exports.PriceGuide = exports.PriceDetail = void 0;\n\nvar _request = require(\"../request\");\n\nvar _catalogItem = require(\"./catalogItem\");\n\n/**\r\n * Specific sale price details for a givent item.\r\n */\nclass PriceDetail {\n  /**\r\n   * Create a Price Detail instance.\r\n   * @param {object} [data] Data returned from an API response.\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {number} */\n\n    this.quantity = data.quantity || 0;\n    /** @type {number} */\n\n    this.unit_price = data.unit_price || 0;\n    /** @type {string} */\n\n    this.shipping_available = data.shipping_available || '';\n    /** @type {string} */\n\n    this.shipping_available = data.shipping_available || '';\n    /** @type {string} */\n\n    this.seller_country_code = data.seller_country_code || '';\n    /** @type {string} */\n\n    this.buyer_country_code = data.buyer_country_code || '';\n    /** @type {Date|null} */\n\n    this.date_ordered = data.date_ordered ? new Date(datea.date_ordered) : null;\n  }\n\n}\n/**\r\n * Represents a Price Guide for a catalog item.\r\n */\n\n\nexports.PriceDetail = PriceDetail;\n\nclass PriceGuide {\n  /**\r\n   * Create a new instance of a price guide.\r\n   * @param {object} [data] Data returned from an API response.\r\n   */\n  constructor(data) {\n    /** @type {Item} item The item that belongs to the price guide. */\n    this.item = data.item ? new _catalogItem.CatalogItem(data.item) : new Item();\n    /** @type {string} new_or_used Whether or not the price guide is new or used condition. */\n\n    this.new_or_used = data.new_or_used || '';\n    /** @type {string} */\n\n    this.currency_code = data.currency_code || '';\n    /** @type {number} */\n\n    this.min_price = data.min_price || 0;\n    /** @type {number} */\n\n    this.max_price = data.max_price || 0;\n    /** @type {number} */\n\n    this.avg_price = data.avg_price || 0;\n    /** @type {number} */\n\n    this.qty_avg_price = data.qty_avg_price || 0;\n    /** @type {number} */\n\n    this.unit_quantity = data.unit_quantity || 0;\n    /** @type {number} */\n\n    this.total_quantity = data.total_quantity || 0;\n    /** @type {PriceDetail[]} */\n\n    this.price_detail = data.price_detail ? data.price_detail.map(detail => new PriceDetail(detail)) : [];\n  }\n  /**\r\n   * Method to get a known catalog item's price guide\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = PriceGuide.get(ItemType.Part, '3001', {new_or_used: Condition.Used});\r\n   * client.send(req).then(guide => console.log(guide));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type as found at {@link ItemType}.\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} [params] Params as outlined in {@link PriceGuideOptions}.\r\n   * @return {Request} A request that is ready to execute with a client.\r\n   */\n\n\n  static get(itemType, itemNumber, params) {\n    params = params ? new PriceGuideOptions(params) : new PriceGuideOptions();\n    let method = _request.Request.GET;\n    let uri = `items/${itemType}/${itemNumber}/price`;\n    return new _request.Request(method, uri, params, data => {\n      return new _catalogItem.CatalogItem(data);\n    });\n  }\n\n}\n/**\r\n * Price guide option request params.\r\n */\n\n\nexports.PriceGuide = PriceGuide;\n\nclass PriceGuideOptions extends _request.RequestParams {\n  /**\r\n   * Create an instance of Price Guide options.\r\n   * @param {object} data Optional parameter data.\r\n   * @param {number|null} [data.color_id=null] The color Identification numbe of the item\r\n   * @param {string} [data.guide_type='stock'] Indicates that which statistics to be provided. Options include \"sold\" and \"stock\"\r\n   * @param {string} [data.new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item\r\n   * @param {string|null} [data.country_code=null]\r\n   * @param {string|null} [data.region=null]\r\n   * @param {string|null} [data.currency_code=null]\r\n   * @param {string} [data.vat='N']\r\n   */\n  constructor(data) {\n    super(data);\n    data = data || {};\n    /** @type {number|null} [data.color_id=null] The color Identification numbe of the item */\n\n    this.color_id = data.color_id || null;\n    /** @type {string} [guide_type='stock'] Indicates that which statistics to be provided. Options include \"sold\" and \"stock\" */\n\n    this.guide_type = data.guide_type || 'stock';\n    /** @type {string} [new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item */\n\n    this.new_or_used = data.new_or_used || 'N';\n    /** @type {string|null} [country_code=null] */\n\n    this.country_code = data.country_code || null;\n    /** @type {string|null} [region=null] */\n\n    this.region = data.region || null;\n    /** @type {string|null} [currency_code=null] */\n\n    this.currency_code = data.currency_code || null;\n    /** @type {string} [vat='N'] */\n\n    this.vat = data.vat || 'N';\n  }\n\n}\n\nexports.PriceGuideOptions = PriceGuideOptions;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/catalogItem/priceGuide.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 85,
+    "kind": "variable",
+    "name": "_request",
+    "memberof": "dist/catalogItem/priceGuide.js",
+    "static": true,
+    "longname": "dist/catalogItem/priceGuide.js~_request",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/priceGuide.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 86,
+    "kind": "variable",
+    "name": "_catalogItem",
+    "memberof": "dist/catalogItem/priceGuide.js",
+    "static": true,
+    "longname": "dist/catalogItem/priceGuide.js~_catalogItem",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/priceGuide.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 87,
+    "kind": "class",
+    "name": "PriceDetail",
+    "memberof": "dist/catalogItem/priceGuide.js",
+    "static": true,
+    "longname": "dist/catalogItem/priceGuide.js~PriceDetail",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/priceGuide.js",
+    "importStyle": null,
+    "description": "Specific sale price details for a givent item.",
+    "lineNumber": 15,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 88,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceDetail",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceDetail#constructor",
+    "access": "public",
+    "description": "Create a Price Detail instance.",
+    "lineNumber": 20,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "Data returned from an API response."
+      }
+    ]
+  },
+  {
+    "__docId__": 89,
+    "kind": "member",
+    "name": "quantity",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceDetail",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceDetail#quantity",
+    "access": "public",
+    "description": null,
+    "lineNumber": 24,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 90,
+    "kind": "member",
+    "name": "unit_price",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceDetail",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceDetail#unit_price",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 91,
+    "kind": "member",
+    "name": "shipping_available",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceDetail",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceDetail#shipping_available",
+    "access": "public",
+    "description": null,
+    "lineNumber": 30,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 93,
+    "kind": "member",
+    "name": "seller_country_code",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceDetail",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceDetail#seller_country_code",
+    "access": "public",
+    "description": null,
+    "lineNumber": 36,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 94,
+    "kind": "member",
+    "name": "buyer_country_code",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceDetail",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceDetail#buyer_country_code",
+    "access": "public",
+    "description": null,
+    "lineNumber": 39,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 95,
+    "kind": "member",
+    "name": "date_ordered",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceDetail",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceDetail#date_ordered",
+    "access": "public",
+    "description": null,
+    "lineNumber": 42,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Date",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 96,
+    "kind": "class",
+    "name": "PriceGuide",
+    "memberof": "dist/catalogItem/priceGuide.js",
+    "static": true,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/priceGuide.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 53,
+    "undocument": true,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 97,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide#constructor",
+    "access": "public",
+    "description": "Create a new instance of a price guide.",
+    "lineNumber": 58,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "Data returned from an API response."
+      }
+    ]
+  },
+  {
+    "__docId__": 98,
+    "kind": "member",
+    "name": "item",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide#item",
+    "access": "public",
+    "description": null,
+    "lineNumber": 60,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Item"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "member",
+    "name": "new_or_used",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide#new_or_used",
+    "access": "public",
+    "description": null,
+    "lineNumber": 63,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 100,
+    "kind": "member",
+    "name": "currency_code",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide#currency_code",
+    "access": "public",
+    "description": null,
+    "lineNumber": 66,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 101,
+    "kind": "member",
+    "name": "min_price",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide#min_price",
+    "access": "public",
+    "description": null,
+    "lineNumber": 69,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 102,
+    "kind": "member",
+    "name": "max_price",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide#max_price",
+    "access": "public",
+    "description": null,
+    "lineNumber": 72,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "member",
+    "name": "avg_price",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide#avg_price",
+    "access": "public",
+    "description": null,
+    "lineNumber": 75,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 104,
+    "kind": "member",
+    "name": "qty_avg_price",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide#qty_avg_price",
+    "access": "public",
+    "description": null,
+    "lineNumber": 78,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 105,
+    "kind": "member",
+    "name": "unit_quantity",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide#unit_quantity",
+    "access": "public",
+    "description": null,
+    "lineNumber": 81,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 106,
+    "kind": "member",
+    "name": "total_quantity",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide#total_quantity",
+    "access": "public",
+    "description": null,
+    "lineNumber": 84,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 107,
+    "kind": "member",
+    "name": "price_detail",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide#price_detail",
+    "access": "public",
+    "description": null,
+    "lineNumber": 87,
+    "type": {
+      "nullable": null,
+      "types": [
+        "PriceDetail[]"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 108,
+    "kind": "method",
+    "name": "get",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuide",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuide.get",
+    "access": "public",
+    "description": "Method to get a known catalog item's price guide\n\nUsage:\n\n```\nvar req = PriceGuide.get(ItemType.Part, '3001', {new_or_used: Condition.Used});\nclient.send(req).then(guide => console.log(guide));\n```",
+    "lineNumber": 106,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemType",
+        "description": "Catalog item type as found at {@link ItemType}."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemNumber",
+        "description": "Catalog item number"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "params",
+        "description": "Params as outlined in {@link PriceGuideOptions}."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Request"
+      ],
+      "spread": false,
+      "description": "A request that is ready to execute with a client."
+    }
+  },
+  {
+    "__docId__": 109,
+    "kind": "class",
+    "name": "PriceGuideOptions",
+    "memberof": "dist/catalogItem/priceGuide.js",
+    "static": true,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuideOptions",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/priceGuide.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 123,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "_request~_request.RequestParams"
+    ],
+    "ignore": true
+  },
+  {
+    "__docId__": 110,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuideOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuideOptions#constructor",
+    "access": "public",
+    "description": "Create an instance of Price Guide options.",
+    "lineNumber": 135,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "Optional parameter data."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number",
+          "null"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "data.color_id",
+        "description": "The color Identification numbe of the item"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'stock'",
+        "defaultRaw": "'stock'",
+        "name": "data.guide_type",
+        "description": "Indicates that which statistics to be provided. Options include \"sold\" and \"stock\""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'N'",
+        "defaultRaw": "'N'",
+        "name": "data.new_or_used",
+        "description": "Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string",
+          "null"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "data.country_code",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string",
+          "null"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "data.region",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string",
+          "null"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "data.currency_code",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'N'",
+        "defaultRaw": "'N'",
+        "name": "data.vat",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 111,
+    "kind": "member",
+    "name": "color_id",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuideOptions",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuideOptions#color_id",
+    "access": "public",
+    "description": null,
+    "lineNumber": 140,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 112,
+    "kind": "member",
+    "name": "guide_type",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuideOptions",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuideOptions#guide_type",
+    "access": "public",
+    "description": null,
+    "lineNumber": 143,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 113,
+    "kind": "member",
+    "name": "new_or_used",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuideOptions",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuideOptions#new_or_used",
+    "access": "public",
+    "description": null,
+    "lineNumber": 146,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 114,
+    "kind": "member",
+    "name": "country_code",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuideOptions",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuideOptions#country_code",
+    "access": "public",
+    "description": null,
+    "lineNumber": 149,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 115,
+    "kind": "member",
+    "name": "region",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuideOptions",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuideOptions#region",
+    "access": "public",
+    "description": null,
+    "lineNumber": 152,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 116,
+    "kind": "member",
+    "name": "currency_code",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuideOptions",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuideOptions#currency_code",
+    "access": "public",
+    "description": null,
+    "lineNumber": 155,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 117,
+    "kind": "member",
+    "name": "vat",
+    "memberof": "dist/catalogItem/priceGuide.js~PriceGuideOptions",
+    "static": false,
+    "longname": "dist/catalogItem/priceGuide.js~PriceGuideOptions#vat",
+    "access": "public",
+    "description": null,
+    "lineNumber": 158,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 118,
+    "kind": "file",
+    "name": "dist/catalogItem/subsets.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.SubsetOptions = exports.Subset = exports.SubsetEntry = void 0;\n\nvar _request = require(\"../request\");\n\nvar _catalogItem = require(\"./catalogItem\");\n\n/**\r\n * Represents a subset entry.\r\n */\nclass SubsetEntry {\n  /**\r\n   * Create an instance of a subset entry\r\n   * @param {object} [data] The API response data\r\n   * @param {object} [data.item] Item information\r\n   * @param {number} [data.color_id] The color id of the entry item.\r\n   * @param {number} [data.quantity] The number of items in the subset entry.\r\n   * @param {number} [data.extra_quantity] The number of extra items included in the subset.\r\n   * @param {boolean} [data.is_alternate] Indicator that the item is an alternate.\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {CatalogItem} */\n\n    this.item = data.item ? new _catalogItem.CatalogItem(data.item) : new _catalogItem.CatalogItem();\n    /** @type {number} */\n\n    this.color_id = data.color_id || 0;\n    /** @type {number} */\n\n    this.quantity = data.quantity || 0;\n    /** @type {number} */\n\n    this.extra_quantity = data.extra_quantity || 0;\n    /** @type {boolean} */\n\n    this.is_alternate = data.is_alternate || false;\n  }\n\n}\n/**\r\n * Represents a subset item. A subset item can have more than one matching entry due to alternate parts.\r\n */\n\n\nexports.SubsetEntry = SubsetEntry;\n\nclass Subset {\n  /**\r\n   * Create an instance of a subset item.\r\n   * @param {object} [data] The response data from API request.\r\n   * @param {number} [data.match_no] The number of matching entries or 0 if there is no matching of alternative item.\r\n   * @param {object} [data.entries] The specific entries for the subset item.\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {number} */\n\n    this.match_no = data.match_no || 0;\n    let entries = data.entries || [];\n    /** @type {SubsetEntry[]} */\n\n    this.entries = entries.map(e => new SubsetEntry(e));\n  }\n  /**\r\n   * Method to get a subset of a catalog item.\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Subset.get(ItemType.Set, '6020-1', {break_minifigs: true});\r\n   * client.send(req).then(subset => console.log(subset));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} options Options that conform to {@link SubsetOptions}.\r\n   */\n\n\n  static get(itemType, itemNumber, options) {\n    let method = _request.Request.GET;\n    options = options ? new SubsetOptions(options) : new SubsetOptions();\n    let uri = `/items/${itemType}/${itemNumber}/subsets`;\n    return new _request.Request(method, uri, options, data => {\n      return data.map(e => new Subset(e));\n    });\n  }\n\n}\n/**\r\n * Options that can be used when make a request for a subset.\r\n */\n\n\nexports.Subset = Subset;\n\nclass SubsetOptions extends _request.RequestParams {\n  /**\r\n   * Make an instance of SubsetOptions.\r\n   * @param {object} [data] Raw options object.\r\n   * @param {number} [data.color_id] The color of the item(This value is valid only for {@link ItemType}.Part.\r\n   * @param {boolean} [data.box] Indicates whether the set includes the original box\r\n   * @param {boolean} [data.instruction] Indicates whether the set includes the original instruction\r\n   * @param {boolean} [data.break_minifigs]\tIndicates whether the result breaks down minifigs as parts\r\n   * @param {boolean} [data.break_subsets] Indicates whether the result breaks down sets in set\r\n   */\n  constructor(data) {\n    super(data);\n    data = data || {};\n    /** @type {number|null} */\n\n    this.color_id = data.color_id || null;\n    /** @type {boolean|null} */\n\n    this.box = data.box || null;\n    /** @type {boolean|null} */\n\n    this.instruction = data.instruction || null;\n    /** @type {boolean|null} */\n\n    this.break_minifigs = data.break_minifigs || null;\n    /** @type {boolean|null} */\n\n    this.break_subsets = data.break_subsets || null;\n  }\n\n}\n\nexports.SubsetOptions = SubsetOptions;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/catalogItem/subsets.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 119,
+    "kind": "variable",
+    "name": "_request",
+    "memberof": "dist/catalogItem/subsets.js",
+    "static": true,
+    "longname": "dist/catalogItem/subsets.js~_request",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/subsets.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 120,
+    "kind": "variable",
+    "name": "_catalogItem",
+    "memberof": "dist/catalogItem/subsets.js",
+    "static": true,
+    "longname": "dist/catalogItem/subsets.js~_catalogItem",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/subsets.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 121,
+    "kind": "class",
+    "name": "SubsetEntry",
+    "memberof": "dist/catalogItem/subsets.js",
+    "static": true,
+    "longname": "dist/catalogItem/subsets.js~SubsetEntry",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/subsets.js",
+    "importStyle": null,
+    "description": "Represents a subset entry.",
+    "lineNumber": 15,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 122,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/catalogItem/subsets.js~SubsetEntry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~SubsetEntry#constructor",
+    "access": "public",
+    "description": "Create an instance of a subset entry",
+    "lineNumber": 25,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "The API response data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.item",
+        "description": "Item information"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.color_id",
+        "description": "The color id of the entry item."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.quantity",
+        "description": "The number of items in the subset entry."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.extra_quantity",
+        "description": "The number of extra items included in the subset."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.is_alternate",
+        "description": "Indicator that the item is an alternate."
+      }
+    ]
+  },
+  {
+    "__docId__": 123,
+    "kind": "member",
+    "name": "item",
+    "memberof": "dist/catalogItem/subsets.js~SubsetEntry",
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~SubsetEntry#item",
+    "access": "public",
+    "description": null,
+    "lineNumber": 29,
+    "type": {
+      "nullable": null,
+      "types": [
+        "CatalogItem"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 124,
+    "kind": "member",
+    "name": "color_id",
+    "memberof": "dist/catalogItem/subsets.js~SubsetEntry",
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~SubsetEntry#color_id",
+    "access": "public",
+    "description": null,
+    "lineNumber": 32,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 125,
+    "kind": "member",
+    "name": "quantity",
+    "memberof": "dist/catalogItem/subsets.js~SubsetEntry",
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~SubsetEntry#quantity",
+    "access": "public",
+    "description": null,
+    "lineNumber": 35,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 126,
+    "kind": "member",
+    "name": "extra_quantity",
+    "memberof": "dist/catalogItem/subsets.js~SubsetEntry",
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~SubsetEntry#extra_quantity",
+    "access": "public",
+    "description": null,
+    "lineNumber": 38,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "member",
+    "name": "is_alternate",
+    "memberof": "dist/catalogItem/subsets.js~SubsetEntry",
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~SubsetEntry#is_alternate",
+    "access": "public",
+    "description": null,
+    "lineNumber": 41,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 128,
+    "kind": "class",
+    "name": "Subset",
+    "memberof": "dist/catalogItem/subsets.js",
+    "static": true,
+    "longname": "dist/catalogItem/subsets.js~Subset",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/subsets.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 52,
+    "undocument": true,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 129,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/catalogItem/subsets.js~Subset",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~Subset#constructor",
+    "access": "public",
+    "description": "Create an instance of a subset item.",
+    "lineNumber": 59,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "The response data from API request."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.match_no",
+        "description": "The number of matching entries or 0 if there is no matching of alternative item."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.entries",
+        "description": "The specific entries for the subset item."
+      }
+    ]
+  },
+  {
+    "__docId__": 130,
+    "kind": "member",
+    "name": "match_no",
+    "memberof": "dist/catalogItem/subsets.js~Subset",
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~Subset#match_no",
+    "access": "public",
+    "description": null,
+    "lineNumber": 63,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 131,
+    "kind": "member",
+    "name": "entries",
+    "memberof": "dist/catalogItem/subsets.js~Subset",
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~Subset#entries",
+    "access": "public",
+    "description": null,
+    "lineNumber": 67,
+    "type": {
+      "nullable": null,
+      "types": [
+        "SubsetEntry[]"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 132,
+    "kind": "method",
+    "name": "get",
+    "memberof": "dist/catalogItem/subsets.js~Subset",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/catalogItem/subsets.js~Subset.get",
+    "access": "public",
+    "description": "Method to get a subset of a catalog item.\n\nUsage:\n\n```\nvar req = Subset.get(ItemType.Set, '6020-1', {break_minifigs: true});\nclient.send(req).then(subset => console.log(subset));\n```",
+    "lineNumber": 85,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemType",
+        "description": "Catalog item type"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemNumber",
+        "description": "Catalog item number"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": "Options that conform to {@link SubsetOptions}."
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 133,
+    "kind": "class",
+    "name": "SubsetOptions",
+    "memberof": "dist/catalogItem/subsets.js",
+    "static": true,
+    "longname": "dist/catalogItem/subsets.js~SubsetOptions",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/subsets.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 102,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "_request~_request.RequestParams"
+    ],
+    "ignore": true
+  },
+  {
+    "__docId__": 134,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/catalogItem/subsets.js~SubsetOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~SubsetOptions#constructor",
+    "access": "public",
+    "description": "Make an instance of SubsetOptions.",
+    "lineNumber": 112,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "Raw options object."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.color_id",
+        "description": "The color of the item(This value is valid only for {@link ItemType}.Part."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.box",
+        "description": "Indicates whether the set includes the original box"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.instruction",
+        "description": "Indicates whether the set includes the original instruction"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.break_minifigs",
+        "description": "Indicates whether the result breaks down minifigs as parts"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.break_subsets",
+        "description": "Indicates whether the result breaks down sets in set"
+      }
+    ]
+  },
+  {
+    "__docId__": 135,
+    "kind": "member",
+    "name": "color_id",
+    "memberof": "dist/catalogItem/subsets.js~SubsetOptions",
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~SubsetOptions#color_id",
+    "access": "public",
+    "description": null,
+    "lineNumber": 117,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 136,
+    "kind": "member",
+    "name": "box",
+    "memberof": "dist/catalogItem/subsets.js~SubsetOptions",
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~SubsetOptions#box",
+    "access": "public",
+    "description": null,
+    "lineNumber": 120,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 137,
+    "kind": "member",
+    "name": "instruction",
+    "memberof": "dist/catalogItem/subsets.js~SubsetOptions",
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~SubsetOptions#instruction",
+    "access": "public",
+    "description": null,
+    "lineNumber": 123,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 138,
+    "kind": "member",
+    "name": "break_minifigs",
+    "memberof": "dist/catalogItem/subsets.js~SubsetOptions",
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~SubsetOptions#break_minifigs",
+    "access": "public",
+    "description": null,
+    "lineNumber": 126,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 139,
+    "kind": "member",
+    "name": "break_subsets",
+    "memberof": "dist/catalogItem/subsets.js~SubsetOptions",
+    "static": false,
+    "longname": "dist/catalogItem/subsets.js~SubsetOptions#break_subsets",
+    "access": "public",
+    "description": null,
+    "lineNumber": 129,
+    "type": {
+      "nullable": null,
+      "types": [
+        "boolean",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 140,
+    "kind": "file",
+    "name": "dist/catalogItem/supersets.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.SupersetOptions = exports.Superset = exports.SupersetEntry = void 0;\n\nvar _request = require(\"../request\");\n\nvar _catalogItem = require(\"./catalogItem\");\n\n/**\r\n * Represents entries of a superset item.\r\n */\nclass SupersetEntry {\n  /**\r\n   * Create an instance of a subset entry\r\n   * @param {object} [data] The API response data\r\n   * @param {object} [data.item] Item information\r\n   * @param {number} [data.quantity] The number of items in the subset entry.\r\n   * @param {string} [data.appear_as] How the entry appears in the superset item.\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {CatalogItem} */\n\n    this.item = data.item ? new _catalogItem.CatalogItem(data.item) : new _catalogItem.CatalogItem();\n    /** @type {number} */\n\n    this.quantity = data.quantity || 0;\n    /** @type {string} */\n\n    this.appear_as = data.appear_as || '';\n  }\n\n}\n/**\r\n * Represents a super set entry.\r\n */\n\n\nexports.SupersetEntry = SupersetEntry;\n\nclass Superset {\n  /**\r\n   * Create an instance of a super set item.\r\n   * @param {object} [data] The API response data\r\n   * @param {object[]} [data.entries] Entries for a superset item.\r\n   * @param {number} [data.color_id] The color id of the superset item.\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {number} */\n\n    this.color_id = data.color_id || 0;\n    let entries = data.entries || [];\n    /** @type {SupersetEntry[]} */\n\n    this.entries = entries.map(e => new SupersetEntry(e));\n  }\n  /**\r\n   * Method to get a superset of a catalog item\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Superset.get(ItemType.Part, '4593');\r\n   * client.send(req).then(superset => console.log(superset));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} options Options that conform to {@link SupersetOptions}.\r\n   * @return {Request} A request that will return an array of {@link Superset} items.\r\n   */\n\n\n  static get(itemType, itemNumber, options) {\n    options = options ? new SupersetOptions(options) : new SupersetOptions();\n    let method = _request.Request.GET;\n    let uri = `/items/${itemType}/${itemNumber}/supersets`;\n    return new _request.Request(method, uri, options, data => {\n      return data.map(set => new Superset(set));\n    });\n  }\n\n}\n/**\r\n * Options that can be used when make a request for a subset.\r\n */\n\n\nexports.Superset = Superset;\n\nclass SupersetOptions extends _request.RequestParams {\n  /**\r\n   * Make an instance of SubsetOptions.\r\n   * @param {object} [data] Raw options object.\r\n   * @param {number} [data.color_id] The color of the item.\r\n   */\n  constructor(data) {\n    super(data);\n    data = data || {};\n    /** @type {number|null} */\n\n    this.color_id = data.color_id || null;\n  }\n\n}\n\nexports.SupersetOptions = SupersetOptions;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/catalogItem/supersets.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 141,
+    "kind": "variable",
+    "name": "_request",
+    "memberof": "dist/catalogItem/supersets.js",
+    "static": true,
+    "longname": "dist/catalogItem/supersets.js~_request",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/supersets.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 142,
+    "kind": "variable",
+    "name": "_catalogItem",
+    "memberof": "dist/catalogItem/supersets.js",
+    "static": true,
+    "longname": "dist/catalogItem/supersets.js~_catalogItem",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/supersets.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 143,
+    "kind": "class",
+    "name": "SupersetEntry",
+    "memberof": "dist/catalogItem/supersets.js",
+    "static": true,
+    "longname": "dist/catalogItem/supersets.js~SupersetEntry",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/supersets.js",
+    "importStyle": null,
+    "description": "Represents entries of a superset item.",
+    "lineNumber": 15,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 144,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/catalogItem/supersets.js~SupersetEntry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/catalogItem/supersets.js~SupersetEntry#constructor",
+    "access": "public",
+    "description": "Create an instance of a subset entry",
+    "lineNumber": 23,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "The API response data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.item",
+        "description": "Item information"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.quantity",
+        "description": "The number of items in the subset entry."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.appear_as",
+        "description": "How the entry appears in the superset item."
+      }
+    ]
+  },
+  {
+    "__docId__": 145,
+    "kind": "member",
+    "name": "item",
+    "memberof": "dist/catalogItem/supersets.js~SupersetEntry",
+    "static": false,
+    "longname": "dist/catalogItem/supersets.js~SupersetEntry#item",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "type": {
+      "nullable": null,
+      "types": [
+        "CatalogItem"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 146,
+    "kind": "member",
+    "name": "quantity",
+    "memberof": "dist/catalogItem/supersets.js~SupersetEntry",
+    "static": false,
+    "longname": "dist/catalogItem/supersets.js~SupersetEntry#quantity",
+    "access": "public",
+    "description": null,
+    "lineNumber": 30,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 147,
+    "kind": "member",
+    "name": "appear_as",
+    "memberof": "dist/catalogItem/supersets.js~SupersetEntry",
+    "static": false,
+    "longname": "dist/catalogItem/supersets.js~SupersetEntry#appear_as",
+    "access": "public",
+    "description": null,
+    "lineNumber": 33,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 148,
+    "kind": "class",
+    "name": "Superset",
+    "memberof": "dist/catalogItem/supersets.js",
+    "static": true,
+    "longname": "dist/catalogItem/supersets.js~Superset",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/supersets.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 44,
+    "undocument": true,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 149,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/catalogItem/supersets.js~Superset",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/catalogItem/supersets.js~Superset#constructor",
+    "access": "public",
+    "description": "Create an instance of a super set item.",
+    "lineNumber": 51,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "The API response data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object[]"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.entries",
+        "description": "Entries for a superset item."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.color_id",
+        "description": "The color id of the superset item."
+      }
+    ]
+  },
+  {
+    "__docId__": 150,
+    "kind": "member",
+    "name": "color_id",
+    "memberof": "dist/catalogItem/supersets.js~Superset",
+    "static": false,
+    "longname": "dist/catalogItem/supersets.js~Superset#color_id",
+    "access": "public",
+    "description": null,
+    "lineNumber": 55,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 151,
+    "kind": "member",
+    "name": "entries",
+    "memberof": "dist/catalogItem/supersets.js~Superset",
+    "static": false,
+    "longname": "dist/catalogItem/supersets.js~Superset#entries",
+    "access": "public",
+    "description": null,
+    "lineNumber": 59,
+    "type": {
+      "nullable": null,
+      "types": [
+        "SupersetEntry[]"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 152,
+    "kind": "method",
+    "name": "get",
+    "memberof": "dist/catalogItem/supersets.js~Superset",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/catalogItem/supersets.js~Superset.get",
+    "access": "public",
+    "description": "Method to get a superset of a catalog item\n\nUsage:\n\n```\nvar req = Superset.get(ItemType.Part, '4593');\nclient.send(req).then(superset => console.log(superset));\n```",
+    "lineNumber": 78,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemType",
+        "description": "Catalog item type"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemNumber",
+        "description": "Catalog item number"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": "Options that conform to {@link SupersetOptions}."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Request"
+      ],
+      "spread": false,
+      "description": "A request that will return an array of {@link Superset} items."
+    }
+  },
+  {
+    "__docId__": 153,
+    "kind": "class",
+    "name": "SupersetOptions",
+    "memberof": "dist/catalogItem/supersets.js",
+    "static": true,
+    "longname": "dist/catalogItem/supersets.js~SupersetOptions",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/catalogItem/supersets.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 95,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "_request~_request.RequestParams"
+    ],
+    "ignore": true
+  },
+  {
+    "__docId__": 154,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/catalogItem/supersets.js~SupersetOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/catalogItem/supersets.js~SupersetOptions#constructor",
+    "access": "public",
+    "description": "Make an instance of SubsetOptions.",
+    "lineNumber": 101,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "Raw options object."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.color_id",
+        "description": "The color of the item."
+      }
+    ]
+  },
+  {
+    "__docId__": 155,
+    "kind": "member",
+    "name": "color_id",
+    "memberof": "dist/catalogItem/supersets.js~SupersetOptions",
+    "static": false,
+    "longname": "dist/catalogItem/supersets.js~SupersetOptions#color_id",
+    "access": "public",
+    "description": null,
+    "lineNumber": 106,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 156,
+    "kind": "file",
+    "name": "dist/category/category.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.Category = void 0;\n\nvar _request = require(\"../request\");\n\n/**\r\n * Represents a Category\r\n */\nclass Category {\n  /**\r\n   * Create a new instance of a category\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.category_id=0] The category id. i.e. - 10\r\n   * @param {string} [data.category_name] The category name. i.e. - Container\r\n   * @param {number} [data.parent_id] The parent category id or 0 if root category. i.e. - 0\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {number} */\n\n    this.category_id = data.category_id || 0;\n    /** @type {string} */\n\n    this.category_name = data.category_name || '';\n    /** @type {number} */\n\n    this.parent_id = data.parent_id || '';\n  }\n  /**\r\n   * Method to get a specific category\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Category.get(123);\r\n   * client.send(req).then(category => console.log(category));\r\n   * ```\r\n   *\r\n   * @param {number} categoryId Catalog item type\r\n   * @return {Request} A request that resolves to a {@link Category} instance.\r\n   */\n\n\n  static get(categoryId) {\n    let method = _request.Request.GET;\n    let uri = `/categories/${categoryId}`;\n    return new _request.Request(method, uri, null, data => new Category(data));\n  }\n  /**\r\n   * Get a list of all colors\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Category.all();\r\n   * client.send(req).then(categories => console.log(categories));\r\n   * ```\r\n   *\r\n   * @return {Request} A request that resolves to an array of {@link Category}.\r\n   */\n\n\n  static all() {\n    let method = _request.Request.GET;\n    let uri = `/categories`;\n    return new _request.Request(method, uri, null, data => data.map(d => new Category(d)));\n  }\n\n}\n\nexports.Category = Category;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/category/category.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 157,
+    "kind": "variable",
+    "name": "_request",
+    "memberof": "dist/category/category.js",
+    "static": true,
+    "longname": "dist/category/category.js~_request",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/category/category.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 158,
+    "kind": "class",
+    "name": "Category",
+    "memberof": "dist/category/category.js",
+    "static": true,
+    "longname": "dist/category/category.js~Category",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/category/category.js",
+    "importStyle": null,
+    "description": "Represents a Category",
+    "lineNumber": 13,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 159,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/category/category.js~Category",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/category/category.js~Category#constructor",
+    "access": "public",
+    "description": "Create a new instance of a category",
+    "lineNumber": 21,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "API response data."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "0",
+        "defaultRaw": 0,
+        "name": "data.category_id",
+        "description": "The category id. i.e. - 10"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.category_name",
+        "description": "The category name. i.e. - Container"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.parent_id",
+        "description": "The parent category id or 0 if root category. i.e. - 0"
+      }
+    ]
+  },
+  {
+    "__docId__": 160,
+    "kind": "member",
+    "name": "category_id",
+    "memberof": "dist/category/category.js~Category",
+    "static": false,
+    "longname": "dist/category/category.js~Category#category_id",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 161,
+    "kind": "member",
+    "name": "category_name",
+    "memberof": "dist/category/category.js~Category",
+    "static": false,
+    "longname": "dist/category/category.js~Category#category_name",
+    "access": "public",
+    "description": null,
+    "lineNumber": 28,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 162,
+    "kind": "member",
+    "name": "parent_id",
+    "memberof": "dist/category/category.js~Category",
+    "static": false,
+    "longname": "dist/category/category.js~Category#parent_id",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 163,
+    "kind": "method",
+    "name": "get",
+    "memberof": "dist/category/category.js~Category",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/category/category.js~Category.get",
+    "access": "public",
+    "description": "Method to get a specific category\n\nUsage:\n\n```\nvar req = Category.get(123);\nclient.send(req).then(category => console.log(category));\n```",
+    "lineNumber": 48,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "categoryId",
+        "description": "Catalog item type"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Request"
+      ],
+      "spread": false,
+      "description": "A request that resolves to a {@link Category} instance."
+    }
+  },
+  {
+    "__docId__": 164,
+    "kind": "method",
+    "name": "all",
+    "memberof": "dist/category/category.js~Category",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/category/category.js~Category.all",
+    "access": "public",
+    "description": "Get a list of all colors\nUsage:\n\n```\nvar req = Category.all();\nclient.send(req).then(categories => console.log(categories));\n```",
+    "lineNumber": 66,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Request"
+      ],
+      "spread": false,
+      "description": "A request that resolves to an array of {@link Category}."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 165,
+    "kind": "file",
+    "name": "dist/client.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.Client = void 0;\n\nvar _request = _interopRequireDefault(require(\"request\"));\n\nvar _oAuthHelper = require(\"./oAuthHelper\");\n\nvar _catalogItem = require(\"./catalogItem/catalogItem\");\n\nvar _priceGuide = require(\"./catalogItem/priceGuide\");\n\nvar _knownColor = require(\"./catalogItem/knownColor\");\n\nvar _itemImage = require(\"./catalogItem/itemImage\");\n\nvar _subsets = require(\"./catalogItem/subsets\");\n\nvar _supersets = require(\"./catalogItem/supersets\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\r\n * Create a client to perform\r\n */\nclass Client {\n  /**\r\n   * Create an instance of the Bricklin Node Client.\r\n   * @param {object} options Options that are used to create a new client.\r\n   * @param {string} [options.token] The `TokenValue` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.token_secret] The `TokenSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.consumer_key] The `ConsumerKey` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.consumer_secret] The `ConsumerSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.endpoint='https://api.bricklink.com/api/store/v1/'] The url of the Bricklink API.\r\n   */\n  constructor(options) {\n    options = options || {};\n    /** @type {string} */\n\n    this.token = options.token || '';\n    /** @type {string} */\n\n    this.token_secret = options.token_secret || '';\n    /** @type {string} */\n\n    this.consumer_key = options.consumer_key || '';\n    /** @type {string} */\n\n    this.consumer_secret = options.consumer_secret || '';\n    /** @type {string} */\n\n    this.endpoint = options.endpoint || 'https://api.bricklink.com/api/store/v1/';\n  }\n  /**\r\n   * Performs a bricklink request and the callback upon success.\r\n   * @param {Request} req The request to perform.\r\n   * @return {Promise} The data that has been return from the API request and any callbacks.\r\n   */\n\n\n  send(req) {\n    let init = {\n      uri: this.endpoint + req.uri.replace(/^\\//, '') + req.params.toQueryString(),\n      method: req.method,\n      headers: {}\n    };\n    let oauthHelper = new _oAuthHelper.OAuthHelper(this.consumer_key, this.token);\n    oauthHelper.sign(init.uri, req, this.consumer_secret, this.token_secret);\n    init.headers['authorization'] = oauthHelper.header;\n    let promise = new Promise((resolve, reject) => {\n      (0, _request.default)(init, (er, rep, body) => {\n        if (er) {\n          reject(er);\n        }\n\n        let data = JSON.parse(body);\n\n        if (data.meta.code >= 300) {\n          console.error(init.uri);\n          console.error(data.meta);\n        }\n\n        resolve(data.data);\n      });\n    });\n\n    if (req.callback) {\n      promise.then(req.callback);\n    }\n\n    return promise;\n  }\n  /**\r\n   * Get a catalog item by type and identification number.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @return {Promise<CatalogItem>} A promise that resolves to a catalog item.\r\n   */\n\n\n  getCatalogItem(itemType, itemNumber) {\n    let req = _catalogItem.CatalogItem.get(itemType, itemNumber);\n\n    return this.send(req);\n  }\n  /**\r\n   * Get the price guide for a given catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} params Options for the price guide as outlined in {@link PriceGuideOptions}.\r\n   * @return {Promise<PriceGuide>} A promise that resolves to a price guide.\r\n   */\n\n\n  getPriceGuide(itemType, itemNumber, params) {\n    let req = _priceGuide.PriceGuide.get(itemType, itemNumber, params);\n\n    return this.send(req);\n  }\n  /**\r\n   * Get known colors for a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @return {Promise<Array>} A promise that resolves to a list of {@link KnownColor}.\r\n   */\n\n\n  getKnownColors(itemType, itemNumber) {\n    let req = _knownColor.KnownColor.get(itemType, itemNumber);\n\n    return this.send(req);\n  }\n  /**\r\n   * Can get an image for a specific image color of a known catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {number} colorId The color id of the item.\r\n   * @return {Promise<ItemImage>} A promise that resolves to an Item Image.\r\n   */\n\n\n  getItemImage(itemType, itemNumber, colorId) {\n    let req = _itemImage.ItemImage.get(itemType, itemNumber, colorId);\n\n    return this.send(req);\n  }\n  /**\r\n   * Gets a subset of a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} [params] Options for the price guide as outlined in {@link SubsetOptions}.\r\n   * @return {Promise<Array>} A promise that resolves to a  list of {@link Subset}.\r\n   */\n\n\n  getItemSubset(itemType, itemNumber, params) {\n    let req = _subsets.Subset.get(itemType, itemNumber, params);\n\n    return this.send(req);\n  }\n  /**\r\n   * Gets a superset of a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} [params] Options for the price guide as outlined in {@link SupersetOptions}.\r\n   * @return {Promise<Array>} A promise that resolves to a  list of {@link Superset}.\r\n   */\n\n\n  getItemSuperset(itemType, itemNumber, params) {\n    let req = _supersets.Superset.get(itemType, itemNumber, params);\n\n    return this.send(req);\n  }\n\n}\n\nexports.Client = Client;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/client.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 166,
+    "kind": "variable",
+    "name": "_request",
+    "memberof": "dist/client.js",
+    "static": true,
+    "longname": "dist/client.js~_request",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/client.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 167,
+    "kind": "variable",
+    "name": "_oAuthHelper",
+    "memberof": "dist/client.js",
+    "static": true,
+    "longname": "dist/client.js~_oAuthHelper",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/client.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 168,
+    "kind": "variable",
+    "name": "_catalogItem",
+    "memberof": "dist/client.js",
+    "static": true,
+    "longname": "dist/client.js~_catalogItem",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/client.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 169,
+    "kind": "variable",
+    "name": "_priceGuide",
+    "memberof": "dist/client.js",
+    "static": true,
+    "longname": "dist/client.js~_priceGuide",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/client.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 170,
+    "kind": "variable",
+    "name": "_knownColor",
+    "memberof": "dist/client.js",
+    "static": true,
+    "longname": "dist/client.js~_knownColor",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/client.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 171,
+    "kind": "variable",
+    "name": "_itemImage",
+    "memberof": "dist/client.js",
+    "static": true,
+    "longname": "dist/client.js~_itemImage",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/client.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 172,
+    "kind": "variable",
+    "name": "_subsets",
+    "memberof": "dist/client.js",
+    "static": true,
+    "longname": "dist/client.js~_subsets",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/client.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 173,
+    "kind": "variable",
+    "name": "_supersets",
+    "memberof": "dist/client.js",
+    "static": true,
+    "longname": "dist/client.js~_supersets",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/client.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 174,
+    "kind": "function",
+    "name": "_interopRequireDefault",
+    "memberof": "dist/client.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/client.js~_interopRequireDefault",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/client.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "params": [
+      {
+        "name": "obj",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 175,
+    "kind": "class",
+    "name": "Client",
+    "memberof": "dist/client.js",
+    "static": true,
+    "longname": "dist/client.js~Client",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/client.js",
+    "importStyle": null,
+    "description": "Create a client to perform",
+    "lineNumber": 29,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 176,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/client.js~Client",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/client.js~Client#constructor",
+    "access": "public",
+    "description": "Create an instance of the Bricklin Node Client.",
+    "lineNumber": 39,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": "Options that are used to create a new client."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.token",
+        "description": "The `TokenValue` from {@link https://www.bricklink.com/v2/api/register_consumer.page}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.token_secret",
+        "description": "The `TokenSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.consumer_key",
+        "description": "The `ConsumerKey` from {@link https://www.bricklink.com/v2/api/register_consumer.page}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.consumer_secret",
+        "description": "The `ConsumerSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'https://api.bricklink.com/api/store/v1/'",
+        "defaultRaw": "'https://api.bricklink.com/api/store/v1/'",
+        "name": "options.endpoint",
+        "description": "The url of the Bricklink API."
+      }
+    ]
+  },
+  {
+    "__docId__": 177,
+    "kind": "member",
+    "name": "token",
+    "memberof": "dist/client.js~Client",
+    "static": false,
+    "longname": "dist/client.js~Client#token",
+    "access": "public",
+    "description": null,
+    "lineNumber": 43,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 178,
+    "kind": "member",
+    "name": "token_secret",
+    "memberof": "dist/client.js~Client",
+    "static": false,
+    "longname": "dist/client.js~Client#token_secret",
+    "access": "public",
+    "description": null,
+    "lineNumber": 46,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 179,
+    "kind": "member",
+    "name": "consumer_key",
+    "memberof": "dist/client.js~Client",
+    "static": false,
+    "longname": "dist/client.js~Client#consumer_key",
+    "access": "public",
+    "description": null,
+    "lineNumber": 49,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 180,
+    "kind": "member",
+    "name": "consumer_secret",
+    "memberof": "dist/client.js~Client",
+    "static": false,
+    "longname": "dist/client.js~Client#consumer_secret",
+    "access": "public",
+    "description": null,
+    "lineNumber": 52,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 181,
+    "kind": "member",
+    "name": "endpoint",
+    "memberof": "dist/client.js~Client",
+    "static": false,
+    "longname": "dist/client.js~Client#endpoint",
+    "access": "public",
+    "description": null,
+    "lineNumber": 55,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 182,
+    "kind": "method",
+    "name": "send",
+    "memberof": "dist/client.js~Client",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/client.js~Client#send",
+    "access": "public",
+    "description": "Performs a bricklink request and the callback upon success.",
+    "lineNumber": 64,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Request"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "req",
+        "description": "The request to perform."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "The data that has been return from the API request and any callbacks."
+    }
+  },
+  {
+    "__docId__": 183,
+    "kind": "method",
+    "name": "getCatalogItem",
+    "memberof": "dist/client.js~Client",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/client.js~Client#getCatalogItem",
+    "access": "public",
+    "description": "Get a catalog item by type and identification number.",
+    "lineNumber": 104,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemType",
+        "description": "An item type as can be foud at {@link ItemType}."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemNumber",
+        "description": "An item identification number."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<CatalogItem>"
+      ],
+      "spread": false,
+      "description": "A promise that resolves to a catalog item."
+    }
+  },
+  {
+    "__docId__": 184,
+    "kind": "method",
+    "name": "getPriceGuide",
+    "memberof": "dist/client.js~Client",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/client.js~Client#getPriceGuide",
+    "access": "public",
+    "description": "Get the price guide for a given catalog item.",
+    "lineNumber": 118,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemType",
+        "description": "An item type as can be foud at {@link ItemType}."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemNumber",
+        "description": "An item identification number."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "Options for the price guide as outlined in {@link PriceGuideOptions}."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<PriceGuide>"
+      ],
+      "spread": false,
+      "description": "A promise that resolves to a price guide."
+    }
+  },
+  {
+    "__docId__": 185,
+    "kind": "method",
+    "name": "getKnownColors",
+    "memberof": "dist/client.js~Client",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/client.js~Client#getKnownColors",
+    "access": "public",
+    "description": "Get known colors for a catalog item.",
+    "lineNumber": 131,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemType",
+        "description": "An item type as can be foud at {@link ItemType}."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemNumber",
+        "description": "An item identification number."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Array>"
+      ],
+      "spread": false,
+      "description": "A promise that resolves to a list of {@link KnownColor}."
+    }
+  },
+  {
+    "__docId__": 186,
+    "kind": "method",
+    "name": "getItemImage",
+    "memberof": "dist/client.js~Client",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/client.js~Client#getItemImage",
+    "access": "public",
+    "description": "Can get an image for a specific image color of a known catalog item.",
+    "lineNumber": 145,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemType",
+        "description": "An item type as can be foud at {@link ItemType}."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemNumber",
+        "description": "An item identification number."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "colorId",
+        "description": "The color id of the item."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<ItemImage>"
+      ],
+      "spread": false,
+      "description": "A promise that resolves to an Item Image."
+    }
+  },
+  {
+    "__docId__": 187,
+    "kind": "method",
+    "name": "getItemSubset",
+    "memberof": "dist/client.js~Client",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/client.js~Client#getItemSubset",
+    "access": "public",
+    "description": "Gets a subset of a catalog item.",
+    "lineNumber": 159,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemType",
+        "description": "An item type as can be foud at {@link ItemType}."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemNumber",
+        "description": "An item identification number."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "params",
+        "description": "Options for the price guide as outlined in {@link SubsetOptions}."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Array>"
+      ],
+      "spread": false,
+      "description": "A promise that resolves to a  list of {@link Subset}."
+    }
+  },
+  {
+    "__docId__": 188,
+    "kind": "method",
+    "name": "getItemSuperset",
+    "memberof": "dist/client.js~Client",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/client.js~Client#getItemSuperset",
+    "access": "public",
+    "description": "Gets a superset of a catalog item.",
+    "lineNumber": 173,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemType",
+        "description": "An item type as can be foud at {@link ItemType}."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "itemNumber",
+        "description": "An item identification number."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "params",
+        "description": "Options for the price guide as outlined in {@link SupersetOptions}."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Array>"
+      ],
+      "spread": false,
+      "description": "A promise that resolves to a  list of {@link Superset}."
+    }
+  },
+  {
+    "__docId__": 189,
+    "kind": "file",
+    "name": "dist/color/color.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.Color = void 0;\n\nvar _request = require(\"../request\");\n\n/**\r\n * Represents a color object\r\n */\nclass Color {\n  /**\r\n   * Create a new instance of a color\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.color_id=0] The color id. i.e. - 10\r\n   * @param {string} [data.color_name] The color name. i.e. - Dark Gray\r\n   * @param {string} [data.color_code] The HTML HEX associated to the color. i.e. - 6b5a5a\r\n   * @param {string} [data.color_type] A group that the color belongs to. i.e. - Solid, Transparent, etc...\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {number} */\n\n    this.color_id = data.color_id || 0;\n    /** @type {string} */\n\n    this.color_name = data.color_name || '';\n    /** @type {string} */\n\n    this.color_code = data.color_code || '';\n    /** @type {string} */\n\n    this.color_type = data.color_type || '';\n  }\n  /**\r\n   * Method to get specific color details\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Color.get(10);\r\n   * client.send(req).then(color => console.log(color));\r\n   * ```\r\n   *\r\n   * @param {number} colorId a color id.\r\n   * @return {Request} A request that resolves to a {@link Color} instance.\r\n   */\n\n\n  static get(colorId) {\n    let method = _request.Request.GET;\n    let uri = `/colors/${colorId}`;\n    return new _request.Request(method, uri, null, data => new Color(data));\n  }\n  /**\r\n   * Get a list of all colors\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Color.all();\r\n   * client.send(req).then(colors => console.log(colors));\r\n   * ```\r\n   *\r\n   * @return {Request} A request that resolves to an array of {@link Color}.\r\n   */\n\n\n  static all() {\n    let method = _request.Request.GET;\n    let uri = `/colors`;\n    return new _request.Request(method, uri, null, data => data.map(d => new Color(d)));\n  }\n\n}\n\nexports.Color = Color;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/color/color.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 190,
+    "kind": "variable",
+    "name": "_request",
+    "memberof": "dist/color/color.js",
+    "static": true,
+    "longname": "dist/color/color.js~_request",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/color/color.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 191,
+    "kind": "class",
+    "name": "Color",
+    "memberof": "dist/color/color.js",
+    "static": true,
+    "longname": "dist/color/color.js~Color",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/color/color.js",
+    "importStyle": null,
+    "description": "Represents a color object",
+    "lineNumber": 13,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 192,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/color/color.js~Color",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/color/color.js~Color#constructor",
+    "access": "public",
+    "description": "Create a new instance of a color",
+    "lineNumber": 22,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data",
+        "description": "API response data."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "0",
+        "defaultRaw": 0,
+        "name": "data.color_id",
+        "description": "The color id. i.e. - 10"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.color_name",
+        "description": "The color name. i.e. - Dark Gray"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.color_code",
+        "description": "The HTML HEX associated to the color. i.e. - 6b5a5a"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "data.color_type",
+        "description": "A group that the color belongs to. i.e. - Solid, Transparent, etc..."
+      }
+    ]
+  },
+  {
+    "__docId__": 193,
+    "kind": "member",
+    "name": "color_id",
+    "memberof": "dist/color/color.js~Color",
+    "static": false,
+    "longname": "dist/color/color.js~Color#color_id",
+    "access": "public",
+    "description": null,
+    "lineNumber": 26,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 194,
+    "kind": "member",
+    "name": "color_name",
+    "memberof": "dist/color/color.js~Color",
+    "static": false,
+    "longname": "dist/color/color.js~Color#color_name",
+    "access": "public",
+    "description": null,
+    "lineNumber": 29,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 195,
+    "kind": "member",
+    "name": "color_code",
+    "memberof": "dist/color/color.js~Color",
+    "static": false,
+    "longname": "dist/color/color.js~Color#color_code",
+    "access": "public",
+    "description": null,
+    "lineNumber": 32,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 196,
+    "kind": "member",
+    "name": "color_type",
+    "memberof": "dist/color/color.js~Color",
+    "static": false,
+    "longname": "dist/color/color.js~Color#color_type",
+    "access": "public",
+    "description": null,
+    "lineNumber": 35,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 197,
+    "kind": "method",
+    "name": "get",
+    "memberof": "dist/color/color.js~Color",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/color/color.js~Color.get",
+    "access": "public",
+    "description": "Method to get specific color details\n\nUsage:\n\n```\nvar req = Color.get(10);\nclient.send(req).then(color => console.log(color));\n```",
+    "lineNumber": 52,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "colorId",
+        "description": "a color id."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Request"
+      ],
+      "spread": false,
+      "description": "A request that resolves to a {@link Color} instance."
+    }
+  },
+  {
+    "__docId__": 198,
+    "kind": "method",
+    "name": "all",
+    "memberof": "dist/color/color.js~Color",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/color/color.js~Color.all",
+    "access": "public",
+    "description": "Get a list of all colors\n\nUsage:\n\n```\nvar req = Color.all();\nclient.send(req).then(colors => console.log(colors));\n```",
+    "lineNumber": 71,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Request"
+      ],
+      "spread": false,
+      "description": "A request that resolves to an array of {@link Color}."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 199,
+    "kind": "file",
+    "name": "dist/condition.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.Condition = void 0;\n\n/**\r\n * Static dictionary of common condition terms to improve code readability.\r\n *\r\n * - `Condition.New`\r\n * - `Condition.Used`\r\n */\nclass Condition {\n  /** @type {string} */\n  static get New() {\n    return 'N';\n  }\n  /** @type {string} */\n\n\n  static get Used() {\n    return 'U';\n  }\n\n}\n\nexports.Condition = Condition;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/condition.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 200,
+    "kind": "class",
+    "name": "Condition",
+    "memberof": "dist/condition.js",
+    "static": true,
+    "longname": "dist/condition.js~Condition",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/condition.js",
+    "importStyle": null,
+    "description": "Static dictionary of common condition terms to improve code readability.\n\n- `Condition.New`\n- `Condition.Used`",
+    "lineNumber": 14,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 201,
+    "kind": "get",
+    "name": "New",
+    "memberof": "dist/condition.js~Condition",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/condition.js~Condition.New",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 202,
+    "kind": "get",
+    "name": "Used",
+    "memberof": "dist/condition.js~Condition",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/condition.js~Condition.Used",
+    "access": "public",
+    "description": null,
+    "lineNumber": 22,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 203,
+    "kind": "file",
+    "name": "dist/index.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nObject.defineProperty(exports, \"Client\", {\n  enumerable: true,\n  get: function () {\n    return _client.Client;\n  }\n});\nObject.defineProperty(exports, \"ItemType\", {\n  enumerable: true,\n  get: function () {\n    return _itemType.ItemType;\n  }\n});\nObject.defineProperty(exports, \"Condition\", {\n  enumerable: true,\n  get: function () {\n    return _condition.Condition;\n  }\n});\nObject.defineProperty(exports, \"CatalogItem\", {\n  enumerable: true,\n  get: function () {\n    return _catalogItem.CatalogItem;\n  }\n});\nObject.defineProperty(exports, \"ItemImage\", {\n  enumerable: true,\n  get: function () {\n    return _itemImage.ItemImage;\n  }\n});\nObject.defineProperty(exports, \"KnownColor\", {\n  enumerable: true,\n  get: function () {\n    return _knownColor.KnownColor;\n  }\n});\nObject.defineProperty(exports, \"PriceGuide\", {\n  enumerable: true,\n  get: function () {\n    return _priceGuide.PriceGuide;\n  }\n});\nObject.defineProperty(exports, \"Subset\", {\n  enumerable: true,\n  get: function () {\n    return _subsets.Subset;\n  }\n});\nObject.defineProperty(exports, \"Superset\", {\n  enumerable: true,\n  get: function () {\n    return _supersets.Superset;\n  }\n});\nObject.defineProperty(exports, \"Color\", {\n  enumerable: true,\n  get: function () {\n    return _color.Color;\n  }\n});\nObject.defineProperty(exports, \"Category\", {\n  enumerable: true,\n  get: function () {\n    return _category.Category;\n  }\n});\n\nvar _client = require(\"./client\");\n\nvar _itemType = require(\"./itemType\");\n\nvar _condition = require(\"./condition\");\n\nvar _catalogItem = require(\"./catalogItem/catalogItem\");\n\nvar _itemImage = require(\"./catalogItem/itemImage\");\n\nvar _knownColor = require(\"./catalogItem/knownColor\");\n\nvar _priceGuide = require(\"./catalogItem/priceGuide\");\n\nvar _subsets = require(\"./catalogItem/subsets\");\n\nvar _supersets = require(\"./catalogItem/supersets\");\n\nvar _color = require(\"./color/color\");\n\nvar _category = require(\"./category/category\");",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 204,
+    "kind": "variable",
+    "name": "_client",
+    "memberof": "dist/index.js",
+    "static": true,
+    "longname": "dist/index.js~_client",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 73,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 205,
+    "kind": "variable",
+    "name": "_itemType",
+    "memberof": "dist/index.js",
+    "static": true,
+    "longname": "dist/index.js~_itemType",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 75,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 206,
+    "kind": "variable",
+    "name": "_condition",
+    "memberof": "dist/index.js",
+    "static": true,
+    "longname": "dist/index.js~_condition",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 77,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 207,
+    "kind": "variable",
+    "name": "_catalogItem",
+    "memberof": "dist/index.js",
+    "static": true,
+    "longname": "dist/index.js~_catalogItem",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 79,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 208,
+    "kind": "variable",
+    "name": "_itemImage",
+    "memberof": "dist/index.js",
+    "static": true,
+    "longname": "dist/index.js~_itemImage",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 81,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 209,
+    "kind": "variable",
+    "name": "_knownColor",
+    "memberof": "dist/index.js",
+    "static": true,
+    "longname": "dist/index.js~_knownColor",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 83,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 210,
+    "kind": "variable",
+    "name": "_priceGuide",
+    "memberof": "dist/index.js",
+    "static": true,
+    "longname": "dist/index.js~_priceGuide",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 85,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 211,
+    "kind": "variable",
+    "name": "_subsets",
+    "memberof": "dist/index.js",
+    "static": true,
+    "longname": "dist/index.js~_subsets",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 87,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 212,
+    "kind": "variable",
+    "name": "_supersets",
+    "memberof": "dist/index.js",
+    "static": true,
+    "longname": "dist/index.js~_supersets",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 89,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 213,
+    "kind": "variable",
+    "name": "_color",
+    "memberof": "dist/index.js",
+    "static": true,
+    "longname": "dist/index.js~_color",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 91,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 214,
+    "kind": "variable",
+    "name": "_category",
+    "memberof": "dist/index.js",
+    "static": true,
+    "longname": "dist/index.js~_category",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 93,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 215,
+    "kind": "file",
+    "name": "dist/itemType.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.ItemType = void 0;\n\n/**\r\n * Static dictionary of common catalog item types to improve code readability.\r\n */\nclass ItemType {\n  /** @type {string} */\n  static get Set() {\n    return 'SET';\n  }\n  /** @type {string} */\n\n\n  static get Minifigure() {\n    return 'MINIFIG';\n  }\n  /** @type {string} */\n\n\n  static get Part() {\n    return 'PART';\n  }\n  /** @type {string} */\n\n\n  static get Book() {\n    return 'BOOK';\n  }\n  /** @type {string} */\n\n\n  static get Gear() {\n    return 'GEAR';\n  }\n  /** @type {string} */\n\n\n  static get Catalog() {\n    return 'CATALOG';\n  }\n  /** @type {string} */\n\n\n  static get Instruction() {\n    return 'INSTRUCTION';\n  }\n  /** @type {string} */\n\n\n  static get UnsortedLot() {\n    return 'UNSORTED_LOT';\n  }\n  /** @type {string} */\n\n\n  static get Box() {\n    return 'ORIGINAL_BOX';\n  }\n\n}\n\nexports.ItemType = ItemType;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/itemType.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 216,
+    "kind": "class",
+    "name": "ItemType",
+    "memberof": "dist/itemType.js",
+    "static": true,
+    "longname": "dist/itemType.js~ItemType",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/itemType.js",
+    "importStyle": null,
+    "description": "Static dictionary of common catalog item types to improve code readability.",
+    "lineNumber": 11,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 217,
+    "kind": "get",
+    "name": "Set",
+    "memberof": "dist/itemType.js~ItemType",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/itemType.js~ItemType.Set",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 218,
+    "kind": "get",
+    "name": "Minifigure",
+    "memberof": "dist/itemType.js~ItemType",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/itemType.js~ItemType.Minifigure",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 219,
+    "kind": "get",
+    "name": "Part",
+    "memberof": "dist/itemType.js~ItemType",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/itemType.js~ItemType.Part",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 220,
+    "kind": "get",
+    "name": "Book",
+    "memberof": "dist/itemType.js~ItemType",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/itemType.js~ItemType.Book",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 221,
+    "kind": "get",
+    "name": "Gear",
+    "memberof": "dist/itemType.js~ItemType",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/itemType.js~ItemType.Gear",
+    "access": "public",
+    "description": null,
+    "lineNumber": 37,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 222,
+    "kind": "get",
+    "name": "Catalog",
+    "memberof": "dist/itemType.js~ItemType",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/itemType.js~ItemType.Catalog",
+    "access": "public",
+    "description": null,
+    "lineNumber": 43,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 223,
+    "kind": "get",
+    "name": "Instruction",
+    "memberof": "dist/itemType.js~ItemType",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/itemType.js~ItemType.Instruction",
+    "access": "public",
+    "description": null,
+    "lineNumber": 49,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 224,
+    "kind": "get",
+    "name": "UnsortedLot",
+    "memberof": "dist/itemType.js~ItemType",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/itemType.js~ItemType.UnsortedLot",
+    "access": "public",
+    "description": null,
+    "lineNumber": 55,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 225,
+    "kind": "get",
+    "name": "Box",
+    "memberof": "dist/itemType.js~ItemType",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/itemType.js~ItemType.Box",
+    "access": "public",
+    "description": null,
+    "lineNumber": 61,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 226,
+    "kind": "file",
+    "name": "dist/oAuthHelper.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.OAuthHelper = void 0;\n\nvar _crypto = _interopRequireDefault(require(\"crypto\"));\n\nvar _oauthSignature = _interopRequireDefault(require(\"oauth-signature\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\r\n * A helper for OAuth 1.0 header information and signing keys.\r\n */\nclass OAuthHelper {\n  /**\r\n   * Intialize the helper\r\n   * @param {string} consumerKey The consumer key\r\n   * @param {string} token The token value\r\n   */\n  constructor(consumerKey, token) {\n    /** @type {string} */\n    this.consumerKey = consumerKey;\n    /** @type {string} */\n\n    this.token = token;\n    /** @type {string} */\n\n    this.nonce = _crypto.default.randomBytes(16).toString('hex');\n    /** @type {string} */\n\n    this.signature = '';\n    /** @type {number} */\n\n    this.timestamp = Math.round(Date.now() / 1000).toString();\n  }\n\n  get parameters() {\n    return {\n      oauth_consumer_key: this.consumerKey,\n      oauth_token: this.token,\n      oauth_nonce: this.nonce,\n      oauth_timestamp: this.timestamp,\n      oauth_signature_method: 'HMAC-SHA1',\n      oauth_version: '1.0'\n    };\n  }\n\n  get header() {\n    let str = 'OAuth ';\n    let params = Object.assign({\n      'realm': ''\n    }, this.parameters);\n    params['oauth_signature'] = this.signature;\n    let keys = Object.keys(params);\n    let pairs = keys.map(k => {\n      return k + '=\"' + params[k] + '\"';\n    });\n    str += pairs.join(',');\n    return str;\n  }\n\n  get queryString() {\n    let params = Object.assign({}, this.parameters);\n    params['oauth_signature'] = this.signature;\n    let str = JSON.stringify(params);\n    return \"Authorization=\" + str;\n  }\n  /**\r\n   * Sign the request with oath headers and sets the signature member of the OauthHelper instance.\r\n   */\n\n\n  sign(url, request, consumerSecret, tokenSecret) {\n    let params = Object.assign({}, this.parameters, request.params.toObject());\n    this.signature = _oauthSignature.default.generate(request.method, url, params, consumerSecret, tokenSecret);\n  }\n\n}\n\nexports.OAuthHelper = OAuthHelper;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/oAuthHelper.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 227,
+    "kind": "variable",
+    "name": "_crypto",
+    "memberof": "dist/oAuthHelper.js",
+    "static": true,
+    "longname": "dist/oAuthHelper.js~_crypto",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/oAuthHelper.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 228,
+    "kind": "variable",
+    "name": "_oauthSignature",
+    "memberof": "dist/oAuthHelper.js",
+    "static": true,
+    "longname": "dist/oAuthHelper.js~_oauthSignature",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/oAuthHelper.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 229,
+    "kind": "function",
+    "name": "_interopRequireDefault",
+    "memberof": "dist/oAuthHelper.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/oAuthHelper.js~_interopRequireDefault",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/oAuthHelper.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "params": [
+      {
+        "name": "obj",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 230,
+    "kind": "class",
+    "name": "OAuthHelper",
+    "memberof": "dist/oAuthHelper.js",
+    "static": true,
+    "longname": "dist/oAuthHelper.js~OAuthHelper",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/oAuthHelper.js",
+    "importStyle": null,
+    "description": "A helper for OAuth 1.0 header information and signing keys.",
+    "lineNumber": 17,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 231,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/oAuthHelper.js~OAuthHelper",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/oAuthHelper.js~OAuthHelper#constructor",
+    "access": "public",
+    "description": "Intialize the helper",
+    "lineNumber": 23,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "consumerKey",
+        "description": "The consumer key"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "token",
+        "description": "The token value"
+      }
+    ]
+  },
+  {
+    "__docId__": 232,
+    "kind": "member",
+    "name": "consumerKey",
+    "memberof": "dist/oAuthHelper.js~OAuthHelper",
+    "static": false,
+    "longname": "dist/oAuthHelper.js~OAuthHelper#consumerKey",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 233,
+    "kind": "member",
+    "name": "token",
+    "memberof": "dist/oAuthHelper.js~OAuthHelper",
+    "static": false,
+    "longname": "dist/oAuthHelper.js~OAuthHelper#token",
+    "access": "public",
+    "description": null,
+    "lineNumber": 28,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 234,
+    "kind": "member",
+    "name": "nonce",
+    "memberof": "dist/oAuthHelper.js~OAuthHelper",
+    "static": false,
+    "longname": "dist/oAuthHelper.js~OAuthHelper#nonce",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 235,
+    "kind": "member",
+    "name": "signature",
+    "memberof": "dist/oAuthHelper.js~OAuthHelper",
+    "static": false,
+    "longname": "dist/oAuthHelper.js~OAuthHelper#signature",
+    "access": "public",
+    "description": null,
+    "lineNumber": 34,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 236,
+    "kind": "member",
+    "name": "timestamp",
+    "memberof": "dist/oAuthHelper.js~OAuthHelper",
+    "static": false,
+    "longname": "dist/oAuthHelper.js~OAuthHelper#timestamp",
+    "access": "public",
+    "description": null,
+    "lineNumber": 37,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 237,
+    "kind": "get",
+    "name": "parameters",
+    "memberof": "dist/oAuthHelper.js~OAuthHelper",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/oAuthHelper.js~OAuthHelper#parameters",
+    "access": "public",
+    "description": null,
+    "lineNumber": 40,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"oauth_consumer_key\": *, \"oauth_token\": *, \"oauth_nonce\": *, \"oauth_timestamp\": *, \"oauth_signature_method\": string, \"oauth_version\": string}"
+      ]
+    }
+  },
+  {
+    "__docId__": 238,
+    "kind": "get",
+    "name": "header",
+    "memberof": "dist/oAuthHelper.js~OAuthHelper",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/oAuthHelper.js~OAuthHelper#header",
+    "access": "public",
+    "description": null,
+    "lineNumber": 51,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 239,
+    "kind": "get",
+    "name": "queryString",
+    "memberof": "dist/oAuthHelper.js~OAuthHelper",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/oAuthHelper.js~OAuthHelper#queryString",
+    "access": "public",
+    "description": null,
+    "lineNumber": 65,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 240,
+    "kind": "method",
+    "name": "sign",
+    "memberof": "dist/oAuthHelper.js~OAuthHelper",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/oAuthHelper.js~OAuthHelper#sign",
+    "access": "public",
+    "description": "Sign the request with oath headers and sets the signature member of the OauthHelper instance.",
+    "lineNumber": 76,
+    "params": [
+      {
+        "name": "url",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "request",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "consumerSecret",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "tokenSecret",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 242,
+    "kind": "file",
+    "name": "dist/request.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.RequestParams = exports.Request = void 0;\n\n/**\r\n * Creates a request to use with the client.\r\n */\nclass Request {\n  /**\r\n   * Create a new request.\r\n   * @param {string} method The type of HTTP request to perform.\r\n   * @param {string} uri The relative of full path uri of a request to perform. This should not include any query parameters.\r\n   * @param {RequestParams} [params] Additional parameters to include with the request in either post body or query params.\r\n   * @param {function} [callback=null] A callback function to perform after the request has been successfully performed.\r\n   */\n  constructor(method, uri, params, callback) {\n    /** @type {string} */\n    this.method = method;\n    /** @type {string} */\n\n    this.uri = uri;\n    /** @type {RequestParams} */\n\n    this.params = params || new RequestParams();\n    /** @type {function|null} */\n\n    this.callback = callback || null;\n  }\n  /** @type {string} */\n\n\n  static get GET() {\n    return 'get';\n  }\n  /** @type {string} */\n\n\n  static get PUT() {\n    return 'put';\n  }\n  /** @type {string} */\n\n\n  static get POST() {\n    return 'post';\n  }\n  /** @type {string} */\n\n\n  static get DELETE() {\n    return 'put';\n  }\n\n}\n/**\r\n * Represents any query parameters to use with a request.\r\n */\n\n\nexports.Request = Request;\n\nclass RequestParams {\n  /**\r\n   * Convert params for the request to a query string.\r\n   * @return {string} parameters in the format of '?<param>=<value>'.\r\n   */\n  toQueryString() {\n    let pairs = [];\n\n    for (let member in this) {\n      if (this[member] != null) {\n        pairs.push(member + '=' + this[member]);\n      }\n    }\n\n    if (pairs.length > 0) {\n      return '?' + pairs.join('&');\n    }\n\n    return '';\n  }\n  /**\r\n   * Convert params for the request to a an object.\r\n   * @return {object} trimmed down parameters object.\r\n   */\n\n\n  toObject() {\n    let params = {};\n\n    for (let member in this) {\n      if (this[member] != null) {\n        params[member] = this[member];\n      }\n    }\n\n    return params;\n  }\n\n}\n\nexports.RequestParams = RequestParams;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/request.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 243,
+    "kind": "class",
+    "name": "Request",
+    "memberof": "dist/request.js",
+    "static": true,
+    "longname": "dist/request.js~Request",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/request.js",
+    "importStyle": null,
+    "description": "Creates a request to use with the client.",
+    "lineNumber": 11,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 244,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/request.js~Request",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/request.js~Request#constructor",
+    "access": "public",
+    "description": "Create a new request.",
+    "lineNumber": 19,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "method",
+        "description": "The type of HTTP request to perform."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "uri",
+        "description": "The relative of full path uri of a request to perform. This should not include any query parameters."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "RequestParams"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "params",
+        "description": "Additional parameters to include with the request in either post body or query params."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "callback",
+        "description": "A callback function to perform after the request has been successfully performed."
+      }
+    ]
+  },
+  {
+    "__docId__": 245,
+    "kind": "member",
+    "name": "method",
+    "memberof": "dist/request.js~Request",
+    "static": false,
+    "longname": "dist/request.js~Request#method",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 246,
+    "kind": "member",
+    "name": "uri",
+    "memberof": "dist/request.js~Request",
+    "static": false,
+    "longname": "dist/request.js~Request#uri",
+    "access": "public",
+    "description": null,
+    "lineNumber": 24,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 247,
+    "kind": "member",
+    "name": "params",
+    "memberof": "dist/request.js~Request",
+    "static": false,
+    "longname": "dist/request.js~Request#params",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "type": {
+      "nullable": null,
+      "types": [
+        "RequestParams"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 248,
+    "kind": "member",
+    "name": "callback",
+    "memberof": "dist/request.js~Request",
+    "static": false,
+    "longname": "dist/request.js~Request#callback",
+    "access": "public",
+    "description": null,
+    "lineNumber": 30,
+    "type": {
+      "nullable": null,
+      "types": [
+        "function",
+        "null"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 249,
+    "kind": "get",
+    "name": "GET",
+    "memberof": "dist/request.js~Request",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/request.js~Request.GET",
+    "access": "public",
+    "description": null,
+    "lineNumber": 35,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 250,
+    "kind": "get",
+    "name": "PUT",
+    "memberof": "dist/request.js~Request",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/request.js~Request.PUT",
+    "access": "public",
+    "description": null,
+    "lineNumber": 41,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 251,
+    "kind": "get",
+    "name": "POST",
+    "memberof": "dist/request.js~Request",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/request.js~Request.POST",
+    "access": "public",
+    "description": null,
+    "lineNumber": 47,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 252,
+    "kind": "get",
+    "name": "DELETE",
+    "memberof": "dist/request.js~Request",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/request.js~Request.DELETE",
+    "access": "public",
+    "description": null,
+    "lineNumber": 53,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 253,
+    "kind": "class",
+    "name": "RequestParams",
+    "memberof": "dist/request.js",
+    "static": true,
+    "longname": "dist/request.js~RequestParams",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/request.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 65,
+    "undocument": true,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 254,
+    "kind": "method",
+    "name": "toQueryString",
+    "memberof": "dist/request.js~RequestParams",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/request.js~RequestParams#toQueryString",
+    "access": "public",
+    "description": "Convert params for the request to a query string.",
+    "lineNumber": 70,
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "parameters in the format of '?<param>=<value>'."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 255,
+    "kind": "method",
+    "name": "toObject",
+    "memberof": "dist/request.js~RequestParams",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/request.js~RequestParams#toObject",
+    "access": "public",
+    "description": "Convert params for the request to a an object.",
+    "lineNumber": 91,
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "trimmed down parameters object."
+    },
+    "params": []
+  },
+  {
+    "kind": "index",
+    "content": "# bricklink-api\r\nNode package for connecting to Bricklink's API.\r\n\r\n```\r\nnpm install --save bricklink-api\r\n```\r\n\r\n## Basic Usage\r\n\r\nInitialize a client with your OAuth credentials as supplied at the following:\r\n\r\n[https://www.bricklink.com/v2/api/register_consumer.page](https://www.bricklink.com/v2/api/register_consumer.page)\r\n\r\nYou are required to have a Bricklink account and register your IP address from\r\nwhich your application will be using the API. You can also use 0.0.0.0 to match\r\nany IP address (such as a cloud solution); however, you would need to keep the keys and secrets secure.\r\n\r\n```javascript\r\nvar api = require('bricklink-api');\r\nvar Client = api.Client,\r\n    ItemType = api.ItemType;\r\n\r\nvar bricklink = new Client({\r\n    \"consumer_key\": \"<ConsumerKey>\",\r\n    \"consumer_secret\": \"<ConsumerSecret>\",\r\n    \"token\": \"<TokenValue>\",\r\n    \"token_secret\": \"<TokenSecret>\"\r\n  });\r\n\r\nbricklink.getCatalogItem(ItemType.Part, '3001')\r\n  .then(function(part){\r\n    console.log(part);\r\n  });\r\n\r\n\\\\ Alternate Usage:\r\n\r\nvar CatalogItem = api.CatalogItem;\r\nvar req = CatalogItem.get(ItemType.Part, '3001');\r\nbricklink.send(req)\r\n  .then(function(part){\r\n    console.log(part);\r\n  });\r\n```\r\n\r\n## ES6 Support\r\n\r\nRead basic usage.\r\n\r\n```javascript\r\nimport {Client, ItemType, CatalogItem} from 'bricklink-api';\r\n\r\nconst bricklink = new Client({\r\n    \"consumer_key\": \"<ConsumerKey>\",\r\n    \"consumer_secret\": \"<ConsumerSecret>\",\r\n    \"token\": \"<TokenValue>\",\r\n    \"token_secret\": \"<TokenSecret>\"\r\n  });\r\n\r\nbricklink.getCatalogItem(ItemType.Part, '3001')\r\n  .then(part => console.log(part));\r\n\r\n\\\\ Alternate Usage:\r\n\r\nlet req = CatalogItem.get(ItemType.Part, '3001');\r\nbricklink.send(req)\r\n  .then(part => console.log(part));\r\n```\r\n\r\n## Documentation\r\n\r\nFull API documentation is available at:\r\n\r\n[https://ryansh100.github.io/bricklink-api](https://ryansh100.github.io/bricklink-api)\r\n\r\n## Change Log\r\n\r\n- 2017/04/03: Fix bugs with require of dictionaries. Update to make more intuitive imports. Add support for color and category lookup.\r\n- 2021/05/01: Updating the compiling engine, updating the way tests are run\r\n",
+    "longname": "C:\\Projects\\bricklink-api\\README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\r\n  \"name\": \"bricklink-api\",\r\n  \"version\": \"1.2.0\",\r\n  \"scripts\": {\r\n    \"test\": \"nyc ava\",\r\n    \"test:ci\": \"nyc ava -c 1\",\r\n    \"build\": \"babel src -d dist\",\r\n    \"docs\": \"esdoc\",\r\n    \"prepublish\": \"npm run build && npm run docs\",\r\n    \"report\": \"nyc report --reporter=html\"\r\n  },\r\n  \"description\": \"A node module for connecting to the Bricklink API.\",\r\n  \"main\": \"./dist/index.js\",\r\n  \"repository\": {\r\n    \"type\": \"git\",\r\n    \"url\": \"git+https://github.com/ryansh100/bricklink-api.git\"\r\n  },\r\n  \"keywords\": [\r\n    \"node\",\r\n    \"js\",\r\n    \"javascript\",\r\n    \"module\",\r\n    \"bricklink\",\r\n    \"api\",\r\n    \"oauth2\"\r\n  ],\r\n  \"author\": \"Ryan Hafer\",\r\n  \"license\": \"SEE LICENCE IN LICENSE\",\r\n  \"bugs\": {\r\n    \"url\": \"https://github.com/ryansh100/bricklink-api/issues\"\r\n  },\r\n  \"homepage\": \"https://github.com/ryansh100/bricklink-api#readme\",\r\n  \"devDependencies\": {\r\n    \"@ava/babel\": \"^1.0.1\",\r\n    \"@babel/cli\": \"^7.13.16\",\r\n    \"@babel/core\": \"^7.14.0\",\r\n    \"@babel/plugin-transform-modules-commonjs\": \"^7.14.0\",\r\n    \"@babel/preset-env\": \"^7.14.0\",\r\n    \"@babel/register\": \"^7.13.16\",\r\n    \"ava\": \"^3.15.0\",\r\n    \"dotenv\": \"^8.2.0\",\r\n    \"esdoc\": \"^1.1.0\",\r\n    \"esdoc-standard-plugin\": \"^1.0.0\",\r\n    \"nyc\": \"^15.1.0\"\r\n  },\r\n  \"dependencies\": {\r\n    \"core-js\": \"^2.4.1\",\r\n    \"oauth-signature\": \"^1.3.1\",\r\n    \"request\": \"^2.88.2\"\r\n  },\r\n  \"ava\": {\r\n    \"babel\": true,\r\n    \"files\": [\r\n      \"spec/**/*spec.js\"\r\n    ],\r\n    \"source\": [\r\n      \"src/**/*.js\"\r\n    ],\r\n    \"concurrency\": 3,\r\n    \"failFast\": true,\r\n    \"tap\": true,\r\n    \"powerAssert\": false,\r\n    \"require\": [\r\n      \"@babel/register\"\r\n    ]\r\n  },\r\n  \"engines\": {\r\n    \"node\": \">=5\"\r\n  },\r\n  \"nyc\": {\r\n    \"extension\": [\r\n      \".js\"\r\n    ]\r\n  }\r\n}\r\n",
+    "longname": "C:\\Projects\\bricklink-api\\package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]
