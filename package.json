@@ -29,6 +29,7 @@
     "test": "nyc ava",
     "test:ci": "nyc ava -c 1",
     "build": "babel src -d dist",
+    "prepare": "husky install",
     "docs": "esdoc",
     "prepare": "husky install",
     "prepublish": "npm run build",
@@ -45,6 +46,7 @@
     "dotenv": "^8.2.0",
     "esdoc": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0",
+    "husky": "^6.0.0",
     "nyc": "^15.1.0",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0"
@@ -76,7 +78,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && esdocs"
+      "pre-commit": "pretty-quick --staged"
     }
   },
   "nyc": {
