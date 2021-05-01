@@ -1393,7 +1393,7 @@
     "__docId__": 84,
     "kind": "file",
     "name": "dist/catalogItem/priceGuide.js",
-    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.PriceGuideOptions = exports.PriceGuide = exports.PriceDetail = void 0;\n\nvar _request = require(\"../request\");\n\nvar _catalogItem = require(\"./catalogItem\");\n\n/**\r\n * Specific sale price details for a givent item.\r\n */\nclass PriceDetail {\n  /**\r\n   * Create a Price Detail instance.\r\n   * @param {object} [data] Data returned from an API response.\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {number} */\n\n    this.quantity = data.quantity || 0;\n    /** @type {number} */\n\n    this.unit_price = data.unit_price || 0;\n    /** @type {string} */\n\n    this.shipping_available = data.shipping_available || '';\n    /** @type {string} */\n\n    this.shipping_available = data.shipping_available || '';\n    /** @type {string} */\n\n    this.seller_country_code = data.seller_country_code || '';\n    /** @type {string} */\n\n    this.buyer_country_code = data.buyer_country_code || '';\n    /** @type {Date|null} */\n\n    this.date_ordered = data.date_ordered ? new Date(datea.date_ordered) : null;\n  }\n\n}\n/**\r\n * Represents a Price Guide for a catalog item.\r\n */\n\n\nexports.PriceDetail = PriceDetail;\n\nclass PriceGuide {\n  /**\r\n   * Create a new instance of a price guide.\r\n   * @param {object} [data] Data returned from an API response.\r\n   */\n  constructor(data) {\n    /** @type {Item} item The item that belongs to the price guide. */\n    this.item = data.item ? new _catalogItem.CatalogItem(data.item) : new Item();\n    /** @type {string} new_or_used Whether or not the price guide is new or used condition. */\n\n    this.new_or_used = data.new_or_used || '';\n    /** @type {string} */\n\n    this.currency_code = data.currency_code || '';\n    /** @type {number} */\n\n    this.min_price = data.min_price || 0;\n    /** @type {number} */\n\n    this.max_price = data.max_price || 0;\n    /** @type {number} */\n\n    this.avg_price = data.avg_price || 0;\n    /** @type {number} */\n\n    this.qty_avg_price = data.qty_avg_price || 0;\n    /** @type {number} */\n\n    this.unit_quantity = data.unit_quantity || 0;\n    /** @type {number} */\n\n    this.total_quantity = data.total_quantity || 0;\n    /** @type {PriceDetail[]} */\n\n    this.price_detail = data.price_detail ? data.price_detail.map(detail => new PriceDetail(detail)) : [];\n  }\n  /**\r\n   * Method to get a known catalog item's price guide\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = PriceGuide.get(ItemType.Part, '3001', {new_or_used: Condition.Used});\r\n   * client.send(req).then(guide => console.log(guide));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type as found at {@link ItemType}.\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} [params] Params as outlined in {@link PriceGuideOptions}.\r\n   * @return {Request} A request that is ready to execute with a client.\r\n   */\n\n\n  static get(itemType, itemNumber, params) {\n    params = params ? new PriceGuideOptions(params) : new PriceGuideOptions();\n    let method = _request.Request.GET;\n    let uri = `items/${itemType}/${itemNumber}/price`;\n    return new _request.Request(method, uri, params, data => {\n      return new _catalogItem.CatalogItem(data);\n    });\n  }\n\n}\n/**\r\n * Price guide option request params.\r\n */\n\n\nexports.PriceGuide = PriceGuide;\n\nclass PriceGuideOptions extends _request.RequestParams {\n  /**\r\n   * Create an instance of Price Guide options.\r\n   * @param {object} data Optional parameter data.\r\n   * @param {number|null} [data.color_id=null] The color Identification numbe of the item\r\n   * @param {string} [data.guide_type='stock'] Indicates that which statistics to be provided. Options include \"sold\" and \"stock\"\r\n   * @param {string} [data.new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item\r\n   * @param {string|null} [data.country_code=null]\r\n   * @param {string|null} [data.region=null]\r\n   * @param {string|null} [data.currency_code=null]\r\n   * @param {string} [data.vat='N']\r\n   */\n  constructor(data) {\n    super(data);\n    data = data || {};\n    /** @type {number|null} [data.color_id=null] The color Identification numbe of the item */\n\n    this.color_id = data.color_id || null;\n    /** @type {string} [guide_type='stock'] Indicates that which statistics to be provided. Options include \"sold\" and \"stock\" */\n\n    this.guide_type = data.guide_type || 'stock';\n    /** @type {string} [new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item */\n\n    this.new_or_used = data.new_or_used || 'N';\n    /** @type {string|null} [country_code=null] */\n\n    this.country_code = data.country_code || null;\n    /** @type {string|null} [region=null] */\n\n    this.region = data.region || null;\n    /** @type {string|null} [currency_code=null] */\n\n    this.currency_code = data.currency_code || null;\n    /** @type {string} [vat='N'] */\n\n    this.vat = data.vat || 'N';\n  }\n\n}\n\nexports.PriceGuideOptions = PriceGuideOptions;",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.PriceGuideOptions = exports.PriceGuide = exports.PriceDetail = void 0;\n\nvar _request = require(\"../request\");\n\nvar _catalogItem = require(\"./catalogItem\");\n\n/**\r\n * Specific sale price details for a givent item.\r\n */\nclass PriceDetail {\n  /**\r\n   * Create a Price Detail instance.\r\n   * @param {object} [data] Data returned from an API response.\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {number} */\n\n    this.quantity = data.quantity || 0;\n    /** @type {number} */\n\n    this.unit_price = data.unit_price || 0;\n    /** @type {string} */\n\n    this.shipping_available = data.shipping_available || '';\n    /** @type {string} */\n\n    this.shipping_available = data.shipping_available || '';\n    /** @type {string} */\n\n    this.seller_country_code = data.seller_country_code || '';\n    /** @type {string} */\n\n    this.buyer_country_code = data.buyer_country_code || '';\n    /** @type {Date|null} */\n\n    this.date_ordered = data.date_ordered ? new Date(datea.date_ordered) : null;\n  }\n\n}\n/**\r\n * Represents a Price Guide for a catalog item.\r\n */\n\n\nexports.PriceDetail = PriceDetail;\n\nclass PriceGuide {\n  /**\r\n   * Create a new instance of a price guide.\r\n   * @param {object} [data] Data returned from an API response.\r\n   */\n  constructor(data) {\n    /** @type {Item} item The item that belongs to the price guide. */\n    this.item = data.item ? new _catalogItem.CatalogItem(data.item) : new Item();\n    /** @type {string} new_or_used Whether or not the price guide is new or used condition. */\n\n    this.new_or_used = data.new_or_used || '';\n    /** @type {string} */\n\n    this.currency_code = data.currency_code || '';\n    /** @type {number} */\n\n    this.min_price = data.min_price || 0;\n    /** @type {number} */\n\n    this.max_price = data.max_price || 0;\n    /** @type {number} */\n\n    this.avg_price = data.avg_price || 0;\n    /** @type {number} */\n\n    this.qty_avg_price = data.qty_avg_price || 0;\n    /** @type {number} */\n\n    this.unit_quantity = data.unit_quantity || 0;\n    /** @type {number} */\n\n    this.total_quantity = data.total_quantity || 0;\n    /** @type {PriceDetail[]} */\n\n    this.price_detail = data.price_detail ? data.price_detail.map(detail => new PriceDetail(detail)) : [];\n  }\n  /**\r\n   * Method to get a known catalog item's price guide\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = PriceGuide.get(ItemType.Part, '3001', {new_or_used: Condition.Used});\r\n   * client.send(req).then(guide => console.log(guide));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type as found at {@link ItemType}.\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} [params] Params as outlined in {@link PriceGuideOptions}.\r\n   * @return {Request} A request that is ready to execute with a client.\r\n   */\n\n\n  static get(itemType, itemNumber, params) {\n    params = params ? new PriceGuideOptions(params) : new PriceGuideOptions();\n    let method = _request.Request.GET;\n    let uri = `items/${itemType}/${itemNumber}/price`;\n    return new _request.Request(method, uri, params, data => {\n      return new PriceGuide(data);\n    });\n  }\n\n}\n/**\r\n * Price guide option request params.\r\n */\n\n\nexports.PriceGuide = PriceGuide;\n\nclass PriceGuideOptions extends _request.RequestParams {\n  /**\r\n   * Create an instance of Price Guide options.\r\n   * @param {object} data Optional parameter data.\r\n   * @param {number|null} [data.color_id=null] The color Identification numbe of the item\r\n   * @param {string} [data.guide_type='stock'] Indicates that which statistics to be provided. Options include \"sold\" and \"stock\"\r\n   * @param {string} [data.new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item\r\n   * @param {string|null} [data.country_code=null]\r\n   * @param {string|null} [data.region=null]\r\n   * @param {string|null} [data.currency_code=null]\r\n   * @param {string} [data.vat='N']\r\n   */\n  constructor(data) {\n    super(data);\n    data = data || {};\n    /** @type {number|null} [data.color_id=null] The color Identification numbe of the item */\n\n    this.color_id = data.color_id || null;\n    /** @type {string} [guide_type='stock'] Indicates that which statistics to be provided. Options include \"sold\" and \"stock\" */\n\n    this.guide_type = data.guide_type || 'stock';\n    /** @type {string} [new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item */\n\n    this.new_or_used = data.new_or_used || 'N';\n    /** @type {string|null} [country_code=null] */\n\n    this.country_code = data.country_code || null;\n    /** @type {string|null} [region=null] */\n\n    this.region = data.region || null;\n    /** @type {string|null} [currency_code=null] */\n\n    this.currency_code = data.currency_code || null;\n    /** @type {string} [vat='N'] */\n\n    this.vat = data.vat || 'N';\n  }\n\n}\n\nexports.PriceGuideOptions = PriceGuideOptions;",
     "static": true,
     "longname": "C:/Projects/bricklink-api/dist/catalogItem/priceGuide.js",
     "access": "public",
@@ -3367,7 +3367,7 @@
     "__docId__": 165,
     "kind": "file",
     "name": "dist/client.js",
-    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.Client = void 0;\n\nvar _request = _interopRequireDefault(require(\"request\"));\n\nvar _oAuthHelper = require(\"./oAuthHelper\");\n\nvar _catalogItem = require(\"./catalogItem/catalogItem\");\n\nvar _priceGuide = require(\"./catalogItem/priceGuide\");\n\nvar _knownColor = require(\"./catalogItem/knownColor\");\n\nvar _itemImage = require(\"./catalogItem/itemImage\");\n\nvar _subsets = require(\"./catalogItem/subsets\");\n\nvar _supersets = require(\"./catalogItem/supersets\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\r\n * Create a client to perform\r\n */\nclass Client {\n  /**\r\n   * Create an instance of the Bricklin Node Client.\r\n   * @param {object} options Options that are used to create a new client.\r\n   * @param {string} [options.token] The `TokenValue` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.token_secret] The `TokenSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.consumer_key] The `ConsumerKey` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.consumer_secret] The `ConsumerSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.endpoint='https://api.bricklink.com/api/store/v1/'] The url of the Bricklink API.\r\n   */\n  constructor(options) {\n    options = options || {};\n    /** @type {string} */\n\n    this.token = options.token || '';\n    /** @type {string} */\n\n    this.token_secret = options.token_secret || '';\n    /** @type {string} */\n\n    this.consumer_key = options.consumer_key || '';\n    /** @type {string} */\n\n    this.consumer_secret = options.consumer_secret || '';\n    /** @type {string} */\n\n    this.endpoint = options.endpoint || 'https://api.bricklink.com/api/store/v1/';\n  }\n  /**\r\n   * Performs a bricklink request and the callback upon success.\r\n   * @param {Request} req The request to perform.\r\n   * @return {Promise} The data that has been return from the API request and any callbacks.\r\n   */\n\n\n  send(req) {\n    let init = {\n      uri: this.endpoint + req.uri.replace(/^\\//, '') + req.params.toQueryString(),\n      method: req.method,\n      headers: {}\n    };\n    let oauthHelper = new _oAuthHelper.OAuthHelper(this.consumer_key, this.token);\n    oauthHelper.sign(init.uri, req, this.consumer_secret, this.token_secret);\n    init.headers['authorization'] = oauthHelper.header;\n    let promise = new Promise((resolve, reject) => {\n      (0, _request.default)(init, (er, rep, body) => {\n        if (er) {\n          reject(er);\n        }\n\n        let data = JSON.parse(body);\n\n        if (data.meta.code >= 300) {\n          console.error(init.uri);\n          console.error(data.meta);\n        }\n\n        resolve(data.data);\n      });\n    });\n\n    if (req.callback) {\n      promise.then(req.callback);\n    }\n\n    return promise;\n  }\n  /**\r\n   * Get a catalog item by type and identification number.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @return {Promise<CatalogItem>} A promise that resolves to a catalog item.\r\n   */\n\n\n  getCatalogItem(itemType, itemNumber) {\n    let req = _catalogItem.CatalogItem.get(itemType, itemNumber);\n\n    return this.send(req);\n  }\n  /**\r\n   * Get the price guide for a given catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} params Options for the price guide as outlined in {@link PriceGuideOptions}.\r\n   * @return {Promise<PriceGuide>} A promise that resolves to a price guide.\r\n   */\n\n\n  getPriceGuide(itemType, itemNumber, params) {\n    let req = _priceGuide.PriceGuide.get(itemType, itemNumber, params);\n\n    return this.send(req);\n  }\n  /**\r\n   * Get known colors for a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @return {Promise<Array>} A promise that resolves to a list of {@link KnownColor}.\r\n   */\n\n\n  getKnownColors(itemType, itemNumber) {\n    let req = _knownColor.KnownColor.get(itemType, itemNumber);\n\n    return this.send(req);\n  }\n  /**\r\n   * Can get an image for a specific image color of a known catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {number} colorId The color id of the item.\r\n   * @return {Promise<ItemImage>} A promise that resolves to an Item Image.\r\n   */\n\n\n  getItemImage(itemType, itemNumber, colorId) {\n    let req = _itemImage.ItemImage.get(itemType, itemNumber, colorId);\n\n    return this.send(req);\n  }\n  /**\r\n   * Gets a subset of a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} [params] Options for the price guide as outlined in {@link SubsetOptions}.\r\n   * @return {Promise<Array>} A promise that resolves to a  list of {@link Subset}.\r\n   */\n\n\n  getItemSubset(itemType, itemNumber, params) {\n    let req = _subsets.Subset.get(itemType, itemNumber, params);\n\n    return this.send(req);\n  }\n  /**\r\n   * Gets a superset of a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} [params] Options for the price guide as outlined in {@link SupersetOptions}.\r\n   * @return {Promise<Array>} A promise that resolves to a  list of {@link Superset}.\r\n   */\n\n\n  getItemSuperset(itemType, itemNumber, params) {\n    let req = _supersets.Superset.get(itemType, itemNumber, params);\n\n    return this.send(req);\n  }\n\n}\n\nexports.Client = Client;",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.Client = void 0;\n\nvar _request = _interopRequireDefault(require(\"request\"));\n\nvar _oAuthHelper = require(\"./oAuthHelper\");\n\nvar _catalogItem = require(\"./catalogItem/catalogItem\");\n\nvar _priceGuide = require(\"./catalogItem/priceGuide\");\n\nvar _knownColor = require(\"./catalogItem/knownColor\");\n\nvar _itemImage = require(\"./catalogItem/itemImage\");\n\nvar _subsets = require(\"./catalogItem/subsets\");\n\nvar _supersets = require(\"./catalogItem/supersets\");\n\nvar _logger = require(\"./logger\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\r\n * Create a client to perform\r\n */\nclass Client {\n  /**\r\n   * Create an instance of the Bricklin Node Client.\r\n   * @param {object} options Options that are used to create a new client.\r\n   * @param {string} [options.token] The `TokenValue` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.token_secret] The `TokenSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.consumer_key] The `ConsumerKey` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.consumer_secret] The `ConsumerSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.endpoint='https://api.bricklink.com/api/store/v1/'] The url of the Bricklink API.\r\n   */\n  constructor(options) {\n    options = options || {};\n    /** @type {string} */\n\n    this.token = options.token || '';\n    /** @type {string} */\n\n    this.token_secret = options.token_secret || '';\n    /** @type {string} */\n\n    this.consumer_key = options.consumer_key || '';\n    /** @type {string} */\n\n    this.consumer_secret = options.consumer_secret || '';\n    /** @type {string} */\n\n    this.endpoint = options.endpoint || 'https://api.bricklink.com/api/store/v1/';\n  }\n  /**\r\n   * Performs a bricklink request and the callback upon success.\r\n   * @param {Request} req The request to perform.\r\n   * @return {Promise} The data that has been return from the API request and any callbacks.\r\n   */\n\n\n  send(req) {\n    let init = {\n      uri: this.endpoint + req.uri.replace(/^\\//, '') + req.params.toQueryString(),\n      method: req.method,\n      headers: {}\n    };\n    let oauthHelper = new _oAuthHelper.OAuthHelper(this.consumer_key, this.token);\n    oauthHelper.sign(init.uri, req, this.consumer_secret, this.token_secret);\n    init.headers['authorization'] = oauthHelper.header;\n    let promise = new Promise((resolve, reject) => {\n      (0, _request.default)(init, (er, _, body) => {\n        if (er) {\n          reject(er);\n        }\n\n        try {\n          let response = JSON.parse(body);\n\n          if (response.meta.code >= 300) {\n            const error = new Error('Received an error from the BrickLink servers');\n            (0, _logger.logger)(JSON.stringify({\n              reqestURI: init.uri,\n              responseMetadata: response.meta\n            }, null, 2));\n            throw error;\n          }\n\n          resolve(response.data);\n        } catch (error) {\n          (0, _logger.logger)(error.message);\n          reject(error);\n        }\n      });\n    });\n\n    if (req.callback) {\n      return promise.then(req.callback);\n    }\n\n    return promise;\n  }\n  /**\r\n   * Get a catalog item by type and identification number.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @return {Promise<CatalogItem>} A promise that resolves to a catalog item.\r\n   */\n\n\n  getCatalogItem(itemType, itemNumber) {\n    let req = _catalogItem.CatalogItem.get(itemType, itemNumber);\n\n    return this.send(req);\n  }\n  /**\r\n   * Get the price guide for a given catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} params Options for the price guide as outlined in {@link PriceGuideOptions}.\r\n   * @return {Promise<PriceGuide>} A promise that resolves to a price guide.\r\n   */\n\n\n  getPriceGuide(itemType, itemNumber, params) {\n    let req = _priceGuide.PriceGuide.get(itemType, itemNumber, params);\n\n    return this.send(req);\n  }\n  /**\r\n   * Get known colors for a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @return {Promise<Array>} A promise that resolves to a list of {@link KnownColor}.\r\n   */\n\n\n  getKnownColors(itemType, itemNumber) {\n    let req = _knownColor.KnownColor.get(itemType, itemNumber);\n\n    return this.send(req);\n  }\n  /**\r\n   * Can get an image for a specific image color of a known catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {number} colorId The color id of the item.\r\n   * @return {Promise<ItemImage>} A promise that resolves to an Item Image.\r\n   */\n\n\n  getItemImage(itemType, itemNumber, colorId) {\n    let req = _itemImage.ItemImage.get(itemType, itemNumber, colorId);\n\n    return this.send(req);\n  }\n  /**\r\n   * Gets a subset of a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} [params] Options for the price guide as outlined in {@link SubsetOptions}.\r\n   * @return {Promise<Array>} A promise that resolves to a  list of {@link Subset}.\r\n   */\n\n\n  getItemSubset(itemType, itemNumber, params) {\n    let req = _subsets.Subset.get(itemType, itemNumber, params);\n\n    return this.send(req);\n  }\n  /**\r\n   * Gets a superset of a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} [params] Options for the price guide as outlined in {@link SupersetOptions}.\r\n   * @return {Promise<Array>} A promise that resolves to a  list of {@link Superset}.\r\n   */\n\n\n  getItemSuperset(itemType, itemNumber, params) {\n    let req = _supersets.Superset.get(itemType, itemNumber, params);\n\n    return this.send(req);\n  }\n\n}\n\nexports.Client = Client;",
     "static": true,
     "longname": "C:/Projects/bricklink-api/dist/client.js",
     "access": "public",
@@ -3544,6 +3544,27 @@
   },
   {
     "__docId__": 174,
+    "kind": "variable",
+    "name": "_logger",
+    "memberof": "dist/client.js",
+    "static": true,
+    "longname": "dist/client.js~_logger",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/client.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 175,
     "kind": "function",
     "name": "_interopRequireDefault",
     "memberof": "dist/client.js",
@@ -3556,7 +3577,7 @@
     "importPath": "bricklink-api/dist/client.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 24,
+    "lineNumber": 26,
     "undocument": true,
     "params": [
       {
@@ -3574,7 +3595,7 @@
     "ignore": true
   },
   {
-    "__docId__": 175,
+    "__docId__": 176,
     "kind": "class",
     "name": "Client",
     "memberof": "dist/client.js",
@@ -3585,12 +3606,12 @@
     "importPath": "bricklink-api/dist/client.js",
     "importStyle": null,
     "description": "Create a client to perform",
-    "lineNumber": 29,
+    "lineNumber": 31,
     "interface": false,
     "ignore": true
   },
   {
-    "__docId__": 176,
+    "__docId__": 177,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "dist/client.js~Client",
@@ -3600,7 +3621,7 @@
     "longname": "dist/client.js~Client#constructor",
     "access": "public",
     "description": "Create an instance of the Bricklin Node Client.",
-    "lineNumber": 39,
+    "lineNumber": 41,
     "params": [
       {
         "nullable": null,
@@ -3667,7 +3688,7 @@
     ]
   },
   {
-    "__docId__": 177,
+    "__docId__": 178,
     "kind": "member",
     "name": "token",
     "memberof": "dist/client.js~Client",
@@ -3675,26 +3696,7 @@
     "longname": "dist/client.js~Client#token",
     "access": "public",
     "description": null,
-    "lineNumber": 43,
-    "type": {
-      "nullable": null,
-      "types": [
-        "string"
-      ],
-      "spread": false,
-      "description": null
-    }
-  },
-  {
-    "__docId__": 178,
-    "kind": "member",
-    "name": "token_secret",
-    "memberof": "dist/client.js~Client",
-    "static": false,
-    "longname": "dist/client.js~Client#token_secret",
-    "access": "public",
-    "description": null,
-    "lineNumber": 46,
+    "lineNumber": 45,
     "type": {
       "nullable": null,
       "types": [
@@ -3707,13 +3709,13 @@
   {
     "__docId__": 179,
     "kind": "member",
-    "name": "consumer_key",
+    "name": "token_secret",
     "memberof": "dist/client.js~Client",
     "static": false,
-    "longname": "dist/client.js~Client#consumer_key",
+    "longname": "dist/client.js~Client#token_secret",
     "access": "public",
     "description": null,
-    "lineNumber": 49,
+    "lineNumber": 48,
     "type": {
       "nullable": null,
       "types": [
@@ -3726,13 +3728,13 @@
   {
     "__docId__": 180,
     "kind": "member",
-    "name": "consumer_secret",
+    "name": "consumer_key",
     "memberof": "dist/client.js~Client",
     "static": false,
-    "longname": "dist/client.js~Client#consumer_secret",
+    "longname": "dist/client.js~Client#consumer_key",
     "access": "public",
     "description": null,
-    "lineNumber": 52,
+    "lineNumber": 51,
     "type": {
       "nullable": null,
       "types": [
@@ -3745,13 +3747,13 @@
   {
     "__docId__": 181,
     "kind": "member",
-    "name": "endpoint",
+    "name": "consumer_secret",
     "memberof": "dist/client.js~Client",
     "static": false,
-    "longname": "dist/client.js~Client#endpoint",
+    "longname": "dist/client.js~Client#consumer_secret",
     "access": "public",
     "description": null,
-    "lineNumber": 55,
+    "lineNumber": 54,
     "type": {
       "nullable": null,
       "types": [
@@ -3763,6 +3765,25 @@
   },
   {
     "__docId__": 182,
+    "kind": "member",
+    "name": "endpoint",
+    "memberof": "dist/client.js~Client",
+    "static": false,
+    "longname": "dist/client.js~Client#endpoint",
+    "access": "public",
+    "description": null,
+    "lineNumber": 57,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 183,
     "kind": "method",
     "name": "send",
     "memberof": "dist/client.js~Client",
@@ -3772,7 +3793,7 @@
     "longname": "dist/client.js~Client#send",
     "access": "public",
     "description": "Performs a bricklink request and the callback upon success.",
-    "lineNumber": 64,
+    "lineNumber": 66,
     "params": [
       {
         "nullable": null,
@@ -3795,7 +3816,7 @@
     }
   },
   {
-    "__docId__": 183,
+    "__docId__": 184,
     "kind": "method",
     "name": "getCatalogItem",
     "memberof": "dist/client.js~Client",
@@ -3805,7 +3826,7 @@
     "longname": "dist/client.js~Client#getCatalogItem",
     "access": "public",
     "description": "Get a catalog item by type and identification number.",
-    "lineNumber": 104,
+    "lineNumber": 115,
     "params": [
       {
         "nullable": null,
@@ -3838,7 +3859,7 @@
     }
   },
   {
-    "__docId__": 184,
+    "__docId__": 185,
     "kind": "method",
     "name": "getPriceGuide",
     "memberof": "dist/client.js~Client",
@@ -3848,7 +3869,7 @@
     "longname": "dist/client.js~Client#getPriceGuide",
     "access": "public",
     "description": "Get the price guide for a given catalog item.",
-    "lineNumber": 118,
+    "lineNumber": 129,
     "params": [
       {
         "nullable": null,
@@ -3891,7 +3912,7 @@
     }
   },
   {
-    "__docId__": 185,
+    "__docId__": 186,
     "kind": "method",
     "name": "getKnownColors",
     "memberof": "dist/client.js~Client",
@@ -3901,7 +3922,7 @@
     "longname": "dist/client.js~Client#getKnownColors",
     "access": "public",
     "description": "Get known colors for a catalog item.",
-    "lineNumber": 131,
+    "lineNumber": 142,
     "params": [
       {
         "nullable": null,
@@ -3934,7 +3955,7 @@
     }
   },
   {
-    "__docId__": 186,
+    "__docId__": 187,
     "kind": "method",
     "name": "getItemImage",
     "memberof": "dist/client.js~Client",
@@ -3944,7 +3965,7 @@
     "longname": "dist/client.js~Client#getItemImage",
     "access": "public",
     "description": "Can get an image for a specific image color of a known catalog item.",
-    "lineNumber": 145,
+    "lineNumber": 156,
     "params": [
       {
         "nullable": null,
@@ -3987,7 +4008,7 @@
     }
   },
   {
-    "__docId__": 187,
+    "__docId__": 188,
     "kind": "method",
     "name": "getItemSubset",
     "memberof": "dist/client.js~Client",
@@ -3997,7 +4018,7 @@
     "longname": "dist/client.js~Client#getItemSubset",
     "access": "public",
     "description": "Gets a subset of a catalog item.",
-    "lineNumber": 159,
+    "lineNumber": 170,
     "params": [
       {
         "nullable": null,
@@ -4040,7 +4061,7 @@
     }
   },
   {
-    "__docId__": 188,
+    "__docId__": 189,
     "kind": "method",
     "name": "getItemSuperset",
     "memberof": "dist/client.js~Client",
@@ -4050,7 +4071,7 @@
     "longname": "dist/client.js~Client#getItemSuperset",
     "access": "public",
     "description": "Gets a superset of a catalog item.",
-    "lineNumber": 173,
+    "lineNumber": 184,
     "params": [
       {
         "nullable": null,
@@ -4093,7 +4114,7 @@
     }
   },
   {
-    "__docId__": 189,
+    "__docId__": 190,
     "kind": "file",
     "name": "dist/color/color.js",
     "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.Color = void 0;\n\nvar _request = require(\"../request\");\n\n/**\r\n * Represents a color object\r\n */\nclass Color {\n  /**\r\n   * Create a new instance of a color\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.color_id=0] The color id. i.e. - 10\r\n   * @param {string} [data.color_name] The color name. i.e. - Dark Gray\r\n   * @param {string} [data.color_code] The HTML HEX associated to the color. i.e. - 6b5a5a\r\n   * @param {string} [data.color_type] A group that the color belongs to. i.e. - Solid, Transparent, etc...\r\n   */\n  constructor(data) {\n    data = data || {};\n    /** @type {number} */\n\n    this.color_id = data.color_id || 0;\n    /** @type {string} */\n\n    this.color_name = data.color_name || '';\n    /** @type {string} */\n\n    this.color_code = data.color_code || '';\n    /** @type {string} */\n\n    this.color_type = data.color_type || '';\n  }\n  /**\r\n   * Method to get specific color details\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Color.get(10);\r\n   * client.send(req).then(color => console.log(color));\r\n   * ```\r\n   *\r\n   * @param {number} colorId a color id.\r\n   * @return {Request} A request that resolves to a {@link Color} instance.\r\n   */\n\n\n  static get(colorId) {\n    let method = _request.Request.GET;\n    let uri = `/colors/${colorId}`;\n    return new _request.Request(method, uri, null, data => new Color(data));\n  }\n  /**\r\n   * Get a list of all colors\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Color.all();\r\n   * client.send(req).then(colors => console.log(colors));\r\n   * ```\r\n   *\r\n   * @return {Request} A request that resolves to an array of {@link Color}.\r\n   */\n\n\n  static all() {\n    let method = _request.Request.GET;\n    let uri = `/colors`;\n    return new _request.Request(method, uri, null, data => data.map(d => new Color(d)));\n  }\n\n}\n\nexports.Color = Color;",
@@ -4104,7 +4125,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 190,
+    "__docId__": 191,
     "kind": "variable",
     "name": "_request",
     "memberof": "dist/color/color.js",
@@ -4125,7 +4146,7 @@
     "ignore": true
   },
   {
-    "__docId__": 191,
+    "__docId__": 192,
     "kind": "class",
     "name": "Color",
     "memberof": "dist/color/color.js",
@@ -4141,7 +4162,7 @@
     "ignore": true
   },
   {
-    "__docId__": 192,
+    "__docId__": 193,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "dist/color/color.js~Color",
@@ -4208,7 +4229,7 @@
     ]
   },
   {
-    "__docId__": 193,
+    "__docId__": 194,
     "kind": "member",
     "name": "color_id",
     "memberof": "dist/color/color.js~Color",
@@ -4227,7 +4248,7 @@
     }
   },
   {
-    "__docId__": 194,
+    "__docId__": 195,
     "kind": "member",
     "name": "color_name",
     "memberof": "dist/color/color.js~Color",
@@ -4246,7 +4267,7 @@
     }
   },
   {
-    "__docId__": 195,
+    "__docId__": 196,
     "kind": "member",
     "name": "color_code",
     "memberof": "dist/color/color.js~Color",
@@ -4265,7 +4286,7 @@
     }
   },
   {
-    "__docId__": 196,
+    "__docId__": 197,
     "kind": "member",
     "name": "color_type",
     "memberof": "dist/color/color.js~Color",
@@ -4284,7 +4305,7 @@
     }
   },
   {
-    "__docId__": 197,
+    "__docId__": 198,
     "kind": "method",
     "name": "get",
     "memberof": "dist/color/color.js~Color",
@@ -4317,7 +4338,7 @@
     }
   },
   {
-    "__docId__": 198,
+    "__docId__": 199,
     "kind": "method",
     "name": "all",
     "memberof": "dist/color/color.js~Color",
@@ -4339,7 +4360,7 @@
     "params": []
   },
   {
-    "__docId__": 199,
+    "__docId__": 200,
     "kind": "file",
     "name": "dist/condition.js",
     "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.Condition = void 0;\n\n/**\r\n * Static dictionary of common condition terms to improve code readability.\r\n *\r\n * - `Condition.New`\r\n * - `Condition.Used`\r\n */\nclass Condition {\n  /** @type {string} */\n  static get New() {\n    return 'N';\n  }\n  /** @type {string} */\n\n\n  static get Used() {\n    return 'U';\n  }\n\n}\n\nexports.Condition = Condition;",
@@ -4350,7 +4371,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 200,
+    "__docId__": 201,
     "kind": "class",
     "name": "Condition",
     "memberof": "dist/condition.js",
@@ -4366,7 +4387,7 @@
     "ignore": true
   },
   {
-    "__docId__": 201,
+    "__docId__": 202,
     "kind": "get",
     "name": "New",
     "memberof": "dist/condition.js~Condition",
@@ -4387,7 +4408,7 @@
     }
   },
   {
-    "__docId__": 202,
+    "__docId__": 203,
     "kind": "get",
     "name": "Used",
     "memberof": "dist/condition.js~Condition",
@@ -4408,7 +4429,7 @@
     }
   },
   {
-    "__docId__": 203,
+    "__docId__": 204,
     "kind": "file",
     "name": "dist/index.js",
     "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nObject.defineProperty(exports, \"Client\", {\n  enumerable: true,\n  get: function () {\n    return _client.Client;\n  }\n});\nObject.defineProperty(exports, \"ItemType\", {\n  enumerable: true,\n  get: function () {\n    return _itemType.ItemType;\n  }\n});\nObject.defineProperty(exports, \"Condition\", {\n  enumerable: true,\n  get: function () {\n    return _condition.Condition;\n  }\n});\nObject.defineProperty(exports, \"CatalogItem\", {\n  enumerable: true,\n  get: function () {\n    return _catalogItem.CatalogItem;\n  }\n});\nObject.defineProperty(exports, \"ItemImage\", {\n  enumerable: true,\n  get: function () {\n    return _itemImage.ItemImage;\n  }\n});\nObject.defineProperty(exports, \"KnownColor\", {\n  enumerable: true,\n  get: function () {\n    return _knownColor.KnownColor;\n  }\n});\nObject.defineProperty(exports, \"PriceGuide\", {\n  enumerable: true,\n  get: function () {\n    return _priceGuide.PriceGuide;\n  }\n});\nObject.defineProperty(exports, \"Subset\", {\n  enumerable: true,\n  get: function () {\n    return _subsets.Subset;\n  }\n});\nObject.defineProperty(exports, \"Superset\", {\n  enumerable: true,\n  get: function () {\n    return _supersets.Superset;\n  }\n});\nObject.defineProperty(exports, \"Color\", {\n  enumerable: true,\n  get: function () {\n    return _color.Color;\n  }\n});\nObject.defineProperty(exports, \"Category\", {\n  enumerable: true,\n  get: function () {\n    return _category.Category;\n  }\n});\n\nvar _client = require(\"./client\");\n\nvar _itemType = require(\"./itemType\");\n\nvar _condition = require(\"./condition\");\n\nvar _catalogItem = require(\"./catalogItem/catalogItem\");\n\nvar _itemImage = require(\"./catalogItem/itemImage\");\n\nvar _knownColor = require(\"./catalogItem/knownColor\");\n\nvar _priceGuide = require(\"./catalogItem/priceGuide\");\n\nvar _subsets = require(\"./catalogItem/subsets\");\n\nvar _supersets = require(\"./catalogItem/supersets\");\n\nvar _color = require(\"./color/color\");\n\nvar _category = require(\"./category/category\");",
@@ -4419,7 +4440,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 204,
+    "__docId__": 205,
     "kind": "variable",
     "name": "_client",
     "memberof": "dist/index.js",
@@ -4440,7 +4461,7 @@
     "ignore": true
   },
   {
-    "__docId__": 205,
+    "__docId__": 206,
     "kind": "variable",
     "name": "_itemType",
     "memberof": "dist/index.js",
@@ -4461,7 +4482,7 @@
     "ignore": true
   },
   {
-    "__docId__": 206,
+    "__docId__": 207,
     "kind": "variable",
     "name": "_condition",
     "memberof": "dist/index.js",
@@ -4482,7 +4503,7 @@
     "ignore": true
   },
   {
-    "__docId__": 207,
+    "__docId__": 208,
     "kind": "variable",
     "name": "_catalogItem",
     "memberof": "dist/index.js",
@@ -4503,7 +4524,7 @@
     "ignore": true
   },
   {
-    "__docId__": 208,
+    "__docId__": 209,
     "kind": "variable",
     "name": "_itemImage",
     "memberof": "dist/index.js",
@@ -4524,7 +4545,7 @@
     "ignore": true
   },
   {
-    "__docId__": 209,
+    "__docId__": 210,
     "kind": "variable",
     "name": "_knownColor",
     "memberof": "dist/index.js",
@@ -4545,7 +4566,7 @@
     "ignore": true
   },
   {
-    "__docId__": 210,
+    "__docId__": 211,
     "kind": "variable",
     "name": "_priceGuide",
     "memberof": "dist/index.js",
@@ -4566,7 +4587,7 @@
     "ignore": true
   },
   {
-    "__docId__": 211,
+    "__docId__": 212,
     "kind": "variable",
     "name": "_subsets",
     "memberof": "dist/index.js",
@@ -4587,7 +4608,7 @@
     "ignore": true
   },
   {
-    "__docId__": 212,
+    "__docId__": 213,
     "kind": "variable",
     "name": "_supersets",
     "memberof": "dist/index.js",
@@ -4608,7 +4629,7 @@
     "ignore": true
   },
   {
-    "__docId__": 213,
+    "__docId__": 214,
     "kind": "variable",
     "name": "_color",
     "memberof": "dist/index.js",
@@ -4629,7 +4650,7 @@
     "ignore": true
   },
   {
-    "__docId__": 214,
+    "__docId__": 215,
     "kind": "variable",
     "name": "_category",
     "memberof": "dist/index.js",
@@ -4650,7 +4671,7 @@
     "ignore": true
   },
   {
-    "__docId__": 215,
+    "__docId__": 216,
     "kind": "file",
     "name": "dist/itemType.js",
     "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.ItemType = void 0;\n\n/**\r\n * Static dictionary of common catalog item types to improve code readability.\r\n */\nclass ItemType {\n  /** @type {string} */\n  static get Set() {\n    return 'SET';\n  }\n  /** @type {string} */\n\n\n  static get Minifigure() {\n    return 'MINIFIG';\n  }\n  /** @type {string} */\n\n\n  static get Part() {\n    return 'PART';\n  }\n  /** @type {string} */\n\n\n  static get Book() {\n    return 'BOOK';\n  }\n  /** @type {string} */\n\n\n  static get Gear() {\n    return 'GEAR';\n  }\n  /** @type {string} */\n\n\n  static get Catalog() {\n    return 'CATALOG';\n  }\n  /** @type {string} */\n\n\n  static get Instruction() {\n    return 'INSTRUCTION';\n  }\n  /** @type {string} */\n\n\n  static get UnsortedLot() {\n    return 'UNSORTED_LOT';\n  }\n  /** @type {string} */\n\n\n  static get Box() {\n    return 'ORIGINAL_BOX';\n  }\n\n}\n\nexports.ItemType = ItemType;",
@@ -4661,7 +4682,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 216,
+    "__docId__": 217,
     "kind": "class",
     "name": "ItemType",
     "memberof": "dist/itemType.js",
@@ -4677,7 +4698,7 @@
     "ignore": true
   },
   {
-    "__docId__": 217,
+    "__docId__": 218,
     "kind": "get",
     "name": "Set",
     "memberof": "dist/itemType.js~ItemType",
@@ -4698,7 +4719,7 @@
     }
   },
   {
-    "__docId__": 218,
+    "__docId__": 219,
     "kind": "get",
     "name": "Minifigure",
     "memberof": "dist/itemType.js~ItemType",
@@ -4719,7 +4740,7 @@
     }
   },
   {
-    "__docId__": 219,
+    "__docId__": 220,
     "kind": "get",
     "name": "Part",
     "memberof": "dist/itemType.js~ItemType",
@@ -4740,7 +4761,7 @@
     }
   },
   {
-    "__docId__": 220,
+    "__docId__": 221,
     "kind": "get",
     "name": "Book",
     "memberof": "dist/itemType.js~ItemType",
@@ -4761,7 +4782,7 @@
     }
   },
   {
-    "__docId__": 221,
+    "__docId__": 222,
     "kind": "get",
     "name": "Gear",
     "memberof": "dist/itemType.js~ItemType",
@@ -4782,7 +4803,7 @@
     }
   },
   {
-    "__docId__": 222,
+    "__docId__": 223,
     "kind": "get",
     "name": "Catalog",
     "memberof": "dist/itemType.js~ItemType",
@@ -4803,7 +4824,7 @@
     }
   },
   {
-    "__docId__": 223,
+    "__docId__": 224,
     "kind": "get",
     "name": "Instruction",
     "memberof": "dist/itemType.js~ItemType",
@@ -4824,7 +4845,7 @@
     }
   },
   {
-    "__docId__": 224,
+    "__docId__": 225,
     "kind": "get",
     "name": "UnsortedLot",
     "memberof": "dist/itemType.js~ItemType",
@@ -4845,7 +4866,7 @@
     }
   },
   {
-    "__docId__": 225,
+    "__docId__": 226,
     "kind": "get",
     "name": "Box",
     "memberof": "dist/itemType.js~ItemType",
@@ -4866,10 +4887,94 @@
     }
   },
   {
-    "__docId__": 226,
+    "__docId__": 227,
+    "kind": "file",
+    "name": "dist/logger.js",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.logger = void 0;\n\nvar _debug = _interopRequireDefault(require(\"debug\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst logger = (0, _debug.default)('bricklink-api');\nexports.logger = logger;",
+    "static": true,
+    "longname": "C:/Projects/bricklink-api/dist/logger.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 228,
+    "kind": "variable",
+    "name": "_debug",
+    "memberof": "dist/logger.js",
+    "static": true,
+    "longname": "dist/logger.js~_debug",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/logger.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 229,
+    "kind": "function",
+    "name": "_interopRequireDefault",
+    "memberof": "dist/logger.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/logger.js~_interopRequireDefault",
+    "access": "private",
+    "export": false,
+    "importPath": "bricklink-api/dist/logger.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "params": [
+      {
+        "name": "obj",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 230,
+    "kind": "variable",
+    "name": "logger",
+    "memberof": "dist/logger.js",
+    "static": true,
+    "longname": "dist/logger.js~logger",
+    "access": "public",
+    "export": false,
+    "importPath": "bricklink-api/dist/logger.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 231,
     "kind": "file",
     "name": "dist/oAuthHelper.js",
-    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.OAuthHelper = void 0;\n\nvar _crypto = _interopRequireDefault(require(\"crypto\"));\n\nvar _oauthSignature = _interopRequireDefault(require(\"oauth-signature\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\r\n * A helper for OAuth 1.0 header information and signing keys.\r\n */\nclass OAuthHelper {\n  /**\r\n   * Intialize the helper\r\n   * @param {string} consumerKey The consumer key\r\n   * @param {string} token The token value\r\n   */\n  constructor(consumerKey, token) {\n    /** @type {string} */\n    this.consumerKey = consumerKey;\n    /** @type {string} */\n\n    this.token = token;\n    /** @type {string} */\n\n    this.nonce = _crypto.default.randomBytes(16).toString('hex');\n    /** @type {string} */\n\n    this.signature = '';\n    /** @type {number} */\n\n    this.timestamp = Math.round(Date.now() / 1000).toString();\n  }\n\n  get parameters() {\n    return {\n      oauth_consumer_key: this.consumerKey,\n      oauth_token: this.token,\n      oauth_nonce: this.nonce,\n      oauth_timestamp: this.timestamp,\n      oauth_signature_method: 'HMAC-SHA1',\n      oauth_version: '1.0'\n    };\n  }\n\n  get header() {\n    let str = 'OAuth ';\n    let params = Object.assign({\n      'realm': ''\n    }, this.parameters);\n    params['oauth_signature'] = this.signature;\n    let keys = Object.keys(params);\n    let pairs = keys.map(k => {\n      return k + '=\"' + params[k] + '\"';\n    });\n    str += pairs.join(',');\n    return str;\n  }\n\n  get queryString() {\n    let params = Object.assign({}, this.parameters);\n    params['oauth_signature'] = this.signature;\n    let str = JSON.stringify(params);\n    return \"Authorization=\" + str;\n  }\n  /**\r\n   * Sign the request with oath headers and sets the signature member of the OauthHelper instance.\r\n   */\n\n\n  sign(url, request, consumerSecret, tokenSecret) {\n    let params = Object.assign({}, this.parameters, request.params.toObject());\n    this.signature = _oauthSignature.default.generate(request.method, url, params, consumerSecret, tokenSecret);\n  }\n\n}\n\nexports.OAuthHelper = OAuthHelper;",
+    "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.OAuthHelper = void 0;\n\nvar _crypto = _interopRequireDefault(require(\"crypto\"));\n\nvar _oauthSignature = _interopRequireDefault(require(\"oauth-signature\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\r\n * A helper for OAuth 1.0 header information and signing keys.\r\n */\nclass OAuthHelper {\n  /**\r\n   * Intialize the helper\r\n   * @param {string} consumerKey The consumer key\r\n   * @param {string} token The token value\r\n   */\n  constructor(consumerKey, token) {\n    /** @type {string} */\n    this.consumerKey = consumerKey;\n    /** @type {string} */\n\n    this.token = token;\n    /** @type {string} */\n\n    this.nonce = _crypto.default.randomBytes(16).toString('hex');\n    /** @type {string} */\n\n    this.signature = '';\n    /** @type {number} */\n\n    this.timestamp = Math.round(Date.now() / 1000).toString();\n  }\n\n  get parameters() {\n    return {\n      oauth_consumer_key: this.consumerKey,\n      oauth_token: this.token,\n      oauth_nonce: this.nonce,\n      oauth_timestamp: this.timestamp,\n      oauth_signature_method: 'HMAC-SHA1',\n      oauth_version: '1.0'\n    };\n  }\n\n  get header() {\n    let str = 'OAuth ';\n    let params = Object.assign({\n      realm: ''\n    }, this.parameters);\n    params['oauth_signature'] = this.signature;\n    let keys = Object.keys(params);\n    let pairs = keys.map(k => {\n      return k + '=\"' + params[k] + '\"';\n    });\n    str += pairs.join(',');\n    return str;\n  }\n\n  get queryString() {\n    let params = Object.assign({}, this.parameters);\n    params['oauth_signature'] = this.signature;\n    let str = JSON.stringify(params);\n    return 'Authorization=' + str;\n  }\n  /**\r\n   * Sign the request with oath headers and sets the signature member of the OauthHelper instance.\r\n   */\n\n\n  sign(url, request, consumerSecret, tokenSecret) {\n    let params = Object.assign({}, this.parameters, request.params.toObject());\n    this.signature = _oauthSignature.default.generate(request.method, url, params, consumerSecret, tokenSecret);\n  }\n\n}\n\nexports.OAuthHelper = OAuthHelper;",
     "static": true,
     "longname": "C:/Projects/bricklink-api/dist/oAuthHelper.js",
     "access": "public",
@@ -4877,7 +4982,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 227,
+    "__docId__": 232,
     "kind": "variable",
     "name": "_crypto",
     "memberof": "dist/oAuthHelper.js",
@@ -4898,7 +5003,7 @@
     "ignore": true
   },
   {
-    "__docId__": 228,
+    "__docId__": 233,
     "kind": "variable",
     "name": "_oauthSignature",
     "memberof": "dist/oAuthHelper.js",
@@ -4919,7 +5024,7 @@
     "ignore": true
   },
   {
-    "__docId__": 229,
+    "__docId__": 234,
     "kind": "function",
     "name": "_interopRequireDefault",
     "memberof": "dist/oAuthHelper.js",
@@ -4950,7 +5055,7 @@
     "ignore": true
   },
   {
-    "__docId__": 230,
+    "__docId__": 235,
     "kind": "class",
     "name": "OAuthHelper",
     "memberof": "dist/oAuthHelper.js",
@@ -4966,7 +5071,7 @@
     "ignore": true
   },
   {
-    "__docId__": 231,
+    "__docId__": 236,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "dist/oAuthHelper.js~OAuthHelper",
@@ -5001,7 +5106,7 @@
     ]
   },
   {
-    "__docId__": 232,
+    "__docId__": 237,
     "kind": "member",
     "name": "consumerKey",
     "memberof": "dist/oAuthHelper.js~OAuthHelper",
@@ -5020,7 +5125,7 @@
     }
   },
   {
-    "__docId__": 233,
+    "__docId__": 238,
     "kind": "member",
     "name": "token",
     "memberof": "dist/oAuthHelper.js~OAuthHelper",
@@ -5039,7 +5144,7 @@
     }
   },
   {
-    "__docId__": 234,
+    "__docId__": 239,
     "kind": "member",
     "name": "nonce",
     "memberof": "dist/oAuthHelper.js~OAuthHelper",
@@ -5058,7 +5163,7 @@
     }
   },
   {
-    "__docId__": 235,
+    "__docId__": 240,
     "kind": "member",
     "name": "signature",
     "memberof": "dist/oAuthHelper.js~OAuthHelper",
@@ -5077,7 +5182,7 @@
     }
   },
   {
-    "__docId__": 236,
+    "__docId__": 241,
     "kind": "member",
     "name": "timestamp",
     "memberof": "dist/oAuthHelper.js~OAuthHelper",
@@ -5096,7 +5201,7 @@
     }
   },
   {
-    "__docId__": 237,
+    "__docId__": 242,
     "kind": "get",
     "name": "parameters",
     "memberof": "dist/oAuthHelper.js~OAuthHelper",
@@ -5115,7 +5220,7 @@
     }
   },
   {
-    "__docId__": 238,
+    "__docId__": 243,
     "kind": "get",
     "name": "header",
     "memberof": "dist/oAuthHelper.js~OAuthHelper",
@@ -5134,7 +5239,7 @@
     }
   },
   {
-    "__docId__": 239,
+    "__docId__": 244,
     "kind": "get",
     "name": "queryString",
     "memberof": "dist/oAuthHelper.js~OAuthHelper",
@@ -5153,7 +5258,7 @@
     }
   },
   {
-    "__docId__": 240,
+    "__docId__": 245,
     "kind": "method",
     "name": "sign",
     "memberof": "dist/oAuthHelper.js~OAuthHelper",
@@ -5193,7 +5298,7 @@
     "return": null
   },
   {
-    "__docId__": 242,
+    "__docId__": 247,
     "kind": "file",
     "name": "dist/request.js",
     "content": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.RequestParams = exports.Request = void 0;\n\n/**\r\n * Creates a request to use with the client.\r\n */\nclass Request {\n  /**\r\n   * Create a new request.\r\n   * @param {string} method The type of HTTP request to perform.\r\n   * @param {string} uri The relative of full path uri of a request to perform. This should not include any query parameters.\r\n   * @param {RequestParams} [params] Additional parameters to include with the request in either post body or query params.\r\n   * @param {function} [callback=null] A callback function to perform after the request has been successfully performed.\r\n   */\n  constructor(method, uri, params, callback) {\n    /** @type {string} */\n    this.method = method;\n    /** @type {string} */\n\n    this.uri = uri;\n    /** @type {RequestParams} */\n\n    this.params = params || new RequestParams();\n    /** @type {function|null} */\n\n    this.callback = callback || null;\n  }\n  /** @type {string} */\n\n\n  static get GET() {\n    return 'get';\n  }\n  /** @type {string} */\n\n\n  static get PUT() {\n    return 'put';\n  }\n  /** @type {string} */\n\n\n  static get POST() {\n    return 'post';\n  }\n  /** @type {string} */\n\n\n  static get DELETE() {\n    return 'put';\n  }\n\n}\n/**\r\n * Represents any query parameters to use with a request.\r\n */\n\n\nexports.Request = Request;\n\nclass RequestParams {\n  /**\r\n   * Convert params for the request to a query string.\r\n   * @return {string} parameters in the format of '?<param>=<value>'.\r\n   */\n  toQueryString() {\n    let pairs = [];\n\n    for (let member in this) {\n      if (this[member] != null) {\n        pairs.push(member + '=' + this[member]);\n      }\n    }\n\n    if (pairs.length > 0) {\n      return '?' + pairs.join('&');\n    }\n\n    return '';\n  }\n  /**\r\n   * Convert params for the request to a an object.\r\n   * @return {object} trimmed down parameters object.\r\n   */\n\n\n  toObject() {\n    let params = {};\n\n    for (let member in this) {\n      if (this[member] != null) {\n        params[member] = this[member];\n      }\n    }\n\n    return params;\n  }\n\n}\n\nexports.RequestParams = RequestParams;",
@@ -5204,7 +5309,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 243,
+    "__docId__": 248,
     "kind": "class",
     "name": "Request",
     "memberof": "dist/request.js",
@@ -5220,7 +5325,7 @@
     "ignore": true
   },
   {
-    "__docId__": 244,
+    "__docId__": 249,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "dist/request.js~Request",
@@ -5277,7 +5382,7 @@
     ]
   },
   {
-    "__docId__": 245,
+    "__docId__": 250,
     "kind": "member",
     "name": "method",
     "memberof": "dist/request.js~Request",
@@ -5296,7 +5401,7 @@
     }
   },
   {
-    "__docId__": 246,
+    "__docId__": 251,
     "kind": "member",
     "name": "uri",
     "memberof": "dist/request.js~Request",
@@ -5315,7 +5420,7 @@
     }
   },
   {
-    "__docId__": 247,
+    "__docId__": 252,
     "kind": "member",
     "name": "params",
     "memberof": "dist/request.js~Request",
@@ -5334,7 +5439,7 @@
     }
   },
   {
-    "__docId__": 248,
+    "__docId__": 253,
     "kind": "member",
     "name": "callback",
     "memberof": "dist/request.js~Request",
@@ -5354,7 +5459,7 @@
     }
   },
   {
-    "__docId__": 249,
+    "__docId__": 254,
     "kind": "get",
     "name": "GET",
     "memberof": "dist/request.js~Request",
@@ -5375,7 +5480,7 @@
     }
   },
   {
-    "__docId__": 250,
+    "__docId__": 255,
     "kind": "get",
     "name": "PUT",
     "memberof": "dist/request.js~Request",
@@ -5396,7 +5501,7 @@
     }
   },
   {
-    "__docId__": 251,
+    "__docId__": 256,
     "kind": "get",
     "name": "POST",
     "memberof": "dist/request.js~Request",
@@ -5417,7 +5522,7 @@
     }
   },
   {
-    "__docId__": 252,
+    "__docId__": 257,
     "kind": "get",
     "name": "DELETE",
     "memberof": "dist/request.js~Request",
@@ -5438,7 +5543,7 @@
     }
   },
   {
-    "__docId__": 253,
+    "__docId__": 258,
     "kind": "class",
     "name": "RequestParams",
     "memberof": "dist/request.js",
@@ -5455,7 +5560,7 @@
     "ignore": true
   },
   {
-    "__docId__": 254,
+    "__docId__": 259,
     "kind": "method",
     "name": "toQueryString",
     "memberof": "dist/request.js~RequestParams",
@@ -5477,7 +5582,7 @@
     "params": []
   },
   {
-    "__docId__": 255,
+    "__docId__": 260,
     "kind": "method",
     "name": "toObject",
     "memberof": "dist/request.js~RequestParams",
@@ -5500,7 +5605,7 @@
   },
   {
     "kind": "index",
-    "content": "# bricklink-api\r\nNode package for connecting to Bricklink's API.\r\n\r\n```\r\nnpm install --save bricklink-api\r\n```\r\n\r\n## Basic Usage\r\n\r\nInitialize a client with your OAuth credentials as supplied at the following:\r\n\r\n[https://www.bricklink.com/v2/api/register_consumer.page](https://www.bricklink.com/v2/api/register_consumer.page)\r\n\r\nYou are required to have a Bricklink account and register your IP address from\r\nwhich your application will be using the API. You can also use 0.0.0.0 to match\r\nany IP address (such as a cloud solution); however, you would need to keep the keys and secrets secure.\r\n\r\n```javascript\r\nvar api = require('bricklink-api');\r\nvar Client = api.Client,\r\n    ItemType = api.ItemType;\r\n\r\nvar bricklink = new Client({\r\n    \"consumer_key\": \"<ConsumerKey>\",\r\n    \"consumer_secret\": \"<ConsumerSecret>\",\r\n    \"token\": \"<TokenValue>\",\r\n    \"token_secret\": \"<TokenSecret>\"\r\n  });\r\n\r\nbricklink.getCatalogItem(ItemType.Part, '3001')\r\n  .then(function(part){\r\n    console.log(part);\r\n  });\r\n\r\n\\\\ Alternate Usage:\r\n\r\nvar CatalogItem = api.CatalogItem;\r\nvar req = CatalogItem.get(ItemType.Part, '3001');\r\nbricklink.send(req)\r\n  .then(function(part){\r\n    console.log(part);\r\n  });\r\n```\r\n\r\n## ES6 Support\r\n\r\nRead basic usage.\r\n\r\n```javascript\r\nimport {Client, ItemType, CatalogItem} from 'bricklink-api';\r\n\r\nconst bricklink = new Client({\r\n    \"consumer_key\": \"<ConsumerKey>\",\r\n    \"consumer_secret\": \"<ConsumerSecret>\",\r\n    \"token\": \"<TokenValue>\",\r\n    \"token_secret\": \"<TokenSecret>\"\r\n  });\r\n\r\nbricklink.getCatalogItem(ItemType.Part, '3001')\r\n  .then(part => console.log(part));\r\n\r\n\\\\ Alternate Usage:\r\n\r\nlet req = CatalogItem.get(ItemType.Part, '3001');\r\nbricklink.send(req)\r\n  .then(part => console.log(part));\r\n```\r\n\r\n## Documentation\r\n\r\nFull API documentation is available at:\r\n\r\n[https://ryansh100.github.io/bricklink-api](https://ryansh100.github.io/bricklink-api)\r\n\r\n## Change Log\r\n\r\n- 2017/04/03: Fix bugs with require of dictionaries. Update to make more intuitive imports. Add support for color and category lookup.\r\n- 2021/05/01: Updating the compiling engine, updating the way tests are run\r\n",
+    "content": "# bricklink-api\r\n\r\nNode package for connecting to Bricklink's API.\r\n\r\n```\r\nnpm install --save bricklink-api\r\n```\r\n\r\n## Basic Usage\r\n\r\nInitialize a client with your OAuth credentials as supplied at the following:\r\n\r\n[https://www.bricklink.com/v2/api/register_consumer.page](https://www.bricklink.com/v2/api/register_consumer.page)\r\n\r\nYou are required to have a Bricklink account and register your IP address from\r\nwhich your application will be using the API. You can also use 0.0.0.0 to match\r\nany IP address (such as a cloud solution); however, you would need to keep the keys and secrets secure.\r\n\r\n```javascript\r\nvar api = require('bricklink-api');\r\nvar Client = api.Client,\r\n    ItemType = api.ItemType;\r\n\r\nvar bricklink = new Client({\r\n    \"consumer_key\": \"<ConsumerKey>\",\r\n    \"consumer_secret\": \"<ConsumerSecret>\",\r\n    \"token\": \"<TokenValue>\",\r\n    \"token_secret\": \"<TokenSecret>\"\r\n  });\r\n\r\nbricklink.getCatalogItem(ItemType.Part, '3001')\r\n  .then(function(part){\r\n    console.log(part);\r\n  });\r\n\r\n\\\\ Alternate Usage:\r\n\r\nvar CatalogItem = api.CatalogItem;\r\nvar req = CatalogItem.get(ItemType.Part, '3001');\r\nbricklink.send(req)\r\n  .then(function(part){\r\n    console.log(part);\r\n  });\r\n```\r\n\r\n## ES6 Support\r\n\r\nRead basic usage.\r\n\r\n```javascript\r\nimport {Client, ItemType, CatalogItem} from 'bricklink-api';\r\n\r\nconst bricklink = new Client({\r\n    \"consumer_key\": \"<ConsumerKey>\",\r\n    \"consumer_secret\": \"<ConsumerSecret>\",\r\n    \"token\": \"<TokenValue>\",\r\n    \"token_secret\": \"<TokenSecret>\"\r\n  });\r\n\r\nbricklink.getCatalogItem(ItemType.Part, '3001')\r\n  .then(part => console.log(part));\r\n\r\n\\\\ Alternate Usage:\r\n\r\nlet req = CatalogItem.get(ItemType.Part, '3001');\r\nbricklink.send(req)\r\n  .then(part => console.log(part));\r\n```\r\n\r\n## Documentation\r\n\r\nFull API documentation is available at:\r\n\r\n[https://ryansh100.github.io/bricklink-api](https://ryansh100.github.io/bricklink-api)\r\n\r\n## Change Log\r\n\r\n- 2017/04/03: Fix bugs with require of dictionaries. Update to make more intuitive imports. Add support for color and category lookup.\r\n- 2021/05/01: Updating the compiling engine, updating the way tests are run\r\n",
     "longname": "C:\\Projects\\bricklink-api\\README.md",
     "name": "./README.md",
     "static": true,
@@ -5508,7 +5613,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\r\n  \"name\": \"bricklink-api\",\r\n  \"version\": \"1.2.0\",\r\n  \"scripts\": {\r\n    \"test\": \"nyc ava\",\r\n    \"test:ci\": \"nyc ava -c 1\",\r\n    \"build\": \"babel src -d dist\",\r\n    \"docs\": \"esdoc\",\r\n    \"prepublish\": \"npm run build && npm run docs\",\r\n    \"report\": \"nyc report --reporter=html\"\r\n  },\r\n  \"description\": \"A node module for connecting to the Bricklink API.\",\r\n  \"main\": \"./dist/index.js\",\r\n  \"repository\": {\r\n    \"type\": \"git\",\r\n    \"url\": \"git+https://github.com/ryansh100/bricklink-api.git\"\r\n  },\r\n  \"keywords\": [\r\n    \"node\",\r\n    \"js\",\r\n    \"javascript\",\r\n    \"module\",\r\n    \"bricklink\",\r\n    \"api\",\r\n    \"oauth2\"\r\n  ],\r\n  \"author\": \"Ryan Hafer\",\r\n  \"license\": \"SEE LICENCE IN LICENSE\",\r\n  \"bugs\": {\r\n    \"url\": \"https://github.com/ryansh100/bricklink-api/issues\"\r\n  },\r\n  \"homepage\": \"https://github.com/ryansh100/bricklink-api#readme\",\r\n  \"devDependencies\": {\r\n    \"@ava/babel\": \"^1.0.1\",\r\n    \"@babel/cli\": \"^7.13.16\",\r\n    \"@babel/core\": \"^7.14.0\",\r\n    \"@babel/plugin-transform-modules-commonjs\": \"^7.14.0\",\r\n    \"@babel/preset-env\": \"^7.14.0\",\r\n    \"@babel/register\": \"^7.13.16\",\r\n    \"ava\": \"^3.15.0\",\r\n    \"dotenv\": \"^8.2.0\",\r\n    \"esdoc\": \"^1.1.0\",\r\n    \"esdoc-standard-plugin\": \"^1.0.0\",\r\n    \"nyc\": \"^15.1.0\"\r\n  },\r\n  \"dependencies\": {\r\n    \"core-js\": \"^2.4.1\",\r\n    \"oauth-signature\": \"^1.3.1\",\r\n    \"request\": \"^2.88.2\"\r\n  },\r\n  \"ava\": {\r\n    \"babel\": true,\r\n    \"files\": [\r\n      \"spec/**/*spec.js\"\r\n    ],\r\n    \"source\": [\r\n      \"src/**/*.js\"\r\n    ],\r\n    \"concurrency\": 3,\r\n    \"failFast\": true,\r\n    \"tap\": true,\r\n    \"powerAssert\": false,\r\n    \"require\": [\r\n      \"@babel/register\"\r\n    ]\r\n  },\r\n  \"engines\": {\r\n    \"node\": \">=5\"\r\n  },\r\n  \"nyc\": {\r\n    \"extension\": [\r\n      \".js\"\r\n    ]\r\n  }\r\n}\r\n",
+    "content": "{\r\n  \"name\": \"bricklink-api\",\r\n  \"version\": \"1.2.3\",\r\n  \"description\": \"A node module for connecting to the Bricklink API.\",\r\n  \"main\": \"./dist/index.js\",\r\n  \"files\": [\r\n    \"dist/*\"\r\n  ],\r\n  \"repository\": {\r\n    \"type\": \"git\",\r\n    \"url\": \"git+https://github.com/ryansh100/bricklink-api.git\"\r\n  },\r\n  \"keywords\": [\r\n    \"node\",\r\n    \"js\",\r\n    \"javascript\",\r\n    \"module\",\r\n    \"bricklink\",\r\n    \"api\",\r\n    \"oauth2\"\r\n  ],\r\n  \"author\": \"Ryan Hafer\",\r\n  \"license\": \"SEE LICENCE IN LICENSE\",\r\n  \"bugs\": {\r\n    \"url\": \"https://github.com/ryansh100/bricklink-api/issues\"\r\n  },\r\n  \"homepage\": \"https://github.com/ryansh100/bricklink-api#readme\",\r\n  \"scripts\": {\r\n    \"test\": \"nyc ava\",\r\n    \"test:ci\": \"nyc ava -c 1\",\r\n    \"build\": \"babel src -d dist\",\r\n    \"prepare\": \"husky install\",\r\n    \"docs\": \"esdoc\",\r\n    \"prepublish\": \"npm run build\",\r\n    \"report\": \"nyc report --reporter=html\"\r\n  },\r\n  \"devDependencies\": {\r\n    \"@ava/babel\": \"^1.0.1\",\r\n    \"@babel/cli\": \"^7.13.16\",\r\n    \"@babel/core\": \"^7.14.0\",\r\n    \"@babel/plugin-transform-modules-commonjs\": \"^7.14.0\",\r\n    \"@babel/preset-env\": \"^7.14.0\",\r\n    \"@babel/register\": \"^7.13.16\",\r\n    \"ava\": \"^3.15.0\",\r\n    \"dotenv\": \"^8.2.0\",\r\n    \"esdoc\": \"^1.1.0\",\r\n    \"esdoc-standard-plugin\": \"^1.0.0\",\r\n    \"husky\": \"^6.0.0\",\r\n    \"nyc\": \"^15.1.0\",\r\n    \"prettier\": \"^2.2.1\",\r\n    \"pretty-quick\": \"^3.1.0\"\r\n  },\r\n  \"dependencies\": {\r\n    \"core-js\": \"^2.4.1\",\r\n    \"debug\": \"^4.3.1\",\r\n    \"oauth-signature\": \"^1.3.1\",\r\n    \"request\": \"^2.88.2\"\r\n  },\r\n  \"ava\": {\r\n    \"babel\": true,\r\n    \"files\": [\r\n      \"spec/**/*spec.js\"\r\n    ],\r\n    \"source\": [\r\n      \"src/**/*.js\"\r\n    ],\r\n    \"concurrency\": 3,\r\n    \"failFast\": true,\r\n    \"tap\": true,\r\n    \"powerAssert\": false,\r\n    \"require\": [\r\n      \"@babel/register\"\r\n    ]\r\n  },\r\n  \"engines\": {\r\n    \"node\": \">=5\"\r\n  },\r\n  \"husky\": {\r\n    \"hooks\": {\r\n      \"pre-commit\": \"pretty-quick --staged\"\r\n    }\r\n  },\r\n  \"nyc\": {\r\n    \"extension\": [\r\n      \".js\"\r\n    ]\r\n  }\r\n}\r\n",
     "longname": "C:\\Projects\\bricklink-api\\package.json",
     "name": "package.json",
     "static": true,

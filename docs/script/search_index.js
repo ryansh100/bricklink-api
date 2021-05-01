@@ -354,6 +354,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "dist/logger.js",
+    "file/dist/logger.js.html",
+    "dist/logger.js",
+    "file"
+  ],
+  [
     "dist/oauthhelper.js",
     "file/dist/oAuthHelper.js.html",
     "dist/oAuthHelper.js",
