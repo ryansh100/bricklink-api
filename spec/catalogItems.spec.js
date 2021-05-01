@@ -1,13 +1,9 @@
 import test from 'ava';
-import FileSystem from 'fs';
-import HttpsProxyAgent from 'https-proxy-agent';
 import {Client, ItemType, Condition} from '../src/';
+import {config} from './test.config';
 
 let BL;
-test.before(t => {
-    let config = JSON.parse(FileSystem.readFileSync(
-      __dirname + '/../credentials.local.json',
-      'UTF-8'));
+test.before(() => {
     BL = new Client(config);
 });
 

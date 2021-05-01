@@ -6,3 +6,4 @@ credentials.local.json
 .nyc_output
 coverage
 .DS_Store
+.env
