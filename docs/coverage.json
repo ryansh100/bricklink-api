@@ -1,6 +1,6 @@
 {
-  "coverage": "77.08%",
-  "expectCount": 192,
+  "coverage": "75.51%",
+  "expectCount": 196,
   "actualCount": 148,
   "files": {
     "dist/catalogItem/catalogItem.js": {
@@ -62,7 +62,7 @@
       ]
     },
     "dist/client.js": {
-      "expectCount": 23,
+      "expectCount": 24,
       "actualCount": 14,
       "undocumentLines": [
         8,
@@ -73,7 +73,8 @@
         18,
         20,
         22,
-        24
+        24,
+        26
       ]
     },
     "dist/color/color.js": {
@@ -109,6 +110,15 @@
       "expectCount": 10,
       "actualCount": 10,
       "undocumentLines": []
+    },
+    "dist/logger.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        8,
+        10,
+        12
+      ]
     },
     "dist/oAuthHelper.js": {
       "expectCount": 14,
