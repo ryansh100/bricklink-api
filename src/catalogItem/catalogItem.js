@@ -1,4 +1,4 @@
-import {Request} from '../request';
+import { Request } from '../request';
 
 /**
  * Represents a Catalog Item.
@@ -8,7 +8,7 @@ export class CatalogItem {
    * Create a new instance of a Catalog Item
    * @param {object} [data] Data typically returned from an API response.
    */
-  constructor(data){
+  constructor(data) {
     data = data || {};
 
     /** @type {string} */
@@ -62,7 +62,7 @@ export class CatalogItem {
     let uri = `/items/${itemType}/${itemNumber}`;
 
     return new Request(method, uri, null, (data) => {
-      let item = new CatalogItem(data)
+      let item = new CatalogItem(data);
       return item;
     });
   }

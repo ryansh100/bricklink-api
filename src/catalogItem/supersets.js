@@ -1,5 +1,5 @@
-import {Request, RequestParams} from '../request';
-import {CatalogItem} from './catalogItem';
+import { Request, RequestParams } from '../request';
+import { CatalogItem } from './catalogItem';
 
 /**
  * Represents entries of a superset item.
@@ -26,7 +26,7 @@ export class SupersetEntry {
 /**
  * Represents a super set entry.
  */
-export class Superset{
+export class Superset {
   /**
    * Create an instance of a super set item.
    * @param {object} [data] The API response data
@@ -40,7 +40,7 @@ export class Superset{
 
     let entries = data.entries || [];
     /** @type {SupersetEntry[]} */
-    this.entries = entries.map(e => new SupersetEntry(e));
+    this.entries = entries.map((e) => new SupersetEntry(e));
   }
 
   /**
@@ -64,7 +64,7 @@ export class Superset{
     let uri = `/items/${itemType}/${itemNumber}/supersets`;
 
     return new Request(method, uri, options, (data) => {
-      return data.map( set => new Superset(set) );
+      return data.map((set) => new Superset(set));
     });
   }
 }
@@ -78,7 +78,7 @@ export class SupersetOptions extends RequestParams {
    * @param {object} [data] Raw options object.
    * @param {number} [data.color_id] The color of the item.
    */
-  constructor(data){
+  constructor(data) {
     super(data);
     data = data || {};
     /** @type {number|null} */

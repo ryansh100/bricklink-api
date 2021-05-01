@@ -1,6 +1,6 @@
 {
-    "targets": {
-        "node": "5"
-    },
-    "plugins": ["@babel/plugin-transform-modules-commonjs"]
+  "targets": {
+    "node": "5"
+  },
+  "plugins": ["@babel/plugin-transform-modules-commonjs"]
 }
