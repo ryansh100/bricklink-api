@@ -1,12 +1,9 @@
 import test from 'ava';
-import FileSystem from 'fs';
 import {Client, Color} from '../src/';
+import {config} from './test.config';
 
 let BL;
-test.before(t => {
-    let config = JSON.parse(FileSystem.readFileSync(
-      __dirname + '/../credentials.local.json',
-      'UTF-8'));
+test.before(() => {
     BL = new Client(config);
 });
 

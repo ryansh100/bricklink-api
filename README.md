@@ -75,3 +75,4 @@ Full API documentation is available at:
 ## Change Log
 
 - 2017/04/03: Fix bugs with require of dictionaries. Update to make more intuitive imports. Add support for color and category lookup.
+- 2021/05/01: Updating the compiling engine, updating the way tests are run
