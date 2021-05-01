@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-      - run: npm run test:cit
+      - run: npm run test:ci
 
   publish-npm:
     needs: build
@@ -31,7 +31,7 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-publish-gpr:
+  publish-gpr:
     needs: build
     runs-on: ubuntu-latest
     permissions:
