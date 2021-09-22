@@ -1,7 +1,7 @@
 {
-  "coverage": "97.24%",
-  "expectCount": 145,
-  "actualCount": 141,
+  "coverage": "97.51%",
+  "expectCount": 161,
+  "actualCount": 157,
   "files": {
     "src/catalogItem/catalogItem.js": {
       "expectCount": 18,
@@ -36,6 +36,11 @@
     "src/category/category.js": {
       "expectCount": 7,
       "actualCount": 7,
+      "undocumentLines": []
+    },
+    "src/client.js": {
+      "expectCount": 16,
+      "actualCount": 16,
       "undocumentLines": []
     },
     "src/color/color.js": {
