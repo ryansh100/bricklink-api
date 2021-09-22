@@ -1,5 +1,7 @@
 # bricklink-api
 
+[![Node.js CI](https://github.com/ryansh100/bricklink-api/actions/workflows/node.js.yml/badge.svg)](https://github.com/ryansh100/bricklink-api/actions/workflows/node.js.yml)
+
 Node package for connecting to Bricklink's API.
 
 ```
