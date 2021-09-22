@@ -37,12 +37,38 @@ export class Client {
       options.endpoint || 'https://api.bricklink.com/api/store/v1/';
   }
 
+  requestQueue = []
+
+  /**
+   * Performs a concurrent-safe bricklink request and the callback upon success.
+   * @param {Request} req The request to perform.
+   * @return {Promise} The data that has been return from the API request and any callbacks.
+   */
+  send(req) {
+    const promise = new Promise((resolve, reject) => {
+      const callback = () => this.dispatch(req).then(resolve).catch(reject).finally(() => {
+        const deleteIndex = this.requestQueue.indexOf(callback);
+        this.requestQueue.splice(deleteIndex, 1);
+        if (this.requestQueue.length > 0) {
+          const continueQueue = this.requestQueue[0];
+          continueQueue();
+        }
+      });
+      this.requestQueue.push(callback);
+      if (this.requestQueue.length === 1) {
+        const startQueue = this.requestQueue[0];
+        startQueue();
+      }
+    });
+    return promise;
+  }
+
   /**
    * Performs a bricklink request and the callback upon success.
    * @param {Request} req The request to perform.
    * @return {Promise} The data that has been return from the API request and any callbacks.
    */
-  send(req) {
+  dispatch(req) {
     let init = {
       uri:
         this.endpoint + req.uri.replace(/^\//, '') + req.params.toQueryString(),
@@ -55,10 +81,22 @@ export class Client {
 
     init.headers['authorization'] = oauthHelper.header;
 
+    
     let promise = new Promise((resolve, reject) => {
-      request(init, (er, _, body) => {
+      request(init, (er, response, body) => {
+        if (response.statusCode >= 400) {
+          const error = new Error(
+            'Received an error status code from the BrickLink servers',
+          );
+          error['statusCode'] = response.statusCode;
+          error['errorMessage'] = response.statusMessage;
+          error['body'] = body;
+          reject(error);
+          return;
+        }
         if (er) {
           reject(er);
+          return;
         }
         try {
           let response = JSON.parse(body);
@@ -86,9 +124,14 @@ export class Client {
       });
     });
 
+    promise.catch(error => {
+      logger(error);
+    });
+
     if (req.callback) {
-      return promise.then(req.callback);
+      return promise.then(req.callback)
     }
+
     return promise;
   }
 
