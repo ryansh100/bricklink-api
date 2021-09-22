@@ -234,6 +234,34 @@
           
           
           
+          <span class="code" data-ice="name"><span><a href="class/src/client.js~Client.html#instance-member-requestQueue">requestQueue</a></span></span><span class="code" data-ice="signature">: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span><span>[]</span></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
           <span class="code" data-ice="name"><span><a href="class/src/client.js~Client.html#instance-member-token">token</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
         </p>
       </div>
@@ -284,6 +312,35 @@
   <tbody>
   
   <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/client.js~Client.html#instance-method-dispatch">dispatch</a></span></span><span class="code" data-ice="signature">(req: <span><a href="class/src/request.js~Request.html">Request</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Performs a bricklink request and the callback upon success.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
     <td>
       <span class="access" data-ice="access">public</span>
       
@@ -477,7 +534,7 @@
       <div>
         
         
-        <div data-ice="description"><p>Performs a bricklink request and the callback upon success.</p>
+        <div data-ice="description"><p>Performs a concurrent-safe bricklink request and the callback upon success.</p>
 </div>
       </div>
     </td>
@@ -726,6 +783,49 @@
   
 </div>
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-member-requestQueue">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">requestQueue</span><span class="code" data-ice="signature">: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span><span>[]</span></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber39">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-member-token">
     <span class="access" data-ice="access">public</span>
     
@@ -815,6 +915,80 @@
 <div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
 
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-dispatch">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">dispatch</span><span class="code" data-ice="signature">(req: <span><a href="class/src/request.js~Request.html">Request</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber72">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Performs a bricklink request and the callback upon success.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">req</td>
+      <td data-ice="type" class="code"><span><a href="class/src/request.js~Request.html">Request</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The request to perform.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>The data that has been return from the API request and any callbacks.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-method-getCatalogItem">
     <span class="access" data-ice="access">public</span>
     
@@ -826,7 +1000,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber101">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber145">source</a></span></span>
     </span>
   </h3>
 
@@ -907,7 +1081,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber139">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber183">source</a></span></span>
     </span>
   </h3>
 
@@ -995,7 +1169,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber151">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber195">source</a></span></span>
     </span>
   </h3>
 
@@ -1083,7 +1257,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber163">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber207">source</a></span></span>
     </span>
   </h3>
 
@@ -1171,7 +1345,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber126">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber170">source</a></span></span>
     </span>
   </h3>
 
@@ -1252,7 +1426,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber114">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber158">source</a></span></span>
     </span>
   </h3>
 
@@ -1340,14 +1514,14 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber45">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber48">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>Performs a bricklink request and the callback upon success.</p>
+  <div data-ice="description"><p>Performs a concurrent-safe bricklink request and the callback upon success.</p>
 </div>
 
   
@@ -1406,7 +1580,7 @@
 </div>
 
 <footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+  Generated by <a href="https://esdoc2.org">esdoc2<span data-ice="esdocVersion">(2.1.5)</span><img src="./image/esdoc2-logo-mini-black.png"></a>
 </footer>
 
 <script src="script/search_index.js"></script>

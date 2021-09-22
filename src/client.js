@@ -35,9 +35,10 @@ export class Client {
     /** @type {string} */
     this.endpoint =
       options.endpoint || 'https://api.bricklink.com/api/store/v1/';
+    /** @type {Function[]} */
+    this.requestQueue = [];
   }
 
-  requestQueue = []
 
   /**
    * Performs a concurrent-safe bricklink request and the callback upon success.
