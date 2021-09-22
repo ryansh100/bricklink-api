@@ -12,12 +12,6 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "bricklink-api/src/client.js~client",
-    "class/src/client.js~Client.html",
-    "<span>Client</span> <span class=\"search-result-import-path\">bricklink-api/src/client.js</span>",
-    "class"
-  ],
-  [
     "bricklink-api/src/color/color.js~color",
     "class/src/color/color.js~Color.html",
     "<span>Color</span> <span class=\"search-result-import-path\">bricklink-api/src/color/color.js</span>",
@@ -964,90 +958,6 @@ window.esdocSearchIndex = [
     "class/src/category/category.js~Category.html#static-method-get",
     "src/category/category.js~Category.get",
     "method"
-  ],
-  [
-    "src/client.js",
-    "file/src/client.js.html",
-    "src/client.js",
-    "file"
-  ],
-  [
-    "src/client.js~client#constructor",
-    "class/src/client.js~Client.html#instance-constructor-constructor",
-    "src/client.js~Client#constructor",
-    "method"
-  ],
-  [
-    "src/client.js~client#consumer_key",
-    "class/src/client.js~Client.html#instance-member-consumer_key",
-    "src/client.js~Client#consumer_key",
-    "member"
-  ],
-  [
-    "src/client.js~client#consumer_secret",
-    "class/src/client.js~Client.html#instance-member-consumer_secret",
-    "src/client.js~Client#consumer_secret",
-    "member"
-  ],
-  [
-    "src/client.js~client#endpoint",
-    "class/src/client.js~Client.html#instance-member-endpoint",
-    "src/client.js~Client#endpoint",
-    "member"
-  ],
-  [
-    "src/client.js~client#getcatalogitem",
-    "class/src/client.js~Client.html#instance-method-getCatalogItem",
-    "src/client.js~Client#getCatalogItem",
-    "method"
-  ],
-  [
-    "src/client.js~client#getitemimage",
-    "class/src/client.js~Client.html#instance-method-getItemImage",
-    "src/client.js~Client#getItemImage",
-    "method"
-  ],
-  [
-    "src/client.js~client#getitemsubset",
-    "class/src/client.js~Client.html#instance-method-getItemSubset",
-    "src/client.js~Client#getItemSubset",
-    "method"
-  ],
-  [
-    "src/client.js~client#getitemsuperset",
-    "class/src/client.js~Client.html#instance-method-getItemSuperset",
-    "src/client.js~Client#getItemSuperset",
-    "method"
-  ],
-  [
-    "src/client.js~client#getknowncolors",
-    "class/src/client.js~Client.html#instance-method-getKnownColors",
-    "src/client.js~Client#getKnownColors",
-    "method"
-  ],
-  [
-    "src/client.js~client#getpriceguide",
-    "class/src/client.js~Client.html#instance-method-getPriceGuide",
-    "src/client.js~Client#getPriceGuide",
-    "method"
-  ],
-  [
-    "src/client.js~client#send",
-    "class/src/client.js~Client.html#instance-method-send",
-    "src/client.js~Client#send",
-    "method"
-  ],
-  [
-    "src/client.js~client#token",
-    "class/src/client.js~Client.html#instance-member-token",
-    "src/client.js~Client#token",
-    "member"
-  ],
-  [
-    "src/client.js~client#token_secret",
-    "class/src/client.js~Client.html#instance-member-token_secret",
-    "src/client.js~Client#token_secret",
-    "member"
   ],
   [
     "src/color/color.js",
