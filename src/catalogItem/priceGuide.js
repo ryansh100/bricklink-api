@@ -24,7 +24,7 @@ export class PriceDetail {
     /** @type {string} */
     this.buyer_country_code = data.buyer_country_code || '';
     /** @type {Date|null} */
-    this.date_ordered = data.date_ordered ? new Date(datea.date_ordered) : null;
+    this.date_ordered = data.date_ordered ? new Date(data.date_ordered) : null;
   }
 }
 
