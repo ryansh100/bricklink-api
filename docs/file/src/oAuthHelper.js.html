@@ -33,7 +33,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/condition.js~Condition.html">Condition</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/itemType.js~ItemType.html">ItemType</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/oAuthHelper.js~OAuthHelper.html">OAuthHelper</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~RequestParams.html">RequestParams</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-logger">logger</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#catalogitem">catalogItem</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/catalogItem.js~CatalogItem.html">CatalogItem</a></span></span></li>
@@ -55,7 +55,8 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/oAuthHelper.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import crypto from &apos;crypto&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//@ts-check
+import crypto from &apos;crypto&apos;;
 import oauthSignature from &apos;oauth-signature&apos;;
 
 /**
@@ -76,7 +77,7 @@ export class OAuthHelper {
     this.nonce = crypto.randomBytes(16).toString(&apos;hex&apos;);
     /** @type {string} */
     this.signature = &apos;&apos;;
-    /** @type {number} */
+    /** @type {string} */
     this.timestamp = Math.round(Date.now() / 1000).toString();
   }
 

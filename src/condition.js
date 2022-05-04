@@ -1,3 +1,4 @@
+//@ts-check
 /**
  * Static dictionary of common condition terms to improve code readability.
  *

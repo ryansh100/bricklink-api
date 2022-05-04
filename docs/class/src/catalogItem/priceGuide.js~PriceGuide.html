@@ -33,7 +33,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/condition.js~Condition.html">Condition</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/itemType.js~ItemType.html">ItemType</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/oAuthHelper.js~OAuthHelper.html">OAuthHelper</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~RequestParams.html">RequestParams</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-logger">logger</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#catalogitem">catalogItem</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/catalogItem.js~CatalogItem.html">CatalogItem</a></span></span></li>
@@ -55,13 +55,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {PriceGuide} from &apos;<span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber34">bricklink-api/src/catalogItem/priceGuide.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {PriceGuide} from &apos;<span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber35">bricklink-api/src/catalogItem/priceGuide.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber34">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber35">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -113,7 +113,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/catalogItem/priceGuide.js~PriceGuide.html#static-method-get">get</a></span></span><span class="code" data-ice="signature">(itemType: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, itemNumber: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span>): <span><a href="class/src/request.js~Request.html">Request</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/catalogItem/priceGuide.js~PriceGuide.html#static-method-get">get</a></span></span><span class="code" data-ice="signature">(itemType: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, itemNumber: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span>): <span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></span>
         </p>
       </div>
       <div>
@@ -244,7 +244,7 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-member-item">item</a></span></span><span class="code" data-ice="signature">: <span>Item</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/catalogItem/priceGuide.js~PriceGuide.html#instance-member-item">item</a></span></span><span class="code" data-ice="signature">: <span><a href="class/src/catalogItem/catalogItem.js~CatalogItem.html">CatalogItem</a></span></span>
         </p>
       </div>
       <div>
@@ -472,11 +472,11 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     
     
     
-    <span class="code" data-ice="name">get</span><span class="code" data-ice="signature">(itemType: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, itemNumber: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span>): <span><a href="class/src/request.js~Request.html">Request</a></span></span>
+    <span class="code" data-ice="name">get</span><span class="code" data-ice="signature">(itemType: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, itemNumber: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, params: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span>): <span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber79">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber80">source</a></span></span>
     </span>
   </h3>
 
@@ -530,7 +530,7 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span><a href="class/src/request.js~Request.html">Request</a></span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></td>
           <td class="return-desc" data-ice="returnDescription"><p>A request that is ready to execute with a client.</p>
 </td>
         </tr>
@@ -570,7 +570,7 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber39">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber40">source</a></span></span>
     </span>
   </h3>
 
@@ -634,7 +634,7 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber51">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber52">source</a></span></span>
     </span>
   </h3>
 
@@ -677,7 +677,7 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber45">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber46">source</a></span></span>
     </span>
   </h3>
 
@@ -716,11 +716,11 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     
     
     
-    <span class="code" data-ice="name">item</span><span class="code" data-ice="signature">: <span>Item</span></span>
+    <span class="code" data-ice="name">item</span><span class="code" data-ice="signature">: <span><a href="class/src/catalogItem/catalogItem.js~CatalogItem.html">CatalogItem</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber41">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber42">source</a></span></span>
     </span>
   </h3>
 
@@ -763,7 +763,7 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber49">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber50">source</a></span></span>
     </span>
   </h3>
 
@@ -806,7 +806,7 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber47">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber48">source</a></span></span>
     </span>
   </h3>
 
@@ -849,7 +849,7 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber43">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber44">source</a></span></span>
     </span>
   </h3>
 
@@ -892,7 +892,7 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber59">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber60">source</a></span></span>
     </span>
   </h3>
 
@@ -935,7 +935,7 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber53">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber54">source</a></span></span>
     </span>
   </h3>
 
@@ -978,7 +978,7 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber57">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber58">source</a></span></span>
     </span>
   </h3>
 
@@ -1021,7 +1021,7 @@ client.send(req).then(guide =&gt; console.log(guide));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber55">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/priceGuide.js.html#lineNumber56">source</a></span></span>
     </span>
   </h3>
 

@@ -33,7 +33,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/condition.js~Condition.html">Condition</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/itemType.js~ItemType.html">ItemType</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/oAuthHelper.js~OAuthHelper.html">OAuthHelper</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~RequestParams.html">RequestParams</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-logger">logger</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#catalogitem">catalogItem</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/catalogItem.js~CatalogItem.html">CatalogItem</a></span></span></li>
@@ -55,16 +55,17 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/request.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//@ts-check
+/**
  * Creates a request to use with the client.
  */
-export class Request {
+export class BricklinkRequest {
   /**
    * Create a new request.
    * @param {string} method The type of HTTP request to perform.
    * @param {string} uri The relative of full path uri of a request to perform. This should not include any query parameters.
    * @param {RequestParams} [params] Additional parameters to include with the request in either post body or query params.
-   * @param {function} [callback=null] A callback function to perform after the request has been successfully performed.
+   * @param {BricklinkRequestCallback} [callback=null] A callback function to perform after the request has been successfully performed.
    */
   constructor(method, uri, params, callback) {
     /** @type {string} */
@@ -73,7 +74,7 @@ export class Request {
     this.uri = uri;
     /** @type {RequestParams} */
     this.params = params || new RequestParams();
-    /** @type {function|null} */
+    /** @type {BricklinkRequestCallback|null} */
     this.callback = callback || null;
   }
   /** @type {string} */
@@ -98,6 +99,12 @@ export class Request {
 }
 
 /**
+ * @callback BricklinkRequestCallback
+ * @param {any} value
+ * @returns {any}
+ */
+
+/**
  * Represents any query parameters to use with a request.
  */
 export class RequestParams {
@@ -106,8 +113,8 @@ export class RequestParams {
    * @return {string} parameters in the format of &apos;?&lt;param&gt;=&lt;value&gt;&apos;.
    */
   toQueryString() {
-    let pairs = [];
-    for (let member in this) {
+    const pairs = [];
+    for (const member in this) {
       if (this[member] != null) {
         pairs.push(member + &apos;=&apos; + this[member]);
       }
@@ -123,8 +130,9 @@ export class RequestParams {
    * @return {object} trimmed down parameters object.
    */
   toObject() {
-    let params = {};
-    for (let member in this) {
+    /** @type {object} */
+    const params = {};
+    for (const member in this) {
       if (this[member] != null) {
         params[member] = this[member];
       }

@@ -1,4 +1,5 @@
-import { Request } from '../request';
+//@ts-check
+import { BricklinkRequest } from '../request';
 
 /**
  * Represents a Catalog Item.
@@ -55,14 +56,14 @@ export class CatalogItem {
    *
    * @param {string} itemType Catalog item type i.e. - MINIFIG, PART, SET, BOOK, GEAR, CATALOG, INSTRUCTION, UNSORTED_LOT, ORIGINAL_BOX
    * @param {string} itemNumber Catalog item number
-   * @return {Request} A request that is ready to execute with a client.
+   * @return {BricklinkRequest} A request that is ready to execute with a client.
    */
   static get(itemType, itemNumber) {
-    let method = Request.GET;
-    let uri = `/items/${itemType}/${itemNumber}`;
+    const  method = BricklinkRequest.GET;
+    const uri = `/items/${itemType}/${itemNumber}`;
 
-    return new Request(method, uri, null, (data) => {
-      let item = new CatalogItem(data);
+    return new BricklinkRequest(method, uri, null, (data) => {
+      const item = new CatalogItem(data);
       return item;
     });
   }

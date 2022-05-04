@@ -1,4 +1,5 @@
-import { Request, RequestParams } from '../request';
+//@ts-check
+import { BricklinkRequest, RequestParams } from '../request';
 import { CatalogItem } from './catalogItem';
 
 /**
@@ -37,8 +38,8 @@ export class PriceGuide {
    * @param {object} [data] Data returned from an API response.
    */
   constructor(data) {
-    /** @type {Item} item The item that belongs to the price guide. */
-    this.item = data.item ? new CatalogItem(data.item) : new Item();
+    /** @type {CatalogItem} item The item that belongs to the price guide. */
+    this.item = data.item ? new CatalogItem(data.item) : new CatalogItem();
     /** @type {string} new_or_used Whether or not the price guide is new or used condition. */
     this.new_or_used = data.new_or_used || '';
     /** @type {string} */
@@ -74,14 +75,14 @@ export class PriceGuide {
    * @param {string} itemType Catalog item type as found at {@link ItemType}.
    * @param {string} itemNumber Catalog item number
    * @param {object} [params] Params as outlined in {@link PriceGuideOptions}.
-   * @return {Request} A request that is ready to execute with a client.
+   * @return {BricklinkRequest} A request that is ready to execute with a client.
    */
   static get(itemType, itemNumber, params) {
     params = params ? new PriceGuideOptions(params) : new PriceGuideOptions();
-    let method = Request.GET;
+    let method = BricklinkRequest.GET;
     let uri = `items/${itemType}/${itemNumber}/price`;
 
-    return new Request(method, uri, params, (data) => {
+    return new BricklinkRequest(method, uri, params, (data) => {
       return new PriceGuide(data);
     });
   }
@@ -93,7 +94,7 @@ export class PriceGuide {
 export class PriceGuideOptions extends RequestParams {
   /**
    * Create an instance of Price Guide options.
-   * @param {object} data Optional parameter data.
+   * @param {object} [data] Optional parameter data.
    * @param {number|null} [data.color_id=null] The color Identification numbe of the item
    * @param {string} [data.guide_type='stock'] Indicates that which statistics to be provided. Options include "sold" and "stock"
    * @param {string} [data.new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: "N": new item (default) and "U": used item
@@ -103,7 +104,7 @@ export class PriceGuideOptions extends RequestParams {
    * @param {string} [data.vat='N']
    */
   constructor(data) {
-    super(data);
+    super();
 
     data = data || {};
     /** @type {number|null} [data.color_id=null] The color Identification numbe of the item */

@@ -1,4 +1,5 @@
-import { Request } from '../request';
+//@ts-check
+import { BricklinkRequest } from '../request';
 
 /**
  * Represents a color object
@@ -35,13 +36,13 @@ export class Color {
    * ```
    *
    * @param {number} colorId a color id.
-   * @return {Request} A request that resolves to a {@link Color} instance.
+   * @return {BricklinkRequest} A request that resolves to a {@link Color} instance.
    */
   static get(colorId) {
-    let method = Request.GET;
+    let method = BricklinkRequest.GET;
     let uri = `/colors/${colorId}`;
 
-    return new Request(method, uri, null, (data) => new Color(data));
+    return new BricklinkRequest(method, uri, null, (data) => new Color(data));
   }
 
   /**
@@ -54,13 +55,13 @@ export class Color {
    * client.send(req).then(colors => console.log(colors));
    * ```
    *
-   * @return {Request} A request that resolves to an array of {@link Color}.
+   * @return {BricklinkRequest} A request that resolves to an array of {@link Color}.
    */
   static all() {
-    let method = Request.GET;
+    let method = BricklinkRequest.GET;
     let uri = `/colors`;
 
-    return new Request(method, uri, null, (data) =>
+    return new BricklinkRequest(method, uri, null, (data) =>
       data.map((d) => new Color(d)),
     );
   }

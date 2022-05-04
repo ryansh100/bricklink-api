@@ -33,7 +33,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/condition.js~Condition.html">Condition</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/itemType.js~ItemType.html">ItemType</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/oAuthHelper.js~OAuthHelper.html">OAuthHelper</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~RequestParams.html">RequestParams</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-logger">logger</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#catalogitem">catalogItem</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/catalogItem.js~CatalogItem.html">CatalogItem</a></span></span></li>
@@ -55,7 +55,8 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/catalogItem/catalogItem.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { Request } from &apos;../request&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//@ts-check
+import { BricklinkRequest } from &apos;../request&apos;;
 
 /**
  * Represents a Catalog Item.
@@ -112,14 +113,14 @@ export class CatalogItem {
    *
    * @param {string} itemType Catalog item type i.e. - MINIFIG, PART, SET, BOOK, GEAR, CATALOG, INSTRUCTION, UNSORTED_LOT, ORIGINAL_BOX
    * @param {string} itemNumber Catalog item number
-   * @return {Request} A request that is ready to execute with a client.
+   * @return {BricklinkRequest} A request that is ready to execute with a client.
    */
   static get(itemType, itemNumber) {
-    let method = Request.GET;
-    let uri = `/items/${itemType}/${itemNumber}`;
+    const  method = BricklinkRequest.GET;
+    const uri = `/items/${itemType}/${itemNumber}`;
 
-    return new Request(method, uri, null, (data) =&gt; {
-      let item = new CatalogItem(data);
+    return new BricklinkRequest(method, uri, null, (data) =&gt; {
+      const item = new CatalogItem(data);
       return item;
     });
   }

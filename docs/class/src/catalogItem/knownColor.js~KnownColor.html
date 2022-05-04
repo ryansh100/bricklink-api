@@ -33,7 +33,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/condition.js~Condition.html">Condition</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/itemType.js~ItemType.html">ItemType</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/oAuthHelper.js~OAuthHelper.html">OAuthHelper</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~RequestParams.html">RequestParams</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-logger">logger</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#catalogitem">catalogItem</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/catalogItem.js~CatalogItem.html">CatalogItem</a></span></span></li>
@@ -55,13 +55,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {KnownColor} from &apos;<span><a href="file/src/catalogItem/knownColor.js.html#lineNumber6">bricklink-api/src/catalogItem/knownColor.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {KnownColor} from &apos;<span><a href="file/src/catalogItem/knownColor.js.html#lineNumber7">bricklink-api/src/catalogItem/knownColor.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/catalogItem/knownColor.js.html#lineNumber6">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/catalogItem/knownColor.js.html#lineNumber7">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -113,7 +113,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/catalogItem/knownColor.js~KnownColor.html#static-method-get">get</a></span></span><span class="code" data-ice="signature">(itemType: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, itemNumber: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/request.js~Request.html">Request</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/catalogItem/knownColor.js~KnownColor.html#static-method-get">get</a></span></span><span class="code" data-ice="signature">(itemType: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, itemNumber: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></span>
         </p>
       </div>
       <div>
@@ -245,11 +245,11 @@
     
     
     
-    <span class="code" data-ice="name">get</span><span class="code" data-ice="signature">(itemType: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, itemNumber: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/request.js~Request.html">Request</a></span></span>
+    <span class="code" data-ice="name">get</span><span class="code" data-ice="signature">(itemType: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, itemNumber: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/knownColor.js.html#lineNumber35">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/knownColor.js.html#lineNumber36">source</a></span></span>
     </span>
   </h3>
 
@@ -296,7 +296,7 @@ client.send(req).then(colors =&gt; console.log(colors));</code>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span><a href="class/src/request.js~Request.html">Request</a></span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></td>
           <td class="return-desc" data-ice="returnDescription"><p>A request that resolves to a list of <span><a href="class/src/catalogItem/knownColor.js~KnownColor.html">KnownColor</a></span>.</p>
 </td>
         </tr>
@@ -336,7 +336,7 @@ client.send(req).then(colors =&gt; console.log(colors));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/knownColor.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/knownColor.js.html#lineNumber14">source</a></span></span>
     </span>
   </h3>
 
@@ -416,7 +416,7 @@ client.send(req).then(colors =&gt; console.log(colors));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/knownColor.js.html#lineNumber16">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/knownColor.js.html#lineNumber17">source</a></span></span>
     </span>
   </h3>
 
@@ -459,7 +459,7 @@ client.send(req).then(colors =&gt; console.log(colors));</code>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/catalogItem/knownColor.js.html#lineNumber18">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/catalogItem/knownColor.js.html#lineNumber19">source</a></span></span>
     </span>
   </h3>
 

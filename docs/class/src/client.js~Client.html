@@ -33,7 +33,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/condition.js~Condition.html">Condition</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/itemType.js~ItemType.html">ItemType</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/oAuthHelper.js~OAuthHelper.html">OAuthHelper</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~RequestParams.html">RequestParams</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-logger">logger</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#catalogitem">catalogItem</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/catalogItem.js~CatalogItem.html">CatalogItem</a></span></span></li>
@@ -55,13 +55,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {Client} from &apos;<span><a href="file/src/client.js.html#lineNumber14">bricklink-api/src/client.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {Client} from &apos;<span><a href="file/src/client.js.html#lineNumber16">bricklink-api/src/client.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/client.js.html#lineNumber14">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/client.js.html#lineNumber16">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -325,7 +325,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/client.js~Client.html#instance-method-dispatch">dispatch</a></span></span><span class="code" data-ice="signature">(req: <span><a href="class/src/request.js~Request.html">Request</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/client.js~Client.html#instance-method-dispatch">dispatch</a></span></span><span class="code" data-ice="signature">(req: <span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></span>
         </p>
       </div>
       <div>
@@ -528,7 +528,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/client.js~Client.html#instance-method-send">send</a></span></span><span class="code" data-ice="signature">(req: <span><a href="class/src/request.js~Request.html">Request</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/client.js~Client.html#instance-method-send">send</a></span></span><span class="code" data-ice="signature">(req: <span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></span>
         </p>
       </div>
       <div>
@@ -565,7 +565,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber24">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber26">source</a></span></span>
     </span>
   </h3>
 
@@ -588,7 +588,7 @@
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">options</td>
       <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></td>
-      <td data-ice="appendix"></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
       <td data-ice="description"><p>Options that are used to create a new client.</p>
 </td>
     </tr>
@@ -665,7 +665,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber32">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber34">source</a></span></span>
     </span>
   </h3>
 
@@ -708,7 +708,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber34">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber36">source</a></span></span>
     </span>
   </h3>
 
@@ -751,7 +751,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber36">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber38">source</a></span></span>
     </span>
   </h3>
 
@@ -794,7 +794,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber39">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber41">source</a></span></span>
     </span>
   </h3>
 
@@ -837,7 +837,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber28">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber30">source</a></span></span>
     </span>
   </h3>
 
@@ -880,7 +880,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber30">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber32">source</a></span></span>
     </span>
   </h3>
 
@@ -922,11 +922,11 @@
     
     
     
-    <span class="code" data-ice="name">dispatch</span><span class="code" data-ice="signature">(req: <span><a href="class/src/request.js~Request.html">Request</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></span>
+    <span class="code" data-ice="name">dispatch</span><span class="code" data-ice="signature">(req: <span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber72">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber74">source</a></span></span>
     </span>
   </h3>
 
@@ -948,7 +948,7 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">req</td>
-      <td data-ice="type" class="code"><span><a href="class/src/request.js~Request.html">Request</a></span></td>
+      <td data-ice="type" class="code"><span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>The request to perform.</p>
 </td>
@@ -1000,7 +1000,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber145">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber131">source</a></span></span>
     </span>
   </h3>
 
@@ -1081,7 +1081,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber183">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber169">source</a></span></span>
     </span>
   </h3>
 
@@ -1169,7 +1169,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber195">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber181">source</a></span></span>
     </span>
   </h3>
 
@@ -1257,7 +1257,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber207">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber193">source</a></span></span>
     </span>
   </h3>
 
@@ -1345,7 +1345,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber170">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber156">source</a></span></span>
     </span>
   </h3>
 
@@ -1426,7 +1426,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber158">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber144">source</a></span></span>
     </span>
   </h3>
 
@@ -1510,11 +1510,11 @@
     
     
     
-    <span class="code" data-ice="name">send</span><span class="code" data-ice="signature">(req: <span><a href="class/src/request.js~Request.html">Request</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></span>
+    <span class="code" data-ice="name">send</span><span class="code" data-ice="signature">(req: <span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber48">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/client.js.html#lineNumber50">source</a></span></span>
     </span>
   </h3>
 
@@ -1536,7 +1536,7 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">req</td>
-      <td data-ice="type" class="code"><span><a href="class/src/request.js~Request.html">Request</a></span></td>
+      <td data-ice="type" class="code"><span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>The request to perform.</p>
 </td>

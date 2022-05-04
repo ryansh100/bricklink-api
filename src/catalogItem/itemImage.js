@@ -1,4 +1,5 @@
-import { Request } from '../request';
+//@ts-check
+import { BricklinkRequest } from '../request';
 
 /**
  * Represents an image for a specific color of a catalog item.
@@ -39,10 +40,10 @@ export class ItemImage {
    * @param {number} colorId Catalog item's color id.
    */
   static get(itemType, itemNumber, colorId) {
-    let method = Request.GET;
+    let method = BricklinkRequest.GET;
     let uri = `/items/${itemType}/${itemNumber}/images/${colorId}`;
 
-    return new Request(method, uri, null, (data) => {
+    return new BricklinkRequest(method, uri, null, (data) => {
       return new ItemImage(data);
     });
   }

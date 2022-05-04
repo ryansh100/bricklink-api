@@ -1,13 +1,14 @@
+//@ts-check
 /**
  * Creates a request to use with the client.
  */
-export class Request {
+export class BricklinkRequest {
   /**
    * Create a new request.
    * @param {string} method The type of HTTP request to perform.
    * @param {string} uri The relative of full path uri of a request to perform. This should not include any query parameters.
    * @param {RequestParams} [params] Additional parameters to include with the request in either post body or query params.
-   * @param {function} [callback=null] A callback function to perform after the request has been successfully performed.
+   * @param {BricklinkRequestCallback} [callback=null] A callback function to perform after the request has been successfully performed.
    */
   constructor(method, uri, params, callback) {
     /** @type {string} */
@@ -16,7 +17,7 @@ export class Request {
     this.uri = uri;
     /** @type {RequestParams} */
     this.params = params || new RequestParams();
-    /** @type {function|null} */
+    /** @type {BricklinkRequestCallback|null} */
     this.callback = callback || null;
   }
   /** @type {string} */
@@ -41,6 +42,12 @@ export class Request {
 }
 
 /**
+ * @callback BricklinkRequestCallback
+ * @param {any} value
+ * @returns {any}
+ */
+
+/**
  * Represents any query parameters to use with a request.
  */
 export class RequestParams {
@@ -49,8 +56,8 @@ export class RequestParams {
    * @return {string} parameters in the format of '?<param>=<value>'.
    */
   toQueryString() {
-    let pairs = [];
-    for (let member in this) {
+    const pairs = [];
+    for (const member in this) {
       if (this[member] != null) {
         pairs.push(member + '=' + this[member]);
       }
@@ -66,8 +73,9 @@ export class RequestParams {
    * @return {object} trimmed down parameters object.
    */
   toObject() {
-    let params = {};
-    for (let member in this) {
+    /** @type {object} */
+    const params = {};
+    for (const member in this) {
       if (this[member] != null) {
         params[member] = this[member];
       }

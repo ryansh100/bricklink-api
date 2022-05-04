@@ -1,4 +1,5 @@
-import { Request } from '../request';
+//@ts-check
+import { BricklinkRequest } from '../request';
 
 /**
  * Represents a Category
@@ -18,7 +19,7 @@ export class Category {
     /** @type {string} */
     this.category_name = data.category_name || '';
     /** @type {number} */
-    this.parent_id = data.parent_id || '';
+    this.parent_id = data.parent_id || 0;
   }
 
   /**
@@ -32,13 +33,13 @@ export class Category {
    * ```
    *
    * @param {number} categoryId Catalog item type
-   * @return {Request} A request that resolves to a {@link Category} instance.
+   * @return {BricklinkRequest} A request that resolves to a {@link Category} instance.
    */
   static get(categoryId) {
-    let method = Request.GET;
+    let method = BricklinkRequest.GET;
     let uri = `/categories/${categoryId}`;
 
-    return new Request(method, uri, null, (data) => new Category(data));
+    return new BricklinkRequest(method, uri, null, (data) => new Category(data));
   }
 
   /**
@@ -50,13 +51,13 @@ export class Category {
    * client.send(req).then(categories => console.log(categories));
    * ```
    *
-   * @return {Request} A request that resolves to an array of {@link Category}.
+   * @return {BricklinkRequest} A request that resolves to an array of {@link Category}.
    */
   static all() {
-    let method = Request.GET;
+    let method = BricklinkRequest.GET;
     let uri = `/categories`;
 
-    return new Request(method, uri, null, (data) =>
+    return new BricklinkRequest(method, uri, null, (data) =>
       data.map((d) => new Category(d)),
     );
   }

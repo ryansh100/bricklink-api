@@ -1,4 +1,5 @@
-import { Request } from '../request';
+//@ts-check
+import { BricklinkRequest } from '../request';
 
 /**
  * Represents a known color object.
@@ -30,13 +31,13 @@ export class KnownColor {
    *
    * @param {string} itemType Catalog item type
    * @param {string} itemNumber Catalog item number
-   * @return {Request} A request that resolves to a list of {@link KnownColor}.
+   * @return {BricklinkRequest} A request that resolves to a list of {@link KnownColor}.
    */
   static get(itemType, itemNumber) {
-    let method = Request.GET;
+    let method = BricklinkRequest.GET;
     let uri = `/items/${itemType}/${itemNumber}/colors`;
 
-    return new Request(method, uri, null, (data) => {
+    return new BricklinkRequest(method, uri, null, (data) => {
       return data.map((color) => new KnownColor(color));
     });
   }

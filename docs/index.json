@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/catalogItem/catalogItem.js",
-    "content": "import { Request } from '../request';\r\n\r\n/**\r\n * Represents a Catalog Item.\r\n */\r\nexport class CatalogItem {\r\n  /**\r\n   * Create a new instance of a Catalog Item\r\n   * @param {object} [data] Data typically returned from an API response.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n\r\n    /** @type {string} */\r\n    this.no = data.no || '';\r\n    /** @type {string} */\r\n    this.name = data.name || '';\r\n    /** @type {string} */\r\n    this.type = data.type || '';\r\n    /** @type {number} */\r\n    this.category_id = data.category_id || data.categoryID || 0;\r\n    /** @type {string} */\r\n    this.alternate_no = data.alternate_no || '';\r\n    /** @type {string} */\r\n    this.image_url = data.image_url || '';\r\n    /** @type {string} */\r\n    this.thumbnail_url = data.thumbnail_url || '';\r\n    /** @type {number} */\r\n    this.weight = data.weight || '';\r\n    /** @type {string} */\r\n    this.dim_x = data.dim_x || '';\r\n    /** @type {string} */\r\n    this.dim_y = data.dim_y || '';\r\n    /** @type {string} */\r\n    this.dim_z = data.dim_z || '';\r\n    /** @type {string} */\r\n    this.year_released = data.year_released || '';\r\n    /** @type {string} */\r\n    this.description = data.description || '';\r\n    /** @type {boolean} */\r\n    this.is_obsolete = data.is_obsolete || false;\r\n    /** @type {string} */\r\n    this.language_code = data.language_code || '';\r\n  }\r\n\r\n  /**\r\n   * Method to get a known catalog item\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = CatalogItem.get(ItemType.Part, '3001');\r\n   * client.send(req).then(item => console.log(item));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type i.e. - MINIFIG, PART, SET, BOOK, GEAR, CATALOG, INSTRUCTION, UNSORTED_LOT, ORIGINAL_BOX\r\n   * @param {string} itemNumber Catalog item number\r\n   * @return {Request} A request that is ready to execute with a client.\r\n   */\r\n  static get(itemType, itemNumber) {\r\n    let method = Request.GET;\r\n    let uri = `/items/${itemType}/${itemNumber}`;\r\n\r\n    return new Request(method, uri, null, (data) => {\r\n      let item = new CatalogItem(data);\r\n      return item;\r\n    });\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\nimport { BricklinkRequest } from '../request';\r\n\r\n/**\r\n * Represents a Catalog Item.\r\n */\r\nexport class CatalogItem {\r\n  /**\r\n   * Create a new instance of a Catalog Item\r\n   * @param {object} [data] Data typically returned from an API response.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n\r\n    /** @type {string} */\r\n    this.no = data.no || '';\r\n    /** @type {string} */\r\n    this.name = data.name || '';\r\n    /** @type {string} */\r\n    this.type = data.type || '';\r\n    /** @type {number} */\r\n    this.category_id = data.category_id || data.categoryID || 0;\r\n    /** @type {string} */\r\n    this.alternate_no = data.alternate_no || '';\r\n    /** @type {string} */\r\n    this.image_url = data.image_url || '';\r\n    /** @type {string} */\r\n    this.thumbnail_url = data.thumbnail_url || '';\r\n    /** @type {number} */\r\n    this.weight = data.weight || '';\r\n    /** @type {string} */\r\n    this.dim_x = data.dim_x || '';\r\n    /** @type {string} */\r\n    this.dim_y = data.dim_y || '';\r\n    /** @type {string} */\r\n    this.dim_z = data.dim_z || '';\r\n    /** @type {string} */\r\n    this.year_released = data.year_released || '';\r\n    /** @type {string} */\r\n    this.description = data.description || '';\r\n    /** @type {boolean} */\r\n    this.is_obsolete = data.is_obsolete || false;\r\n    /** @type {string} */\r\n    this.language_code = data.language_code || '';\r\n  }\r\n\r\n  /**\r\n   * Method to get a known catalog item\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = CatalogItem.get(ItemType.Part, '3001');\r\n   * client.send(req).then(item => console.log(item));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type i.e. - MINIFIG, PART, SET, BOOK, GEAR, CATALOG, INSTRUCTION, UNSORTED_LOT, ORIGINAL_BOX\r\n   * @param {string} itemNumber Catalog item number\r\n   * @return {BricklinkRequest} A request that is ready to execute with a client.\r\n   */\r\n  static get(itemType, itemNumber) {\r\n    const  method = BricklinkRequest.GET;\r\n    const uri = `/items/${itemType}/${itemNumber}`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) => {\r\n      const item = new CatalogItem(data);\r\n      return item;\r\n    });\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/catalogItem/catalogItem.js",
     "access": "public",
@@ -586,7 +586,7 @@
     "importPath": "bricklink-api/src/catalogItem/catalogItem.js",
     "importStyle": "{CatalogItem}",
     "description": "Represents a Catalog Item.",
-    "lineNumber": 6,
+    "lineNumber": 7,
     "interface": false
   },
   {
@@ -600,7 +600,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#constructor",
     "access": "public",
     "description": "Create a new instance of a Catalog Item",
-    "lineNumber": 11,
+    "lineNumber": 12,
     "params": [
       {
         "nullable": null,
@@ -623,7 +623,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#no",
     "access": "public",
     "description": null,
-    "lineNumber": 15,
+    "lineNumber": 16,
     "type": {
       "nullable": null,
       "types": [
@@ -642,7 +642,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#name",
     "access": "public",
     "description": null,
-    "lineNumber": 17,
+    "lineNumber": 18,
     "type": {
       "nullable": null,
       "types": [
@@ -661,7 +661,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#type",
     "access": "public",
     "description": null,
-    "lineNumber": 19,
+    "lineNumber": 20,
     "type": {
       "nullable": null,
       "types": [
@@ -680,7 +680,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#category_id",
     "access": "public",
     "description": null,
-    "lineNumber": 21,
+    "lineNumber": 22,
     "type": {
       "nullable": null,
       "types": [
@@ -699,7 +699,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#alternate_no",
     "access": "public",
     "description": null,
-    "lineNumber": 23,
+    "lineNumber": 24,
     "type": {
       "nullable": null,
       "types": [
@@ -718,7 +718,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#image_url",
     "access": "public",
     "description": null,
-    "lineNumber": 25,
+    "lineNumber": 26,
     "type": {
       "nullable": null,
       "types": [
@@ -737,7 +737,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#thumbnail_url",
     "access": "public",
     "description": null,
-    "lineNumber": 27,
+    "lineNumber": 28,
     "type": {
       "nullable": null,
       "types": [
@@ -756,7 +756,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#weight",
     "access": "public",
     "description": null,
-    "lineNumber": 29,
+    "lineNumber": 30,
     "type": {
       "nullable": null,
       "types": [
@@ -775,7 +775,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#dim_x",
     "access": "public",
     "description": null,
-    "lineNumber": 31,
+    "lineNumber": 32,
     "type": {
       "nullable": null,
       "types": [
@@ -794,7 +794,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#dim_y",
     "access": "public",
     "description": null,
-    "lineNumber": 33,
+    "lineNumber": 34,
     "type": {
       "nullable": null,
       "types": [
@@ -813,7 +813,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#dim_z",
     "access": "public",
     "description": null,
-    "lineNumber": 35,
+    "lineNumber": 36,
     "type": {
       "nullable": null,
       "types": [
@@ -832,7 +832,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#year_released",
     "access": "public",
     "description": null,
-    "lineNumber": 37,
+    "lineNumber": 38,
     "type": {
       "nullable": null,
       "types": [
@@ -851,7 +851,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#description",
     "access": "public",
     "description": null,
-    "lineNumber": 39,
+    "lineNumber": 40,
     "type": {
       "nullable": null,
       "types": [
@@ -870,7 +870,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#is_obsolete",
     "access": "public",
     "description": null,
-    "lineNumber": 41,
+    "lineNumber": 42,
     "type": {
       "nullable": null,
       "types": [
@@ -889,7 +889,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem#language_code",
     "access": "public",
     "description": null,
-    "lineNumber": 43,
+    "lineNumber": 44,
     "type": {
       "nullable": null,
       "types": [
@@ -910,7 +910,7 @@
     "longname": "src/catalogItem/catalogItem.js~CatalogItem.get",
     "access": "public",
     "description": "Method to get a known catalog item\n\nUsage:\n\n```\nvar req = CatalogItem.get(ItemType.Part, '3001');\nclient.send(req).then(item => console.log(item));\n```",
-    "lineNumber": 60,
+    "lineNumber": 61,
     "params": [
       {
         "nullable": null,
@@ -936,7 +936,7 @@
     "return": {
       "nullable": null,
       "types": [
-        "Request"
+        "BricklinkRequest"
       ],
       "spread": false,
       "description": "A request that is ready to execute with a client."
@@ -946,7 +946,7 @@
     "__docId__": 67,
     "kind": "file",
     "name": "src/catalogItem/itemImage.js",
-    "content": "import { Request } from '../request';\r\n\r\n/**\r\n * Represents an image for a specific color of a catalog item.\r\n */\r\nexport class ItemImage {\r\n  /**\r\n   * Create an instance of Item Image\r\n   * @param {object} data The API response data\r\n   * @param {number} [data.color_id=0] Color Id of the image.\r\n   * @param {string} [data.thumbnail_url=''] The Url of the thumbnail image.\r\n   * @param {string} [data.type=''] The type of catalog item as correspondeing to {@link ItemType}.\r\n   * @param {string} [data.no=''] The catalog item's identification number.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n    /** @type {string} */\r\n    this.thumbnail_url = data.thumbnail_url || '';\r\n    /** @type {string} */\r\n    this.type = data.type || '';\r\n    /** @type {string} */\r\n    this.no = data.no || '';\r\n  }\r\n\r\n  /**\r\n   * Method to get an image of a catalog item.\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = ItemImage.get(ItemType.Part, '3001', 0);\r\n   * client.send(req).then(image => console.log(image));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {number} colorId Catalog item's color id.\r\n   */\r\n  static get(itemType, itemNumber, colorId) {\r\n    let method = Request.GET;\r\n    let uri = `/items/${itemType}/${itemNumber}/images/${colorId}`;\r\n\r\n    return new Request(method, uri, null, (data) => {\r\n      return new ItemImage(data);\r\n    });\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\nimport { BricklinkRequest } from '../request';\r\n\r\n/**\r\n * Represents an image for a specific color of a catalog item.\r\n */\r\nexport class ItemImage {\r\n  /**\r\n   * Create an instance of Item Image\r\n   * @param {object} data The API response data\r\n   * @param {number} [data.color_id=0] Color Id of the image.\r\n   * @param {string} [data.thumbnail_url=''] The Url of the thumbnail image.\r\n   * @param {string} [data.type=''] The type of catalog item as correspondeing to {@link ItemType}.\r\n   * @param {string} [data.no=''] The catalog item's identification number.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n    /** @type {string} */\r\n    this.thumbnail_url = data.thumbnail_url || '';\r\n    /** @type {string} */\r\n    this.type = data.type || '';\r\n    /** @type {string} */\r\n    this.no = data.no || '';\r\n  }\r\n\r\n  /**\r\n   * Method to get an image of a catalog item.\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = ItemImage.get(ItemType.Part, '3001', 0);\r\n   * client.send(req).then(image => console.log(image));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {number} colorId Catalog item's color id.\r\n   */\r\n  static get(itemType, itemNumber, colorId) {\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/items/${itemType}/${itemNumber}/images/${colorId}`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) => {\r\n      return new ItemImage(data);\r\n    });\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/catalogItem/itemImage.js",
     "access": "public",
@@ -965,7 +965,7 @@
     "importPath": "bricklink-api/src/catalogItem/itemImage.js",
     "importStyle": "{ItemImage}",
     "description": "Represents an image for a specific color of a catalog item.",
-    "lineNumber": 6,
+    "lineNumber": 7,
     "interface": false
   },
   {
@@ -979,7 +979,7 @@
     "longname": "src/catalogItem/itemImage.js~ItemImage#constructor",
     "access": "public",
     "description": "Create an instance of Item Image",
-    "lineNumber": 15,
+    "lineNumber": 16,
     "params": [
       {
         "nullable": null,
@@ -1050,7 +1050,7 @@
     "longname": "src/catalogItem/itemImage.js~ItemImage#color_id",
     "access": "public",
     "description": null,
-    "lineNumber": 18,
+    "lineNumber": 19,
     "type": {
       "nullable": null,
       "types": [
@@ -1069,7 +1069,7 @@
     "longname": "src/catalogItem/itemImage.js~ItemImage#thumbnail_url",
     "access": "public",
     "description": null,
-    "lineNumber": 20,
+    "lineNumber": 21,
     "type": {
       "nullable": null,
       "types": [
@@ -1088,7 +1088,7 @@
     "longname": "src/catalogItem/itemImage.js~ItemImage#type",
     "access": "public",
     "description": null,
-    "lineNumber": 22,
+    "lineNumber": 23,
     "type": {
       "nullable": null,
       "types": [
@@ -1107,7 +1107,7 @@
     "longname": "src/catalogItem/itemImage.js~ItemImage#no",
     "access": "public",
     "description": null,
-    "lineNumber": 24,
+    "lineNumber": 25,
     "type": {
       "nullable": null,
       "types": [
@@ -1128,7 +1128,7 @@
     "longname": "src/catalogItem/itemImage.js~ItemImage.get",
     "access": "public",
     "description": "Method to get an image of a catalog item.\n\nUsage:\n\n```\nvar req = ItemImage.get(ItemType.Part, '3001', 0);\nclient.send(req).then(image => console.log(image));\n```",
-    "lineNumber": 41,
+    "lineNumber": 42,
     "params": [
       {
         "nullable": null,
@@ -1171,7 +1171,7 @@
     "__docId__": 75,
     "kind": "file",
     "name": "src/catalogItem/knownColor.js",
-    "content": "import { Request } from '../request';\r\n\r\n/**\r\n * Represents a known color object.\r\n */\r\nexport class KnownColor {\r\n  /**\r\n   * Create a new instance of a known color\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.color_id=0] The color id.\r\n   * @param {number} [data.quantity=0] The quantity of items with this known color.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n    /** @type {number} */\r\n    this.quantity = data.quantity || 0;\r\n  }\r\n\r\n  /**\r\n   * Method to get a list of known color_id for a given catalog item.\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = KnownColor.get(ItemType.Part, '3001');\r\n   * client.send(req).then(colors => console.log(colors));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @return {Request} A request that resolves to a list of {@link KnownColor}.\r\n   */\r\n  static get(itemType, itemNumber) {\r\n    let method = Request.GET;\r\n    let uri = `/items/${itemType}/${itemNumber}/colors`;\r\n\r\n    return new Request(method, uri, null, (data) => {\r\n      return data.map((color) => new KnownColor(color));\r\n    });\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\nimport { BricklinkRequest } from '../request';\r\n\r\n/**\r\n * Represents a known color object.\r\n */\r\nexport class KnownColor {\r\n  /**\r\n   * Create a new instance of a known color\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.color_id=0] The color id.\r\n   * @param {number} [data.quantity=0] The quantity of items with this known color.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n    /** @type {number} */\r\n    this.quantity = data.quantity || 0;\r\n  }\r\n\r\n  /**\r\n   * Method to get a list of known color_id for a given catalog item.\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = KnownColor.get(ItemType.Part, '3001');\r\n   * client.send(req).then(colors => console.log(colors));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @return {BricklinkRequest} A request that resolves to a list of {@link KnownColor}.\r\n   */\r\n  static get(itemType, itemNumber) {\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/items/${itemType}/${itemNumber}/colors`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) => {\r\n      return data.map((color) => new KnownColor(color));\r\n    });\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/catalogItem/knownColor.js",
     "access": "public",
@@ -1190,7 +1190,7 @@
     "importPath": "bricklink-api/src/catalogItem/knownColor.js",
     "importStyle": "{KnownColor}",
     "description": "Represents a known color object.",
-    "lineNumber": 6,
+    "lineNumber": 7,
     "interface": false
   },
   {
@@ -1204,7 +1204,7 @@
     "longname": "src/catalogItem/knownColor.js~KnownColor#constructor",
     "access": "public",
     "description": "Create a new instance of a known color",
-    "lineNumber": 13,
+    "lineNumber": 14,
     "params": [
       {
         "nullable": null,
@@ -1251,7 +1251,7 @@
     "longname": "src/catalogItem/knownColor.js~KnownColor#color_id",
     "access": "public",
     "description": null,
-    "lineNumber": 16,
+    "lineNumber": 17,
     "type": {
       "nullable": null,
       "types": [
@@ -1270,7 +1270,7 @@
     "longname": "src/catalogItem/knownColor.js~KnownColor#quantity",
     "access": "public",
     "description": null,
-    "lineNumber": 18,
+    "lineNumber": 19,
     "type": {
       "nullable": null,
       "types": [
@@ -1291,7 +1291,7 @@
     "longname": "src/catalogItem/knownColor.js~KnownColor.get",
     "access": "public",
     "description": "Method to get a list of known color_id for a given catalog item.\n\nUsage:\n\n```\nvar req = KnownColor.get(ItemType.Part, '3001');\nclient.send(req).then(colors => console.log(colors));\n```",
-    "lineNumber": 35,
+    "lineNumber": 36,
     "params": [
       {
         "nullable": null,
@@ -1317,7 +1317,7 @@
     "return": {
       "nullable": null,
       "types": [
-        "Request"
+        "BricklinkRequest"
       ],
       "spread": false,
       "description": "A request that resolves to a list of {@link KnownColor}."
@@ -1327,7 +1327,7 @@
     "__docId__": 81,
     "kind": "file",
     "name": "src/catalogItem/priceGuide.js",
-    "content": "import { Request, RequestParams } from '../request';\r\nimport { CatalogItem } from './catalogItem';\r\n\r\n/**\r\n * Specific sale price details for a givent item.\r\n */\r\nexport class PriceDetail {\r\n  /**\r\n   * Create a Price Detail instance.\r\n   * @param {object} [data] Data returned from an API response.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.quantity = data.quantity || 0;\r\n    /** @type {number} */\r\n    this.unit_price = data.unit_price || 0;\r\n    /** @type {string} */\r\n    this.shipping_available = data.shipping_available || '';\r\n    /** @type {string} */\r\n    this.shipping_available = data.shipping_available || '';\r\n    /** @type {string} */\r\n    this.seller_country_code = data.seller_country_code || '';\r\n    /** @type {string} */\r\n    this.buyer_country_code = data.buyer_country_code || '';\r\n    /** @type {Date|null} */\r\n    this.date_ordered = data.date_ordered ? new Date(data.date_ordered) : null;\r\n  }\r\n}\r\n\r\n/**\r\n * Represents a Price Guide for a catalog item.\r\n */\r\nexport class PriceGuide {\r\n  /**\r\n   * Create a new instance of a price guide.\r\n   * @param {object} [data] Data returned from an API response.\r\n   */\r\n  constructor(data) {\r\n    /** @type {Item} item The item that belongs to the price guide. */\r\n    this.item = data.item ? new CatalogItem(data.item) : new Item();\r\n    /** @type {string} new_or_used Whether or not the price guide is new or used condition. */\r\n    this.new_or_used = data.new_or_used || '';\r\n    /** @type {string} */\r\n    this.currency_code = data.currency_code || '';\r\n    /** @type {number} */\r\n    this.min_price = data.min_price || 0;\r\n    /** @type {number} */\r\n    this.max_price = data.max_price || 0;\r\n    /** @type {number} */\r\n    this.avg_price = data.avg_price || 0;\r\n    /** @type {number} */\r\n    this.qty_avg_price = data.qty_avg_price || 0;\r\n    /** @type {number} */\r\n    this.unit_quantity = data.unit_quantity || 0;\r\n    /** @type {number} */\r\n    this.total_quantity = data.total_quantity || 0;\r\n    /** @type {PriceDetail[]} */\r\n    this.price_detail = data.price_detail\r\n      ? data.price_detail.map((detail) => new PriceDetail(detail))\r\n      : [];\r\n  }\r\n\r\n  /**\r\n   * Method to get a known catalog item's price guide\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = PriceGuide.get(ItemType.Part, '3001', {new_or_used: Condition.Used});\r\n   * client.send(req).then(guide => console.log(guide));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type as found at {@link ItemType}.\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} [params] Params as outlined in {@link PriceGuideOptions}.\r\n   * @return {Request} A request that is ready to execute with a client.\r\n   */\r\n  static get(itemType, itemNumber, params) {\r\n    params = params ? new PriceGuideOptions(params) : new PriceGuideOptions();\r\n    let method = Request.GET;\r\n    let uri = `items/${itemType}/${itemNumber}/price`;\r\n\r\n    return new Request(method, uri, params, (data) => {\r\n      return new PriceGuide(data);\r\n    });\r\n  }\r\n}\r\n\r\n/**\r\n * Price guide option request params.\r\n */\r\nexport class PriceGuideOptions extends RequestParams {\r\n  /**\r\n   * Create an instance of Price Guide options.\r\n   * @param {object} data Optional parameter data.\r\n   * @param {number|null} [data.color_id=null] The color Identification numbe of the item\r\n   * @param {string} [data.guide_type='stock'] Indicates that which statistics to be provided. Options include \"sold\" and \"stock\"\r\n   * @param {string} [data.new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item\r\n   * @param {string|null} [data.country_code=null]\r\n   * @param {string|null} [data.region=null]\r\n   * @param {string|null} [data.currency_code=null]\r\n   * @param {string} [data.vat='N']\r\n   */\r\n  constructor(data) {\r\n    super(data);\r\n\r\n    data = data || {};\r\n    /** @type {number|null} [data.color_id=null] The color Identification numbe of the item */\r\n    this.color_id = data.color_id || null;\r\n    /** @type {string} [guide_type='stock'] Indicates that which statistics to be provided. Options include \"sold\" and \"stock\" */\r\n    this.guide_type = data.guide_type || 'stock';\r\n    /** @type {string} [new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item */\r\n    this.new_or_used = data.new_or_used || 'N';\r\n    /** @type {string|null} [country_code=null] */\r\n    this.country_code = data.country_code || null;\r\n    /** @type {string|null} [region=null] */\r\n    this.region = data.region || null;\r\n    /** @type {string|null} [currency_code=null] */\r\n    this.currency_code = data.currency_code || null;\r\n    /** @type {string} [vat='N'] */\r\n    this.vat = data.vat || 'N';\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\nimport { BricklinkRequest, RequestParams } from '../request';\r\nimport { CatalogItem } from './catalogItem';\r\n\r\n/**\r\n * Specific sale price details for a givent item.\r\n */\r\nexport class PriceDetail {\r\n  /**\r\n   * Create a Price Detail instance.\r\n   * @param {object} [data] Data returned from an API response.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.quantity = data.quantity || 0;\r\n    /** @type {number} */\r\n    this.unit_price = data.unit_price || 0;\r\n    /** @type {string} */\r\n    this.shipping_available = data.shipping_available || '';\r\n    /** @type {string} */\r\n    this.shipping_available = data.shipping_available || '';\r\n    /** @type {string} */\r\n    this.seller_country_code = data.seller_country_code || '';\r\n    /** @type {string} */\r\n    this.buyer_country_code = data.buyer_country_code || '';\r\n    /** @type {Date|null} */\r\n    this.date_ordered = data.date_ordered ? new Date(data.date_ordered) : null;\r\n  }\r\n}\r\n\r\n/**\r\n * Represents a Price Guide for a catalog item.\r\n */\r\nexport class PriceGuide {\r\n  /**\r\n   * Create a new instance of a price guide.\r\n   * @param {object} [data] Data returned from an API response.\r\n   */\r\n  constructor(data) {\r\n    /** @type {CatalogItem} item The item that belongs to the price guide. */\r\n    this.item = data.item ? new CatalogItem(data.item) : new CatalogItem();\r\n    /** @type {string} new_or_used Whether or not the price guide is new or used condition. */\r\n    this.new_or_used = data.new_or_used || '';\r\n    /** @type {string} */\r\n    this.currency_code = data.currency_code || '';\r\n    /** @type {number} */\r\n    this.min_price = data.min_price || 0;\r\n    /** @type {number} */\r\n    this.max_price = data.max_price || 0;\r\n    /** @type {number} */\r\n    this.avg_price = data.avg_price || 0;\r\n    /** @type {number} */\r\n    this.qty_avg_price = data.qty_avg_price || 0;\r\n    /** @type {number} */\r\n    this.unit_quantity = data.unit_quantity || 0;\r\n    /** @type {number} */\r\n    this.total_quantity = data.total_quantity || 0;\r\n    /** @type {PriceDetail[]} */\r\n    this.price_detail = data.price_detail\r\n      ? data.price_detail.map((detail) => new PriceDetail(detail))\r\n      : [];\r\n  }\r\n\r\n  /**\r\n   * Method to get a known catalog item's price guide\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = PriceGuide.get(ItemType.Part, '3001', {new_or_used: Condition.Used});\r\n   * client.send(req).then(guide => console.log(guide));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type as found at {@link ItemType}.\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} [params] Params as outlined in {@link PriceGuideOptions}.\r\n   * @return {BricklinkRequest} A request that is ready to execute with a client.\r\n   */\r\n  static get(itemType, itemNumber, params) {\r\n    params = params ? new PriceGuideOptions(params) : new PriceGuideOptions();\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `items/${itemType}/${itemNumber}/price`;\r\n\r\n    return new BricklinkRequest(method, uri, params, (data) => {\r\n      return new PriceGuide(data);\r\n    });\r\n  }\r\n}\r\n\r\n/**\r\n * Price guide option request params.\r\n */\r\nexport class PriceGuideOptions extends RequestParams {\r\n  /**\r\n   * Create an instance of Price Guide options.\r\n   * @param {object} [data] Optional parameter data.\r\n   * @param {number|null} [data.color_id=null] The color Identification numbe of the item\r\n   * @param {string} [data.guide_type='stock'] Indicates that which statistics to be provided. Options include \"sold\" and \"stock\"\r\n   * @param {string} [data.new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item\r\n   * @param {string|null} [data.country_code=null]\r\n   * @param {string|null} [data.region=null]\r\n   * @param {string|null} [data.currency_code=null]\r\n   * @param {string} [data.vat='N']\r\n   */\r\n  constructor(data) {\r\n    super();\r\n\r\n    data = data || {};\r\n    /** @type {number|null} [data.color_id=null] The color Identification numbe of the item */\r\n    this.color_id = data.color_id || null;\r\n    /** @type {string} [guide_type='stock'] Indicates that which statistics to be provided. Options include \"sold\" and \"stock\" */\r\n    this.guide_type = data.guide_type || 'stock';\r\n    /** @type {string} [new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item */\r\n    this.new_or_used = data.new_or_used || 'N';\r\n    /** @type {string|null} [country_code=null] */\r\n    this.country_code = data.country_code || null;\r\n    /** @type {string|null} [region=null] */\r\n    this.region = data.region || null;\r\n    /** @type {string|null} [currency_code=null] */\r\n    this.currency_code = data.currency_code || null;\r\n    /** @type {string} [vat='N'] */\r\n    this.vat = data.vat || 'N';\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/catalogItem/priceGuide.js",
     "access": "public",
@@ -1346,7 +1346,7 @@
     "importPath": "bricklink-api/src/catalogItem/priceGuide.js",
     "importStyle": "{PriceDetail}",
     "description": "Specific sale price details for a givent item.",
-    "lineNumber": 7,
+    "lineNumber": 8,
     "interface": false
   },
   {
@@ -1360,7 +1360,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceDetail#constructor",
     "access": "public",
     "description": "Create a Price Detail instance.",
-    "lineNumber": 12,
+    "lineNumber": 13,
     "params": [
       {
         "nullable": null,
@@ -1383,7 +1383,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceDetail#quantity",
     "access": "public",
     "description": null,
-    "lineNumber": 15,
+    "lineNumber": 16,
     "type": {
       "nullable": null,
       "types": [
@@ -1402,7 +1402,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceDetail#unit_price",
     "access": "public",
     "description": null,
-    "lineNumber": 17,
+    "lineNumber": 18,
     "type": {
       "nullable": null,
       "types": [
@@ -1421,7 +1421,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceDetail#shipping_available",
     "access": "public",
     "description": null,
-    "lineNumber": 19,
+    "lineNumber": 20,
     "type": {
       "nullable": null,
       "types": [
@@ -1440,7 +1440,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceDetail#seller_country_code",
     "access": "public",
     "description": null,
-    "lineNumber": 23,
+    "lineNumber": 24,
     "type": {
       "nullable": null,
       "types": [
@@ -1459,7 +1459,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceDetail#buyer_country_code",
     "access": "public",
     "description": null,
-    "lineNumber": 25,
+    "lineNumber": 26,
     "type": {
       "nullable": null,
       "types": [
@@ -1478,7 +1478,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceDetail#date_ordered",
     "access": "public",
     "description": null,
-    "lineNumber": 27,
+    "lineNumber": 28,
     "type": {
       "nullable": null,
       "types": [
@@ -1501,7 +1501,7 @@
     "importPath": "bricklink-api/src/catalogItem/priceGuide.js",
     "importStyle": "{PriceGuide}",
     "description": "Represents a Price Guide for a catalog item.",
-    "lineNumber": 34,
+    "lineNumber": 35,
     "interface": false
   },
   {
@@ -1515,7 +1515,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuide#constructor",
     "access": "public",
     "description": "Create a new instance of a price guide.",
-    "lineNumber": 39,
+    "lineNumber": 40,
     "params": [
       {
         "nullable": null,
@@ -1538,11 +1538,11 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuide#item",
     "access": "public",
     "description": null,
-    "lineNumber": 41,
+    "lineNumber": 42,
     "type": {
       "nullable": null,
       "types": [
-        "Item"
+        "CatalogItem"
       ],
       "spread": false,
       "description": null
@@ -1557,7 +1557,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuide#new_or_used",
     "access": "public",
     "description": null,
-    "lineNumber": 43,
+    "lineNumber": 44,
     "type": {
       "nullable": null,
       "types": [
@@ -1576,7 +1576,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuide#currency_code",
     "access": "public",
     "description": null,
-    "lineNumber": 45,
+    "lineNumber": 46,
     "type": {
       "nullable": null,
       "types": [
@@ -1595,7 +1595,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuide#min_price",
     "access": "public",
     "description": null,
-    "lineNumber": 47,
+    "lineNumber": 48,
     "type": {
       "nullable": null,
       "types": [
@@ -1614,7 +1614,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuide#max_price",
     "access": "public",
     "description": null,
-    "lineNumber": 49,
+    "lineNumber": 50,
     "type": {
       "nullable": null,
       "types": [
@@ -1633,7 +1633,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuide#avg_price",
     "access": "public",
     "description": null,
-    "lineNumber": 51,
+    "lineNumber": 52,
     "type": {
       "nullable": null,
       "types": [
@@ -1652,7 +1652,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuide#qty_avg_price",
     "access": "public",
     "description": null,
-    "lineNumber": 53,
+    "lineNumber": 54,
     "type": {
       "nullable": null,
       "types": [
@@ -1671,7 +1671,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuide#unit_quantity",
     "access": "public",
     "description": null,
-    "lineNumber": 55,
+    "lineNumber": 56,
     "type": {
       "nullable": null,
       "types": [
@@ -1690,7 +1690,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuide#total_quantity",
     "access": "public",
     "description": null,
-    "lineNumber": 57,
+    "lineNumber": 58,
     "type": {
       "nullable": null,
       "types": [
@@ -1709,7 +1709,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuide#price_detail",
     "access": "public",
     "description": null,
-    "lineNumber": 59,
+    "lineNumber": 60,
     "type": {
       "nullable": null,
       "types": [
@@ -1730,7 +1730,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuide.get",
     "access": "public",
     "description": "Method to get a known catalog item's price guide\n\nUsage:\n\n```\nvar req = PriceGuide.get(ItemType.Part, '3001', {new_or_used: Condition.Used});\nclient.send(req).then(guide => console.log(guide));\n```",
-    "lineNumber": 79,
+    "lineNumber": 80,
     "params": [
       {
         "nullable": null,
@@ -1766,7 +1766,7 @@
     "return": {
       "nullable": null,
       "types": [
-        "Request"
+        "BricklinkRequest"
       ],
       "spread": false,
       "description": "A request that is ready to execute with a client."
@@ -1784,7 +1784,7 @@
     "importPath": "bricklink-api/src/catalogItem/priceGuide.js",
     "importStyle": "{PriceGuideOptions}",
     "description": "Price guide option request params.",
-    "lineNumber": 93,
+    "lineNumber": 94,
     "interface": false,
     "extends": [
       "src/request.js~RequestParams"
@@ -1801,7 +1801,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuideOptions#constructor",
     "access": "public",
     "description": "Create an instance of Price Guide options.",
-    "lineNumber": 105,
+    "lineNumber": 106,
     "params": [
       {
         "nullable": null,
@@ -1809,7 +1809,7 @@
           "object"
         ],
         "spread": false,
-        "optional": false,
+        "optional": true,
         "name": "data",
         "description": "Optional parameter data."
       },
@@ -1912,7 +1912,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuideOptions#color_id",
     "access": "public",
     "description": null,
-    "lineNumber": 110,
+    "lineNumber": 111,
     "type": {
       "nullable": null,
       "types": [
@@ -1932,7 +1932,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuideOptions#guide_type",
     "access": "public",
     "description": null,
-    "lineNumber": 112,
+    "lineNumber": 113,
     "type": {
       "nullable": null,
       "types": [
@@ -1951,7 +1951,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuideOptions#new_or_used",
     "access": "public",
     "description": null,
-    "lineNumber": 114,
+    "lineNumber": 115,
     "type": {
       "nullable": null,
       "types": [
@@ -1970,7 +1970,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuideOptions#country_code",
     "access": "public",
     "description": null,
-    "lineNumber": 116,
+    "lineNumber": 117,
     "type": {
       "nullable": null,
       "types": [
@@ -1990,7 +1990,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuideOptions#region",
     "access": "public",
     "description": null,
-    "lineNumber": 118,
+    "lineNumber": 119,
     "type": {
       "nullable": null,
       "types": [
@@ -2010,7 +2010,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuideOptions#currency_code",
     "access": "public",
     "description": null,
-    "lineNumber": 120,
+    "lineNumber": 121,
     "type": {
       "nullable": null,
       "types": [
@@ -2030,7 +2030,7 @@
     "longname": "src/catalogItem/priceGuide.js~PriceGuideOptions#vat",
     "access": "public",
     "description": null,
-    "lineNumber": 122,
+    "lineNumber": 123,
     "type": {
       "nullable": null,
       "types": [
@@ -2044,7 +2044,7 @@
     "__docId__": 113,
     "kind": "file",
     "name": "src/catalogItem/subsets.js",
-    "content": "import { Request, RequestParams } from '../request';\r\nimport { CatalogItem } from './catalogItem';\r\n\r\n/**\r\n * Represents a subset entry.\r\n */\r\nexport class SubsetEntry {\r\n  /**\r\n   * Create an instance of a subset entry\r\n   * @param {object} [data] The API response data\r\n   * @param {object} [data.item] Item information\r\n   * @param {number} [data.color_id] The color id of the entry item.\r\n   * @param {number} [data.quantity] The number of items in the subset entry.\r\n   * @param {number} [data.extra_quantity] The number of extra items included in the subset.\r\n   * @param {boolean} [data.is_alternate] Indicator that the item is an alternate.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {CatalogItem} */\r\n    this.item = data.item ? new CatalogItem(data.item) : new CatalogItem();\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n    /** @type {number} */\r\n    this.quantity = data.quantity || 0;\r\n    /** @type {number} */\r\n    this.extra_quantity = data.extra_quantity || 0;\r\n    /** @type {boolean} */\r\n    this.is_alternate = data.is_alternate || false;\r\n  }\r\n}\r\n/**\r\n * Represents a subset item. A subset item can have more than one matching entry due to alternate parts.\r\n */\r\nexport class Subset {\r\n  /**\r\n   * Create an instance of a subset item.\r\n   * @param {object} [data] The response data from API request.\r\n   * @param {number} [data.match_no] The number of matching entries or 0 if there is no matching of alternative item.\r\n   * @param {object} [data.entries] The specific entries for the subset item.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.match_no = data.match_no || 0;\r\n\r\n    let entries = data.entries || [];\r\n    /** @type {SubsetEntry[]} */\r\n    this.entries = entries.map((e) => new SubsetEntry(e));\r\n  }\r\n  /**\r\n   * Method to get a subset of a catalog item.\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Subset.get(ItemType.Set, '6020-1', {break_minifigs: true});\r\n   * client.send(req).then(subset => console.log(subset));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} options Options that conform to {@link SubsetOptions}.\r\n   */\r\n  static get(itemType, itemNumber, options) {\r\n    let method = Request.GET;\r\n    options = options ? new SubsetOptions(options) : new SubsetOptions();\r\n\r\n    let uri = `/items/${itemType}/${itemNumber}/subsets`;\r\n\r\n    return new Request(method, uri, options, (data) => {\r\n      return data.map((e) => new Subset(e));\r\n    });\r\n  }\r\n}\r\n\r\n/**\r\n * Options that can be used when make a request for a subset.\r\n */\r\nexport class SubsetOptions extends RequestParams {\r\n  /**\r\n   * Make an instance of SubsetOptions.\r\n   * @param {object} [data] Raw options object.\r\n   * @param {number} [data.color_id] The color of the item(This value is valid only for {@link ItemType}.Part.\r\n   * @param {boolean} [data.box] Indicates whether the set includes the original box\r\n   * @param {boolean} [data.instruction] Indicates whether the set includes the original instruction\r\n   * @param {boolean} [data.break_minifigs]\tIndicates whether the result breaks down minifigs as parts\r\n   * @param {boolean} [data.break_subsets] Indicates whether the result breaks down sets in set\r\n   */\r\n  constructor(data) {\r\n    super(data);\r\n    data = data || {};\r\n    /** @type {number|null} */\r\n    this.color_id = data.color_id || null;\r\n    /** @type {boolean|null} */\r\n    this.box = data.box || null;\r\n    /** @type {boolean|null} */\r\n    this.instruction = data.instruction || null;\r\n    /** @type {boolean|null} */\r\n    this.break_minifigs = data.break_minifigs || null;\r\n    /** @type {boolean|null} */\r\n    this.break_subsets = data.break_subsets || null;\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\nimport { BricklinkRequest, RequestParams } from '../request';\r\nimport { CatalogItem } from './catalogItem';\r\n\r\n/**\r\n * Represents a subset entry.\r\n */\r\nexport class SubsetEntry {\r\n  /**\r\n   * Create an instance of a subset entry\r\n   * @param {object} [data] The API response data\r\n   * @param {object} [data.item] Item information\r\n   * @param {number} [data.color_id] The color id of the entry item.\r\n   * @param {number} [data.quantity] The number of items in the subset entry.\r\n   * @param {number} [data.extra_quantity] The number of extra items included in the subset.\r\n   * @param {boolean} [data.is_alternate] Indicator that the item is an alternate.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {CatalogItem} */\r\n    this.item = data.item ? new CatalogItem(data.item) : new CatalogItem();\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n    /** @type {number} */\r\n    this.quantity = data.quantity || 0;\r\n    /** @type {number} */\r\n    this.extra_quantity = data.extra_quantity || 0;\r\n    /** @type {boolean} */\r\n    this.is_alternate = data.is_alternate || false;\r\n  }\r\n}\r\n/**\r\n * Represents a subset item. A subset item can have more than one matching entry due to alternate parts.\r\n */\r\nexport class Subset {\r\n  /**\r\n   * Create an instance of a subset item.\r\n   * @param {object} [data] The response data from API request.\r\n   * @param {number} [data.match_no] The number of matching entries or 0 if there is no matching of alternative item.\r\n   * @param {object} [data.entries] The specific entries for the subset item.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.match_no = data.match_no || 0;\r\n\r\n    const entries = data.entries || [];\r\n    /** @type {SubsetEntry[]} */\r\n    this.entries = entries.map((e) => new SubsetEntry(e));\r\n  }\r\n  /**\r\n   * Method to get a subset of a catalog item.\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Subset.get(ItemType.Set, '6020-1', {break_minifigs: true});\r\n   * client.send(req).then(subset => console.log(subset));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} options Options that conform to {@link SubsetOptions}.\r\n   */\r\n  static get(itemType, itemNumber, options) {\r\n    const method = BricklinkRequest.GET;\r\n    options = options ? new SubsetOptions(options) : new SubsetOptions();\r\n\r\n    const uri = `/items/${itemType}/${itemNumber}/subsets`;\r\n\r\n    return new BricklinkRequest(method, uri, options, (data) => {\r\n      return data.map((e) => new Subset(e));\r\n    });\r\n  }\r\n}\r\n\r\n/**\r\n * Options that can be used when make a request for a subset.\r\n */\r\nexport class SubsetOptions extends RequestParams {\r\n  /**\r\n   * Make an instance of SubsetOptions.\r\n   * @param {object} [data] Raw options object.\r\n   * @param {number} [data.color_id] The color of the item(This value is valid only for {@link ItemType}.Part.\r\n   * @param {boolean} [data.box] Indicates whether the set includes the original box\r\n   * @param {boolean} [data.instruction] Indicates whether the set includes the original instruction\r\n   * @param {boolean} [data.break_minifigs]\tIndicates whether the result breaks down minifigs as parts\r\n   * @param {boolean} [data.break_subsets] Indicates whether the result breaks down sets in set\r\n   */\r\n  constructor(data) {\r\n    super();\r\n    data = data || {};\r\n    /** @type {number|null} */\r\n    this.color_id = data.color_id || null;\r\n    /** @type {boolean|null} */\r\n    this.box = data.box || null;\r\n    /** @type {boolean|null} */\r\n    this.instruction = data.instruction || null;\r\n    /** @type {boolean|null} */\r\n    this.break_minifigs = data.break_minifigs || null;\r\n    /** @type {boolean|null} */\r\n    this.break_subsets = data.break_subsets || null;\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/catalogItem/subsets.js",
     "access": "public",
@@ -2063,7 +2063,7 @@
     "importPath": "bricklink-api/src/catalogItem/subsets.js",
     "importStyle": "{SubsetEntry}",
     "description": "Represents a subset entry.",
-    "lineNumber": 7,
+    "lineNumber": 8,
     "interface": false
   },
   {
@@ -2077,7 +2077,7 @@
     "longname": "src/catalogItem/subsets.js~SubsetEntry#constructor",
     "access": "public",
     "description": "Create an instance of a subset entry",
-    "lineNumber": 17,
+    "lineNumber": 18,
     "params": [
       {
         "nullable": null,
@@ -2150,7 +2150,7 @@
     "longname": "src/catalogItem/subsets.js~SubsetEntry#item",
     "access": "public",
     "description": null,
-    "lineNumber": 20,
+    "lineNumber": 21,
     "type": {
       "nullable": null,
       "types": [
@@ -2169,7 +2169,7 @@
     "longname": "src/catalogItem/subsets.js~SubsetEntry#color_id",
     "access": "public",
     "description": null,
-    "lineNumber": 22,
+    "lineNumber": 23,
     "type": {
       "nullable": null,
       "types": [
@@ -2188,7 +2188,7 @@
     "longname": "src/catalogItem/subsets.js~SubsetEntry#quantity",
     "access": "public",
     "description": null,
-    "lineNumber": 24,
+    "lineNumber": 25,
     "type": {
       "nullable": null,
       "types": [
@@ -2207,7 +2207,7 @@
     "longname": "src/catalogItem/subsets.js~SubsetEntry#extra_quantity",
     "access": "public",
     "description": null,
-    "lineNumber": 26,
+    "lineNumber": 27,
     "type": {
       "nullable": null,
       "types": [
@@ -2226,7 +2226,7 @@
     "longname": "src/catalogItem/subsets.js~SubsetEntry#is_alternate",
     "access": "public",
     "description": null,
-    "lineNumber": 28,
+    "lineNumber": 29,
     "type": {
       "nullable": null,
       "types": [
@@ -2248,7 +2248,7 @@
     "importPath": "bricklink-api/src/catalogItem/subsets.js",
     "importStyle": "{Subset}",
     "description": "Represents a subset item. A subset item can have more than one matching entry due to alternate parts.",
-    "lineNumber": 34,
+    "lineNumber": 35,
     "interface": false
   },
   {
@@ -2262,7 +2262,7 @@
     "longname": "src/catalogItem/subsets.js~Subset#constructor",
     "access": "public",
     "description": "Create an instance of a subset item.",
-    "lineNumber": 41,
+    "lineNumber": 42,
     "params": [
       {
         "nullable": null,
@@ -2305,7 +2305,7 @@
     "longname": "src/catalogItem/subsets.js~Subset#match_no",
     "access": "public",
     "description": null,
-    "lineNumber": 44,
+    "lineNumber": 45,
     "type": {
       "nullable": null,
       "types": [
@@ -2324,7 +2324,7 @@
     "longname": "src/catalogItem/subsets.js~Subset#entries",
     "access": "public",
     "description": null,
-    "lineNumber": 48,
+    "lineNumber": 49,
     "type": {
       "nullable": null,
       "types": [
@@ -2345,7 +2345,7 @@
     "longname": "src/catalogItem/subsets.js~Subset.get",
     "access": "public",
     "description": "Method to get a subset of a catalog item.\n\nUsage:\n\n```\nvar req = Subset.get(ItemType.Set, '6020-1', {break_minifigs: true});\nclient.send(req).then(subset => console.log(subset));\n```",
-    "lineNumber": 64,
+    "lineNumber": 65,
     "params": [
       {
         "nullable": null,
@@ -2396,7 +2396,7 @@
     "importPath": "bricklink-api/src/catalogItem/subsets.js",
     "importStyle": "{SubsetOptions}",
     "description": "Options that can be used when make a request for a subset.",
-    "lineNumber": 79,
+    "lineNumber": 80,
     "interface": false,
     "extends": [
       "src/request.js~RequestParams"
@@ -2413,7 +2413,7 @@
     "longname": "src/catalogItem/subsets.js~SubsetOptions#constructor",
     "access": "public",
     "description": "Make an instance of SubsetOptions.",
-    "lineNumber": 89,
+    "lineNumber": 90,
     "params": [
       {
         "nullable": null,
@@ -2486,7 +2486,7 @@
     "longname": "src/catalogItem/subsets.js~SubsetOptions#color_id",
     "access": "public",
     "description": null,
-    "lineNumber": 93,
+    "lineNumber": 94,
     "type": {
       "nullable": null,
       "types": [
@@ -2506,7 +2506,7 @@
     "longname": "src/catalogItem/subsets.js~SubsetOptions#box",
     "access": "public",
     "description": null,
-    "lineNumber": 95,
+    "lineNumber": 96,
     "type": {
       "nullable": null,
       "types": [
@@ -2526,7 +2526,7 @@
     "longname": "src/catalogItem/subsets.js~SubsetOptions#instruction",
     "access": "public",
     "description": null,
-    "lineNumber": 97,
+    "lineNumber": 98,
     "type": {
       "nullable": null,
       "types": [
@@ -2546,7 +2546,7 @@
     "longname": "src/catalogItem/subsets.js~SubsetOptions#break_minifigs",
     "access": "public",
     "description": null,
-    "lineNumber": 99,
+    "lineNumber": 100,
     "type": {
       "nullable": null,
       "types": [
@@ -2566,7 +2566,7 @@
     "longname": "src/catalogItem/subsets.js~SubsetOptions#break_subsets",
     "access": "public",
     "description": null,
-    "lineNumber": 101,
+    "lineNumber": 102,
     "type": {
       "nullable": null,
       "types": [
@@ -2581,7 +2581,7 @@
     "__docId__": 133,
     "kind": "file",
     "name": "src/catalogItem/supersets.js",
-    "content": "import { Request, RequestParams } from '../request';\r\nimport { CatalogItem } from './catalogItem';\r\n\r\n/**\r\n * Represents entries of a superset item.\r\n */\r\nexport class SupersetEntry {\r\n  /**\r\n   * Create an instance of a subset entry\r\n   * @param {object} [data] The API response data\r\n   * @param {object} [data.item] Item information\r\n   * @param {number} [data.quantity] The number of items in the subset entry.\r\n   * @param {string} [data.appear_as] How the entry appears in the superset item.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {CatalogItem} */\r\n    this.item = data.item ? new CatalogItem(data.item) : new CatalogItem();\r\n    /** @type {number} */\r\n    this.quantity = data.quantity || 0;\r\n    /** @type {string} */\r\n    this.appear_as = data.appear_as || '';\r\n  }\r\n}\r\n\r\n/**\r\n * Represents a super set entry.\r\n */\r\nexport class Superset {\r\n  /**\r\n   * Create an instance of a super set item.\r\n   * @param {object} [data] The API response data\r\n   * @param {object[]} [data.entries] Entries for a superset item.\r\n   * @param {number} [data.color_id] The color id of the superset item.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n\r\n    let entries = data.entries || [];\r\n    /** @type {SupersetEntry[]} */\r\n    this.entries = entries.map((e) => new SupersetEntry(e));\r\n  }\r\n\r\n  /**\r\n   * Method to get a superset of a catalog item\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Superset.get(ItemType.Part, '4593');\r\n   * client.send(req).then(superset => console.log(superset));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} options Options that conform to {@link SupersetOptions}.\r\n   * @return {Request} A request that will return an array of {@link Superset} items.\r\n   */\r\n  static get(itemType, itemNumber, options) {\r\n    options = options ? new SupersetOptions(options) : new SupersetOptions();\r\n    let method = Request.GET;\r\n    let uri = `/items/${itemType}/${itemNumber}/supersets`;\r\n\r\n    return new Request(method, uri, options, (data) => {\r\n      return data.map((set) => new Superset(set));\r\n    });\r\n  }\r\n}\r\n\r\n/**\r\n * Options that can be used when make a request for a subset.\r\n */\r\nexport class SupersetOptions extends RequestParams {\r\n  /**\r\n   * Make an instance of SubsetOptions.\r\n   * @param {object} [data] Raw options object.\r\n   * @param {number} [data.color_id] The color of the item.\r\n   */\r\n  constructor(data) {\r\n    super(data);\r\n    data = data || {};\r\n    /** @type {number|null} */\r\n    this.color_id = data.color_id || null;\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\nimport { BricklinkRequest, RequestParams } from '../request';\r\nimport { CatalogItem } from './catalogItem';\r\n\r\n/**\r\n * Represents entries of a superset item.\r\n */\r\nexport class SupersetEntry {\r\n  /**\r\n   * Create an instance of a subset entry\r\n   * @param {object} [data] The API response data\r\n   * @param {object} [data.item] Item information\r\n   * @param {number} [data.quantity] The number of items in the subset entry.\r\n   * @param {string} [data.appear_as] How the entry appears in the superset item.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {CatalogItem} */\r\n    this.item = data.item ? new CatalogItem(data.item) : new CatalogItem();\r\n    /** @type {number} */\r\n    this.quantity = data.quantity || 0;\r\n    /** @type {string} */\r\n    this.appear_as = data.appear_as || '';\r\n  }\r\n}\r\n\r\n/**\r\n * Represents a super set entry.\r\n */\r\nexport class Superset {\r\n  /**\r\n   * Create an instance of a super set item.\r\n   * @param {object} [data] The API response data\r\n   * @param {object[]} [data.entries] Entries for a superset item.\r\n   * @param {number} [data.color_id] The color id of the superset item.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n\r\n    let entries = data.entries || [];\r\n    /** @type {SupersetEntry[]} */\r\n    this.entries = entries.map((e) => new SupersetEntry(e));\r\n  }\r\n\r\n  /**\r\n   * Method to get a superset of a catalog item\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Superset.get(ItemType.Part, '4593');\r\n   * client.send(req).then(superset => console.log(superset));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} options Options that conform to {@link SupersetOptions}.\r\n   * @return {BricklinkRequest} A request that will return an array of {@link Superset} items.\r\n   */\r\n  static get(itemType, itemNumber, options) {\r\n    options = options ? new SupersetOptions(options) : new SupersetOptions();\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/items/${itemType}/${itemNumber}/supersets`;\r\n\r\n    return new BricklinkRequest(method, uri, options, (data) => {\r\n      return data.map((set) => new Superset(set));\r\n    });\r\n  }\r\n}\r\n\r\n/**\r\n * Options that can be used when make a request for a subset.\r\n */\r\nexport class SupersetOptions extends RequestParams {\r\n  /**\r\n   * Make an instance of SubsetOptions.\r\n   * @param {object} [data] Raw options object.\r\n   * @param {number} [data.color_id] The color of the item.\r\n   */\r\n  constructor(data) {\r\n    super();\r\n    data = data || {};\r\n    /** @type {number|null} */\r\n    this.color_id = data.color_id || null;\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/catalogItem/supersets.js",
     "access": "public",
@@ -2600,7 +2600,7 @@
     "importPath": "bricklink-api/src/catalogItem/supersets.js",
     "importStyle": "{SupersetEntry}",
     "description": "Represents entries of a superset item.",
-    "lineNumber": 7,
+    "lineNumber": 8,
     "interface": false
   },
   {
@@ -2614,7 +2614,7 @@
     "longname": "src/catalogItem/supersets.js~SupersetEntry#constructor",
     "access": "public",
     "description": "Create an instance of a subset entry",
-    "lineNumber": 15,
+    "lineNumber": 16,
     "params": [
       {
         "nullable": null,
@@ -2667,7 +2667,7 @@
     "longname": "src/catalogItem/supersets.js~SupersetEntry#item",
     "access": "public",
     "description": null,
-    "lineNumber": 18,
+    "lineNumber": 19,
     "type": {
       "nullable": null,
       "types": [
@@ -2686,7 +2686,7 @@
     "longname": "src/catalogItem/supersets.js~SupersetEntry#quantity",
     "access": "public",
     "description": null,
-    "lineNumber": 20,
+    "lineNumber": 21,
     "type": {
       "nullable": null,
       "types": [
@@ -2705,7 +2705,7 @@
     "longname": "src/catalogItem/supersets.js~SupersetEntry#appear_as",
     "access": "public",
     "description": null,
-    "lineNumber": 22,
+    "lineNumber": 23,
     "type": {
       "nullable": null,
       "types": [
@@ -2727,7 +2727,7 @@
     "importPath": "bricklink-api/src/catalogItem/supersets.js",
     "importStyle": "{Superset}",
     "description": "Represents a super set entry.",
-    "lineNumber": 29,
+    "lineNumber": 30,
     "interface": false
   },
   {
@@ -2741,7 +2741,7 @@
     "longname": "src/catalogItem/supersets.js~Superset#constructor",
     "access": "public",
     "description": "Create an instance of a super set item.",
-    "lineNumber": 36,
+    "lineNumber": 37,
     "params": [
       {
         "nullable": null,
@@ -2784,7 +2784,7 @@
     "longname": "src/catalogItem/supersets.js~Superset#color_id",
     "access": "public",
     "description": null,
-    "lineNumber": 39,
+    "lineNumber": 40,
     "type": {
       "nullable": null,
       "types": [
@@ -2803,7 +2803,7 @@
     "longname": "src/catalogItem/supersets.js~Superset#entries",
     "access": "public",
     "description": null,
-    "lineNumber": 43,
+    "lineNumber": 44,
     "type": {
       "nullable": null,
       "types": [
@@ -2824,7 +2824,7 @@
     "longname": "src/catalogItem/supersets.js~Superset.get",
     "access": "public",
     "description": "Method to get a superset of a catalog item\n\nUsage:\n\n```\nvar req = Superset.get(ItemType.Part, '4593');\nclient.send(req).then(superset => console.log(superset));\n```",
-    "lineNumber": 61,
+    "lineNumber": 62,
     "params": [
       {
         "nullable": null,
@@ -2860,7 +2860,7 @@
     "return": {
       "nullable": null,
       "types": [
-        "Request"
+        "BricklinkRequest"
       ],
       "spread": false,
       "description": "A request that will return an array of {@link Superset} items."
@@ -2878,7 +2878,7 @@
     "importPath": "bricklink-api/src/catalogItem/supersets.js",
     "importStyle": "{SupersetOptions}",
     "description": "Options that can be used when make a request for a subset.",
-    "lineNumber": 75,
+    "lineNumber": 76,
     "interface": false,
     "extends": [
       "src/request.js~RequestParams"
@@ -2895,7 +2895,7 @@
     "longname": "src/catalogItem/supersets.js~SupersetOptions#constructor",
     "access": "public",
     "description": "Make an instance of SubsetOptions.",
-    "lineNumber": 81,
+    "lineNumber": 82,
     "params": [
       {
         "nullable": null,
@@ -2928,7 +2928,7 @@
     "longname": "src/catalogItem/supersets.js~SupersetOptions#color_id",
     "access": "public",
     "description": null,
-    "lineNumber": 85,
+    "lineNumber": 86,
     "type": {
       "nullable": null,
       "types": [
@@ -2943,7 +2943,7 @@
     "__docId__": 147,
     "kind": "file",
     "name": "src/category/category.js",
-    "content": "import { Request } from '../request';\r\n\r\n/**\r\n * Represents a Category\r\n */\r\nexport class Category {\r\n  /**\r\n   * Create a new instance of a category\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.category_id=0] The category id. i.e. - 10\r\n   * @param {string} [data.category_name] The category name. i.e. - Container\r\n   * @param {number} [data.parent_id] The parent category id or 0 if root category. i.e. - 0\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.category_id = data.category_id || 0;\r\n    /** @type {string} */\r\n    this.category_name = data.category_name || '';\r\n    /** @type {number} */\r\n    this.parent_id = data.parent_id || '';\r\n  }\r\n\r\n  /**\r\n   * Method to get a specific category\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Category.get(123);\r\n   * client.send(req).then(category => console.log(category));\r\n   * ```\r\n   *\r\n   * @param {number} categoryId Catalog item type\r\n   * @return {Request} A request that resolves to a {@link Category} instance.\r\n   */\r\n  static get(categoryId) {\r\n    let method = Request.GET;\r\n    let uri = `/categories/${categoryId}`;\r\n\r\n    return new Request(method, uri, null, (data) => new Category(data));\r\n  }\r\n\r\n  /**\r\n   * Get a list of all colors\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Category.all();\r\n   * client.send(req).then(categories => console.log(categories));\r\n   * ```\r\n   *\r\n   * @return {Request} A request that resolves to an array of {@link Category}.\r\n   */\r\n  static all() {\r\n    let method = Request.GET;\r\n    let uri = `/categories`;\r\n\r\n    return new Request(method, uri, null, (data) =>\r\n      data.map((d) => new Category(d)),\r\n    );\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\nimport { BricklinkRequest } from '../request';\r\n\r\n/**\r\n * Represents a Category\r\n */\r\nexport class Category {\r\n  /**\r\n   * Create a new instance of a category\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.category_id=0] The category id. i.e. - 10\r\n   * @param {string} [data.category_name] The category name. i.e. - Container\r\n   * @param {number} [data.parent_id] The parent category id or 0 if root category. i.e. - 0\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.category_id = data.category_id || 0;\r\n    /** @type {string} */\r\n    this.category_name = data.category_name || '';\r\n    /** @type {number} */\r\n    this.parent_id = data.parent_id || 0;\r\n  }\r\n\r\n  /**\r\n   * Method to get a specific category\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Category.get(123);\r\n   * client.send(req).then(category => console.log(category));\r\n   * ```\r\n   *\r\n   * @param {number} categoryId Catalog item type\r\n   * @return {BricklinkRequest} A request that resolves to a {@link Category} instance.\r\n   */\r\n  static get(categoryId) {\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/categories/${categoryId}`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) => new Category(data));\r\n  }\r\n\r\n  /**\r\n   * Get a list of all colors\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Category.all();\r\n   * client.send(req).then(categories => console.log(categories));\r\n   * ```\r\n   *\r\n   * @return {BricklinkRequest} A request that resolves to an array of {@link Category}.\r\n   */\r\n  static all() {\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/categories`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) =>\r\n      data.map((d) => new Category(d)),\r\n    );\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/category/category.js",
     "access": "public",
@@ -2962,7 +2962,7 @@
     "importPath": "bricklink-api/src/category/category.js",
     "importStyle": "{Category}",
     "description": "Represents a Category",
-    "lineNumber": 6,
+    "lineNumber": 7,
     "interface": false
   },
   {
@@ -2976,7 +2976,7 @@
     "longname": "src/category/category.js~Category#constructor",
     "access": "public",
     "description": "Create a new instance of a category",
-    "lineNumber": 14,
+    "lineNumber": 15,
     "params": [
       {
         "nullable": null,
@@ -3031,7 +3031,7 @@
     "longname": "src/category/category.js~Category#category_id",
     "access": "public",
     "description": null,
-    "lineNumber": 17,
+    "lineNumber": 18,
     "type": {
       "nullable": null,
       "types": [
@@ -3050,7 +3050,7 @@
     "longname": "src/category/category.js~Category#category_name",
     "access": "public",
     "description": null,
-    "lineNumber": 19,
+    "lineNumber": 20,
     "type": {
       "nullable": null,
       "types": [
@@ -3069,7 +3069,7 @@
     "longname": "src/category/category.js~Category#parent_id",
     "access": "public",
     "description": null,
-    "lineNumber": 21,
+    "lineNumber": 22,
     "type": {
       "nullable": null,
       "types": [
@@ -3090,7 +3090,7 @@
     "longname": "src/category/category.js~Category.get",
     "access": "public",
     "description": "Method to get a specific category\n\nUsage:\n\n```\nvar req = Category.get(123);\nclient.send(req).then(category => console.log(category));\n```",
-    "lineNumber": 37,
+    "lineNumber": 38,
     "params": [
       {
         "nullable": null,
@@ -3106,7 +3106,7 @@
     "return": {
       "nullable": null,
       "types": [
-        "Request"
+        "BricklinkRequest"
       ],
       "spread": false,
       "description": "A request that resolves to a {@link Category} instance."
@@ -3123,11 +3123,11 @@
     "longname": "src/category/category.js~Category.all",
     "access": "public",
     "description": "Get a list of all colors\nUsage:\n\n```\nvar req = Category.all();\nclient.send(req).then(categories => console.log(categories));\n```",
-    "lineNumber": 55,
+    "lineNumber": 56,
     "return": {
       "nullable": null,
       "types": [
-        "Request"
+        "BricklinkRequest"
       ],
       "spread": false,
       "description": "A request that resolves to an array of {@link Category}."
@@ -3138,7 +3138,7 @@
     "__docId__": 155,
     "kind": "file",
     "name": "src/client.js",
-    "content": "import request from 'request';\r\nimport { OAuthHelper } from './oAuthHelper';\r\nimport { CatalogItem } from './catalogItem/catalogItem';\r\nimport { PriceGuide } from './catalogItem/priceGuide';\r\nimport { KnownColor } from './catalogItem/knownColor';\r\nimport { ItemImage } from './catalogItem/itemImage';\r\nimport { Subset } from './catalogItem/subsets';\r\nimport { Superset } from './catalogItem/supersets';\r\nimport { logger } from './logger';\r\n\r\n/**\r\n * Create a client to perform\r\n */\r\nexport class Client {\r\n  /**\r\n   * Create an instance of the Bricklin Node Client.\r\n   * @param {object} options Options that are used to create a new client.\r\n   * @param {string} [options.token] The `TokenValue` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.token_secret] The `TokenSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.consumer_key] The `ConsumerKey` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.consumer_secret] The `ConsumerSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.endpoint='https://api.bricklink.com/api/store/v1/'] The url of the Bricklink API.\r\n   */\r\n  constructor(options) {\r\n    options = options || {};\r\n\r\n    /** @type {string} */\r\n    this.token = options.token || '';\r\n    /** @type {string} */\r\n    this.token_secret = options.token_secret || '';\r\n    /** @type {string} */\r\n    this.consumer_key = options.consumer_key || '';\r\n    /** @type {string} */\r\n    this.consumer_secret = options.consumer_secret || '';\r\n    /** @type {string} */\r\n    this.endpoint =\r\n      options.endpoint || 'https://api.bricklink.com/api/store/v1/';\r\n    /** @type {Function[]} */\r\n    this.requestQueue = [];\r\n  }\r\n\r\n\r\n  /**\r\n   * Performs a concurrent-safe bricklink request and the callback upon success.\r\n   * @param {Request} req The request to perform.\r\n   * @return {Promise} The data that has been return from the API request and any callbacks.\r\n   */\r\n  send(req) {\r\n    const promise = new Promise((resolve, reject) => {\r\n      const callback = () => this.dispatch(req).then(resolve).catch(reject).finally(() => {\r\n        const deleteIndex = this.requestQueue.indexOf(callback);\r\n        this.requestQueue.splice(deleteIndex, 1);\r\n        if (this.requestQueue.length > 0) {\r\n          const continueQueue = this.requestQueue[0];\r\n          continueQueue();\r\n        }\r\n      });\r\n      this.requestQueue.push(callback);\r\n      if (this.requestQueue.length === 1) {\r\n        const startQueue = this.requestQueue[0];\r\n        startQueue();\r\n      }\r\n    });\r\n    return promise;\r\n  }\r\n\r\n  /**\r\n   * Performs a bricklink request and the callback upon success.\r\n   * @param {Request} req The request to perform.\r\n   * @return {Promise} The data that has been return from the API request and any callbacks.\r\n   */\r\n  dispatch(req) {\r\n    let init = {\r\n      uri:\r\n        this.endpoint + req.uri.replace(/^\\//, '') + req.params.toQueryString(),\r\n      method: req.method,\r\n      headers: {},\r\n    };\r\n\r\n    let oauthHelper = new OAuthHelper(this.consumer_key, this.token);\r\n    oauthHelper.sign(init.uri, req, this.consumer_secret, this.token_secret);\r\n\r\n    init.headers['authorization'] = oauthHelper.header;\r\n\r\n    \r\n    let promise = new Promise((resolve, reject) => {\r\n      request(init, (er, response, body) => {\r\n        if (response.statusCode >= 400) {\r\n          const error = new Error(\r\n            'Received an error status code from the BrickLink servers',\r\n          );\r\n          error['statusCode'] = response.statusCode;\r\n          error['errorMessage'] = response.statusMessage;\r\n          error['body'] = body;\r\n          reject(error);\r\n          return;\r\n        }\r\n        if (er) {\r\n          reject(er);\r\n          return;\r\n        }\r\n        try {\r\n          let response = JSON.parse(body);\r\n          if (response.meta.code >= 300) {\r\n            const error = new Error(\r\n              'Received an error from the BrickLink servers',\r\n            );\r\n            logger(\r\n              JSON.stringify(\r\n                {\r\n                  reqestURI: init.uri,\r\n                  responseMetadata: response.meta,\r\n                },\r\n                null,\r\n                2,\r\n              ),\r\n            );\r\n            throw error;\r\n          }\r\n          resolve(response.data);\r\n        } catch (error) {\r\n          logger(error.message);\r\n          reject(error);\r\n        }\r\n      });\r\n    });\r\n\r\n    promise.catch(error => {\r\n      logger(error);\r\n    });\r\n\r\n    if (req.callback) {\r\n      return promise.then(req.callback)\r\n    }\r\n\r\n    return promise;\r\n  }\r\n\r\n  /**\r\n   * Get a catalog item by type and identification number.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @return {Promise<CatalogItem>} A promise that resolves to a catalog item.\r\n   */\r\n  getCatalogItem(itemType, itemNumber) {\r\n    let req = CatalogItem.get(itemType, itemNumber);\r\n\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Get the price guide for a given catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} params Options for the price guide as outlined in {@link PriceGuideOptions}.\r\n   * @return {Promise<PriceGuide>} A promise that resolves to a price guide.\r\n   */\r\n  getPriceGuide(itemType, itemNumber, params) {\r\n    let req = PriceGuide.get(itemType, itemNumber, params);\r\n\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Get known colors for a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @return {Promise<Array>} A promise that resolves to a list of {@link KnownColor}.\r\n   */\r\n  getKnownColors(itemType, itemNumber) {\r\n    let req = KnownColor.get(itemType, itemNumber);\r\n\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Can get an image for a specific image color of a known catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {number} colorId The color id of the item.\r\n   * @return {Promise<ItemImage>} A promise that resolves to an Item Image.\r\n   */\r\n  getItemImage(itemType, itemNumber, colorId) {\r\n    let req = ItemImage.get(itemType, itemNumber, colorId);\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Gets a subset of a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} [params] Options for the price guide as outlined in {@link SubsetOptions}.\r\n   * @return {Promise<Array>} A promise that resolves to a  list of {@link Subset}.\r\n   */\r\n  getItemSubset(itemType, itemNumber, params) {\r\n    let req = Subset.get(itemType, itemNumber, params);\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Gets a superset of a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} [params] Options for the price guide as outlined in {@link SupersetOptions}.\r\n   * @return {Promise<Array>} A promise that resolves to a  list of {@link Superset}.\r\n   */\r\n  getItemSuperset(itemType, itemNumber, params) {\r\n    let req = Superset.get(itemType, itemNumber, params);\r\n    return this.send(req);\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\nimport { OAuthHelper } from './oAuthHelper';\r\nimport { CatalogItem } from './catalogItem/catalogItem';\r\nimport { PriceGuide } from './catalogItem/priceGuide';\r\nimport { KnownColor } from './catalogItem/knownColor';\r\nimport { ItemImage } from './catalogItem/itemImage';\r\nimport { Subset } from './catalogItem/subsets';\r\nimport { Superset } from './catalogItem/supersets';\r\nimport { logger } from './logger';\r\nimport { BricklinkRequest } from './request';\r\nimport fetch from 'node-fetch'\r\n\r\n/**\r\n * Create a client to perform\r\n */\r\nexport class Client {\r\n  /**\r\n   * Create an instance of the Bricklin Node Client.\r\n   * @param {object} [options] Options that are used to create a new client.\r\n   * @param {string} [options.token] The `TokenValue` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.token_secret] The `TokenSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.consumer_key] The `ConsumerKey` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.consumer_secret] The `ConsumerSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.endpoint='https://api.bricklink.com/api/store/v1/'] The url of the Bricklink API.\r\n   */\r\n  constructor(options) {\r\n    options = options || {};\r\n\r\n    /** @type {string} */\r\n    this.token = options.token || '';\r\n    /** @type {string} */\r\n    this.token_secret = options.token_secret || '';\r\n    /** @type {string} */\r\n    this.consumer_key = options.consumer_key || '';\r\n    /** @type {string} */\r\n    this.consumer_secret = options.consumer_secret || '';\r\n    /** @type {string} */\r\n    this.endpoint =\r\n      options.endpoint || 'https://api.bricklink.com/api/store/v1/';\r\n    /** @type {Function[]} */\r\n    this.requestQueue = [];\r\n  }\r\n\r\n\r\n  /**\r\n   * Performs a concurrent-safe bricklink request and the callback upon success.\r\n   * @param {BricklinkRequest} req The request to perform.\r\n   * @return {Promise} The data that has been return from the API request and any callbacks.\r\n   */\r\n  send(req) {\r\n    const promise = new Promise((resolve, reject) => {\r\n      const callback = () => this.dispatch(req).then(resolve).catch(reject).finally(() => {\r\n        const deleteIndex = this.requestQueue.indexOf(callback);\r\n        this.requestQueue.splice(deleteIndex, 1);\r\n        if (this.requestQueue.length > 0) {\r\n          const continueQueue = this.requestQueue[0];\r\n          continueQueue();\r\n        }\r\n      });\r\n      this.requestQueue.push(callback);\r\n      if (this.requestQueue.length === 1) {\r\n        const startQueue = this.requestQueue[0];\r\n        startQueue();\r\n      }\r\n    });\r\n    return promise;\r\n  }\r\n\r\n  /**\r\n   * Performs a bricklink request and the callback upon success.\r\n   * @param {BricklinkRequest} req The request to perform.\r\n   * @return {Promise} The data that has been return from the API request and any callbacks.\r\n   */\r\n  dispatch(req) {\r\n    const resourceURL = this.endpoint + req.uri.replace(/^\\//, '') + req.params.toQueryString();\r\n    /** @type {import('node-fetch').RequestInit} */\r\n    const init = {\r\n      method: req.method,\r\n      headers: {},\r\n    };\r\n\r\n    const oauthHelper = new OAuthHelper(this.consumer_key, this.token);\r\n    oauthHelper.sign(resourceURL, req, this.consumer_secret, this.token_secret);\r\n\r\n    init.headers['authorization'] = oauthHelper.header;\r\n\r\n    const promise = fetch(resourceURL, init)\r\n      .then(response => response.json())\r\n      .then(\r\n        /**\r\n         * @param {any} payload Any object\r\n         */\r\n        (payload) => {\r\n          if (payload.meta.code >= 300) {\r\n            const error = new Error(\r\n              'Received an error from the BrickLink servers',\r\n            );\r\n            logger(\r\n              JSON.stringify(\r\n                {\r\n                  reqestURI: resourceURL,\r\n                  responseMetadata: payload.meta,\r\n                },\r\n                null,\r\n                2,\r\n              ),\r\n            );\r\n            throw error;\r\n          } else {\r\n            return payload.data\r\n          }\r\n        })\r\n\r\n    promise.catch(error => {\r\n      logger(error);\r\n    });\r\n\r\n    if (req.callback) {\r\n      return promise.then(req.callback)\r\n    }\r\n\r\n    return promise;\r\n  }\r\n\r\n  /**\r\n   * Get a catalog item by type and identification number.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @return {Promise<CatalogItem>} A promise that resolves to a catalog item.\r\n   */\r\n  getCatalogItem(itemType, itemNumber) {\r\n    const req = CatalogItem.get(itemType, itemNumber);\r\n\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Get the price guide for a given catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} params Options for the price guide as outlined in {@link PriceGuideOptions}.\r\n   * @return {Promise<PriceGuide>} A promise that resolves to a price guide.\r\n   */\r\n  getPriceGuide(itemType, itemNumber, params) {\r\n    const req = PriceGuide.get(itemType, itemNumber, params);\r\n\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Get known colors for a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @return {Promise<Array>} A promise that resolves to a list of {@link KnownColor}.\r\n   */\r\n  getKnownColors(itemType, itemNumber) {\r\n    const req = KnownColor.get(itemType, itemNumber);\r\n\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Can get an image for a specific image color of a known catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {number} colorId The color id of the item.\r\n   * @return {Promise<ItemImage>} A promise that resolves to an Item Image.\r\n   */\r\n  getItemImage(itemType, itemNumber, colorId) {\r\n    const req = ItemImage.get(itemType, itemNumber, colorId);\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Gets a subset of a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} [params] Options for the price guide as outlined in {@link SubsetOptions}.\r\n   * @return {Promise<Array>} A promise that resolves to a  list of {@link Subset}.\r\n   */\r\n  getItemSubset(itemType, itemNumber, params) {\r\n    const req = Subset.get(itemType, itemNumber, params);\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Gets a superset of a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} [params] Options for the price guide as outlined in {@link SupersetOptions}.\r\n   * @return {Promise<Array>} A promise that resolves to a  list of {@link Superset}.\r\n   */\r\n  getItemSuperset(itemType, itemNumber, params) {\r\n    const req = Superset.get(itemType, itemNumber, params);\r\n    return this.send(req);\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/client.js",
     "access": "public",
@@ -3157,7 +3157,7 @@
     "importPath": "bricklink-api/src/client.js",
     "importStyle": "{Client}",
     "description": "Create a client to perform",
-    "lineNumber": 14,
+    "lineNumber": 16,
     "interface": false
   },
   {
@@ -3171,7 +3171,7 @@
     "longname": "src/client.js~Client#constructor",
     "access": "public",
     "description": "Create an instance of the Bricklin Node Client.",
-    "lineNumber": 24,
+    "lineNumber": 26,
     "params": [
       {
         "nullable": null,
@@ -3179,7 +3179,7 @@
           "object"
         ],
         "spread": false,
-        "optional": false,
+        "optional": true,
         "name": "options",
         "description": "Options that are used to create a new client."
       },
@@ -3246,7 +3246,7 @@
     "longname": "src/client.js~Client#token",
     "access": "public",
     "description": null,
-    "lineNumber": 28,
+    "lineNumber": 30,
     "type": {
       "nullable": null,
       "types": [
@@ -3265,7 +3265,7 @@
     "longname": "src/client.js~Client#token_secret",
     "access": "public",
     "description": null,
-    "lineNumber": 30,
+    "lineNumber": 32,
     "type": {
       "nullable": null,
       "types": [
@@ -3284,7 +3284,7 @@
     "longname": "src/client.js~Client#consumer_key",
     "access": "public",
     "description": null,
-    "lineNumber": 32,
+    "lineNumber": 34,
     "type": {
       "nullable": null,
       "types": [
@@ -3303,7 +3303,7 @@
     "longname": "src/client.js~Client#consumer_secret",
     "access": "public",
     "description": null,
-    "lineNumber": 34,
+    "lineNumber": 36,
     "type": {
       "nullable": null,
       "types": [
@@ -3322,7 +3322,7 @@
     "longname": "src/client.js~Client#endpoint",
     "access": "public",
     "description": null,
-    "lineNumber": 36,
+    "lineNumber": 38,
     "type": {
       "nullable": null,
       "types": [
@@ -3341,7 +3341,7 @@
     "longname": "src/client.js~Client#requestQueue",
     "access": "public",
     "description": null,
-    "lineNumber": 39,
+    "lineNumber": 41,
     "type": {
       "nullable": null,
       "types": [
@@ -3362,12 +3362,12 @@
     "longname": "src/client.js~Client#send",
     "access": "public",
     "description": "Performs a concurrent-safe bricklink request and the callback upon success.",
-    "lineNumber": 48,
+    "lineNumber": 50,
     "params": [
       {
         "nullable": null,
         "types": [
-          "Request"
+          "BricklinkRequest"
         ],
         "spread": false,
         "optional": false,
@@ -3395,12 +3395,12 @@
     "longname": "src/client.js~Client#dispatch",
     "access": "public",
     "description": "Performs a bricklink request and the callback upon success.",
-    "lineNumber": 72,
+    "lineNumber": 74,
     "params": [
       {
         "nullable": null,
         "types": [
-          "Request"
+          "BricklinkRequest"
         ],
         "spread": false,
         "optional": false,
@@ -3428,7 +3428,7 @@
     "longname": "src/client.js~Client#getCatalogItem",
     "access": "public",
     "description": "Get a catalog item by type and identification number.",
-    "lineNumber": 145,
+    "lineNumber": 131,
     "params": [
       {
         "nullable": null,
@@ -3471,7 +3471,7 @@
     "longname": "src/client.js~Client#getPriceGuide",
     "access": "public",
     "description": "Get the price guide for a given catalog item.",
-    "lineNumber": 158,
+    "lineNumber": 144,
     "params": [
       {
         "nullable": null,
@@ -3524,7 +3524,7 @@
     "longname": "src/client.js~Client#getKnownColors",
     "access": "public",
     "description": "Get known colors for a catalog item.",
-    "lineNumber": 170,
+    "lineNumber": 156,
     "params": [
       {
         "nullable": null,
@@ -3567,7 +3567,7 @@
     "longname": "src/client.js~Client#getItemImage",
     "access": "public",
     "description": "Can get an image for a specific image color of a known catalog item.",
-    "lineNumber": 183,
+    "lineNumber": 169,
     "params": [
       {
         "nullable": null,
@@ -3620,7 +3620,7 @@
     "longname": "src/client.js~Client#getItemSubset",
     "access": "public",
     "description": "Gets a subset of a catalog item.",
-    "lineNumber": 195,
+    "lineNumber": 181,
     "params": [
       {
         "nullable": null,
@@ -3673,7 +3673,7 @@
     "longname": "src/client.js~Client#getItemSuperset",
     "access": "public",
     "description": "Gets a superset of a catalog item.",
-    "lineNumber": 207,
+    "lineNumber": 193,
     "params": [
       {
         "nullable": null,
@@ -3719,7 +3719,7 @@
     "__docId__": 172,
     "kind": "file",
     "name": "src/color/color.js",
-    "content": "import { Request } from '../request';\r\n\r\n/**\r\n * Represents a color object\r\n */\r\nexport class Color {\r\n  /**\r\n   * Create a new instance of a color\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.color_id=0] The color id. i.e. - 10\r\n   * @param {string} [data.color_name] The color name. i.e. - Dark Gray\r\n   * @param {string} [data.color_code] The HTML HEX associated to the color. i.e. - 6b5a5a\r\n   * @param {string} [data.color_type] A group that the color belongs to. i.e. - Solid, Transparent, etc...\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n    /** @type {string} */\r\n    this.color_name = data.color_name || '';\r\n    /** @type {string} */\r\n    this.color_code = data.color_code || '';\r\n    /** @type {string} */\r\n    this.color_type = data.color_type || '';\r\n  }\r\n\r\n  /**\r\n   * Method to get specific color details\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Color.get(10);\r\n   * client.send(req).then(color => console.log(color));\r\n   * ```\r\n   *\r\n   * @param {number} colorId a color id.\r\n   * @return {Request} A request that resolves to a {@link Color} instance.\r\n   */\r\n  static get(colorId) {\r\n    let method = Request.GET;\r\n    let uri = `/colors/${colorId}`;\r\n\r\n    return new Request(method, uri, null, (data) => new Color(data));\r\n  }\r\n\r\n  /**\r\n   * Get a list of all colors\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Color.all();\r\n   * client.send(req).then(colors => console.log(colors));\r\n   * ```\r\n   *\r\n   * @return {Request} A request that resolves to an array of {@link Color}.\r\n   */\r\n  static all() {\r\n    let method = Request.GET;\r\n    let uri = `/colors`;\r\n\r\n    return new Request(method, uri, null, (data) =>\r\n      data.map((d) => new Color(d)),\r\n    );\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\nimport { BricklinkRequest } from '../request';\r\n\r\n/**\r\n * Represents a color object\r\n */\r\nexport class Color {\r\n  /**\r\n   * Create a new instance of a color\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.color_id=0] The color id. i.e. - 10\r\n   * @param {string} [data.color_name] The color name. i.e. - Dark Gray\r\n   * @param {string} [data.color_code] The HTML HEX associated to the color. i.e. - 6b5a5a\r\n   * @param {string} [data.color_type] A group that the color belongs to. i.e. - Solid, Transparent, etc...\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n    /** @type {string} */\r\n    this.color_name = data.color_name || '';\r\n    /** @type {string} */\r\n    this.color_code = data.color_code || '';\r\n    /** @type {string} */\r\n    this.color_type = data.color_type || '';\r\n  }\r\n\r\n  /**\r\n   * Method to get specific color details\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Color.get(10);\r\n   * client.send(req).then(color => console.log(color));\r\n   * ```\r\n   *\r\n   * @param {number} colorId a color id.\r\n   * @return {BricklinkRequest} A request that resolves to a {@link Color} instance.\r\n   */\r\n  static get(colorId) {\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/colors/${colorId}`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) => new Color(data));\r\n  }\r\n\r\n  /**\r\n   * Get a list of all colors\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Color.all();\r\n   * client.send(req).then(colors => console.log(colors));\r\n   * ```\r\n   *\r\n   * @return {BricklinkRequest} A request that resolves to an array of {@link Color}.\r\n   */\r\n  static all() {\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/colors`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) =>\r\n      data.map((d) => new Color(d)),\r\n    );\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/color/color.js",
     "access": "public",
@@ -3738,7 +3738,7 @@
     "importPath": "bricklink-api/src/color/color.js",
     "importStyle": "{Color}",
     "description": "Represents a color object",
-    "lineNumber": 6,
+    "lineNumber": 7,
     "interface": false
   },
   {
@@ -3752,7 +3752,7 @@
     "longname": "src/color/color.js~Color#constructor",
     "access": "public",
     "description": "Create a new instance of a color",
-    "lineNumber": 15,
+    "lineNumber": 16,
     "params": [
       {
         "nullable": null,
@@ -3817,7 +3817,7 @@
     "longname": "src/color/color.js~Color#color_id",
     "access": "public",
     "description": null,
-    "lineNumber": 18,
+    "lineNumber": 19,
     "type": {
       "nullable": null,
       "types": [
@@ -3836,7 +3836,7 @@
     "longname": "src/color/color.js~Color#color_name",
     "access": "public",
     "description": null,
-    "lineNumber": 20,
+    "lineNumber": 21,
     "type": {
       "nullable": null,
       "types": [
@@ -3855,7 +3855,7 @@
     "longname": "src/color/color.js~Color#color_code",
     "access": "public",
     "description": null,
-    "lineNumber": 22,
+    "lineNumber": 23,
     "type": {
       "nullable": null,
       "types": [
@@ -3874,7 +3874,7 @@
     "longname": "src/color/color.js~Color#color_type",
     "access": "public",
     "description": null,
-    "lineNumber": 24,
+    "lineNumber": 25,
     "type": {
       "nullable": null,
       "types": [
@@ -3895,7 +3895,7 @@
     "longname": "src/color/color.js~Color.get",
     "access": "public",
     "description": "Method to get specific color details\n\nUsage:\n\n```\nvar req = Color.get(10);\nclient.send(req).then(color => console.log(color));\n```",
-    "lineNumber": 40,
+    "lineNumber": 41,
     "params": [
       {
         "nullable": null,
@@ -3911,7 +3911,7 @@
     "return": {
       "nullable": null,
       "types": [
-        "Request"
+        "BricklinkRequest"
       ],
       "spread": false,
       "description": "A request that resolves to a {@link Color} instance."
@@ -3928,11 +3928,11 @@
     "longname": "src/color/color.js~Color.all",
     "access": "public",
     "description": "Get a list of all colors\n\nUsage:\n\n```\nvar req = Color.all();\nclient.send(req).then(colors => console.log(colors));\n```",
-    "lineNumber": 59,
+    "lineNumber": 60,
     "return": {
       "nullable": null,
       "types": [
-        "Request"
+        "BricklinkRequest"
       ],
       "spread": false,
       "description": "A request that resolves to an array of {@link Color}."
@@ -3943,7 +3943,7 @@
     "__docId__": 181,
     "kind": "file",
     "name": "src/condition.js",
-    "content": "/**\r\n * Static dictionary of common condition terms to improve code readability.\r\n *\r\n * - `Condition.New`\r\n * - `Condition.Used`\r\n */\r\nexport class Condition {\r\n  /** @type {string} */\r\n  static get New() {\r\n    return 'N';\r\n  }\r\n\r\n  /** @type {string} */\r\n  static get Used() {\r\n    return 'U';\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\n/**\r\n * Static dictionary of common condition terms to improve code readability.\r\n *\r\n * - `Condition.New`\r\n * - `Condition.Used`\r\n */\r\nexport class Condition {\r\n  /** @type {string} */\r\n  static get New() {\r\n    return 'N';\r\n  }\r\n\r\n  /** @type {string} */\r\n  static get Used() {\r\n    return 'U';\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/condition.js",
     "access": "public",
@@ -3962,7 +3962,7 @@
     "importPath": "bricklink-api/src/condition.js",
     "importStyle": "{Condition}",
     "description": "Static dictionary of common condition terms to improve code readability.\n\n- `Condition.New`\n- `Condition.Used`",
-    "lineNumber": 7,
+    "lineNumber": 8,
     "interface": false
   },
   {
@@ -3976,7 +3976,7 @@
     "longname": "src/condition.js~Condition.New",
     "access": "public",
     "description": null,
-    "lineNumber": 9,
+    "lineNumber": 10,
     "type": {
       "nullable": null,
       "types": [
@@ -3997,7 +3997,7 @@
     "longname": "src/condition.js~Condition.Used",
     "access": "public",
     "description": null,
-    "lineNumber": 14,
+    "lineNumber": 15,
     "type": {
       "nullable": null,
       "types": [
@@ -4011,7 +4011,7 @@
     "__docId__": 185,
     "kind": "file",
     "name": "src/index.js",
-    "content": "export { Client } from './client';\r\nexport { ItemType } from './itemType';\r\nexport { Condition } from './condition';\r\n\r\nexport { CatalogItem } from './catalogItem/catalogItem';\r\nexport { ItemImage } from './catalogItem/itemImage';\r\nexport { KnownColor } from './catalogItem/knownColor';\r\nexport { PriceGuide } from './catalogItem/priceGuide';\r\nexport { Subset } from './catalogItem/subsets';\r\nexport { Superset } from './catalogItem/supersets';\r\n\r\nexport { Color } from './color/color';\r\n\r\nexport { Category } from './category/category';\r\n",
+    "content": "//@ts-check\r\nexport { Client } from './client';\r\nexport { ItemType } from './itemType';\r\nexport { Condition } from './condition';\r\n\r\nexport { CatalogItem } from './catalogItem/catalogItem';\r\nexport { ItemImage } from './catalogItem/itemImage';\r\nexport { KnownColor } from './catalogItem/knownColor';\r\nexport { PriceGuide } from './catalogItem/priceGuide';\r\nexport { Subset } from './catalogItem/subsets';\r\nexport { Superset } from './catalogItem/supersets';\r\n\r\nexport { Color } from './color/color';\r\n\r\nexport { Category } from './category/category';\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/index.js",
     "access": "public",
@@ -4022,7 +4022,7 @@
     "__docId__": 186,
     "kind": "file",
     "name": "src/itemType.js",
-    "content": "/**\r\n * Static dictionary of common catalog item types to improve code readability.\r\n */\r\nexport class ItemType {\r\n  /** @type {string} */\r\n  static get Set() {\r\n    return 'SET';\r\n  }\r\n  /** @type {string} */\r\n  static get Minifigure() {\r\n    return 'MINIFIG';\r\n  }\r\n  /** @type {string} */\r\n  static get Part() {\r\n    return 'PART';\r\n  }\r\n  /** @type {string} */\r\n  static get Book() {\r\n    return 'BOOK';\r\n  }\r\n  /** @type {string} */\r\n  static get Gear() {\r\n    return 'GEAR';\r\n  }\r\n  /** @type {string} */\r\n  static get Catalog() {\r\n    return 'CATALOG';\r\n  }\r\n  /** @type {string} */\r\n  static get Instruction() {\r\n    return 'INSTRUCTION';\r\n  }\r\n  /** @type {string} */\r\n  static get UnsortedLot() {\r\n    return 'UNSORTED_LOT';\r\n  }\r\n  /** @type {string} */\r\n  static get Box() {\r\n    return 'ORIGINAL_BOX';\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\n/**\r\n * Static dictionary of common catalog item types to improve code readability.\r\n */\r\nexport class ItemType {\r\n  /** @type {string} */\r\n  static get Set() {\r\n    return 'SET';\r\n  }\r\n  /** @type {string} */\r\n  static get Minifigure() {\r\n    return 'MINIFIG';\r\n  }\r\n  /** @type {string} */\r\n  static get Part() {\r\n    return 'PART';\r\n  }\r\n  /** @type {string} */\r\n  static get Book() {\r\n    return 'BOOK';\r\n  }\r\n  /** @type {string} */\r\n  static get Gear() {\r\n    return 'GEAR';\r\n  }\r\n  /** @type {string} */\r\n  static get Catalog() {\r\n    return 'CATALOG';\r\n  }\r\n  /** @type {string} */\r\n  static get Instruction() {\r\n    return 'INSTRUCTION';\r\n  }\r\n  /** @type {string} */\r\n  static get UnsortedLot() {\r\n    return 'UNSORTED_LOT';\r\n  }\r\n  /** @type {string} */\r\n  static get Box() {\r\n    return 'ORIGINAL_BOX';\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/itemType.js",
     "access": "public",
@@ -4041,7 +4041,7 @@
     "importPath": "bricklink-api/src/itemType.js",
     "importStyle": "{ItemType}",
     "description": "Static dictionary of common catalog item types to improve code readability.",
-    "lineNumber": 4,
+    "lineNumber": 5,
     "interface": false
   },
   {
@@ -4055,7 +4055,7 @@
     "longname": "src/itemType.js~ItemType.Set",
     "access": "public",
     "description": null,
-    "lineNumber": 6,
+    "lineNumber": 7,
     "type": {
       "nullable": null,
       "types": [
@@ -4076,7 +4076,7 @@
     "longname": "src/itemType.js~ItemType.Minifigure",
     "access": "public",
     "description": null,
-    "lineNumber": 10,
+    "lineNumber": 11,
     "type": {
       "nullable": null,
       "types": [
@@ -4097,7 +4097,7 @@
     "longname": "src/itemType.js~ItemType.Part",
     "access": "public",
     "description": null,
-    "lineNumber": 14,
+    "lineNumber": 15,
     "type": {
       "nullable": null,
       "types": [
@@ -4118,7 +4118,7 @@
     "longname": "src/itemType.js~ItemType.Book",
     "access": "public",
     "description": null,
-    "lineNumber": 18,
+    "lineNumber": 19,
     "type": {
       "nullable": null,
       "types": [
@@ -4139,7 +4139,7 @@
     "longname": "src/itemType.js~ItemType.Gear",
     "access": "public",
     "description": null,
-    "lineNumber": 22,
+    "lineNumber": 23,
     "type": {
       "nullable": null,
       "types": [
@@ -4160,7 +4160,7 @@
     "longname": "src/itemType.js~ItemType.Catalog",
     "access": "public",
     "description": null,
-    "lineNumber": 26,
+    "lineNumber": 27,
     "type": {
       "nullable": null,
       "types": [
@@ -4181,7 +4181,7 @@
     "longname": "src/itemType.js~ItemType.Instruction",
     "access": "public",
     "description": null,
-    "lineNumber": 30,
+    "lineNumber": 31,
     "type": {
       "nullable": null,
       "types": [
@@ -4202,7 +4202,7 @@
     "longname": "src/itemType.js~ItemType.UnsortedLot",
     "access": "public",
     "description": null,
-    "lineNumber": 34,
+    "lineNumber": 35,
     "type": {
       "nullable": null,
       "types": [
@@ -4223,7 +4223,7 @@
     "longname": "src/itemType.js~ItemType.Box",
     "access": "public",
     "description": null,
-    "lineNumber": 38,
+    "lineNumber": 39,
     "type": {
       "nullable": null,
       "types": [
@@ -4237,7 +4237,7 @@
     "__docId__": 197,
     "kind": "file",
     "name": "src/logger.js",
-    "content": "import debug from 'debug';\r\n\r\nexport const logger = debug('bricklink-api');\r\n",
+    "content": "//@ts-check\r\nimport debug from 'debug';\r\n\r\nexport const logger = debug('bricklink-api');\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/logger.js",
     "access": "public",
@@ -4256,7 +4256,7 @@
     "importPath": "bricklink-api/src/logger.js",
     "importStyle": "{logger}",
     "description": null,
-    "lineNumber": 3,
+    "lineNumber": 4,
     "undocument": true,
     "type": {
       "types": [
@@ -4268,7 +4268,7 @@
     "__docId__": 199,
     "kind": "file",
     "name": "src/oAuthHelper.js",
-    "content": "import crypto from 'crypto';\r\nimport oauthSignature from 'oauth-signature';\r\n\r\n/**\r\n * A helper for OAuth 1.0 header information and signing keys.\r\n */\r\nexport class OAuthHelper {\r\n  /**\r\n   * Intialize the helper\r\n   * @param {string} consumerKey The consumer key\r\n   * @param {string} token The token value\r\n   */\r\n  constructor(consumerKey, token) {\r\n    /** @type {string} */\r\n    this.consumerKey = consumerKey;\r\n    /** @type {string} */\r\n    this.token = token;\r\n    /** @type {string} */\r\n    this.nonce = crypto.randomBytes(16).toString('hex');\r\n    /** @type {string} */\r\n    this.signature = '';\r\n    /** @type {number} */\r\n    this.timestamp = Math.round(Date.now() / 1000).toString();\r\n  }\r\n\r\n  get parameters() {\r\n    return {\r\n      oauth_consumer_key: this.consumerKey,\r\n      oauth_token: this.token,\r\n      oauth_nonce: this.nonce,\r\n      oauth_timestamp: this.timestamp,\r\n      oauth_signature_method: 'HMAC-SHA1',\r\n      oauth_version: '1.0',\r\n    };\r\n  }\r\n\r\n  get header() {\r\n    let str = 'OAuth ';\r\n\r\n    let params = Object.assign({ realm: '' }, this.parameters);\r\n    params['oauth_signature'] = this.signature;\r\n\r\n    let keys = Object.keys(params);\r\n    let pairs = keys.map((k) => {\r\n      return k + '=\"' + params[k] + '\"';\r\n    });\r\n\r\n    str += pairs.join(',');\r\n    return str;\r\n  }\r\n\r\n  get queryString() {\r\n    let params = Object.assign({}, this.parameters);\r\n    params['oauth_signature'] = this.signature;\r\n    let str = JSON.stringify(params);\r\n    return 'Authorization=' + str;\r\n  }\r\n\r\n  /**\r\n   * Sign the request with oath headers and sets the signature member of the OauthHelper instance.\r\n   */\r\n  sign(url, request, consumerSecret, tokenSecret) {\r\n    let params = Object.assign({}, this.parameters, request.params.toObject());\r\n\r\n    this.signature = oauthSignature.generate(\r\n      request.method,\r\n      url,\r\n      params,\r\n      consumerSecret,\r\n      tokenSecret,\r\n    );\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\nimport crypto from 'crypto';\r\nimport oauthSignature from 'oauth-signature';\r\n\r\n/**\r\n * A helper for OAuth 1.0 header information and signing keys.\r\n */\r\nexport class OAuthHelper {\r\n  /**\r\n   * Intialize the helper\r\n   * @param {string} consumerKey The consumer key\r\n   * @param {string} token The token value\r\n   */\r\n  constructor(consumerKey, token) {\r\n    /** @type {string} */\r\n    this.consumerKey = consumerKey;\r\n    /** @type {string} */\r\n    this.token = token;\r\n    /** @type {string} */\r\n    this.nonce = crypto.randomBytes(16).toString('hex');\r\n    /** @type {string} */\r\n    this.signature = '';\r\n    /** @type {string} */\r\n    this.timestamp = Math.round(Date.now() / 1000).toString();\r\n  }\r\n\r\n  get parameters() {\r\n    return {\r\n      oauth_consumer_key: this.consumerKey,\r\n      oauth_token: this.token,\r\n      oauth_nonce: this.nonce,\r\n      oauth_timestamp: this.timestamp,\r\n      oauth_signature_method: 'HMAC-SHA1',\r\n      oauth_version: '1.0',\r\n    };\r\n  }\r\n\r\n  get header() {\r\n    let str = 'OAuth ';\r\n\r\n    let params = Object.assign({ realm: '' }, this.parameters);\r\n    params['oauth_signature'] = this.signature;\r\n\r\n    let keys = Object.keys(params);\r\n    let pairs = keys.map((k) => {\r\n      return k + '=\"' + params[k] + '\"';\r\n    });\r\n\r\n    str += pairs.join(',');\r\n    return str;\r\n  }\r\n\r\n  get queryString() {\r\n    let params = Object.assign({}, this.parameters);\r\n    params['oauth_signature'] = this.signature;\r\n    let str = JSON.stringify(params);\r\n    return 'Authorization=' + str;\r\n  }\r\n\r\n  /**\r\n   * Sign the request with oath headers and sets the signature member of the OauthHelper instance.\r\n   */\r\n  sign(url, request, consumerSecret, tokenSecret) {\r\n    let params = Object.assign({}, this.parameters, request.params.toObject());\r\n\r\n    this.signature = oauthSignature.generate(\r\n      request.method,\r\n      url,\r\n      params,\r\n      consumerSecret,\r\n      tokenSecret,\r\n    );\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/oAuthHelper.js",
     "access": "public",
@@ -4287,7 +4287,7 @@
     "importPath": "bricklink-api/src/oAuthHelper.js",
     "importStyle": "{OAuthHelper}",
     "description": "A helper for OAuth 1.0 header information and signing keys.",
-    "lineNumber": 7,
+    "lineNumber": 8,
     "interface": false
   },
   {
@@ -4301,7 +4301,7 @@
     "longname": "src/oAuthHelper.js~OAuthHelper#constructor",
     "access": "public",
     "description": "Intialize the helper",
-    "lineNumber": 13,
+    "lineNumber": 14,
     "params": [
       {
         "nullable": null,
@@ -4334,7 +4334,7 @@
     "longname": "src/oAuthHelper.js~OAuthHelper#consumerKey",
     "access": "public",
     "description": null,
-    "lineNumber": 15,
+    "lineNumber": 16,
     "type": {
       "nullable": null,
       "types": [
@@ -4353,7 +4353,7 @@
     "longname": "src/oAuthHelper.js~OAuthHelper#token",
     "access": "public",
     "description": null,
-    "lineNumber": 17,
+    "lineNumber": 18,
     "type": {
       "nullable": null,
       "types": [
@@ -4372,7 +4372,7 @@
     "longname": "src/oAuthHelper.js~OAuthHelper#nonce",
     "access": "public",
     "description": null,
-    "lineNumber": 19,
+    "lineNumber": 20,
     "type": {
       "nullable": null,
       "types": [
@@ -4391,7 +4391,7 @@
     "longname": "src/oAuthHelper.js~OAuthHelper#signature",
     "access": "public",
     "description": null,
-    "lineNumber": 21,
+    "lineNumber": 22,
     "type": {
       "nullable": null,
       "types": [
@@ -4410,11 +4410,11 @@
     "longname": "src/oAuthHelper.js~OAuthHelper#timestamp",
     "access": "public",
     "description": null,
-    "lineNumber": 23,
+    "lineNumber": 24,
     "type": {
       "nullable": null,
       "types": [
-        "number"
+        "string"
       ],
       "spread": false,
       "description": null
@@ -4431,7 +4431,7 @@
     "longname": "src/oAuthHelper.js~OAuthHelper#parameters",
     "access": "public",
     "description": null,
-    "lineNumber": 26,
+    "lineNumber": 27,
     "undocument": true,
     "type": {
       "types": [
@@ -4450,7 +4450,7 @@
     "longname": "src/oAuthHelper.js~OAuthHelper#header",
     "access": "public",
     "description": null,
-    "lineNumber": 37,
+    "lineNumber": 38,
     "undocument": true,
     "type": {
       "types": [
@@ -4469,7 +4469,7 @@
     "longname": "src/oAuthHelper.js~OAuthHelper#queryString",
     "access": "public",
     "description": null,
-    "lineNumber": 52,
+    "lineNumber": 53,
     "undocument": true,
     "type": {
       "types": [
@@ -4488,7 +4488,7 @@
     "longname": "src/oAuthHelper.js~OAuthHelper#sign",
     "access": "public",
     "description": "Sign the request with oath headers and sets the signature member of the OauthHelper instance.",
-    "lineNumber": 62,
+    "lineNumber": 63,
     "params": [
       {
         "name": "url",
@@ -4521,7 +4521,7 @@
     "__docId__": 212,
     "kind": "file",
     "name": "src/request.js",
-    "content": "/**\r\n * Creates a request to use with the client.\r\n */\r\nexport class Request {\r\n  /**\r\n   * Create a new request.\r\n   * @param {string} method The type of HTTP request to perform.\r\n   * @param {string} uri The relative of full path uri of a request to perform. This should not include any query parameters.\r\n   * @param {RequestParams} [params] Additional parameters to include with the request in either post body or query params.\r\n   * @param {function} [callback=null] A callback function to perform after the request has been successfully performed.\r\n   */\r\n  constructor(method, uri, params, callback) {\r\n    /** @type {string} */\r\n    this.method = method;\r\n    /** @type {string} */\r\n    this.uri = uri;\r\n    /** @type {RequestParams} */\r\n    this.params = params || new RequestParams();\r\n    /** @type {function|null} */\r\n    this.callback = callback || null;\r\n  }\r\n  /** @type {string} */\r\n  static get GET() {\r\n    return 'get';\r\n  }\r\n\r\n  /** @type {string} */\r\n  static get PUT() {\r\n    return 'put';\r\n  }\r\n\r\n  /** @type {string} */\r\n  static get POST() {\r\n    return 'post';\r\n  }\r\n\r\n  /** @type {string} */\r\n  static get DELETE() {\r\n    return 'put';\r\n  }\r\n}\r\n\r\n/**\r\n * Represents any query parameters to use with a request.\r\n */\r\nexport class RequestParams {\r\n  /**\r\n   * Convert params for the request to a query string.\r\n   * @return {string} parameters in the format of '?<param>=<value>'.\r\n   */\r\n  toQueryString() {\r\n    let pairs = [];\r\n    for (let member in this) {\r\n      if (this[member] != null) {\r\n        pairs.push(member + '=' + this[member]);\r\n      }\r\n    }\r\n    if (pairs.length > 0) {\r\n      return '?' + pairs.join('&');\r\n    }\r\n    return '';\r\n  }\r\n\r\n  /**\r\n   * Convert params for the request to a an object.\r\n   * @return {object} trimmed down parameters object.\r\n   */\r\n  toObject() {\r\n    let params = {};\r\n    for (let member in this) {\r\n      if (this[member] != null) {\r\n        params[member] = this[member];\r\n      }\r\n    }\r\n    return params;\r\n  }\r\n}\r\n",
+    "content": "//@ts-check\r\n/**\r\n * Creates a request to use with the client.\r\n */\r\nexport class BricklinkRequest {\r\n  /**\r\n   * Create a new request.\r\n   * @param {string} method The type of HTTP request to perform.\r\n   * @param {string} uri The relative of full path uri of a request to perform. This should not include any query parameters.\r\n   * @param {RequestParams} [params] Additional parameters to include with the request in either post body or query params.\r\n   * @param {BricklinkRequestCallback} [callback=null] A callback function to perform after the request has been successfully performed.\r\n   */\r\n  constructor(method, uri, params, callback) {\r\n    /** @type {string} */\r\n    this.method = method;\r\n    /** @type {string} */\r\n    this.uri = uri;\r\n    /** @type {RequestParams} */\r\n    this.params = params || new RequestParams();\r\n    /** @type {BricklinkRequestCallback|null} */\r\n    this.callback = callback || null;\r\n  }\r\n  /** @type {string} */\r\n  static get GET() {\r\n    return 'get';\r\n  }\r\n\r\n  /** @type {string} */\r\n  static get PUT() {\r\n    return 'put';\r\n  }\r\n\r\n  /** @type {string} */\r\n  static get POST() {\r\n    return 'post';\r\n  }\r\n\r\n  /** @type {string} */\r\n  static get DELETE() {\r\n    return 'put';\r\n  }\r\n}\r\n\r\n/**\r\n * @callback BricklinkRequestCallback\r\n * @param {any} value\r\n * @returns {any}\r\n */\r\n\r\n/**\r\n * Represents any query parameters to use with a request.\r\n */\r\nexport class RequestParams {\r\n  /**\r\n   * Convert params for the request to a query string.\r\n   * @return {string} parameters in the format of '?<param>=<value>'.\r\n   */\r\n  toQueryString() {\r\n    const pairs = [];\r\n    for (const member in this) {\r\n      if (this[member] != null) {\r\n        pairs.push(member + '=' + this[member]);\r\n      }\r\n    }\r\n    if (pairs.length > 0) {\r\n      return '?' + pairs.join('&');\r\n    }\r\n    return '';\r\n  }\r\n\r\n  /**\r\n   * Convert params for the request to a an object.\r\n   * @return {object} trimmed down parameters object.\r\n   */\r\n  toObject() {\r\n    /** @type {object} */\r\n    const params = {};\r\n    for (const member in this) {\r\n      if (this[member] != null) {\r\n        params[member] = this[member];\r\n      }\r\n    }\r\n    return params;\r\n  }\r\n}\r\n",
     "static": true,
     "longname": "C:/Projects/bricklink-api/src/request.js",
     "access": "public",
@@ -4531,30 +4531,30 @@
   {
     "__docId__": 213,
     "kind": "class",
-    "name": "Request",
+    "name": "BricklinkRequest",
     "memberof": "src/request.js",
     "static": true,
-    "longname": "src/request.js~Request",
+    "longname": "src/request.js~BricklinkRequest",
     "access": "public",
     "export": true,
     "importPath": "bricklink-api/src/request.js",
-    "importStyle": "{Request}",
+    "importStyle": "{BricklinkRequest}",
     "description": "Creates a request to use with the client.",
-    "lineNumber": 4,
+    "lineNumber": 5,
     "interface": false
   },
   {
     "__docId__": 214,
     "kind": "constructor",
     "name": "constructor",
-    "memberof": "src/request.js~Request",
+    "memberof": "src/request.js~BricklinkRequest",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/request.js~Request#constructor",
+    "longname": "src/request.js~BricklinkRequest#constructor",
     "access": "public",
     "description": "Create a new request.",
-    "lineNumber": 12,
+    "lineNumber": 13,
     "params": [
       {
         "nullable": null,
@@ -4589,7 +4589,7 @@
       {
         "nullable": null,
         "types": [
-          "function"
+          "BricklinkRequestCallback"
         ],
         "spread": false,
         "optional": true,
@@ -4604,12 +4604,12 @@
     "__docId__": 215,
     "kind": "member",
     "name": "method",
-    "memberof": "src/request.js~Request",
+    "memberof": "src/request.js~BricklinkRequest",
     "static": false,
-    "longname": "src/request.js~Request#method",
+    "longname": "src/request.js~BricklinkRequest#method",
     "access": "public",
     "description": null,
-    "lineNumber": 14,
+    "lineNumber": 15,
     "type": {
       "nullable": null,
       "types": [
@@ -4623,12 +4623,12 @@
     "__docId__": 216,
     "kind": "member",
     "name": "uri",
-    "memberof": "src/request.js~Request",
+    "memberof": "src/request.js~BricklinkRequest",
     "static": false,
-    "longname": "src/request.js~Request#uri",
+    "longname": "src/request.js~BricklinkRequest#uri",
     "access": "public",
     "description": null,
-    "lineNumber": 16,
+    "lineNumber": 17,
     "type": {
       "nullable": null,
       "types": [
@@ -4642,12 +4642,12 @@
     "__docId__": 217,
     "kind": "member",
     "name": "params",
-    "memberof": "src/request.js~Request",
+    "memberof": "src/request.js~BricklinkRequest",
     "static": false,
-    "longname": "src/request.js~Request#params",
+    "longname": "src/request.js~BricklinkRequest#params",
     "access": "public",
     "description": null,
-    "lineNumber": 18,
+    "lineNumber": 19,
     "type": {
       "nullable": null,
       "types": [
@@ -4661,16 +4661,16 @@
     "__docId__": 218,
     "kind": "member",
     "name": "callback",
-    "memberof": "src/request.js~Request",
+    "memberof": "src/request.js~BricklinkRequest",
     "static": false,
-    "longname": "src/request.js~Request#callback",
+    "longname": "src/request.js~BricklinkRequest#callback",
     "access": "public",
     "description": null,
-    "lineNumber": 20,
+    "lineNumber": 21,
     "type": {
       "nullable": null,
       "types": [
-        "function",
+        "BricklinkRequestCallback",
         "null"
       ],
       "spread": false,
@@ -4681,14 +4681,14 @@
     "__docId__": 219,
     "kind": "get",
     "name": "GET",
-    "memberof": "src/request.js~Request",
+    "memberof": "src/request.js~BricklinkRequest",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/request.js~Request.GET",
+    "longname": "src/request.js~BricklinkRequest.GET",
     "access": "public",
     "description": null,
-    "lineNumber": 23,
+    "lineNumber": 24,
     "type": {
       "nullable": null,
       "types": [
@@ -4702,14 +4702,14 @@
     "__docId__": 220,
     "kind": "get",
     "name": "PUT",
-    "memberof": "src/request.js~Request",
+    "memberof": "src/request.js~BricklinkRequest",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/request.js~Request.PUT",
+    "longname": "src/request.js~BricklinkRequest.PUT",
     "access": "public",
     "description": null,
-    "lineNumber": 28,
+    "lineNumber": 29,
     "type": {
       "nullable": null,
       "types": [
@@ -4723,14 +4723,14 @@
     "__docId__": 221,
     "kind": "get",
     "name": "POST",
-    "memberof": "src/request.js~Request",
+    "memberof": "src/request.js~BricklinkRequest",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/request.js~Request.POST",
+    "longname": "src/request.js~BricklinkRequest.POST",
     "access": "public",
     "description": null,
-    "lineNumber": 33,
+    "lineNumber": 34,
     "type": {
       "nullable": null,
       "types": [
@@ -4744,14 +4744,14 @@
     "__docId__": 222,
     "kind": "get",
     "name": "DELETE",
-    "memberof": "src/request.js~Request",
+    "memberof": "src/request.js~BricklinkRequest",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/request.js~Request.DELETE",
+    "longname": "src/request.js~BricklinkRequest.DELETE",
     "access": "public",
     "description": null,
-    "lineNumber": 38,
+    "lineNumber": 39,
     "type": {
       "nullable": null,
       "types": [
@@ -4773,7 +4773,7 @@
     "importPath": "bricklink-api/src/request.js",
     "importStyle": "{RequestParams}",
     "description": "Represents any query parameters to use with a request.",
-    "lineNumber": 46,
+    "lineNumber": 53,
     "interface": false
   },
   {
@@ -4787,7 +4787,7 @@
     "longname": "src/request.js~RequestParams#toQueryString",
     "access": "public",
     "description": "Convert params for the request to a query string.",
-    "lineNumber": 51,
+    "lineNumber": 58,
     "return": {
       "nullable": null,
       "types": [
@@ -4809,7 +4809,7 @@
     "longname": "src/request.js~RequestParams#toObject",
     "access": "public",
     "description": "Convert params for the request to a an object.",
-    "lineNumber": 68,
+    "lineNumber": 75,
     "return": {
       "nullable": null,
       "types": [
@@ -4830,7 +4830,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\r\n  \"name\": \"bricklink-api\",\r\n  \"version\": \"1.2.5\",\r\n  \"description\": \"A node module for connecting to the Bricklink API.\",\r\n  \"main\": \"./dist/index.js\",\r\n  \"files\": [\r\n    \"dist/*\"\r\n  ],\r\n  \"repository\": {\r\n    \"type\": \"git\",\r\n    \"url\": \"git+https://github.com/ryansh100/bricklink-api.git\"\r\n  },\r\n  \"keywords\": [\r\n    \"node\",\r\n    \"js\",\r\n    \"javascript\",\r\n    \"module\",\r\n    \"bricklink\",\r\n    \"api\",\r\n    \"oauth2\"\r\n  ],\r\n  \"author\": \"Ryan Hafer\",\r\n  \"license\": \"SEE LICENCE IN LICENSE\",\r\n  \"bugs\": {\r\n    \"url\": \"https://github.com/ryansh100/bricklink-api/issues\"\r\n  },\r\n  \"homepage\": \"https://github.com/ryansh100/bricklink-api#readme\",\r\n  \"scripts\": {\r\n    \"test\": \"nyc ava\",\r\n    \"test:ci\": \"nyc ava -c 1\",\r\n    \"build\": \"babel src -d dist\",\r\n    \"prepare\": \"husky install\",\r\n    \"docs\": \"esdoc2\",\r\n    \"prepublish\": \"npm run build\",\r\n    \"report\": \"nyc report --reporter=html\"\r\n  },\r\n  \"devDependencies\": {\r\n    \"@ava/babel\": \"^1.0.1\",\r\n    \"@babel/cli\": \"^7.15.7\",\r\n    \"@babel/core\": \"^7.15.5\",\r\n    \"@babel/plugin-transform-modules-commonjs\": \"^7.15.4\",\r\n    \"@babel/preset-env\": \"^7.15.6\",\r\n    \"@babel/register\": \"^7.15.3\",\r\n    \"ava\": \"^3.15.0\",\r\n    \"dotenv\": \"^8.6.0\",\r\n    \"esdoc2\": \"^2.1.5\",\r\n    \"esdoc2-standard-plugin\": \"^2.1.2\",\r\n    \"husky\": \"^6.0.0\",\r\n    \"nyc\": \"^15.1.0\",\r\n    \"prettier\": \"^2.4.1\",\r\n    \"pretty-quick\": \"^3.1.1\"\r\n  },\r\n  \"dependencies\": {\r\n    \"core-js\": \"^2.6.12\",\r\n    \"debug\": \"^4.3.2\",\r\n    \"oauth-signature\": \"^1.3.1\",\r\n    \"request\": \"^2.88.2\"\r\n  },\r\n  \"ava\": {\r\n    \"babel\": true,\r\n    \"files\": [\r\n      \"spec/**/*spec.js\"\r\n    ],\r\n    \"source\": [\r\n      \"src/**/*.js\"\r\n    ],\r\n    \"concurrency\": 3,\r\n    \"failFast\": true,\r\n    \"tap\": true,\r\n    \"powerAssert\": false,\r\n    \"require\": [\r\n      \"@babel/register\"\r\n    ]\r\n  },\r\n  \"engines\": {\r\n    \"node\": \">=5\"\r\n  },\r\n  \"husky\": {\r\n    \"hooks\": {\r\n      \"pre-commit\": \"pretty-quick --staged\"\r\n    }\r\n  },\r\n  \"nyc\": {\r\n    \"extension\": [\r\n      \".js\"\r\n    ]\r\n  }\r\n}\r\n",
+    "content": "{\r\n  \"name\": \"bricklink-api\",\r\n  \"version\": \"1.2.7\",\r\n  \"description\": \"A node module for connecting to the Bricklink API.\",\r\n  \"main\": \"./dist/index.js\",\r\n  \"files\": [\r\n    \"dist/*\"\r\n  ],\r\n  \"repository\": {\r\n    \"type\": \"git\",\r\n    \"url\": \"git+https://github.com/ryansh100/bricklink-api.git\"\r\n  },\r\n  \"keywords\": [\r\n    \"node\",\r\n    \"js\",\r\n    \"javascript\",\r\n    \"module\",\r\n    \"bricklink\",\r\n    \"api\",\r\n    \"oauth2\"\r\n  ],\r\n  \"author\": \"Ryan Hafer\",\r\n  \"license\": \"SEE LICENCE IN LICENSE\",\r\n  \"bugs\": {\r\n    \"url\": \"https://github.com/ryansh100/bricklink-api/issues\"\r\n  },\r\n  \"homepage\": \"https://github.com/ryansh100/bricklink-api#readme\",\r\n  \"scripts\": {\r\n    \"test\": \"nyc ava\",\r\n    \"test:ci\": \"nyc ava -c 1\",\r\n    \"build\": \"babel src -d dist\",\r\n    \"prepare\": \"husky install\",\r\n    \"docs\": \"esdoc2\",\r\n    \"prepublish\": \"npm run build\",\r\n    \"report\": \"nyc report --reporter=html\"\r\n  },\r\n  \"devDependencies\": {\r\n    \"@ava/babel\": \"^1.0.1\",\r\n    \"@babel/cli\": \"^7.15.7\",\r\n    \"@babel/core\": \"^7.15.5\",\r\n    \"@babel/plugin-transform-modules-commonjs\": \"^7.15.4\",\r\n    \"@babel/preset-env\": \"^7.15.6\",\r\n    \"@babel/register\": \"^7.15.3\",\r\n    \"ava\": \"^3.15.0\",\r\n    \"dotenv\": \"^8.6.0\",\r\n    \"esdoc2\": \"^2.1.5\",\r\n    \"esdoc2-standard-plugin\": \"^2.1.2\",\r\n    \"husky\": \"^6.0.0\",\r\n    \"nyc\": \"^15.1.0\",\r\n    \"prettier\": \"^2.4.1\",\r\n    \"pretty-quick\": \"^3.1.1\"\r\n  },\r\n  \"dependencies\": {\r\n    \"debug\": \"^4.3.2\",\r\n    \"node-fetch\": \"^2.6.7\",\r\n    \"oauth-signature\": \"^1.3.1\"\r\n  },\r\n  \"ava\": {\r\n    \"babel\": true,\r\n    \"files\": [\r\n      \"spec/**/*spec.js\"\r\n    ],\r\n    \"source\": [\r\n      \"src/**/*.js\"\r\n    ],\r\n    \"concurrency\": 3,\r\n    \"failFast\": true,\r\n    \"tap\": true,\r\n    \"powerAssert\": false,\r\n    \"require\": [\r\n      \"@babel/register\"\r\n    ]\r\n  },\r\n  \"engines\": {\r\n    \"node\": \">=5\"\r\n  },\r\n  \"husky\": {\r\n    \"hooks\": {\r\n      \"pre-commit\": \"pretty-quick --staged\"\r\n    }\r\n  },\r\n  \"nyc\": {\r\n    \"extension\": [\r\n      \".js\"\r\n    ]\r\n  }\r\n}\r\n",
     "longname": "C:\\Projects\\bricklink-api\\package.json",
     "name": "package.json",
     "static": true,

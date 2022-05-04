@@ -1,3 +1,4 @@
+//@ts-check
 import crypto from 'crypto';
 import oauthSignature from 'oauth-signature';
 
@@ -19,7 +20,7 @@ export class OAuthHelper {
     this.nonce = crypto.randomBytes(16).toString('hex');
     /** @type {string} */
     this.signature = '';
-    /** @type {number} */
+    /** @type {string} */
     this.timestamp = Math.round(Date.now() / 1000).toString();
   }
 
