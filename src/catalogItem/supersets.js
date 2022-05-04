@@ -1,4 +1,5 @@
-import { Request, RequestParams } from '../request';
+//@ts-check
+import { BricklinkRequest, RequestParams } from '../request';
 import { CatalogItem } from './catalogItem';
 
 /**
@@ -56,14 +57,14 @@ export class Superset {
    * @param {string} itemType Catalog item type
    * @param {string} itemNumber Catalog item number
    * @param {object} options Options that conform to {@link SupersetOptions}.
-   * @return {Request} A request that will return an array of {@link Superset} items.
+   * @return {BricklinkRequest} A request that will return an array of {@link Superset} items.
    */
   static get(itemType, itemNumber, options) {
     options = options ? new SupersetOptions(options) : new SupersetOptions();
-    let method = Request.GET;
+    let method = BricklinkRequest.GET;
     let uri = `/items/${itemType}/${itemNumber}/supersets`;
 
-    return new Request(method, uri, options, (data) => {
+    return new BricklinkRequest(method, uri, options, (data) => {
       return data.map((set) => new Superset(set));
     });
   }
@@ -79,7 +80,7 @@ export class SupersetOptions extends RequestParams {
    * @param {number} [data.color_id] The color of the item.
    */
   constructor(data) {
-    super(data);
+    super();
     data = data || {};
     /** @type {number|null} */
     this.color_id = data.color_id || null;

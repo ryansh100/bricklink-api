@@ -33,7 +33,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/condition.js~Condition.html">Condition</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/itemType.js~ItemType.html">ItemType</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/oAuthHelper.js~OAuthHelper.html">OAuthHelper</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~BricklinkRequest.html">BricklinkRequest</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/request.js~RequestParams.html">RequestParams</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-logger">logger</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#catalogitem">catalogItem</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/catalogItem/catalogItem.js~CatalogItem.html">CatalogItem</a></span></span></li>
@@ -55,7 +55,8 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/catalogItem/priceGuide.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { Request, RequestParams } from &apos;../request&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//@ts-check
+import { BricklinkRequest, RequestParams } from &apos;../request&apos;;
 import { CatalogItem } from &apos;./catalogItem&apos;;
 
 /**
@@ -94,8 +95,8 @@ export class PriceGuide {
    * @param {object} [data] Data returned from an API response.
    */
   constructor(data) {
-    /** @type {Item} item The item that belongs to the price guide. */
-    this.item = data.item ? new CatalogItem(data.item) : new Item();
+    /** @type {CatalogItem} item The item that belongs to the price guide. */
+    this.item = data.item ? new CatalogItem(data.item) : new CatalogItem();
     /** @type {string} new_or_used Whether or not the price guide is new or used condition. */
     this.new_or_used = data.new_or_used || &apos;&apos;;
     /** @type {string} */
@@ -131,14 +132,14 @@ export class PriceGuide {
    * @param {string} itemType Catalog item type as found at {@link ItemType}.
    * @param {string} itemNumber Catalog item number
    * @param {object} [params] Params as outlined in {@link PriceGuideOptions}.
-   * @return {Request} A request that is ready to execute with a client.
+   * @return {BricklinkRequest} A request that is ready to execute with a client.
    */
   static get(itemType, itemNumber, params) {
     params = params ? new PriceGuideOptions(params) : new PriceGuideOptions();
-    let method = Request.GET;
+    let method = BricklinkRequest.GET;
     let uri = `items/${itemType}/${itemNumber}/price`;
 
-    return new Request(method, uri, params, (data) =&gt; {
+    return new BricklinkRequest(method, uri, params, (data) =&gt; {
       return new PriceGuide(data);
     });
   }
@@ -150,7 +151,7 @@ export class PriceGuide {
 export class PriceGuideOptions extends RequestParams {
   /**
    * Create an instance of Price Guide options.
-   * @param {object} data Optional parameter data.
+   * @param {object} [data] Optional parameter data.
    * @param {number|null} [data.color_id=null] The color Identification numbe of the item
    * @param {string} [data.guide_type=&apos;stock&apos;] Indicates that which statistics to be provided. Options include &quot;sold&quot; and &quot;stock&quot;
    * @param {string} [data.new_or_used=&apos;N&apos;] Indicates the condition of items that are included in the statistics. Acceptable values are: &quot;N&quot;: new item (default) and &quot;U&quot;: used item
@@ -160,7 +161,7 @@ export class PriceGuideOptions extends RequestParams {
    * @param {string} [data.vat=&apos;N&apos;]
    */
   constructor(data) {
-    super(data);
+    super();
 
     data = data || {};
     /** @type {number|null} [data.color_id=null] The color Identification numbe of the item */

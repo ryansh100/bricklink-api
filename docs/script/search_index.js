@@ -1,5 +1,11 @@
 window.esdocSearchIndex = [
   [
+    "bricklink-api/src/request.js~bricklinkrequest",
+    "class/src/request.js~BricklinkRequest.html",
+    "<span>BricklinkRequest</span> <span class=\"search-result-import-path\">bricklink-api/src/request.js</span>",
+    "class"
+  ],
+  [
     "bricklink-api/src/catalogitem/catalogitem.js~catalogitem",
     "class/src/catalogItem/catalogItem.js~CatalogItem.html",
     "<span>CatalogItem</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/catalogItem.js</span>",
@@ -69,12 +75,6 @@ window.esdocSearchIndex = [
     "bricklink-api/src/catalogitem/priceguide.js~priceguideoptions",
     "class/src/catalogItem/priceGuide.js~PriceGuideOptions.html",
     "<span>PriceGuideOptions</span> <span class=\"search-result-import-path\">bricklink-api/src/catalogItem/priceGuide.js</span>",
-    "class"
-  ],
-  [
-    "bricklink-api/src/request.js~request",
-    "class/src/request.js~Request.html",
-    "<span>Request</span> <span class=\"search-result-import-path\">bricklink-api/src/request.js</span>",
     "class"
   ],
   [
@@ -1272,57 +1272,57 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "src/request.js~request#callback",
-    "class/src/request.js~Request.html#instance-member-callback",
-    "src/request.js~Request#callback",
+    "src/request.js~bricklinkrequest#callback",
+    "class/src/request.js~BricklinkRequest.html#instance-member-callback",
+    "src/request.js~BricklinkRequest#callback",
     "member"
   ],
   [
-    "src/request.js~request#constructor",
-    "class/src/request.js~Request.html#instance-constructor-constructor",
-    "src/request.js~Request#constructor",
+    "src/request.js~bricklinkrequest#constructor",
+    "class/src/request.js~BricklinkRequest.html#instance-constructor-constructor",
+    "src/request.js~BricklinkRequest#constructor",
     "method"
   ],
   [
-    "src/request.js~request#method",
-    "class/src/request.js~Request.html#instance-member-method",
-    "src/request.js~Request#method",
+    "src/request.js~bricklinkrequest#method",
+    "class/src/request.js~BricklinkRequest.html#instance-member-method",
+    "src/request.js~BricklinkRequest#method",
     "member"
   ],
   [
-    "src/request.js~request#params",
-    "class/src/request.js~Request.html#instance-member-params",
-    "src/request.js~Request#params",
+    "src/request.js~bricklinkrequest#params",
+    "class/src/request.js~BricklinkRequest.html#instance-member-params",
+    "src/request.js~BricklinkRequest#params",
     "member"
   ],
   [
-    "src/request.js~request#uri",
-    "class/src/request.js~Request.html#instance-member-uri",
-    "src/request.js~Request#uri",
+    "src/request.js~bricklinkrequest#uri",
+    "class/src/request.js~BricklinkRequest.html#instance-member-uri",
+    "src/request.js~BricklinkRequest#uri",
     "member"
   ],
   [
-    "src/request.js~request.delete",
-    "class/src/request.js~Request.html#static-get-DELETE",
-    "src/request.js~Request.DELETE",
+    "src/request.js~bricklinkrequest.delete",
+    "class/src/request.js~BricklinkRequest.html#static-get-DELETE",
+    "src/request.js~BricklinkRequest.DELETE",
     "member"
   ],
   [
-    "src/request.js~request.get",
-    "class/src/request.js~Request.html#static-get-GET",
-    "src/request.js~Request.GET",
+    "src/request.js~bricklinkrequest.get",
+    "class/src/request.js~BricklinkRequest.html#static-get-GET",
+    "src/request.js~BricklinkRequest.GET",
     "member"
   ],
   [
-    "src/request.js~request.post",
-    "class/src/request.js~Request.html#static-get-POST",
-    "src/request.js~Request.POST",
+    "src/request.js~bricklinkrequest.post",
+    "class/src/request.js~BricklinkRequest.html#static-get-POST",
+    "src/request.js~BricklinkRequest.POST",
     "member"
   ],
   [
-    "src/request.js~request.put",
-    "class/src/request.js~Request.html#static-get-PUT",
-    "src/request.js~Request.PUT",
+    "src/request.js~bricklinkrequest.put",
+    "class/src/request.js~BricklinkRequest.html#static-get-PUT",
+    "src/request.js~BricklinkRequest.PUT",
     "member"
   ],
   [

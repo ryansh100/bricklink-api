@@ -1,4 +1,5 @@
-import { Request, RequestParams } from '../request';
+//@ts-check
+import { BricklinkRequest, RequestParams } from '../request';
 import { CatalogItem } from './catalogItem';
 
 /**
@@ -43,7 +44,7 @@ export class Subset {
     /** @type {number} */
     this.match_no = data.match_no || 0;
 
-    let entries = data.entries || [];
+    const entries = data.entries || [];
     /** @type {SubsetEntry[]} */
     this.entries = entries.map((e) => new SubsetEntry(e));
   }
@@ -62,12 +63,12 @@ export class Subset {
    * @param {object} options Options that conform to {@link SubsetOptions}.
    */
   static get(itemType, itemNumber, options) {
-    let method = Request.GET;
+    const method = BricklinkRequest.GET;
     options = options ? new SubsetOptions(options) : new SubsetOptions();
 
-    let uri = `/items/${itemType}/${itemNumber}/subsets`;
+    const uri = `/items/${itemType}/${itemNumber}/subsets`;
 
-    return new Request(method, uri, options, (data) => {
+    return new BricklinkRequest(method, uri, options, (data) => {
       return data.map((e) => new Subset(e));
     });
   }
@@ -87,7 +88,7 @@ export class SubsetOptions extends RequestParams {
    * @param {boolean} [data.break_subsets] Indicates whether the result breaks down sets in set
    */
   constructor(data) {
-    super(data);
+    super();
     data = data || {};
     /** @type {number|null} */
     this.color_id = data.color_id || null;

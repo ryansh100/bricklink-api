@@ -1,4 +1,4 @@
-import request from 'request';
+//@ts-check
 import { OAuthHelper } from './oAuthHelper';
 import { CatalogItem } from './catalogItem/catalogItem';
 import { PriceGuide } from './catalogItem/priceGuide';
@@ -7,6 +7,8 @@ import { ItemImage } from './catalogItem/itemImage';
 import { Subset } from './catalogItem/subsets';
 import { Superset } from './catalogItem/supersets';
 import { logger } from './logger';
+import { BricklinkRequest } from './request';
+import fetch from 'node-fetch'
 
 /**
  * Create a client to perform
@@ -14,7 +16,7 @@ import { logger } from './logger';
 export class Client {
   /**
    * Create an instance of the Bricklin Node Client.
-   * @param {object} options Options that are used to create a new client.
+   * @param {object} [options] Options that are used to create a new client.
    * @param {string} [options.token] The `TokenValue` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
    * @param {string} [options.token_secret] The `TokenSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
    * @param {string} [options.consumer_key] The `ConsumerKey` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
@@ -42,7 +44,7 @@ export class Client {
 
   /**
    * Performs a concurrent-safe bricklink request and the callback upon success.
-   * @param {Request} req The request to perform.
+   * @param {BricklinkRequest} req The request to perform.
    * @return {Promise} The data that has been return from the API request and any callbacks.
    */
   send(req) {
@@ -66,64 +68,48 @@ export class Client {
 
   /**
    * Performs a bricklink request and the callback upon success.
-   * @param {Request} req The request to perform.
+   * @param {BricklinkRequest} req The request to perform.
    * @return {Promise} The data that has been return from the API request and any callbacks.
    */
   dispatch(req) {
-    let init = {
-      uri:
-        this.endpoint + req.uri.replace(/^\//, '') + req.params.toQueryString(),
+    const resourceURL = this.endpoint + req.uri.replace(/^\//, '') + req.params.toQueryString();
+    /** @type {import('node-fetch').RequestInit} */
+    const init = {
       method: req.method,
       headers: {},
     };
 
-    let oauthHelper = new OAuthHelper(this.consumer_key, this.token);
-    oauthHelper.sign(init.uri, req, this.consumer_secret, this.token_secret);
+    const oauthHelper = new OAuthHelper(this.consumer_key, this.token);
+    oauthHelper.sign(resourceURL, req, this.consumer_secret, this.token_secret);
 
     init.headers['authorization'] = oauthHelper.header;
 
-    
-    let promise = new Promise((resolve, reject) => {
-      request(init, (er, response, body) => {
-        if (response.statusCode >= 400) {
-          const error = new Error(
-            'Received an error status code from the BrickLink servers',
-          );
-          error['statusCode'] = response.statusCode;
-          error['errorMessage'] = response.statusMessage;
-          error['body'] = body;
-          reject(error);
-          return;
-        }
-        if (er) {
-          reject(er);
-          return;
-        }
-        try {
-          let response = JSON.parse(body);
-          if (response.meta.code >= 300) {
+    const promise = fetch(resourceURL, init)
+      .then(response => response.json())
+      .then(
+        /**
+         * @param {any} payload Any object
+         */
+        (payload) => {
+          if (payload.meta.code >= 300) {
             const error = new Error(
               'Received an error from the BrickLink servers',
             );
             logger(
               JSON.stringify(
                 {
-                  reqestURI: init.uri,
-                  responseMetadata: response.meta,
+                  reqestURI: resourceURL,
+                  responseMetadata: payload.meta,
                 },
                 null,
                 2,
               ),
             );
             throw error;
+          } else {
+            return payload.data
           }
-          resolve(response.data);
-        } catch (error) {
-          logger(error.message);
-          reject(error);
-        }
-      });
-    });
+        })
 
     promise.catch(error => {
       logger(error);
@@ -143,7 +129,7 @@ export class Client {
    * @return {Promise<CatalogItem>} A promise that resolves to a catalog item.
    */
   getCatalogItem(itemType, itemNumber) {
-    let req = CatalogItem.get(itemType, itemNumber);
+    const req = CatalogItem.get(itemType, itemNumber);
 
     return this.send(req);
   }
@@ -156,7 +142,7 @@ export class Client {
    * @return {Promise<PriceGuide>} A promise that resolves to a price guide.
    */
   getPriceGuide(itemType, itemNumber, params) {
-    let req = PriceGuide.get(itemType, itemNumber, params);
+    const req = PriceGuide.get(itemType, itemNumber, params);
 
     return this.send(req);
   }
@@ -168,7 +154,7 @@ export class Client {
    * @return {Promise<Array>} A promise that resolves to a list of {@link KnownColor}.
    */
   getKnownColors(itemType, itemNumber) {
-    let req = KnownColor.get(itemType, itemNumber);
+    const req = KnownColor.get(itemType, itemNumber);
 
     return this.send(req);
   }
@@ -181,7 +167,7 @@ export class Client {
    * @return {Promise<ItemImage>} A promise that resolves to an Item Image.
    */
   getItemImage(itemType, itemNumber, colorId) {
-    let req = ItemImage.get(itemType, itemNumber, colorId);
+    const req = ItemImage.get(itemType, itemNumber, colorId);
     return this.send(req);
   }
 
@@ -193,7 +179,7 @@ export class Client {
    * @return {Promise<Array>} A promise that resolves to a  list of {@link Subset}.
    */
   getItemSubset(itemType, itemNumber, params) {
-    let req = Subset.get(itemType, itemNumber, params);
+    const req = Subset.get(itemType, itemNumber, params);
     return this.send(req);
   }
 
@@ -205,7 +191,7 @@ export class Client {
    * @return {Promise<Array>} A promise that resolves to a  list of {@link Superset}.
    */
   getItemSuperset(itemType, itemNumber, params) {
-    let req = Superset.get(itemType, itemNumber, params);
+    const req = Superset.get(itemType, itemNumber, params);
     return this.send(req);
   }
 }
