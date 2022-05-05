@@ -5,7 +5,7 @@
         "emitDeclarationOnly": true,
         "allowJs": true,
         "checkJs": true,
-        "outFile": "dist/index.d.ts"
+        "outDir": "dist"
     },
     "include": [
         "src/**/*"
