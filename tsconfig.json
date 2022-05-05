@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "allowJs": true,
+        "checkJs": true,
+        "outFile": "dist/index.d.ts"
+    },
+    "include": [
+        "src/**/*"
+    ],
+}

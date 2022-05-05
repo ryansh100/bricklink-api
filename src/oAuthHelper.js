@@ -1,5 +1,4 @@
-//@ts-check
-import crypto from 'crypto';
+import * as crypto from 'crypto';
 import oauthSignature from 'oauth-signature';
 
 /**

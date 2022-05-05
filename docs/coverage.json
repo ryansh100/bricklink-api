@@ -62,16 +62,16 @@
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
-        4
+        3
       ]
     },
     "src/oAuthHelper.js": {
       "expectCount": 11,
       "actualCount": 8,
       "undocumentLines": [
-        27,
-        38,
-        53
+        26,
+        37,
+        52
       ]
     },
     "src/request.js": {
