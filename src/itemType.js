@@ -1,4 +1,3 @@
-//@ts-check
 /**
  * Static dictionary of common catalog item types to improve code readability.
  */

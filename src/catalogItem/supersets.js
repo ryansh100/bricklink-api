@@ -1,4 +1,3 @@
-//@ts-check
 import { BricklinkRequest, RequestParams } from '../request';
 import { CatalogItem } from './catalogItem';
 

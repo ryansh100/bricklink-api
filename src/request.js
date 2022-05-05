@@ -1,4 +1,3 @@
-//@ts-check
 /**
  * Creates a request to use with the client.
  */

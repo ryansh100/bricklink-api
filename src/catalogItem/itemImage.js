@@ -1,4 +1,3 @@
-//@ts-check
 import { BricklinkRequest } from '../request';
 
 /**

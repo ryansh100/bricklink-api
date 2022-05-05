@@ -1,8 +1,9 @@
 {
   "name": "bricklink-api",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "A node module for connecting to the Bricklink API.",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist/*"
   ],
@@ -28,7 +29,9 @@
   "scripts": {
     "test": "nyc ava",
     "test:ci": "nyc ava -c 1",
-    "build": "babel src -d dist",
+    "build": "npm run compile:src & npm run build:definitions",
+    "compile:src": "babel src -d dist",
+    "build:definitions": "tsc",
     "prepare": "husky install",
     "docs": "esdoc2",
     "prepublish": "npm run build",
@@ -48,7 +51,8 @@
     "husky": "^6.0.0",
     "nyc": "^15.1.0",
     "prettier": "^2.4.1",
-    "pretty-quick": "^3.1.1"
+    "pretty-quick": "^3.1.1",
+    "typescript": "^4.6.4"
   },
   "dependencies": {
     "debug": "^4.3.2",
