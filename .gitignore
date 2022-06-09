@@ -7,3 +7,4 @@ credentials.local.json
 coverage
 .DS_Store
 .env
+.idea
