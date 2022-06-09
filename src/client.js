@@ -1,13 +1,13 @@
-import {OAuthHelper} from './oAuthHelper';
-import {CatalogItem} from './catalogItem/catalogItem';
-import {PriceGuide} from './catalogItem/priceGuide';
-import {KnownColor} from './catalogItem/knownColor';
-import {ItemImage} from './catalogItem/itemImage';
-import {Subset} from './catalogItem/subsets';
-import {Superset} from './catalogItem/supersets';
-import {logger} from './logger';
-import {BricklinkRequest} from './request';
-import {BrickLinkApiError} from "./brickLinkApiError";
+import { OAuthHelper } from './oAuthHelper';
+import { CatalogItem } from './catalogItem/catalogItem';
+import { PriceGuide } from './catalogItem/priceGuide';
+import { KnownColor } from './catalogItem/knownColor';
+import { ItemImage } from './catalogItem/itemImage';
+import { Subset } from './catalogItem/subsets';
+import { Superset } from './catalogItem/supersets';
+import { logger } from './logger';
+import { BricklinkRequest } from './request';
+import { BrickLinkApiError } from "./brickLinkApiError";
 import fetch from 'node-fetch'
 
 /**
