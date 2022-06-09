@@ -1,8 +1,17 @@
 {
-  "coverage": "97.51%",
-  "expectCount": 161,
-  "actualCount": 157,
+  "coverage": "95.88%",
+  "expectCount": 170,
+  "actualCount": 163,
   "files": {
+    "src/brickLinkApiError.js": {
+      "expectCount": 9,
+      "actualCount": 6,
+      "undocumentLines": [
+        12,
+        13,
+        17
+      ]
+    },
     "src/catalogItem/catalogItem.js": {
       "expectCount": 18,
       "actualCount": 18,

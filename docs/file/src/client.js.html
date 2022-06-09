@@ -29,7 +29,9 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/client.js~Client.html">Client</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/brickLinkApiError.js~BrickLinkApiError.html">BrickLinkApiError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/brickLinkApiError.js~BrickLinkResponseMeta.html">BrickLinkResponseMeta</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/client.js~Client.html">Client</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/condition.js~Condition.html">Condition</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/itemType.js~ItemType.html">ItemType</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/oAuthHelper.js~OAuthHelper.html">OAuthHelper</a></span></span></li>
@@ -55,15 +57,16 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/client.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { OAuthHelper } from &apos;./oAuthHelper&apos;;
-import { CatalogItem } from &apos;./catalogItem/catalogItem&apos;;
-import { PriceGuide } from &apos;./catalogItem/priceGuide&apos;;
-import { KnownColor } from &apos;./catalogItem/knownColor&apos;;
-import { ItemImage } from &apos;./catalogItem/itemImage&apos;;
-import { Subset } from &apos;./catalogItem/subsets&apos;;
-import { Superset } from &apos;./catalogItem/supersets&apos;;
-import { logger } from &apos;./logger&apos;;
-import { BricklinkRequest } from &apos;./request&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {OAuthHelper} from &apos;./oAuthHelper&apos;;
+import {CatalogItem} from &apos;./catalogItem/catalogItem&apos;;
+import {PriceGuide} from &apos;./catalogItem/priceGuide&apos;;
+import {KnownColor} from &apos;./catalogItem/knownColor&apos;;
+import {ItemImage} from &apos;./catalogItem/itemImage&apos;;
+import {Subset} from &apos;./catalogItem/subsets&apos;;
+import {Superset} from &apos;./catalogItem/supersets&apos;;
+import {logger} from &apos;./logger&apos;;
+import {BricklinkRequest} from &apos;./request&apos;;
+import {BrickLinkApiError} from &quot;./brickLinkApiError&quot;;
 import fetch from &apos;node-fetch&apos;
 
 /**
@@ -148,9 +151,7 @@ export class Client {
          */
         (payload) =&gt; {
           if (payload.meta.code &gt;= 300) {
-            const error = new Error(
-              &apos;Received an error from the BrickLink servers&apos;,
-            );
+            const error = new BrickLinkApiError(payload.meta);
             logger(
               JSON.stringify(
                 {
