@@ -63,7 +63,7 @@
  */
 export class BrickLinkApiError extends Error {
     /**
-     * Create a new request.
+     * Create a BrickLink error exception object.
      * @param {BrickLinkResponseMeta} meta The type of HTTP request to perform.
      */
     constructor(meta) {
@@ -75,7 +75,7 @@ export class BrickLinkApiError extends Error {
 
 export class BrickLinkResponseMeta {
     /**
-     * Create a new request.
+     * Create a new response meta object
      * @param {number} code The type of HTTP request to perform.
      * @param {string} message The error message
      * @param {string} description The error description
