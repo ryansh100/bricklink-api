@@ -6,12 +6,6 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "bricklink-api/src/bricklinkapierror.js~bricklinkresponsemeta",
-    "class/src/brickLinkApiError.js~BrickLinkResponseMeta.html",
-    "<span>BrickLinkResponseMeta</span> <span class=\"search-result-import-path\">bricklink-api/src/brickLinkApiError.js</span>",
-    "class"
-  ],
-  [
     "bricklink-api/src/request.js~bricklinkrequest",
     "class/src/request.js~BricklinkRequest.html",
     "<span>BricklinkRequest</span> <span class=\"search-result-import-path\">bricklink-api/src/request.js</span>",
@@ -441,30 +435,6 @@ window.esdocSearchIndex = [
     "src/bricklinkapierror.js~bricklinkapierror#name",
     "class/src/brickLinkApiError.js~BrickLinkApiError.html#instance-member-name",
     "src/brickLinkApiError.js~BrickLinkApiError#name",
-    "member"
-  ],
-  [
-    "src/bricklinkapierror.js~bricklinkresponsemeta#code",
-    "class/src/brickLinkApiError.js~BrickLinkResponseMeta.html#instance-member-code",
-    "src/brickLinkApiError.js~BrickLinkResponseMeta#code",
-    "member"
-  ],
-  [
-    "src/bricklinkapierror.js~bricklinkresponsemeta#constructor",
-    "class/src/brickLinkApiError.js~BrickLinkResponseMeta.html#instance-constructor-constructor",
-    "src/brickLinkApiError.js~BrickLinkResponseMeta#constructor",
-    "method"
-  ],
-  [
-    "src/bricklinkapierror.js~bricklinkresponsemeta#description",
-    "class/src/brickLinkApiError.js~BrickLinkResponseMeta.html#instance-member-description",
-    "src/brickLinkApiError.js~BrickLinkResponseMeta#description",
-    "member"
-  ],
-  [
-    "src/bricklinkapierror.js~bricklinkresponsemeta#message",
-    "class/src/brickLinkApiError.js~BrickLinkResponseMeta.html#instance-member-message",
-    "src/brickLinkApiError.js~BrickLinkResponseMeta#message",
     "member"
   ],
   [
