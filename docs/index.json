@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/brickLinkApiError.js",
-    "content": "/**\r\n * An object that represents a BrickLInk API error\r\n * Catching this error can be used to access HTTPS status codes and error description\r\n */\r\nexport class BrickLinkApiError extends Error {\r\n    /**\r\n     * Create a BrickLink error exception object.\r\n     * @param {BrickLinkResponseMeta} meta The type of HTTP request to perform.\r\n     */\r\n    constructor(meta) {\r\n        super(meta.message);\r\n        this.name = this.constructor.name;\r\n        this.meta = meta;\r\n    }\r\n}\r\n\r\nexport class BrickLinkResponseMeta {\r\n    /**\r\n     * Create a new response meta object\r\n     * @param {number} code The type of HTTP request to perform.\r\n     * @param {string} message The error message\r\n     * @param {string} description The error description\r\n     */\r\n    constructor(code, message, description) {\r\n        /** @type {number} */\r\n        this.code = code;\r\n        /** @type {string} */\r\n        this.message = message;\r\n        /** @type {string} */\r\n        this.description = description;\r\n    }\r\n}\r\n",
+    "content": "/**\r\n * An object that represents a BrickLInk API error\r\n * Catching this error can be used to access HTTPS status codes and error description\r\n */\r\nexport class BrickLinkApiError extends Error {\r\n    /**\r\n     * Create a BrickLink error exception object.\r\n     * @param {Object} meta The object containing error data.\r\n     * @param {number} meta.code The HTTP response status code.\r\n     * @param {string} meta.message The error message.\r\n     * @param {string} meta.description The error description.\r\n     */\r\n    constructor(meta) {\r\n        super(meta.message);\r\n        this.name = this.constructor.name;\r\n        this.meta = meta;\r\n    }\r\n}\r\n",
     "static": true,
     "longname": "C:/workspace/open-source/bricklink-api/src/brickLinkApiError.js",
     "access": "public",
@@ -603,17 +603,47 @@
     "longname": "src/brickLinkApiError.js~BrickLinkApiError#constructor",
     "access": "public",
     "description": "Create a BrickLink error exception object.",
-    "lineNumber": 10,
+    "lineNumber": 13,
     "params": [
       {
         "nullable": null,
         "types": [
-          "BrickLinkResponseMeta"
+          "Object"
         ],
         "spread": false,
         "optional": false,
         "name": "meta",
-        "description": "The type of HTTP request to perform."
+        "description": "The object containing error data."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "meta.code",
+        "description": "The HTTP response status code."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "meta.message",
+        "description": "The error message."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "meta.description",
+        "description": "The error description."
       }
     ]
   },
@@ -626,7 +656,7 @@
     "longname": "src/brickLinkApiError.js~BrickLinkApiError#name",
     "access": "public",
     "description": null,
-    "lineNumber": 12,
+    "lineNumber": 15,
     "undocument": true,
     "type": {
       "types": [
@@ -643,7 +673,7 @@
     "longname": "src/brickLinkApiError.js~BrickLinkApiError#meta",
     "access": "public",
     "description": null,
-    "lineNumber": 13,
+    "lineNumber": 16,
     "undocument": true,
     "type": {
       "types": [
@@ -653,124 +683,6 @@
   },
   {
     "__docId__": 53,
-    "kind": "class",
-    "name": "BrickLinkResponseMeta",
-    "memberof": "src/brickLinkApiError.js",
-    "static": true,
-    "longname": "src/brickLinkApiError.js~BrickLinkResponseMeta",
-    "access": "public",
-    "export": true,
-    "importPath": "bricklink-api/src/brickLinkApiError.js",
-    "importStyle": "{BrickLinkResponseMeta}",
-    "description": null,
-    "lineNumber": 17,
-    "undocument": true,
-    "interface": false
-  },
-  {
-    "__docId__": 54,
-    "kind": "constructor",
-    "name": "constructor",
-    "memberof": "src/brickLinkApiError.js~BrickLinkResponseMeta",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/brickLinkApiError.js~BrickLinkResponseMeta#constructor",
-    "access": "public",
-    "description": "Create a new response meta object",
-    "lineNumber": 24,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "number"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "code",
-        "description": "The type of HTTP request to perform."
-      },
-      {
-        "nullable": null,
-        "types": [
-          "string"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "message",
-        "description": "The error message"
-      },
-      {
-        "nullable": null,
-        "types": [
-          "string"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "description",
-        "description": "The error description"
-      }
-    ]
-  },
-  {
-    "__docId__": 55,
-    "kind": "member",
-    "name": "code",
-    "memberof": "src/brickLinkApiError.js~BrickLinkResponseMeta",
-    "static": false,
-    "longname": "src/brickLinkApiError.js~BrickLinkResponseMeta#code",
-    "access": "public",
-    "description": null,
-    "lineNumber": 26,
-    "type": {
-      "nullable": null,
-      "types": [
-        "number"
-      ],
-      "spread": false,
-      "description": null
-    }
-  },
-  {
-    "__docId__": 56,
-    "kind": "member",
-    "name": "message",
-    "memberof": "src/brickLinkApiError.js~BrickLinkResponseMeta",
-    "static": false,
-    "longname": "src/brickLinkApiError.js~BrickLinkResponseMeta#message",
-    "access": "public",
-    "description": null,
-    "lineNumber": 28,
-    "type": {
-      "nullable": null,
-      "types": [
-        "string"
-      ],
-      "spread": false,
-      "description": null
-    }
-  },
-  {
-    "__docId__": 57,
-    "kind": "member",
-    "name": "description",
-    "memberof": "src/brickLinkApiError.js~BrickLinkResponseMeta",
-    "static": false,
-    "longname": "src/brickLinkApiError.js~BrickLinkResponseMeta#description",
-    "access": "public",
-    "description": null,
-    "lineNumber": 30,
-    "type": {
-      "nullable": null,
-      "types": [
-        "string"
-      ],
-      "spread": false,
-      "description": null
-    }
-  },
-  {
-    "__docId__": 58,
     "kind": "file",
     "name": "src/catalogItem/catalogItem.js",
     "content": "import { BricklinkRequest } from '../request';\r\n\r\n/**\r\n * Represents a Catalog Item.\r\n */\r\nexport class CatalogItem {\r\n  /**\r\n   * Create a new instance of a Catalog Item\r\n   * @param {object} [data] Data typically returned from an API response.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n\r\n    /** @type {string} */\r\n    this.no = data.no || '';\r\n    /** @type {string} */\r\n    this.name = data.name || '';\r\n    /** @type {string} */\r\n    this.type = data.type || '';\r\n    /** @type {number} */\r\n    this.category_id = data.category_id || data.categoryID || 0;\r\n    /** @type {string} */\r\n    this.alternate_no = data.alternate_no || '';\r\n    /** @type {string} */\r\n    this.image_url = data.image_url || '';\r\n    /** @type {string} */\r\n    this.thumbnail_url = data.thumbnail_url || '';\r\n    /** @type {number} */\r\n    this.weight = data.weight || '';\r\n    /** @type {string} */\r\n    this.dim_x = data.dim_x || '';\r\n    /** @type {string} */\r\n    this.dim_y = data.dim_y || '';\r\n    /** @type {string} */\r\n    this.dim_z = data.dim_z || '';\r\n    /** @type {string} */\r\n    this.year_released = data.year_released || '';\r\n    /** @type {string} */\r\n    this.description = data.description || '';\r\n    /** @type {boolean} */\r\n    this.is_obsolete = data.is_obsolete || false;\r\n    /** @type {string} */\r\n    this.language_code = data.language_code || '';\r\n  }\r\n\r\n  /**\r\n   * Method to get a known catalog item\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = CatalogItem.get(ItemType.Part, '3001');\r\n   * client.send(req).then(item => console.log(item));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type i.e. - MINIFIG, PART, SET, BOOK, GEAR, CATALOG, INSTRUCTION, UNSORTED_LOT, ORIGINAL_BOX\r\n   * @param {string} itemNumber Catalog item number\r\n   * @return {BricklinkRequest} A request that is ready to execute with a client.\r\n   */\r\n  static get(itemType, itemNumber) {\r\n    const  method = BricklinkRequest.GET;\r\n    const uri = `/items/${itemType}/${itemNumber}`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) => {\r\n      const item = new CatalogItem(data);\r\n      return item;\r\n    });\r\n  }\r\n}\r\n",
@@ -781,7 +693,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 59,
+    "__docId__": 54,
     "kind": "class",
     "name": "CatalogItem",
     "memberof": "src/catalogItem/catalogItem.js",
@@ -796,7 +708,7 @@
     "interface": false
   },
   {
-    "__docId__": 60,
+    "__docId__": 55,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -821,7 +733,7 @@
     ]
   },
   {
-    "__docId__": 61,
+    "__docId__": 56,
     "kind": "member",
     "name": "no",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -840,7 +752,7 @@
     }
   },
   {
-    "__docId__": 62,
+    "__docId__": 57,
     "kind": "member",
     "name": "name",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -859,7 +771,7 @@
     }
   },
   {
-    "__docId__": 63,
+    "__docId__": 58,
     "kind": "member",
     "name": "type",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -878,7 +790,7 @@
     }
   },
   {
-    "__docId__": 64,
+    "__docId__": 59,
     "kind": "member",
     "name": "category_id",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -897,7 +809,7 @@
     }
   },
   {
-    "__docId__": 65,
+    "__docId__": 60,
     "kind": "member",
     "name": "alternate_no",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -916,7 +828,7 @@
     }
   },
   {
-    "__docId__": 66,
+    "__docId__": 61,
     "kind": "member",
     "name": "image_url",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -935,7 +847,7 @@
     }
   },
   {
-    "__docId__": 67,
+    "__docId__": 62,
     "kind": "member",
     "name": "thumbnail_url",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -954,7 +866,7 @@
     }
   },
   {
-    "__docId__": 68,
+    "__docId__": 63,
     "kind": "member",
     "name": "weight",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -973,7 +885,7 @@
     }
   },
   {
-    "__docId__": 69,
+    "__docId__": 64,
     "kind": "member",
     "name": "dim_x",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -992,7 +904,7 @@
     }
   },
   {
-    "__docId__": 70,
+    "__docId__": 65,
     "kind": "member",
     "name": "dim_y",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -1011,7 +923,7 @@
     }
   },
   {
-    "__docId__": 71,
+    "__docId__": 66,
     "kind": "member",
     "name": "dim_z",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -1030,7 +942,7 @@
     }
   },
   {
-    "__docId__": 72,
+    "__docId__": 67,
     "kind": "member",
     "name": "year_released",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -1049,7 +961,7 @@
     }
   },
   {
-    "__docId__": 73,
+    "__docId__": 68,
     "kind": "member",
     "name": "description",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -1068,7 +980,7 @@
     }
   },
   {
-    "__docId__": 74,
+    "__docId__": 69,
     "kind": "member",
     "name": "is_obsolete",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -1087,7 +999,7 @@
     }
   },
   {
-    "__docId__": 75,
+    "__docId__": 70,
     "kind": "member",
     "name": "language_code",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -1106,7 +1018,7 @@
     }
   },
   {
-    "__docId__": 76,
+    "__docId__": 71,
     "kind": "method",
     "name": "get",
     "memberof": "src/catalogItem/catalogItem.js~CatalogItem",
@@ -1149,7 +1061,7 @@
     }
   },
   {
-    "__docId__": 77,
+    "__docId__": 72,
     "kind": "file",
     "name": "src/catalogItem/itemImage.js",
     "content": "import { BricklinkRequest } from '../request';\r\n\r\n/**\r\n * Represents an image for a specific color of a catalog item.\r\n */\r\nexport class ItemImage {\r\n  /**\r\n   * Create an instance of Item Image\r\n   * @param {object} data The API response data\r\n   * @param {number} [data.color_id=0] Color Id of the image.\r\n   * @param {string} [data.thumbnail_url=''] The Url of the thumbnail image.\r\n   * @param {string} [data.type=''] The type of catalog item as correspondeing to {@link ItemType}.\r\n   * @param {string} [data.no=''] The catalog item's identification number.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n    /** @type {string} */\r\n    this.thumbnail_url = data.thumbnail_url || '';\r\n    /** @type {string} */\r\n    this.type = data.type || '';\r\n    /** @type {string} */\r\n    this.no = data.no || '';\r\n  }\r\n\r\n  /**\r\n   * Method to get an image of a catalog item.\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = ItemImage.get(ItemType.Part, '3001', 0);\r\n   * client.send(req).then(image => console.log(image));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {number} colorId Catalog item's color id.\r\n   */\r\n  static get(itemType, itemNumber, colorId) {\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/items/${itemType}/${itemNumber}/images/${colorId}`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) => {\r\n      return new ItemImage(data);\r\n    });\r\n  }\r\n}\r\n",
@@ -1160,7 +1072,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 78,
+    "__docId__": 73,
     "kind": "class",
     "name": "ItemImage",
     "memberof": "src/catalogItem/itemImage.js",
@@ -1175,7 +1087,7 @@
     "interface": false
   },
   {
-    "__docId__": 79,
+    "__docId__": 74,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/catalogItem/itemImage.js~ItemImage",
@@ -1248,7 +1160,7 @@
     ]
   },
   {
-    "__docId__": 80,
+    "__docId__": 75,
     "kind": "member",
     "name": "color_id",
     "memberof": "src/catalogItem/itemImage.js~ItemImage",
@@ -1267,7 +1179,7 @@
     }
   },
   {
-    "__docId__": 81,
+    "__docId__": 76,
     "kind": "member",
     "name": "thumbnail_url",
     "memberof": "src/catalogItem/itemImage.js~ItemImage",
@@ -1286,7 +1198,7 @@
     }
   },
   {
-    "__docId__": 82,
+    "__docId__": 77,
     "kind": "member",
     "name": "type",
     "memberof": "src/catalogItem/itemImage.js~ItemImage",
@@ -1305,7 +1217,7 @@
     }
   },
   {
-    "__docId__": 83,
+    "__docId__": 78,
     "kind": "member",
     "name": "no",
     "memberof": "src/catalogItem/itemImage.js~ItemImage",
@@ -1324,7 +1236,7 @@
     }
   },
   {
-    "__docId__": 84,
+    "__docId__": 79,
     "kind": "method",
     "name": "get",
     "memberof": "src/catalogItem/itemImage.js~ItemImage",
@@ -1374,7 +1286,7 @@
     }
   },
   {
-    "__docId__": 85,
+    "__docId__": 80,
     "kind": "file",
     "name": "src/catalogItem/knownColor.js",
     "content": "import { BricklinkRequest } from '../request';\r\n\r\n/**\r\n * Represents a known color object.\r\n */\r\nexport class KnownColor {\r\n  /**\r\n   * Create a new instance of a known color\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.color_id=0] The color id.\r\n   * @param {number} [data.quantity=0] The quantity of items with this known color.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n    /** @type {number} */\r\n    this.quantity = data.quantity || 0;\r\n  }\r\n\r\n  /**\r\n   * Method to get a list of known color_id for a given catalog item.\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = KnownColor.get(ItemType.Part, '3001');\r\n   * client.send(req).then(colors => console.log(colors));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @return {BricklinkRequest} A request that resolves to a list of {@link KnownColor}.\r\n   */\r\n  static get(itemType, itemNumber) {\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/items/${itemType}/${itemNumber}/colors`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) => {\r\n      return data.map((color) => new KnownColor(color));\r\n    });\r\n  }\r\n}\r\n",
@@ -1385,7 +1297,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 86,
+    "__docId__": 81,
     "kind": "class",
     "name": "KnownColor",
     "memberof": "src/catalogItem/knownColor.js",
@@ -1400,7 +1312,7 @@
     "interface": false
   },
   {
-    "__docId__": 87,
+    "__docId__": 82,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/catalogItem/knownColor.js~KnownColor",
@@ -1449,7 +1361,7 @@
     ]
   },
   {
-    "__docId__": 88,
+    "__docId__": 83,
     "kind": "member",
     "name": "color_id",
     "memberof": "src/catalogItem/knownColor.js~KnownColor",
@@ -1468,7 +1380,7 @@
     }
   },
   {
-    "__docId__": 89,
+    "__docId__": 84,
     "kind": "member",
     "name": "quantity",
     "memberof": "src/catalogItem/knownColor.js~KnownColor",
@@ -1487,7 +1399,7 @@
     }
   },
   {
-    "__docId__": 90,
+    "__docId__": 85,
     "kind": "method",
     "name": "get",
     "memberof": "src/catalogItem/knownColor.js~KnownColor",
@@ -1530,7 +1442,7 @@
     }
   },
   {
-    "__docId__": 91,
+    "__docId__": 86,
     "kind": "file",
     "name": "src/catalogItem/priceGuide.js",
     "content": "import { BricklinkRequest, RequestParams } from '../request';\r\nimport { CatalogItem } from './catalogItem';\r\n\r\n/**\r\n * Specific sale price details for a givent item.\r\n */\r\nexport class PriceDetail {\r\n  /**\r\n   * Create a Price Detail instance.\r\n   * @param {object} [data] Data returned from an API response.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.quantity = data.quantity || 0;\r\n    /** @type {number} */\r\n    this.unit_price = data.unit_price || 0;\r\n    /** @type {string} */\r\n    this.shipping_available = data.shipping_available || '';\r\n    /** @type {string} */\r\n    this.shipping_available = data.shipping_available || '';\r\n    /** @type {string} */\r\n    this.seller_country_code = data.seller_country_code || '';\r\n    /** @type {string} */\r\n    this.buyer_country_code = data.buyer_country_code || '';\r\n    /** @type {Date|null} */\r\n    this.date_ordered = data.date_ordered ? new Date(data.date_ordered) : null;\r\n  }\r\n}\r\n\r\n/**\r\n * Represents a Price Guide for a catalog item.\r\n */\r\nexport class PriceGuide {\r\n  /**\r\n   * Create a new instance of a price guide.\r\n   * @param {object} [data] Data returned from an API response.\r\n   */\r\n  constructor(data) {\r\n    /** @type {CatalogItem} item The item that belongs to the price guide. */\r\n    this.item = data.item ? new CatalogItem(data.item) : new CatalogItem();\r\n    /** @type {string} new_or_used Whether or not the price guide is new or used condition. */\r\n    this.new_or_used = data.new_or_used || '';\r\n    /** @type {string} */\r\n    this.currency_code = data.currency_code || '';\r\n    /** @type {number} */\r\n    this.min_price = data.min_price || 0;\r\n    /** @type {number} */\r\n    this.max_price = data.max_price || 0;\r\n    /** @type {number} */\r\n    this.avg_price = data.avg_price || 0;\r\n    /** @type {number} */\r\n    this.qty_avg_price = data.qty_avg_price || 0;\r\n    /** @type {number} */\r\n    this.unit_quantity = data.unit_quantity || 0;\r\n    /** @type {number} */\r\n    this.total_quantity = data.total_quantity || 0;\r\n    /** @type {PriceDetail[]} */\r\n    this.price_detail = data.price_detail\r\n      ? data.price_detail.map((detail) => new PriceDetail(detail))\r\n      : [];\r\n  }\r\n\r\n  /**\r\n   * Method to get a known catalog item's price guide\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = PriceGuide.get(ItemType.Part, '3001', {new_or_used: Condition.Used});\r\n   * client.send(req).then(guide => console.log(guide));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type as found at {@link ItemType}.\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} [params] Params as outlined in {@link PriceGuideOptions}.\r\n   * @return {BricklinkRequest} A request that is ready to execute with a client.\r\n   */\r\n  static get(itemType, itemNumber, params) {\r\n    params = params ? new PriceGuideOptions(params) : new PriceGuideOptions();\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `items/${itemType}/${itemNumber}/price`;\r\n\r\n    return new BricklinkRequest(method, uri, params, (data) => {\r\n      return new PriceGuide(data);\r\n    });\r\n  }\r\n}\r\n\r\n/**\r\n * Price guide option request params.\r\n */\r\nexport class PriceGuideOptions extends RequestParams {\r\n  /**\r\n   * Create an instance of Price Guide options.\r\n   * @param {object} [data] Optional parameter data.\r\n   * @param {number|null} [data.color_id=null] The color Identification numbe of the item\r\n   * @param {string} [data.guide_type='stock'] Indicates that which statistics to be provided. Options include \"sold\" and \"stock\"\r\n   * @param {string} [data.new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item\r\n   * @param {string|null} [data.country_code=null]\r\n   * @param {string|null} [data.region=null]\r\n   * @param {string|null} [data.currency_code=null]\r\n   * @param {string} [data.vat='N']\r\n   */\r\n  constructor(data) {\r\n    super();\r\n\r\n    data = data || {};\r\n    /** @type {number|null} [data.color_id=null] The color Identification numbe of the item */\r\n    this.color_id = data.color_id || null;\r\n    /** @type {string} [guide_type='stock'] Indicates that which statistics to be provided. Options include \"sold\" and \"stock\" */\r\n    this.guide_type = data.guide_type || 'stock';\r\n    /** @type {string} [new_or_used='N'] Indicates the condition of items that are included in the statistics. Acceptable values are: \"N\": new item (default) and \"U\": used item */\r\n    this.new_or_used = data.new_or_used || 'N';\r\n    /** @type {string|null} [country_code=null] */\r\n    this.country_code = data.country_code || null;\r\n    /** @type {string|null} [region=null] */\r\n    this.region = data.region || null;\r\n    /** @type {string|null} [currency_code=null] */\r\n    this.currency_code = data.currency_code || null;\r\n    /** @type {string} [vat='N'] */\r\n    this.vat = data.vat || 'N';\r\n  }\r\n}\r\n",
@@ -1541,7 +1453,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 92,
+    "__docId__": 87,
     "kind": "class",
     "name": "PriceDetail",
     "memberof": "src/catalogItem/priceGuide.js",
@@ -1556,7 +1468,7 @@
     "interface": false
   },
   {
-    "__docId__": 93,
+    "__docId__": 88,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/catalogItem/priceGuide.js~PriceDetail",
@@ -1581,7 +1493,7 @@
     ]
   },
   {
-    "__docId__": 94,
+    "__docId__": 89,
     "kind": "member",
     "name": "quantity",
     "memberof": "src/catalogItem/priceGuide.js~PriceDetail",
@@ -1600,7 +1512,7 @@
     }
   },
   {
-    "__docId__": 95,
+    "__docId__": 90,
     "kind": "member",
     "name": "unit_price",
     "memberof": "src/catalogItem/priceGuide.js~PriceDetail",
@@ -1619,7 +1531,7 @@
     }
   },
   {
-    "__docId__": 96,
+    "__docId__": 91,
     "kind": "member",
     "name": "shipping_available",
     "memberof": "src/catalogItem/priceGuide.js~PriceDetail",
@@ -1638,7 +1550,7 @@
     }
   },
   {
-    "__docId__": 98,
+    "__docId__": 93,
     "kind": "member",
     "name": "seller_country_code",
     "memberof": "src/catalogItem/priceGuide.js~PriceDetail",
@@ -1657,7 +1569,7 @@
     }
   },
   {
-    "__docId__": 99,
+    "__docId__": 94,
     "kind": "member",
     "name": "buyer_country_code",
     "memberof": "src/catalogItem/priceGuide.js~PriceDetail",
@@ -1676,7 +1588,7 @@
     }
   },
   {
-    "__docId__": 100,
+    "__docId__": 95,
     "kind": "member",
     "name": "date_ordered",
     "memberof": "src/catalogItem/priceGuide.js~PriceDetail",
@@ -1696,7 +1608,7 @@
     }
   },
   {
-    "__docId__": 101,
+    "__docId__": 96,
     "kind": "class",
     "name": "PriceGuide",
     "memberof": "src/catalogItem/priceGuide.js",
@@ -1711,7 +1623,7 @@
     "interface": false
   },
   {
-    "__docId__": 102,
+    "__docId__": 97,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuide",
@@ -1736,7 +1648,7 @@
     ]
   },
   {
-    "__docId__": 103,
+    "__docId__": 98,
     "kind": "member",
     "name": "item",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuide",
@@ -1755,7 +1667,7 @@
     }
   },
   {
-    "__docId__": 104,
+    "__docId__": 99,
     "kind": "member",
     "name": "new_or_used",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuide",
@@ -1774,7 +1686,7 @@
     }
   },
   {
-    "__docId__": 105,
+    "__docId__": 100,
     "kind": "member",
     "name": "currency_code",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuide",
@@ -1793,7 +1705,7 @@
     }
   },
   {
-    "__docId__": 106,
+    "__docId__": 101,
     "kind": "member",
     "name": "min_price",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuide",
@@ -1812,7 +1724,7 @@
     }
   },
   {
-    "__docId__": 107,
+    "__docId__": 102,
     "kind": "member",
     "name": "max_price",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuide",
@@ -1831,7 +1743,7 @@
     }
   },
   {
-    "__docId__": 108,
+    "__docId__": 103,
     "kind": "member",
     "name": "avg_price",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuide",
@@ -1850,7 +1762,7 @@
     }
   },
   {
-    "__docId__": 109,
+    "__docId__": 104,
     "kind": "member",
     "name": "qty_avg_price",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuide",
@@ -1869,7 +1781,7 @@
     }
   },
   {
-    "__docId__": 110,
+    "__docId__": 105,
     "kind": "member",
     "name": "unit_quantity",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuide",
@@ -1888,7 +1800,7 @@
     }
   },
   {
-    "__docId__": 111,
+    "__docId__": 106,
     "kind": "member",
     "name": "total_quantity",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuide",
@@ -1907,7 +1819,7 @@
     }
   },
   {
-    "__docId__": 112,
+    "__docId__": 107,
     "kind": "member",
     "name": "price_detail",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuide",
@@ -1926,7 +1838,7 @@
     }
   },
   {
-    "__docId__": 113,
+    "__docId__": 108,
     "kind": "method",
     "name": "get",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuide",
@@ -1979,7 +1891,7 @@
     }
   },
   {
-    "__docId__": 114,
+    "__docId__": 109,
     "kind": "class",
     "name": "PriceGuideOptions",
     "memberof": "src/catalogItem/priceGuide.js",
@@ -1997,7 +1909,7 @@
     ]
   },
   {
-    "__docId__": 115,
+    "__docId__": 110,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuideOptions",
@@ -2110,7 +2022,7 @@
     ]
   },
   {
-    "__docId__": 116,
+    "__docId__": 111,
     "kind": "member",
     "name": "color_id",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuideOptions",
@@ -2130,7 +2042,7 @@
     }
   },
   {
-    "__docId__": 117,
+    "__docId__": 112,
     "kind": "member",
     "name": "guide_type",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuideOptions",
@@ -2149,7 +2061,7 @@
     }
   },
   {
-    "__docId__": 118,
+    "__docId__": 113,
     "kind": "member",
     "name": "new_or_used",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuideOptions",
@@ -2168,7 +2080,7 @@
     }
   },
   {
-    "__docId__": 119,
+    "__docId__": 114,
     "kind": "member",
     "name": "country_code",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuideOptions",
@@ -2188,7 +2100,7 @@
     }
   },
   {
-    "__docId__": 120,
+    "__docId__": 115,
     "kind": "member",
     "name": "region",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuideOptions",
@@ -2208,7 +2120,7 @@
     }
   },
   {
-    "__docId__": 121,
+    "__docId__": 116,
     "kind": "member",
     "name": "currency_code",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuideOptions",
@@ -2228,7 +2140,7 @@
     }
   },
   {
-    "__docId__": 122,
+    "__docId__": 117,
     "kind": "member",
     "name": "vat",
     "memberof": "src/catalogItem/priceGuide.js~PriceGuideOptions",
@@ -2247,7 +2159,7 @@
     }
   },
   {
-    "__docId__": 123,
+    "__docId__": 118,
     "kind": "file",
     "name": "src/catalogItem/subsets.js",
     "content": "import { BricklinkRequest, RequestParams } from '../request';\r\nimport { CatalogItem } from './catalogItem';\r\n\r\n/**\r\n * Represents a subset entry.\r\n */\r\nexport class SubsetEntry {\r\n  /**\r\n   * Create an instance of a subset entry\r\n   * @param {object} [data] The API response data\r\n   * @param {object} [data.item] Item information\r\n   * @param {number} [data.color_id] The color id of the entry item.\r\n   * @param {number} [data.quantity] The number of items in the subset entry.\r\n   * @param {number} [data.extra_quantity] The number of extra items included in the subset.\r\n   * @param {boolean} [data.is_alternate] Indicator that the item is an alternate.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {CatalogItem} */\r\n    this.item = data.item ? new CatalogItem(data.item) : new CatalogItem();\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n    /** @type {number} */\r\n    this.quantity = data.quantity || 0;\r\n    /** @type {number} */\r\n    this.extra_quantity = data.extra_quantity || 0;\r\n    /** @type {boolean} */\r\n    this.is_alternate = data.is_alternate || false;\r\n  }\r\n}\r\n/**\r\n * Represents a subset item. A subset item can have more than one matching entry due to alternate parts.\r\n */\r\nexport class Subset {\r\n  /**\r\n   * Create an instance of a subset item.\r\n   * @param {object} [data] The response data from API request.\r\n   * @param {number} [data.match_no] The number of matching entries or 0 if there is no matching of alternative item.\r\n   * @param {object} [data.entries] The specific entries for the subset item.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.match_no = data.match_no || 0;\r\n\r\n    const entries = data.entries || [];\r\n    /** @type {SubsetEntry[]} */\r\n    this.entries = entries.map((e) => new SubsetEntry(e));\r\n  }\r\n  /**\r\n   * Method to get a subset of a catalog item.\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Subset.get(ItemType.Set, '6020-1', {break_minifigs: true});\r\n   * client.send(req).then(subset => console.log(subset));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} options Options that conform to {@link SubsetOptions}.\r\n   */\r\n  static get(itemType, itemNumber, options) {\r\n    const method = BricklinkRequest.GET;\r\n    options = options ? new SubsetOptions(options) : new SubsetOptions();\r\n\r\n    const uri = `/items/${itemType}/${itemNumber}/subsets`;\r\n\r\n    return new BricklinkRequest(method, uri, options, (data) => {\r\n      return data.map((e) => new Subset(e));\r\n    });\r\n  }\r\n}\r\n\r\n/**\r\n * Options that can be used when make a request for a subset.\r\n */\r\nexport class SubsetOptions extends RequestParams {\r\n  /**\r\n   * Make an instance of SubsetOptions.\r\n   * @param {object} [data] Raw options object.\r\n   * @param {number} [data.color_id] The color of the item(This value is valid only for {@link ItemType}.Part.\r\n   * @param {boolean} [data.box] Indicates whether the set includes the original box\r\n   * @param {boolean} [data.instruction] Indicates whether the set includes the original instruction\r\n   * @param {boolean} [data.break_minifigs]\tIndicates whether the result breaks down minifigs as parts\r\n   * @param {boolean} [data.break_subsets] Indicates whether the result breaks down sets in set\r\n   */\r\n  constructor(data) {\r\n    super();\r\n    data = data || {};\r\n    /** @type {number|null} */\r\n    this.color_id = data.color_id || null;\r\n    /** @type {boolean|null} */\r\n    this.box = data.box || null;\r\n    /** @type {boolean|null} */\r\n    this.instruction = data.instruction || null;\r\n    /** @type {boolean|null} */\r\n    this.break_minifigs = data.break_minifigs || null;\r\n    /** @type {boolean|null} */\r\n    this.break_subsets = data.break_subsets || null;\r\n  }\r\n}\r\n",
@@ -2258,7 +2170,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 124,
+    "__docId__": 119,
     "kind": "class",
     "name": "SubsetEntry",
     "memberof": "src/catalogItem/subsets.js",
@@ -2273,7 +2185,7 @@
     "interface": false
   },
   {
-    "__docId__": 125,
+    "__docId__": 120,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/catalogItem/subsets.js~SubsetEntry",
@@ -2348,7 +2260,7 @@
     ]
   },
   {
-    "__docId__": 126,
+    "__docId__": 121,
     "kind": "member",
     "name": "item",
     "memberof": "src/catalogItem/subsets.js~SubsetEntry",
@@ -2367,7 +2279,7 @@
     }
   },
   {
-    "__docId__": 127,
+    "__docId__": 122,
     "kind": "member",
     "name": "color_id",
     "memberof": "src/catalogItem/subsets.js~SubsetEntry",
@@ -2386,7 +2298,7 @@
     }
   },
   {
-    "__docId__": 128,
+    "__docId__": 123,
     "kind": "member",
     "name": "quantity",
     "memberof": "src/catalogItem/subsets.js~SubsetEntry",
@@ -2405,7 +2317,7 @@
     }
   },
   {
-    "__docId__": 129,
+    "__docId__": 124,
     "kind": "member",
     "name": "extra_quantity",
     "memberof": "src/catalogItem/subsets.js~SubsetEntry",
@@ -2424,7 +2336,7 @@
     }
   },
   {
-    "__docId__": 130,
+    "__docId__": 125,
     "kind": "member",
     "name": "is_alternate",
     "memberof": "src/catalogItem/subsets.js~SubsetEntry",
@@ -2443,7 +2355,7 @@
     }
   },
   {
-    "__docId__": 131,
+    "__docId__": 126,
     "kind": "class",
     "name": "Subset",
     "memberof": "src/catalogItem/subsets.js",
@@ -2458,7 +2370,7 @@
     "interface": false
   },
   {
-    "__docId__": 132,
+    "__docId__": 127,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/catalogItem/subsets.js~Subset",
@@ -2503,7 +2415,7 @@
     ]
   },
   {
-    "__docId__": 133,
+    "__docId__": 128,
     "kind": "member",
     "name": "match_no",
     "memberof": "src/catalogItem/subsets.js~Subset",
@@ -2522,7 +2434,7 @@
     }
   },
   {
-    "__docId__": 134,
+    "__docId__": 129,
     "kind": "member",
     "name": "entries",
     "memberof": "src/catalogItem/subsets.js~Subset",
@@ -2541,7 +2453,7 @@
     }
   },
   {
-    "__docId__": 135,
+    "__docId__": 130,
     "kind": "method",
     "name": "get",
     "memberof": "src/catalogItem/subsets.js~Subset",
@@ -2591,7 +2503,7 @@
     }
   },
   {
-    "__docId__": 136,
+    "__docId__": 131,
     "kind": "class",
     "name": "SubsetOptions",
     "memberof": "src/catalogItem/subsets.js",
@@ -2609,7 +2521,7 @@
     ]
   },
   {
-    "__docId__": 137,
+    "__docId__": 132,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/catalogItem/subsets.js~SubsetOptions",
@@ -2684,7 +2596,7 @@
     ]
   },
   {
-    "__docId__": 138,
+    "__docId__": 133,
     "kind": "member",
     "name": "color_id",
     "memberof": "src/catalogItem/subsets.js~SubsetOptions",
@@ -2704,7 +2616,7 @@
     }
   },
   {
-    "__docId__": 139,
+    "__docId__": 134,
     "kind": "member",
     "name": "box",
     "memberof": "src/catalogItem/subsets.js~SubsetOptions",
@@ -2724,7 +2636,7 @@
     }
   },
   {
-    "__docId__": 140,
+    "__docId__": 135,
     "kind": "member",
     "name": "instruction",
     "memberof": "src/catalogItem/subsets.js~SubsetOptions",
@@ -2744,7 +2656,7 @@
     }
   },
   {
-    "__docId__": 141,
+    "__docId__": 136,
     "kind": "member",
     "name": "break_minifigs",
     "memberof": "src/catalogItem/subsets.js~SubsetOptions",
@@ -2764,7 +2676,7 @@
     }
   },
   {
-    "__docId__": 142,
+    "__docId__": 137,
     "kind": "member",
     "name": "break_subsets",
     "memberof": "src/catalogItem/subsets.js~SubsetOptions",
@@ -2784,7 +2696,7 @@
     }
   },
   {
-    "__docId__": 143,
+    "__docId__": 138,
     "kind": "file",
     "name": "src/catalogItem/supersets.js",
     "content": "import { BricklinkRequest, RequestParams } from '../request';\r\nimport { CatalogItem } from './catalogItem';\r\n\r\n/**\r\n * Represents entries of a superset item.\r\n */\r\nexport class SupersetEntry {\r\n  /**\r\n   * Create an instance of a subset entry\r\n   * @param {object} [data] The API response data\r\n   * @param {object} [data.item] Item information\r\n   * @param {number} [data.quantity] The number of items in the subset entry.\r\n   * @param {string} [data.appear_as] How the entry appears in the superset item.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {CatalogItem} */\r\n    this.item = data.item ? new CatalogItem(data.item) : new CatalogItem();\r\n    /** @type {number} */\r\n    this.quantity = data.quantity || 0;\r\n    /** @type {string} */\r\n    this.appear_as = data.appear_as || '';\r\n  }\r\n}\r\n\r\n/**\r\n * Represents a super set entry.\r\n */\r\nexport class Superset {\r\n  /**\r\n   * Create an instance of a super set item.\r\n   * @param {object} [data] The API response data\r\n   * @param {object[]} [data.entries] Entries for a superset item.\r\n   * @param {number} [data.color_id] The color id of the superset item.\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n\r\n    let entries = data.entries || [];\r\n    /** @type {SupersetEntry[]} */\r\n    this.entries = entries.map((e) => new SupersetEntry(e));\r\n  }\r\n\r\n  /**\r\n   * Method to get a superset of a catalog item\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Superset.get(ItemType.Part, '4593');\r\n   * client.send(req).then(superset => console.log(superset));\r\n   * ```\r\n   *\r\n   * @param {string} itemType Catalog item type\r\n   * @param {string} itemNumber Catalog item number\r\n   * @param {object} options Options that conform to {@link SupersetOptions}.\r\n   * @return {BricklinkRequest} A request that will return an array of {@link Superset} items.\r\n   */\r\n  static get(itemType, itemNumber, options) {\r\n    options = options ? new SupersetOptions(options) : new SupersetOptions();\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/items/${itemType}/${itemNumber}/supersets`;\r\n\r\n    return new BricklinkRequest(method, uri, options, (data) => {\r\n      return data.map((set) => new Superset(set));\r\n    });\r\n  }\r\n}\r\n\r\n/**\r\n * Options that can be used when make a request for a subset.\r\n */\r\nexport class SupersetOptions extends RequestParams {\r\n  /**\r\n   * Make an instance of SubsetOptions.\r\n   * @param {object} [data] Raw options object.\r\n   * @param {number} [data.color_id] The color of the item.\r\n   */\r\n  constructor(data) {\r\n    super();\r\n    data = data || {};\r\n    /** @type {number|null} */\r\n    this.color_id = data.color_id || null;\r\n  }\r\n}\r\n",
@@ -2795,7 +2707,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 144,
+    "__docId__": 139,
     "kind": "class",
     "name": "SupersetEntry",
     "memberof": "src/catalogItem/supersets.js",
@@ -2810,7 +2722,7 @@
     "interface": false
   },
   {
-    "__docId__": 145,
+    "__docId__": 140,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/catalogItem/supersets.js~SupersetEntry",
@@ -2865,7 +2777,7 @@
     ]
   },
   {
-    "__docId__": 146,
+    "__docId__": 141,
     "kind": "member",
     "name": "item",
     "memberof": "src/catalogItem/supersets.js~SupersetEntry",
@@ -2884,7 +2796,7 @@
     }
   },
   {
-    "__docId__": 147,
+    "__docId__": 142,
     "kind": "member",
     "name": "quantity",
     "memberof": "src/catalogItem/supersets.js~SupersetEntry",
@@ -2903,7 +2815,7 @@
     }
   },
   {
-    "__docId__": 148,
+    "__docId__": 143,
     "kind": "member",
     "name": "appear_as",
     "memberof": "src/catalogItem/supersets.js~SupersetEntry",
@@ -2922,7 +2834,7 @@
     }
   },
   {
-    "__docId__": 149,
+    "__docId__": 144,
     "kind": "class",
     "name": "Superset",
     "memberof": "src/catalogItem/supersets.js",
@@ -2937,7 +2849,7 @@
     "interface": false
   },
   {
-    "__docId__": 150,
+    "__docId__": 145,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/catalogItem/supersets.js~Superset",
@@ -2982,7 +2894,7 @@
     ]
   },
   {
-    "__docId__": 151,
+    "__docId__": 146,
     "kind": "member",
     "name": "color_id",
     "memberof": "src/catalogItem/supersets.js~Superset",
@@ -3001,7 +2913,7 @@
     }
   },
   {
-    "__docId__": 152,
+    "__docId__": 147,
     "kind": "member",
     "name": "entries",
     "memberof": "src/catalogItem/supersets.js~Superset",
@@ -3020,7 +2932,7 @@
     }
   },
   {
-    "__docId__": 153,
+    "__docId__": 148,
     "kind": "method",
     "name": "get",
     "memberof": "src/catalogItem/supersets.js~Superset",
@@ -3073,7 +2985,7 @@
     }
   },
   {
-    "__docId__": 154,
+    "__docId__": 149,
     "kind": "class",
     "name": "SupersetOptions",
     "memberof": "src/catalogItem/supersets.js",
@@ -3091,7 +3003,7 @@
     ]
   },
   {
-    "__docId__": 155,
+    "__docId__": 150,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/catalogItem/supersets.js~SupersetOptions",
@@ -3126,7 +3038,7 @@
     ]
   },
   {
-    "__docId__": 156,
+    "__docId__": 151,
     "kind": "member",
     "name": "color_id",
     "memberof": "src/catalogItem/supersets.js~SupersetOptions",
@@ -3146,7 +3058,7 @@
     }
   },
   {
-    "__docId__": 157,
+    "__docId__": 152,
     "kind": "file",
     "name": "src/category/category.js",
     "content": "import { BricklinkRequest } from '../request';\r\n\r\n/**\r\n * Represents a Category\r\n */\r\nexport class Category {\r\n  /**\r\n   * Create a new instance of a category\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.category_id=0] The category id. i.e. - 10\r\n   * @param {string} [data.category_name] The category name. i.e. - Container\r\n   * @param {number} [data.parent_id] The parent category id or 0 if root category. i.e. - 0\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.category_id = data.category_id || 0;\r\n    /** @type {string} */\r\n    this.category_name = data.category_name || '';\r\n    /** @type {number} */\r\n    this.parent_id = data.parent_id || 0;\r\n  }\r\n\r\n  /**\r\n   * Method to get a specific category\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Category.get(123);\r\n   * client.send(req).then(category => console.log(category));\r\n   * ```\r\n   *\r\n   * @param {number} categoryId Catalog item type\r\n   * @return {BricklinkRequest} A request that resolves to a {@link Category} instance.\r\n   */\r\n  static get(categoryId) {\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/categories/${categoryId}`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) => new Category(data));\r\n  }\r\n\r\n  /**\r\n   * Get a list of all colors\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Category.all();\r\n   * client.send(req).then(categories => console.log(categories));\r\n   * ```\r\n   *\r\n   * @return {BricklinkRequest} A request that resolves to an array of {@link Category}.\r\n   */\r\n  static all() {\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/categories`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) =>\r\n      data.map((d) => new Category(d)),\r\n    );\r\n  }\r\n}\r\n",
@@ -3157,7 +3069,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 158,
+    "__docId__": 153,
     "kind": "class",
     "name": "Category",
     "memberof": "src/category/category.js",
@@ -3172,7 +3084,7 @@
     "interface": false
   },
   {
-    "__docId__": 159,
+    "__docId__": 154,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/category/category.js~Category",
@@ -3229,7 +3141,7 @@
     ]
   },
   {
-    "__docId__": 160,
+    "__docId__": 155,
     "kind": "member",
     "name": "category_id",
     "memberof": "src/category/category.js~Category",
@@ -3248,7 +3160,7 @@
     }
   },
   {
-    "__docId__": 161,
+    "__docId__": 156,
     "kind": "member",
     "name": "category_name",
     "memberof": "src/category/category.js~Category",
@@ -3267,7 +3179,7 @@
     }
   },
   {
-    "__docId__": 162,
+    "__docId__": 157,
     "kind": "member",
     "name": "parent_id",
     "memberof": "src/category/category.js~Category",
@@ -3286,7 +3198,7 @@
     }
   },
   {
-    "__docId__": 163,
+    "__docId__": 158,
     "kind": "method",
     "name": "get",
     "memberof": "src/category/category.js~Category",
@@ -3319,7 +3231,7 @@
     }
   },
   {
-    "__docId__": 164,
+    "__docId__": 159,
     "kind": "method",
     "name": "all",
     "memberof": "src/category/category.js~Category",
@@ -3341,7 +3253,7 @@
     "params": []
   },
   {
-    "__docId__": 165,
+    "__docId__": 160,
     "kind": "file",
     "name": "src/client.js",
     "content": "import { OAuthHelper } from './oAuthHelper';\r\nimport { CatalogItem } from './catalogItem/catalogItem';\r\nimport { PriceGuide } from './catalogItem/priceGuide';\r\nimport { KnownColor } from './catalogItem/knownColor';\r\nimport { ItemImage } from './catalogItem/itemImage';\r\nimport { Subset } from './catalogItem/subsets';\r\nimport { Superset } from './catalogItem/supersets';\r\nimport { logger } from './logger';\r\nimport { BricklinkRequest } from './request';\r\nimport { BrickLinkApiError } from \"./brickLinkApiError\";\r\nimport fetch from 'node-fetch'\r\n\r\n/**\r\n * Create a client to perform\r\n */\r\nexport class Client {\r\n  /**\r\n   * Create an instance of the Bricklin Node Client.\r\n   * @param {object} [options] Options that are used to create a new client.\r\n   * @param {string} [options.token] The `TokenValue` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.token_secret] The `TokenSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.consumer_key] The `ConsumerKey` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.consumer_secret] The `ConsumerSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}\r\n   * @param {string} [options.endpoint='https://api.bricklink.com/api/store/v1/'] The url of the Bricklink API.\r\n   */\r\n  constructor(options) {\r\n    options = options || {};\r\n\r\n    /** @type {string} */\r\n    this.token = options.token || '';\r\n    /** @type {string} */\r\n    this.token_secret = options.token_secret || '';\r\n    /** @type {string} */\r\n    this.consumer_key = options.consumer_key || '';\r\n    /** @type {string} */\r\n    this.consumer_secret = options.consumer_secret || '';\r\n    /** @type {string} */\r\n    this.endpoint =\r\n      options.endpoint || 'https://api.bricklink.com/api/store/v1/';\r\n    /** @type {Function[]} */\r\n    this.requestQueue = [];\r\n  }\r\n\r\n\r\n  /**\r\n   * Performs a concurrent-safe bricklink request and the callback upon success.\r\n   * @param {BricklinkRequest} req The request to perform.\r\n   * @return {Promise} The data that has been return from the API request and any callbacks.\r\n   */\r\n  send(req) {\r\n    const promise = new Promise((resolve, reject) => {\r\n      const callback = () => this.dispatch(req).then(resolve).catch(reject).finally(() => {\r\n        const deleteIndex = this.requestQueue.indexOf(callback);\r\n        this.requestQueue.splice(deleteIndex, 1);\r\n        if (this.requestQueue.length > 0) {\r\n          const continueQueue = this.requestQueue[0];\r\n          continueQueue();\r\n        }\r\n      });\r\n      this.requestQueue.push(callback);\r\n      if (this.requestQueue.length === 1) {\r\n        const startQueue = this.requestQueue[0];\r\n        startQueue();\r\n      }\r\n    });\r\n    return promise;\r\n  }\r\n\r\n  /**\r\n   * Performs a bricklink request and the callback upon success.\r\n   * @param {BricklinkRequest} req The request to perform.\r\n   * @return {Promise} The data that has been return from the API request and any callbacks.\r\n   */\r\n  dispatch(req) {\r\n    const resourceURL = this.endpoint + req.uri.replace(/^\\//, '') + req.params.toQueryString();\r\n    /** @type {import('node-fetch').RequestInit} */\r\n    const init = {\r\n      method: req.method,\r\n      headers: {},\r\n    };\r\n\r\n    const oauthHelper = new OAuthHelper(this.consumer_key, this.token);\r\n    oauthHelper.sign(resourceURL, req, this.consumer_secret, this.token_secret);\r\n\r\n    init.headers['authorization'] = oauthHelper.header;\r\n\r\n    const promise = fetch(resourceURL, init)\r\n      .then(response => response.json())\r\n      .then(\r\n        /**\r\n         * @param {any} payload Any object\r\n         */\r\n        (payload) => {\r\n          if (payload.meta.code >= 300) {\r\n            const error = new BrickLinkApiError(payload.meta);\r\n            logger(\r\n              JSON.stringify(\r\n                {\r\n                  reqestURI: resourceURL,\r\n                  responseMetadata: payload.meta,\r\n                },\r\n                null,\r\n                2,\r\n              ),\r\n            );\r\n            throw error;\r\n          } else {\r\n            return payload.data\r\n          }\r\n        })\r\n\r\n    promise.catch(error => {\r\n      logger(error);\r\n    });\r\n\r\n    if (req.callback) {\r\n      return promise.then(req.callback)\r\n    }\r\n\r\n    return promise;\r\n  }\r\n\r\n  /**\r\n   * Get a catalog item by type and identification number.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @return {Promise<CatalogItem>} A promise that resolves to a catalog item.\r\n   */\r\n  getCatalogItem(itemType, itemNumber) {\r\n    const req = CatalogItem.get(itemType, itemNumber);\r\n\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Get the price guide for a given catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} params Options for the price guide as outlined in {@link PriceGuideOptions}.\r\n   * @return {Promise<PriceGuide>} A promise that resolves to a price guide.\r\n   */\r\n  getPriceGuide(itemType, itemNumber, params) {\r\n    const req = PriceGuide.get(itemType, itemNumber, params);\r\n\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Get known colors for a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @return {Promise<Array>} A promise that resolves to a list of {@link KnownColor}.\r\n   */\r\n  getKnownColors(itemType, itemNumber) {\r\n    const req = KnownColor.get(itemType, itemNumber);\r\n\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Can get an image for a specific image color of a known catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {number} colorId The color id of the item.\r\n   * @return {Promise<ItemImage>} A promise that resolves to an Item Image.\r\n   */\r\n  getItemImage(itemType, itemNumber, colorId) {\r\n    const req = ItemImage.get(itemType, itemNumber, colorId);\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Gets a subset of a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} [params] Options for the price guide as outlined in {@link SubsetOptions}.\r\n   * @return {Promise<Array>} A promise that resolves to a  list of {@link Subset}.\r\n   */\r\n  getItemSubset(itemType, itemNumber, params) {\r\n    const req = Subset.get(itemType, itemNumber, params);\r\n    return this.send(req);\r\n  }\r\n\r\n  /**\r\n   * Gets a superset of a catalog item.\r\n   * @param {string} itemType An item type as can be foud at {@link ItemType}.\r\n   * @param {string} itemNumber An item identification number.\r\n   * @param {object} [params] Options for the price guide as outlined in {@link SupersetOptions}.\r\n   * @return {Promise<Array>} A promise that resolves to a  list of {@link Superset}.\r\n   */\r\n  getItemSuperset(itemType, itemNumber, params) {\r\n    const req = Superset.get(itemType, itemNumber, params);\r\n    return this.send(req);\r\n  }\r\n}\r\n",
@@ -3352,7 +3264,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 166,
+    "__docId__": 161,
     "kind": "class",
     "name": "Client",
     "memberof": "src/client.js",
@@ -3367,7 +3279,7 @@
     "interface": false
   },
   {
-    "__docId__": 167,
+    "__docId__": 162,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/client.js~Client",
@@ -3444,7 +3356,7 @@
     ]
   },
   {
-    "__docId__": 168,
+    "__docId__": 163,
     "kind": "member",
     "name": "token",
     "memberof": "src/client.js~Client",
@@ -3463,7 +3375,7 @@
     }
   },
   {
-    "__docId__": 169,
+    "__docId__": 164,
     "kind": "member",
     "name": "token_secret",
     "memberof": "src/client.js~Client",
@@ -3482,7 +3394,7 @@
     }
   },
   {
-    "__docId__": 170,
+    "__docId__": 165,
     "kind": "member",
     "name": "consumer_key",
     "memberof": "src/client.js~Client",
@@ -3501,7 +3413,7 @@
     }
   },
   {
-    "__docId__": 171,
+    "__docId__": 166,
     "kind": "member",
     "name": "consumer_secret",
     "memberof": "src/client.js~Client",
@@ -3520,7 +3432,7 @@
     }
   },
   {
-    "__docId__": 172,
+    "__docId__": 167,
     "kind": "member",
     "name": "endpoint",
     "memberof": "src/client.js~Client",
@@ -3539,7 +3451,7 @@
     }
   },
   {
-    "__docId__": 173,
+    "__docId__": 168,
     "kind": "member",
     "name": "requestQueue",
     "memberof": "src/client.js~Client",
@@ -3558,7 +3470,7 @@
     }
   },
   {
-    "__docId__": 174,
+    "__docId__": 169,
     "kind": "method",
     "name": "send",
     "memberof": "src/client.js~Client",
@@ -3591,7 +3503,7 @@
     }
   },
   {
-    "__docId__": 175,
+    "__docId__": 170,
     "kind": "method",
     "name": "dispatch",
     "memberof": "src/client.js~Client",
@@ -3624,7 +3536,7 @@
     }
   },
   {
-    "__docId__": 176,
+    "__docId__": 171,
     "kind": "method",
     "name": "getCatalogItem",
     "memberof": "src/client.js~Client",
@@ -3667,7 +3579,7 @@
     }
   },
   {
-    "__docId__": 177,
+    "__docId__": 172,
     "kind": "method",
     "name": "getPriceGuide",
     "memberof": "src/client.js~Client",
@@ -3720,7 +3632,7 @@
     }
   },
   {
-    "__docId__": 178,
+    "__docId__": 173,
     "kind": "method",
     "name": "getKnownColors",
     "memberof": "src/client.js~Client",
@@ -3763,7 +3675,7 @@
     }
   },
   {
-    "__docId__": 179,
+    "__docId__": 174,
     "kind": "method",
     "name": "getItemImage",
     "memberof": "src/client.js~Client",
@@ -3816,7 +3728,7 @@
     }
   },
   {
-    "__docId__": 180,
+    "__docId__": 175,
     "kind": "method",
     "name": "getItemSubset",
     "memberof": "src/client.js~Client",
@@ -3869,7 +3781,7 @@
     }
   },
   {
-    "__docId__": 181,
+    "__docId__": 176,
     "kind": "method",
     "name": "getItemSuperset",
     "memberof": "src/client.js~Client",
@@ -3922,7 +3834,7 @@
     }
   },
   {
-    "__docId__": 182,
+    "__docId__": 177,
     "kind": "file",
     "name": "src/color/color.js",
     "content": "import { BricklinkRequest } from '../request';\r\n\r\n/**\r\n * Represents a color object\r\n */\r\nexport class Color {\r\n  /**\r\n   * Create a new instance of a color\r\n   * @param {object} [data] API response data.\r\n   * @param {number} [data.color_id=0] The color id. i.e. - 10\r\n   * @param {string} [data.color_name] The color name. i.e. - Dark Gray\r\n   * @param {string} [data.color_code] The HTML HEX associated to the color. i.e. - 6b5a5a\r\n   * @param {string} [data.color_type] A group that the color belongs to. i.e. - Solid, Transparent, etc...\r\n   */\r\n  constructor(data) {\r\n    data = data || {};\r\n    /** @type {number} */\r\n    this.color_id = data.color_id || 0;\r\n    /** @type {string} */\r\n    this.color_name = data.color_name || '';\r\n    /** @type {string} */\r\n    this.color_code = data.color_code || '';\r\n    /** @type {string} */\r\n    this.color_type = data.color_type || '';\r\n  }\r\n\r\n  /**\r\n   * Method to get specific color details\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Color.get(10);\r\n   * client.send(req).then(color => console.log(color));\r\n   * ```\r\n   *\r\n   * @param {number} colorId a color id.\r\n   * @return {BricklinkRequest} A request that resolves to a {@link Color} instance.\r\n   */\r\n  static get(colorId) {\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/colors/${colorId}`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) => new Color(data));\r\n  }\r\n\r\n  /**\r\n   * Get a list of all colors\r\n   *\r\n   * Usage:\r\n   *\r\n   * ```\r\n   * var req = Color.all();\r\n   * client.send(req).then(colors => console.log(colors));\r\n   * ```\r\n   *\r\n   * @return {BricklinkRequest} A request that resolves to an array of {@link Color}.\r\n   */\r\n  static all() {\r\n    let method = BricklinkRequest.GET;\r\n    let uri = `/colors`;\r\n\r\n    return new BricklinkRequest(method, uri, null, (data) =>\r\n      data.map((d) => new Color(d)),\r\n    );\r\n  }\r\n}\r\n",
@@ -3933,7 +3845,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 183,
+    "__docId__": 178,
     "kind": "class",
     "name": "Color",
     "memberof": "src/color/color.js",
@@ -3948,7 +3860,7 @@
     "interface": false
   },
   {
-    "__docId__": 184,
+    "__docId__": 179,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/color/color.js~Color",
@@ -4015,7 +3927,7 @@
     ]
   },
   {
-    "__docId__": 185,
+    "__docId__": 180,
     "kind": "member",
     "name": "color_id",
     "memberof": "src/color/color.js~Color",
@@ -4034,7 +3946,7 @@
     }
   },
   {
-    "__docId__": 186,
+    "__docId__": 181,
     "kind": "member",
     "name": "color_name",
     "memberof": "src/color/color.js~Color",
@@ -4053,7 +3965,7 @@
     }
   },
   {
-    "__docId__": 187,
+    "__docId__": 182,
     "kind": "member",
     "name": "color_code",
     "memberof": "src/color/color.js~Color",
@@ -4072,7 +3984,7 @@
     }
   },
   {
-    "__docId__": 188,
+    "__docId__": 183,
     "kind": "member",
     "name": "color_type",
     "memberof": "src/color/color.js~Color",
@@ -4091,7 +4003,7 @@
     }
   },
   {
-    "__docId__": 189,
+    "__docId__": 184,
     "kind": "method",
     "name": "get",
     "memberof": "src/color/color.js~Color",
@@ -4124,7 +4036,7 @@
     }
   },
   {
-    "__docId__": 190,
+    "__docId__": 185,
     "kind": "method",
     "name": "all",
     "memberof": "src/color/color.js~Color",
@@ -4146,7 +4058,7 @@
     "params": []
   },
   {
-    "__docId__": 191,
+    "__docId__": 186,
     "kind": "file",
     "name": "src/condition.js",
     "content": "/**\r\n * Static dictionary of common condition terms to improve code readability.\r\n *\r\n * - `Condition.New`\r\n * - `Condition.Used`\r\n */\r\nexport class Condition {\r\n  /** @type {string} */\r\n  static get New() {\r\n    return 'N';\r\n  }\r\n\r\n  /** @type {string} */\r\n  static get Used() {\r\n    return 'U';\r\n  }\r\n}\r\n",
@@ -4157,7 +4069,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 192,
+    "__docId__": 187,
     "kind": "class",
     "name": "Condition",
     "memberof": "src/condition.js",
@@ -4172,7 +4084,7 @@
     "interface": false
   },
   {
-    "__docId__": 193,
+    "__docId__": 188,
     "kind": "get",
     "name": "New",
     "memberof": "src/condition.js~Condition",
@@ -4193,7 +4105,7 @@
     }
   },
   {
-    "__docId__": 194,
+    "__docId__": 189,
     "kind": "get",
     "name": "Used",
     "memberof": "src/condition.js~Condition",
@@ -4214,7 +4126,7 @@
     }
   },
   {
-    "__docId__": 195,
+    "__docId__": 190,
     "kind": "file",
     "name": "src/index.js",
     "content": "export { Client } from './client';\r\nexport { ItemType } from './itemType';\r\nexport { Condition } from './condition';\r\n\r\nexport { CatalogItem } from './catalogItem/catalogItem';\r\nexport { ItemImage } from './catalogItem/itemImage';\r\nexport { KnownColor } from './catalogItem/knownColor';\r\nexport { PriceGuide } from './catalogItem/priceGuide';\r\nexport { Subset } from './catalogItem/subsets';\r\nexport { Superset } from './catalogItem/supersets';\r\n\r\nexport { Color } from './color/color';\r\n\r\nexport { Category } from './category/category';\r\n",
@@ -4225,7 +4137,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 196,
+    "__docId__": 191,
     "kind": "file",
     "name": "src/itemType.js",
     "content": "/**\r\n * Static dictionary of common catalog item types to improve code readability.\r\n */\r\nexport class ItemType {\r\n  /** @type {string} */\r\n  static get Set() {\r\n    return 'SET';\r\n  }\r\n  /** @type {string} */\r\n  static get Minifigure() {\r\n    return 'MINIFIG';\r\n  }\r\n  /** @type {string} */\r\n  static get Part() {\r\n    return 'PART';\r\n  }\r\n  /** @type {string} */\r\n  static get Book() {\r\n    return 'BOOK';\r\n  }\r\n  /** @type {string} */\r\n  static get Gear() {\r\n    return 'GEAR';\r\n  }\r\n  /** @type {string} */\r\n  static get Catalog() {\r\n    return 'CATALOG';\r\n  }\r\n  /** @type {string} */\r\n  static get Instruction() {\r\n    return 'INSTRUCTION';\r\n  }\r\n  /** @type {string} */\r\n  static get UnsortedLot() {\r\n    return 'UNSORTED_LOT';\r\n  }\r\n  /** @type {string} */\r\n  static get Box() {\r\n    return 'ORIGINAL_BOX';\r\n  }\r\n}\r\n",
@@ -4236,7 +4148,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 197,
+    "__docId__": 192,
     "kind": "class",
     "name": "ItemType",
     "memberof": "src/itemType.js",
@@ -4251,7 +4163,7 @@
     "interface": false
   },
   {
-    "__docId__": 198,
+    "__docId__": 193,
     "kind": "get",
     "name": "Set",
     "memberof": "src/itemType.js~ItemType",
@@ -4272,7 +4184,7 @@
     }
   },
   {
-    "__docId__": 199,
+    "__docId__": 194,
     "kind": "get",
     "name": "Minifigure",
     "memberof": "src/itemType.js~ItemType",
@@ -4293,7 +4205,7 @@
     }
   },
   {
-    "__docId__": 200,
+    "__docId__": 195,
     "kind": "get",
     "name": "Part",
     "memberof": "src/itemType.js~ItemType",
@@ -4314,7 +4226,7 @@
     }
   },
   {
-    "__docId__": 201,
+    "__docId__": 196,
     "kind": "get",
     "name": "Book",
     "memberof": "src/itemType.js~ItemType",
@@ -4335,7 +4247,7 @@
     }
   },
   {
-    "__docId__": 202,
+    "__docId__": 197,
     "kind": "get",
     "name": "Gear",
     "memberof": "src/itemType.js~ItemType",
@@ -4356,7 +4268,7 @@
     }
   },
   {
-    "__docId__": 203,
+    "__docId__": 198,
     "kind": "get",
     "name": "Catalog",
     "memberof": "src/itemType.js~ItemType",
@@ -4377,7 +4289,7 @@
     }
   },
   {
-    "__docId__": 204,
+    "__docId__": 199,
     "kind": "get",
     "name": "Instruction",
     "memberof": "src/itemType.js~ItemType",
@@ -4398,7 +4310,7 @@
     }
   },
   {
-    "__docId__": 205,
+    "__docId__": 200,
     "kind": "get",
     "name": "UnsortedLot",
     "memberof": "src/itemType.js~ItemType",
@@ -4419,7 +4331,7 @@
     }
   },
   {
-    "__docId__": 206,
+    "__docId__": 201,
     "kind": "get",
     "name": "Box",
     "memberof": "src/itemType.js~ItemType",
@@ -4440,7 +4352,7 @@
     }
   },
   {
-    "__docId__": 207,
+    "__docId__": 202,
     "kind": "file",
     "name": "src/logger.js",
     "content": "import debug from 'debug';\r\n\r\nexport const logger = debug('bricklink-api');\r\n",
@@ -4451,7 +4363,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 208,
+    "__docId__": 203,
     "kind": "variable",
     "name": "logger",
     "memberof": "src/logger.js",
@@ -4471,7 +4383,7 @@
     }
   },
   {
-    "__docId__": 209,
+    "__docId__": 204,
     "kind": "file",
     "name": "src/oAuthHelper.js",
     "content": "import * as crypto from 'crypto';\r\nimport oauthSignature from 'oauth-signature';\r\n\r\n/**\r\n * A helper for OAuth 1.0 header information and signing keys.\r\n */\r\nexport class OAuthHelper {\r\n  /**\r\n   * Intialize the helper\r\n   * @param {string} consumerKey The consumer key\r\n   * @param {string} token The token value\r\n   */\r\n  constructor(consumerKey, token) {\r\n    /** @type {string} */\r\n    this.consumerKey = consumerKey;\r\n    /** @type {string} */\r\n    this.token = token;\r\n    /** @type {string} */\r\n    this.nonce = crypto.randomBytes(16).toString('hex');\r\n    /** @type {string} */\r\n    this.signature = '';\r\n    /** @type {string} */\r\n    this.timestamp = Math.round(Date.now() / 1000).toString();\r\n  }\r\n\r\n  get parameters() {\r\n    return {\r\n      oauth_consumer_key: this.consumerKey,\r\n      oauth_token: this.token,\r\n      oauth_nonce: this.nonce,\r\n      oauth_timestamp: this.timestamp,\r\n      oauth_signature_method: 'HMAC-SHA1',\r\n      oauth_version: '1.0',\r\n    };\r\n  }\r\n\r\n  get header() {\r\n    let str = 'OAuth ';\r\n\r\n    let params = Object.assign({ realm: '' }, this.parameters);\r\n    params['oauth_signature'] = this.signature;\r\n\r\n    let keys = Object.keys(params);\r\n    let pairs = keys.map((k) => {\r\n      return k + '=\"' + params[k] + '\"';\r\n    });\r\n\r\n    str += pairs.join(',');\r\n    return str;\r\n  }\r\n\r\n  get queryString() {\r\n    let params = Object.assign({}, this.parameters);\r\n    params['oauth_signature'] = this.signature;\r\n    let str = JSON.stringify(params);\r\n    return 'Authorization=' + str;\r\n  }\r\n\r\n  /**\r\n   * Sign the request with oath headers and sets the signature member of the OauthHelper instance.\r\n   */\r\n  sign(url, request, consumerSecret, tokenSecret) {\r\n    let params = Object.assign({}, this.parameters, request.params.toObject());\r\n\r\n    this.signature = oauthSignature.generate(\r\n      request.method,\r\n      url,\r\n      params,\r\n      consumerSecret,\r\n      tokenSecret,\r\n    );\r\n  }\r\n}\r\n",
@@ -4482,7 +4394,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 210,
+    "__docId__": 205,
     "kind": "class",
     "name": "OAuthHelper",
     "memberof": "src/oAuthHelper.js",
@@ -4497,7 +4409,7 @@
     "interface": false
   },
   {
-    "__docId__": 211,
+    "__docId__": 206,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/oAuthHelper.js~OAuthHelper",
@@ -4532,7 +4444,7 @@
     ]
   },
   {
-    "__docId__": 212,
+    "__docId__": 207,
     "kind": "member",
     "name": "consumerKey",
     "memberof": "src/oAuthHelper.js~OAuthHelper",
@@ -4551,7 +4463,7 @@
     }
   },
   {
-    "__docId__": 213,
+    "__docId__": 208,
     "kind": "member",
     "name": "token",
     "memberof": "src/oAuthHelper.js~OAuthHelper",
@@ -4570,7 +4482,7 @@
     }
   },
   {
-    "__docId__": 214,
+    "__docId__": 209,
     "kind": "member",
     "name": "nonce",
     "memberof": "src/oAuthHelper.js~OAuthHelper",
@@ -4589,7 +4501,7 @@
     }
   },
   {
-    "__docId__": 215,
+    "__docId__": 210,
     "kind": "member",
     "name": "signature",
     "memberof": "src/oAuthHelper.js~OAuthHelper",
@@ -4608,7 +4520,7 @@
     }
   },
   {
-    "__docId__": 216,
+    "__docId__": 211,
     "kind": "member",
     "name": "timestamp",
     "memberof": "src/oAuthHelper.js~OAuthHelper",
@@ -4627,7 +4539,7 @@
     }
   },
   {
-    "__docId__": 217,
+    "__docId__": 212,
     "kind": "get",
     "name": "parameters",
     "memberof": "src/oAuthHelper.js~OAuthHelper",
@@ -4646,7 +4558,7 @@
     }
   },
   {
-    "__docId__": 218,
+    "__docId__": 213,
     "kind": "get",
     "name": "header",
     "memberof": "src/oAuthHelper.js~OAuthHelper",
@@ -4665,7 +4577,7 @@
     }
   },
   {
-    "__docId__": 219,
+    "__docId__": 214,
     "kind": "get",
     "name": "queryString",
     "memberof": "src/oAuthHelper.js~OAuthHelper",
@@ -4684,7 +4596,7 @@
     }
   },
   {
-    "__docId__": 220,
+    "__docId__": 215,
     "kind": "method",
     "name": "sign",
     "memberof": "src/oAuthHelper.js~OAuthHelper",
@@ -4724,7 +4636,7 @@
     "return": null
   },
   {
-    "__docId__": 222,
+    "__docId__": 217,
     "kind": "file",
     "name": "src/request.js",
     "content": "/**\r\n * Creates a request to use with the client.\r\n */\r\nexport class BricklinkRequest {\r\n  /**\r\n   * Create a new request.\r\n   * @param {string} method The type of HTTP request to perform.\r\n   * @param {string} uri The relative of full path uri of a request to perform. This should not include any query parameters.\r\n   * @param {RequestParams} [params] Additional parameters to include with the request in either post body or query params.\r\n   * @param {BricklinkRequestCallback} [callback=null] A callback function to perform after the request has been successfully performed.\r\n   */\r\n  constructor(method, uri, params, callback) {\r\n    /** @type {string} */\r\n    this.method = method;\r\n    /** @type {string} */\r\n    this.uri = uri;\r\n    /** @type {RequestParams} */\r\n    this.params = params || new RequestParams();\r\n    /** @type {BricklinkRequestCallback|null} */\r\n    this.callback = callback || null;\r\n  }\r\n  /** @type {string} */\r\n  static get GET() {\r\n    return 'get';\r\n  }\r\n\r\n  /** @type {string} */\r\n  static get PUT() {\r\n    return 'put';\r\n  }\r\n\r\n  /** @type {string} */\r\n  static get POST() {\r\n    return 'post';\r\n  }\r\n\r\n  /** @type {string} */\r\n  static get DELETE() {\r\n    return 'put';\r\n  }\r\n}\r\n\r\n/**\r\n * @callback BricklinkRequestCallback\r\n * @param {any} value\r\n * @returns {any}\r\n */\r\n\r\n/**\r\n * Represents any query parameters to use with a request.\r\n */\r\nexport class RequestParams {\r\n  /**\r\n   * Convert params for the request to a query string.\r\n   * @return {string} parameters in the format of '?<param>=<value>'.\r\n   */\r\n  toQueryString() {\r\n    const pairs = [];\r\n    for (const member in this) {\r\n      if (this[member] != null) {\r\n        pairs.push(member + '=' + this[member]);\r\n      }\r\n    }\r\n    if (pairs.length > 0) {\r\n      return '?' + pairs.join('&');\r\n    }\r\n    return '';\r\n  }\r\n\r\n  /**\r\n   * Convert params for the request to a an object.\r\n   * @return {object} trimmed down parameters object.\r\n   */\r\n  toObject() {\r\n    /** @type {object} */\r\n    const params = {};\r\n    for (const member in this) {\r\n      if (this[member] != null) {\r\n        params[member] = this[member];\r\n      }\r\n    }\r\n    return params;\r\n  }\r\n}\r\n",
@@ -4735,7 +4647,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 223,
+    "__docId__": 218,
     "kind": "class",
     "name": "BricklinkRequest",
     "memberof": "src/request.js",
@@ -4750,7 +4662,7 @@
     "interface": false
   },
   {
-    "__docId__": 224,
+    "__docId__": 219,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/request.js~BricklinkRequest",
@@ -4807,7 +4719,7 @@
     ]
   },
   {
-    "__docId__": 225,
+    "__docId__": 220,
     "kind": "member",
     "name": "method",
     "memberof": "src/request.js~BricklinkRequest",
@@ -4826,7 +4738,7 @@
     }
   },
   {
-    "__docId__": 226,
+    "__docId__": 221,
     "kind": "member",
     "name": "uri",
     "memberof": "src/request.js~BricklinkRequest",
@@ -4845,7 +4757,7 @@
     }
   },
   {
-    "__docId__": 227,
+    "__docId__": 222,
     "kind": "member",
     "name": "params",
     "memberof": "src/request.js~BricklinkRequest",
@@ -4864,7 +4776,7 @@
     }
   },
   {
-    "__docId__": 228,
+    "__docId__": 223,
     "kind": "member",
     "name": "callback",
     "memberof": "src/request.js~BricklinkRequest",
@@ -4884,7 +4796,7 @@
     }
   },
   {
-    "__docId__": 229,
+    "__docId__": 224,
     "kind": "get",
     "name": "GET",
     "memberof": "src/request.js~BricklinkRequest",
@@ -4905,7 +4817,7 @@
     }
   },
   {
-    "__docId__": 230,
+    "__docId__": 225,
     "kind": "get",
     "name": "PUT",
     "memberof": "src/request.js~BricklinkRequest",
@@ -4926,7 +4838,7 @@
     }
   },
   {
-    "__docId__": 231,
+    "__docId__": 226,
     "kind": "get",
     "name": "POST",
     "memberof": "src/request.js~BricklinkRequest",
@@ -4947,7 +4859,7 @@
     }
   },
   {
-    "__docId__": 232,
+    "__docId__": 227,
     "kind": "get",
     "name": "DELETE",
     "memberof": "src/request.js~BricklinkRequest",
@@ -4968,7 +4880,7 @@
     }
   },
   {
-    "__docId__": 233,
+    "__docId__": 228,
     "kind": "class",
     "name": "RequestParams",
     "memberof": "src/request.js",
@@ -4983,7 +4895,7 @@
     "interface": false
   },
   {
-    "__docId__": 234,
+    "__docId__": 229,
     "kind": "method",
     "name": "toQueryString",
     "memberof": "src/request.js~RequestParams",
@@ -5005,7 +4917,7 @@
     "params": []
   },
   {
-    "__docId__": 235,
+    "__docId__": 230,
     "kind": "method",
     "name": "toObject",
     "memberof": "src/request.js~RequestParams",
