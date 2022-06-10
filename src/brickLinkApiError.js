@@ -5,28 +5,14 @@
 export class BrickLinkApiError extends Error {
     /**
      * Create a BrickLink error exception object.
-     * @param {BrickLinkResponseMeta} meta The type of HTTP request to perform.
+     * @param {Object} meta The object containing error data.
+     * @param {number} meta.code The HTTP response status code.
+     * @param {string} meta.message The error message.
+     * @param {string} meta.description The error description.
      */
     constructor(meta) {
         super(meta.message);
         this.name = this.constructor.name;
         this.meta = meta;
-    }
-}
-
-export class BrickLinkResponseMeta {
-    /**
-     * Create a new response meta object
-     * @param {number} code The type of HTTP request to perform.
-     * @param {string} message The error message
-     * @param {string} description The error description
-     */
-    constructor(code, message, description) {
-        /** @type {number} */
-        this.code = code;
-        /** @type {string} */
-        this.message = message;
-        /** @type {string} */
-        this.description = description;
     }
 }
