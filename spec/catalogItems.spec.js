@@ -51,7 +51,7 @@ test('Can get information on minifigure', (t) => {
 test('Can get information on part', (t) => {
   return BL.getCatalogItem(ItemType.Part, '3001').then((part) => {
     t.not(part.image_url, '', 'Has an image url');
-    t.is(part.year_released, 1969, 'Gets the year correctly');
+    t.is(part.year_released, 1978, 'Gets the year correctly');
     t.is(part.type, ItemType.Part);
   });
 });
