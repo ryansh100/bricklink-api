@@ -1,7 +1,6 @@
 import test from 'ava';
-import {Client, Color} from '../src/';
+import {Client, Color, BrickLinkApiError} from '../src/';
 import {config} from './test.config';
-import {BrickLinkApiError} from "../src/brickLinkApiError";
 
 /** @type {Client} */
 let BL;

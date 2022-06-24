@@ -1,7 +1,7 @@
 export { Client } from './client';
+export { BrickLinkApiError } from './brickLinkApiError';
 export { ItemType } from './itemType';
 export { Condition } from './condition';
-
 export { CatalogItem } from './catalogItem/catalogItem';
 export { ItemImage } from './catalogItem/itemImage';
 export { KnownColor } from './catalogItem/knownColor';
