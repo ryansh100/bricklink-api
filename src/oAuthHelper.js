@@ -1,5 +1,5 @@
-import * as crypto from 'crypto';
 import oauthSignature from 'oauth-signature';
+import {randomBytes} from 'crypto';
 
 /**
  * A helper for OAuth 1.0 header information and signing keys.
@@ -16,7 +16,7 @@ export class OAuthHelper {
     /** @type {string} */
     this.token = token;
     /** @type {string} */
-    this.nonce = crypto.randomBytes(16).toString('hex');
+    this.nonce = randomBytes(16).toString('hex');
     /** @type {string} */
     this.signature = '';
     /** @type {string} */

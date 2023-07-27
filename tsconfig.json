@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
-        "target": "ES5",
+        "target": "es6",
+        "module": "CommonJS",
         "declaration": true,
         "emitDeclarationOnly": true,
         "allowJs": true,
@@ -10,4 +11,8 @@
     "include": [
         "src/**/*"
     ],
+    "exclude": [
+        "/dist",
+        "/node_modules"
+    ]
 }

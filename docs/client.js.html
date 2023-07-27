@@ -1,4 +1,32 @@
-import { OAuthHelper } from './oAuthHelper';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: client.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: client.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { OAuthHelper } from './oAuthHelper';
 import { CatalogItem } from './catalogItem/catalogItem';
 import { PriceGuide } from './catalogItem/priceGuide';
 import { KnownColor } from './catalogItem/knownColor';
@@ -123,7 +151,7 @@ export class Client {
    * Get a catalog item by type and identification number.
    * @param {string} itemType An item type as can be foud at {@link ItemType}.
    * @param {string} itemNumber An item identification number.
-   * @return {Promise<CatalogItem>} A promise that resolves to a catalog item.
+   * @return {Promise&lt;CatalogItem>} A promise that resolves to a catalog item.
    */
   getCatalogItem(itemType, itemNumber) {
     const req = CatalogItem.get(itemType, itemNumber);
@@ -136,7 +164,7 @@ export class Client {
    * @param {string} itemType An item type as can be foud at {@link ItemType}.
    * @param {string} itemNumber An item identification number.
    * @param {object} params Options for the price guide as outlined in {@link PriceGuideOptions}.
-   * @return {Promise<PriceGuide>} A promise that resolves to a price guide.
+   * @return {Promise&lt;PriceGuide>} A promise that resolves to a price guide.
    */
   getPriceGuide(itemType, itemNumber, params) {
     const req = PriceGuide.get(itemType, itemNumber, params);
@@ -148,7 +176,7 @@ export class Client {
    * Get known colors for a catalog item.
    * @param {string} itemType An item type as can be foud at {@link ItemType}.
    * @param {string} itemNumber An item identification number.
-   * @return {Promise<Array>} A promise that resolves to a list of {@link KnownColor}.
+   * @return {Promise&lt;Array>} A promise that resolves to a list of {@link KnownColor}.
    */
   getKnownColors(itemType, itemNumber) {
     const req = KnownColor.get(itemType, itemNumber);
@@ -161,7 +189,7 @@ export class Client {
    * @param {string} itemType An item type as can be foud at {@link ItemType}.
    * @param {string} itemNumber An item identification number.
    * @param {number} colorId The color id of the item.
-   * @return {Promise<ItemImage>} A promise that resolves to an Item Image.
+   * @return {Promise&lt;ItemImage>} A promise that resolves to an Item Image.
    */
   getItemImage(itemType, itemNumber, colorId) {
     const req = ItemImage.get(itemType, itemNumber, colorId);
@@ -173,7 +201,7 @@ export class Client {
    * @param {string} itemType An item type as can be foud at {@link ItemType}.
    * @param {string} itemNumber An item identification number.
    * @param {object} [params] Options for the price guide as outlined in {@link SubsetOptions}.
-   * @return {Promise<Array>} A promise that resolves to a  list of {@link Subset}.
+   * @return {Promise&lt;Array>} A promise that resolves to a  list of {@link Subset}.
    */
   getItemSubset(itemType, itemNumber, params) {
     const req = Subset.get(itemType, itemNumber, params);
@@ -185,10 +213,33 @@ export class Client {
    * @param {string} itemType An item type as can be foud at {@link ItemType}.
    * @param {string} itemNumber An item identification number.
    * @param {object} [params] Options for the price guide as outlined in {@link SupersetOptions}.
-   * @return {Promise<Array>} A promise that resolves to a  list of {@link Superset}.
+   * @return {Promise&lt;Array>} A promise that resolves to a  list of {@link Superset}.
    */
   getItemSuperset(itemType, itemNumber, params) {
     const req = Superset.get(itemType, itemNumber, params);
     return this.send(req);
   }
 }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BrickLinkApiError.html">BrickLinkApiError</a></li><li><a href="BricklinkRequest.html">BricklinkRequest</a></li><li><a href="CatalogItem.html">CatalogItem</a></li><li><a href="Category.html">Category</a></li><li><a href="Client.html">Client</a></li><li><a href="Color.html">Color</a></li><li><a href="Condition.html">Condition</a></li><li><a href="ItemImage.html">ItemImage</a></li><li><a href="ItemType.html">ItemType</a></li><li><a href="KnownColor.html">KnownColor</a></li><li><a href="OAuthHelper.html">OAuthHelper</a></li><li><a href="PriceDetail.html">PriceDetail</a></li><li><a href="PriceGuide.html">PriceGuide</a></li><li><a href="PriceGuideOptions.html">PriceGuideOptions</a></li><li><a href="RequestParams.html">RequestParams</a></li><li><a href="Subset.html">Subset</a></li><li><a href="SubsetEntry.html">SubsetEntry</a></li><li><a href="SubsetOptions.html">SubsetOptions</a></li><li><a href="Superset.html">Superset</a></li><li><a href="SupersetEntry.html">SupersetEntry</a></li><li><a href="SupersetOptions.html">SupersetOptions</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
