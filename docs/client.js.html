@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: client.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: client.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { OAuthHelper } from './oAuthHelper';
+import { CatalogItem } from './catalogItem/catalogItem';
+import { PriceGuide } from './catalogItem/priceGuide';
+import { KnownColor } from './catalogItem/knownColor';
+import { ItemImage } from './catalogItem/itemImage';
+import { Subset } from './catalogItem/subsets';
+import { Superset } from './catalogItem/supersets';
+import { logger } from './logger';
+import { BricklinkRequest } from './request';
+import { BrickLinkApiError } from './brickLinkApiError';
+
+/**
+ * Create a client to perform
+ */
+export class Client {
+  /**
+   * Create an instance of the Bricklin Node Client.
+   * @param {object} [options] Options that are used to create a new client.
+   * @param {string} [options.token] The `TokenValue` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
+   * @param {string} [options.token_secret] The `TokenSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
+   * @param {string} [options.consumer_key] The `ConsumerKey` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
+   * @param {string} [options.consumer_secret] The `ConsumerSecret` from {@link https://www.bricklink.com/v2/api/register_consumer.page}
+   * @param {string} [options.endpoint='https://api.bricklink.com/api/store/v1/'] The url of the Bricklink API.
+   */
+  constructor(options) {
+    options = options || {};
+
+    /** @type {string} */
+    this.token = options.token || '';
+    /** @type {string} */
+    this.token_secret = options.token_secret || '';
+    /** @type {string} */
+    this.consumer_key = options.consumer_key || '';
+    /** @type {string} */
+    this.consumer_secret = options.consumer_secret || '';
+    /** @type {string} */
+    this.endpoint =
+      options.endpoint || 'https://api.bricklink.com/api/store/v1/';
+    /** @type {Function[]} */
+    this.requestQueue = [];
+  }
+
+
+  /**
+   * Performs a concurrent-safe bricklink request and the callback upon success.
+   * @param {BricklinkRequest} req The request to perform.
+   * @return {Promise} The data that has been return from the API request and any callbacks.
+   */
+  send(req) {
+    const promise = new Promise((resolve, reject) => {
+      const callback = () => this.dispatch(req).then(resolve).catch(reject).then(() => {
+        const deleteIndex = this.requestQueue.indexOf(callback);
+        this.requestQueue.splice(deleteIndex, 1);
+        if (this.requestQueue.length > 0) {
+          const continueQueue = this.requestQueue[0];
+          continueQueue();
+        }
+      });
+      this.requestQueue.push(callback);
+      if (this.requestQueue.length === 1) {
+        const startQueue = this.requestQueue[0];
+        startQueue();
+      }
+    });
+    return promise;
+  }
+
+  /**
+   * Performs a bricklink request and the callback upon success.
+   * @param {BricklinkRequest} req The request to perform.
+   * @return {Promise} The data that has been return from the API request and any callbacks.
+   */
+  dispatch(req) {
+    const resourceURL = this.endpoint + req.uri.replace(/^\//, '') + req.params.toQueryString();
+    /** @type {RequestInit} */
+    const init = {
+      method: req.method,
+      headers: {},
+    };
+
+    const oauthHelper = new OAuthHelper(this.consumer_key, this.token);
+    oauthHelper.sign(resourceURL, req, this.consumer_secret, this.token_secret);
+
+    init.headers['authorization'] = oauthHelper.header;
+
+    const promise = fetch(resourceURL, init)
+      .then(response => response.json())
+      .then(
+        /**
+         * @param {any} payload Any object
+         */
+        (payload) => {
+          if (payload.meta.code >= 300) {
+            const error = new BrickLinkApiError(payload.meta);
+            logger(
+              JSON.stringify(
+                {
+                  reqestURI: resourceURL,
+                  responseMetadata: payload.meta,
+                },
+                null,
+                2,
+              ),
+            );
+            throw error;
+          } else {
+            return payload.data
+          }
+        })
+
+    promise.catch(error => {
+      logger(error);
+    });
+
+    if (req.callback) {
+      return promise.then(req.callback)
+    }
+
+    return promise;
+  }
+
+  /**
+   * Get a catalog item by type and identification number.
+   * @param {string} itemType An item type as can be foud at {@link ItemType}.
+   * @param {string} itemNumber An item identification number.
+   * @return {Promise&lt;CatalogItem>} A promise that resolves to a catalog item.
+   */
+  getCatalogItem(itemType, itemNumber) {
+    const req = CatalogItem.get(itemType, itemNumber);
+
+    return this.send(req);
+  }
+
+  /**
+   * Get the price guide for a given catalog item.
+   * @param {string} itemType An item type as can be foud at {@link ItemType}.
+   * @param {string} itemNumber An item identification number.
+   * @param {object} params Options for the price guide as outlined in {@link PriceGuideOptions}.
+   * @return {Promise&lt;PriceGuide>} A promise that resolves to a price guide.
+   */
+  getPriceGuide(itemType, itemNumber, params) {
+    const req = PriceGuide.get(itemType, itemNumber, params);
+
+    return this.send(req);
+  }
+
+  /**
+   * Get known colors for a catalog item.
+   * @param {string} itemType An item type as can be foud at {@link ItemType}.
+   * @param {string} itemNumber An item identification number.
+   * @return {Promise&lt;Array>} A promise that resolves to a list of {@link KnownColor}.
+   */
+  getKnownColors(itemType, itemNumber) {
+    const req = KnownColor.get(itemType, itemNumber);
+
+    return this.send(req);
+  }
+
+  /**
+   * Can get an image for a specific image color of a known catalog item.
+   * @param {string} itemType An item type as can be foud at {@link ItemType}.
+   * @param {string} itemNumber An item identification number.
+   * @param {number} colorId The color id of the item.
+   * @return {Promise&lt;ItemImage>} A promise that resolves to an Item Image.
+   */
+  getItemImage(itemType, itemNumber, colorId) {
+    const req = ItemImage.get(itemType, itemNumber, colorId);
+    return this.send(req);
+  }
+
+  /**
+   * Gets a subset of a catalog item.
+   * @param {string} itemType An item type as can be foud at {@link ItemType}.
+   * @param {string} itemNumber An item identification number.
+   * @param {object} [params] Options for the price guide as outlined in {@link SubsetOptions}.
+   * @return {Promise&lt;Array>} A promise that resolves to a  list of {@link Subset}.
+   */
+  getItemSubset(itemType, itemNumber, params) {
+    const req = Subset.get(itemType, itemNumber, params);
+    return this.send(req);
+  }
+
+  /**
+   * Gets a superset of a catalog item.
+   * @param {string} itemType An item type as can be foud at {@link ItemType}.
+   * @param {string} itemNumber An item identification number.
+   * @param {object} [params] Options for the price guide as outlined in {@link SupersetOptions}.
+   * @return {Promise&lt;Array>} A promise that resolves to a  list of {@link Superset}.
+   */
+  getItemSuperset(itemType, itemNumber, params) {
+    const req = Superset.get(itemType, itemNumber, params);
+    return this.send(req);
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BrickLinkApiError.html">BrickLinkApiError</a></li><li><a href="BricklinkRequest.html">BricklinkRequest</a></li><li><a href="Client.html">Client</a></li><li><a href="Condition.html">Condition</a></li><li><a href="ItemType.html">ItemType</a></li><li><a href="OAuthHelper.html">OAuthHelper</a></li><li><a href="RequestParams.html">RequestParams</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Thu Jul 27 2023 23:43:13 GMT+0200 (GMT+02:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

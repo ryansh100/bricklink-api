@@ -33,7 +33,7 @@
     "compile:src": "babel src -d dist",
     "build:definitions": "tsc",
     "prepare": "husky install",
-    "docs": "esdoc2",
+    "docs": "rm -rf docs/* && node_modules/.bin/jsdoc -c .jsdoc.json",
     "prepublish": "npm run build",
     "report": "nyc report --reporter=html"
   },
@@ -46,8 +46,6 @@
     "@babel/register": "^7.22.5",
     "ava": "^5.3.1",
     "dotenv": "^16.3.1",
-    "esdoc2": "^2.1.5",
-    "esdoc2-standard-plugin": "^2.1.2",
     "husky": "^8.0.3",
     "nyc": "^15.1.0",
     "prettier": "^3.0.0",
@@ -57,6 +55,7 @@
   "dependencies": {
     "crypto": "^1.0.1",
     "http": "^0.0.1-security",
+    "jsdoc": "^4.0.2",
     "oauth-signature": "^1.5.0",
     "randombytes": "^2.1.0"
   },
