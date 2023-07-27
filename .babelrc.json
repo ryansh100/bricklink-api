@@ -1,6 +1,5 @@
 {
-  "targets": {
-    "node": "5"
-  },
-  "plugins": ["@babel/plugin-transform-modules-commonjs"]
+  "presets": [
+    "@babel/preset-env"
+  ]
 }

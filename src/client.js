@@ -8,7 +8,6 @@ import { Superset } from './catalogItem/supersets';
 import { logger } from './logger';
 import { BricklinkRequest } from './request';
 import { BrickLinkApiError } from './brickLinkApiError';
-import fetch from 'node-fetch'
 
 /**
  * Create a client to perform
@@ -49,7 +48,7 @@ export class Client {
    */
   send(req) {
     const promise = new Promise((resolve, reject) => {
-      const callback = () => this.dispatch(req).then(resolve).catch(reject).finally(() => {
+      const callback = () => this.dispatch(req).then(resolve).catch(reject).then(() => {
         const deleteIndex = this.requestQueue.indexOf(callback);
         this.requestQueue.splice(deleteIndex, 1);
         if (this.requestQueue.length > 0) {
@@ -73,7 +72,7 @@ export class Client {
    */
   dispatch(req) {
     const resourceURL = this.endpoint + req.uri.replace(/^\//, '') + req.params.toQueryString();
-    /** @type {import('node-fetch').RequestInit} */
+    /** @type {RequestInit} */
     const init = {
       method: req.method,
       headers: {},
