@@ -1,5 +1,5 @@
 import oauthSignature from 'oauth-signature';
-import randomBytes from 'randombytes';
+import {randomBytes} from 'crypto';
 
 /**
  * A helper for OAuth 1.0 header information and signing keys.
