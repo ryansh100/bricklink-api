@@ -1,3 +1,4 @@
+import fetch from 'node-fetch';
 import { OAuthHelper } from './oAuthHelper';
 import { CatalogItem } from './catalogItem/catalogItem';
 import { PriceGuide } from './catalogItem/priceGuide';
