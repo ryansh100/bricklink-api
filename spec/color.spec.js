@@ -16,7 +16,7 @@ test('Can get a list of categories', (t) => {
   });
 });
 
-test('Can get a single category', (t) => {
+test('Can get a single color', (t) => {
   let request = Color.get(27);
   return BL.send(request).then((color) => {
     t.is(color.color_name, 'Rust', 'Gets the correct color');

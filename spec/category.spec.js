@@ -20,7 +20,7 @@ test('Can get a single category', (t) => {
   return BL.send(request).then((category) => {
     t.is(
       category.category_name,
-      'Nexo Knights',
+      'NEXO KNIGHTS',
       'Pulls back the correct information',
     );
   });

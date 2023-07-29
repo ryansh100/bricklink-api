@@ -1,6 +1,6 @@
 {
   "name": "bricklink-api",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "A node module for connecting to the Bricklink API.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -33,31 +33,31 @@
     "compile:src": "babel src -d dist",
     "build:definitions": "tsc",
     "prepare": "husky install",
-    "docs": "esdoc2",
+    "docs": "rimraf --glob docs/* & jsdoc -c .jsdoc.json",
     "prepublish": "npm run build",
     "report": "nyc report --reporter=html"
   },
   "devDependencies": {
     "@ava/babel": "^2.0.0",
-    "@babel/cli": "^7.17.10",
-    "@babel/core": "^7.18.5",
-    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
-    "@babel/preset-env": "^7.18.2",
-    "@babel/register": "^7.17.7",
-    "ava": "^4.3.0",
-    "dotenv": "^8.6.0",
-    "esdoc2": "^2.1.5",
-    "esdoc2-standard-plugin": "^2.1.2",
-    "husky": "^6.0.0",
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/plugin-transform-modules-commonjs": "^7.22.5",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/register": "^7.22.5",
+    "@types/node": "^20.4.5",
+    "ava": "^4.3.3",
+    "dotenv": "^16.3.1",
+    "husky": "^8.0.3",
+    "jsdoc": "^4.0.2",
     "nyc": "^15.1.0",
-    "prettier": "^2.4.1",
-    "pretty-quick": "^3.1.1",
-    "typescript": "^4.6.4"
+    "prettier": "^3.0.0",
+    "pretty-quick": "^3.1.3",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.4"
   },
   "dependencies": {
-    "debug": "^4.3.2",
-    "node-fetch": "^2.6.7",
-    "oauth-signature": "^1.3.1"
+    "node-fetch": "^2.6.12",
+    "oauth-signature": "^1.5.0"
   },
   "ava": {
     "files": [

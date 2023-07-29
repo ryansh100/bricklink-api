@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: catalogItem/subsets.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: catalogItem/subsets.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { BricklinkRequest, RequestParams } from '../request';
+import { CatalogItem } from './catalogItem';
+
+/**
+ * Represents a subset entry.
+ */
+export class SubsetEntry {
+  /**
+   * Create an instance of a subset entry
+   * @param {object} [data] The API response data
+   * @param {object} [data.item] Item information
+   * @param {number} [data.color_id] The color id of the entry item.
+   * @param {number} [data.quantity] The number of items in the subset entry.
+   * @param {number} [data.extra_quantity] The number of extra items included in the subset.
+   * @param {boolean} [data.is_alternate] Indicator that the item is an alternate.
+   */
+  constructor(data) {
+    data = data || {};
+    /** @type {CatalogItem} */
+    this.item = data.item ? new CatalogItem(data.item) : new CatalogItem();
+    /** @type {number} */
+    this.color_id = data.color_id || 0;
+    /** @type {number} */
+    this.quantity = data.quantity || 0;
+    /** @type {number} */
+    this.extra_quantity = data.extra_quantity || 0;
+    /** @type {boolean} */
+    this.is_alternate = data.is_alternate || false;
+  }
+}
+/**
+ * Represents a subset item. A subset item can have more than one matching entry due to alternate parts.
+ */
+export class Subset {
+  /**
+   * Create an instance of a subset item.
+   * @param {object} [data] The response data from API request.
+   * @param {number} [data.match_no] The number of matching entries or 0 if there is no matching of alternative item.
+   * @param {object} [data.entries] The specific entries for the subset item.
+   */
+  constructor(data) {
+    data = data || {};
+    /** @type {number} */
+    this.match_no = data.match_no || 0;
+
+    const entries = data.entries || [];
+    /** @type {SubsetEntry[]} */
+    this.entries = entries.map((e) => new SubsetEntry(e));
+  }
+  /**
+   * Method to get a subset of a catalog item.
+   *
+   * Usage:
+   *
+   * ```
+   * var req = Subset.get(ItemType.Set, '6020-1', {break_minifigs: true});
+   * client.send(req).then(subset => console.log(subset));
+   * ```
+   *
+   * @param {string} itemType Catalog item type
+   * @param {string} itemNumber Catalog item number
+   * @param {object} options Options that conform to {@link SubsetOptions}.
+   */
+  static get(itemType, itemNumber, options) {
+    const method = BricklinkRequest.GET;
+    options = options ? new SubsetOptions(options) : new SubsetOptions();
+
+    const uri = `/items/${itemType}/${itemNumber}/subsets`;
+
+    return new BricklinkRequest(method, uri, options, (data) => {
+      return data.map((e) => new Subset(e));
+    });
+  }
+}
+
+/**
+ * Options that can be used when make a request for a subset.
+ */
+export class SubsetOptions extends RequestParams {
+  /**
+   * Make an instance of SubsetOptions.
+   * @param {object} [data] Raw options object.
+   * @param {number} [data.color_id] The color of the item(This value is valid only for {@link ItemType}.Part.
+   * @param {boolean} [data.box] Indicates whether the set includes the original box
+   * @param {boolean} [data.instruction] Indicates whether the set includes the original instruction
+   * @param {boolean} [data.break_minifigs]	Indicates whether the result breaks down minifigs as parts
+   * @param {boolean} [data.break_subsets] Indicates whether the result breaks down sets in set
+   */
+  constructor(data) {
+    super();
+    data = data || {};
+    /** @type {number|null} */
+    this.color_id = data.color_id || null;
+    /** @type {boolean|null} */
+    this.box = data.box || null;
+    /** @type {boolean|null} */
+    this.instruction = data.instruction || null;
+    /** @type {boolean|null} */
+    this.break_minifigs = data.break_minifigs || null;
+    /** @type {boolean|null} */
+    this.break_subsets = data.break_subsets || null;
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BrickLinkApiError.html">BrickLinkApiError</a></li><li><a href="BricklinkRequest.html">BricklinkRequest</a></li><li><a href="CatalogItem.html">CatalogItem</a></li><li><a href="Category.html">Category</a></li><li><a href="Client.html">Client</a></li><li><a href="Color.html">Color</a></li><li><a href="Condition.html">Condition</a></li><li><a href="ItemImage.html">ItemImage</a></li><li><a href="ItemType.html">ItemType</a></li><li><a href="KnownColor.html">KnownColor</a></li><li><a href="OAuthHelper.html">OAuthHelper</a></li><li><a href="PriceDetail.html">PriceDetail</a></li><li><a href="PriceGuide.html">PriceGuide</a></li><li><a href="PriceGuideOptions.html">PriceGuideOptions</a></li><li><a href="RequestParams.html">RequestParams</a></li><li><a href="Subset.html">Subset</a></li><li><a href="SubsetEntry.html">SubsetEntry</a></li><li><a href="SubsetOptions.html">SubsetOptions</a></li><li><a href="Superset.html">Superset</a></li><li><a href="SupersetEntry.html">SupersetEntry</a></li><li><a href="SupersetOptions.html">SupersetOptions</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
