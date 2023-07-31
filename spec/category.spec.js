@@ -8,7 +8,7 @@ test.before(() => {
 });
 
 test('Can get a list of categories', (t) => {
-  let request = Category.all();
+  const request = Category.all();
   return BL.send(request).then((categories) => {
     t.true(categories.length > 0, 'Returns a list of categories');
     t.not(categories[0].category_name, '', 'Sets the category name');
@@ -16,7 +16,7 @@ test('Can get a list of categories', (t) => {
 });
 
 test('Can get a single category', (t) => {
-  let request = Category.get(868);
+  const request = Category.get(868);
   return BL.send(request).then((category) => {
     t.is(
       category.category_name,

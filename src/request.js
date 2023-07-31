@@ -8,8 +8,9 @@ export class BricklinkRequest {
    * @param {string} uri The relative of full path uri of a request to perform. This should not include any query parameters.
    * @param {RequestParams} [params] Additional parameters to include with the request in either post body or query params.
    * @param {BricklinkRequestCallback} [callback=null] A callback function to perform after the request has been successfully performed.
+   * @param {object} [resource] A resource when using POST or PUT HTTP methods
    */
-  constructor(method, uri, params, callback) {
+  constructor(method, uri, params, callback, resource) {
     /** @type {string} */
     this.method = method;
     /** @type {string} */
@@ -18,6 +19,13 @@ export class BricklinkRequest {
     this.params = params || new RequestParams();
     /** @type {BricklinkRequestCallback|null} */
     this.callback = callback || null;
+    /** @type {object|null} */
+    this.resource = resource || null;
+
+    if ([BricklinkRequest.POST, BricklinkRequest.PUT].includes(method) && !resource)
+    {
+      throw new Error('must supply a resource body for put or post operations')
+    }
   }
   /** @type {string} */
   static get GET() {
@@ -36,7 +44,7 @@ export class BricklinkRequest {
 
   /** @type {string} */
   static get DELETE() {
-    return 'put';
+    return 'delete';
   }
 }
 
