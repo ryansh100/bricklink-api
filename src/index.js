@@ -8,7 +8,6 @@ export { KnownColor } from './catalogItem/knownColor';
 export { PriceGuide } from './catalogItem/priceGuide';
 export { Subset } from './catalogItem/subsets';
 export { Superset } from './catalogItem/supersets';
-
+export { Inventory } from './store/inventory';
 export { Color } from './color/color';
-
 export { Category } from './category/category';

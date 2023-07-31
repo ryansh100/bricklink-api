@@ -40,7 +40,6 @@ export class Client {
     this.requestQueue = [];
   }
 
-
   /**
    * Performs a concurrent-safe bricklink request and the callback upon success.
    * @param {BricklinkRequest} req The request to perform.
@@ -48,14 +47,18 @@ export class Client {
    */
   send(req) {
     const promise = new Promise((resolve, reject) => {
-      const callback = () => this.dispatch(req).then(resolve).catch(reject).then(() => {
-        const deleteIndex = this.requestQueue.indexOf(callback);
-        this.requestQueue.splice(deleteIndex, 1);
-        if (this.requestQueue.length > 0) {
-          const continueQueue = this.requestQueue[0];
-          continueQueue();
-        }
-      });
+      const callback = () =>
+        this.dispatch(req)
+          .then(resolve)
+          .catch(reject)
+          .then(() => {
+            const deleteIndex = this.requestQueue.indexOf(callback);
+            this.requestQueue.splice(deleteIndex, 1);
+            if (this.requestQueue.length > 0) {
+              const continueQueue = this.requestQueue[0];
+              continueQueue();
+            }
+          });
       this.requestQueue.push(callback);
       if (this.requestQueue.length === 1) {
         const startQueue = this.requestQueue[0];
@@ -71,12 +74,18 @@ export class Client {
    * @return {Promise} The data that has been return from the API request and any callbacks.
    */
   dispatch(req) {
-    const resourceURL = this.endpoint + req.uri.replace(/^\//, '') + req.params.toQueryString();
+    const resourceURL =
+      this.endpoint + req.uri.replace(/^\//, '') + req.params.toQueryString();
     /** @type {RequestInit} */
     const init = {
       method: req.method,
       headers: {},
     };
+
+    if (req.resource) {
+      init.headers['content-type'] = 'application/json';
+      init.body = JSON.stringify(req.resource);
+    }
 
     const oauthHelper = new OAuthHelper(this.consumer_key, this.token);
     oauthHelper.sign(resourceURL, req, this.consumer_secret, this.token_secret);
@@ -84,7 +93,7 @@ export class Client {
     init.headers['authorization'] = oauthHelper.header;
 
     const promise = fetch(resourceURL, init)
-      .then(response => response.json())
+      .then((response) => response.json())
       .then(
         /**
          * @param {any} payload Any object
@@ -104,16 +113,17 @@ export class Client {
             );
             throw error;
           } else {
-            return payload.data
+            return payload.data;
           }
-        })
+        },
+      );
 
-    promise.catch(error => {
+    promise.catch((error) => {
       logger(error);
     });
 
     if (req.callback) {
-      return promise.then(req.callback)
+      return promise.then(req.callback);
     }
 
     return promise;

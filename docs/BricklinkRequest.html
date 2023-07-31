@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>BricklinkRequest<span class="signature">(method, uri, params<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>BricklinkRequest<span class="signature">(method, uri, params<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>, resource<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
         
             <div class="class-description">Creates a request to use with the client.</div>
         
@@ -45,7 +45,7 @@
     
 
     
-    <h4 class="name" id="BricklinkRequest"><span class="type-signature"></span>new BricklinkRequest<span class="signature">(method, uri, params<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="BricklinkRequest"><span class="type-signature"></span>new BricklinkRequest<span class="signature">(method, uri, params<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>, resource<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
 
     
@@ -236,6 +236,43 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>resource</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">A resource when using POST or PUT HTTP methods</td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -383,7 +420,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="request.js.html">request.js</a>, <a href="request.js.html#line20">line 20</a>
+        <a href="request.js.html">request.js</a>, <a href="request.js.html#line21">line 21</a>
     </li></ul></dd>
     
 
@@ -451,7 +488,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="request.js.html">request.js</a>, <a href="request.js.html#line14">line 14</a>
+        <a href="request.js.html">request.js</a>, <a href="request.js.html#line15">line 15</a>
     </li></ul></dd>
     
 
@@ -519,7 +556,78 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="request.js.html">request.js</a>, <a href="request.js.html#line18">line 18</a>
+        <a href="request.js.html">request.js</a>, <a href="request.js.html#line19">line 19</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="resource"><span class="type-signature"></span>resource<span class="type-signature"> :object|null</span></h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+|
+
+<span class="param-type">null</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="request.js.html">request.js</a>, <a href="request.js.html#line23">line 23</a>
     </li></ul></dd>
     
 
@@ -587,7 +695,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="request.js.html">request.js</a>, <a href="request.js.html#line16">line 16</a>
+        <a href="request.js.html">request.js</a>, <a href="request.js.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -655,7 +763,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="request.js.html">request.js</a>, <a href="request.js.html#line38">line 38</a>
+        <a href="request.js.html">request.js</a>, <a href="request.js.html#line46">line 46</a>
     </li></ul></dd>
     
 
@@ -723,7 +831,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="request.js.html">request.js</a>, <a href="request.js.html#line23">line 23</a>
+        <a href="request.js.html">request.js</a>, <a href="request.js.html#line31">line 31</a>
     </li></ul></dd>
     
 
@@ -791,7 +899,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="request.js.html">request.js</a>, <a href="request.js.html#line33">line 33</a>
+        <a href="request.js.html">request.js</a>, <a href="request.js.html#line41">line 41</a>
     </li></ul></dd>
     
 
@@ -859,7 +967,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="request.js.html">request.js</a>, <a href="request.js.html#line28">line 28</a>
+        <a href="request.js.html">request.js</a>, <a href="request.js.html#line36">line 36</a>
     </li></ul></dd>
     
 
@@ -893,7 +1001,7 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BrickLinkApiError.html">BrickLinkApiError</a></li><li><a href="BricklinkRequest.html">BricklinkRequest</a></li><li><a href="CatalogItem.html">CatalogItem</a></li><li><a href="Category.html">Category</a></li><li><a href="Client.html">Client</a></li><li><a href="Color.html">Color</a></li><li><a href="Condition.html">Condition</a></li><li><a href="ItemImage.html">ItemImage</a></li><li><a href="ItemType.html">ItemType</a></li><li><a href="KnownColor.html">KnownColor</a></li><li><a href="OAuthHelper.html">OAuthHelper</a></li><li><a href="PriceDetail.html">PriceDetail</a></li><li><a href="PriceGuide.html">PriceGuide</a></li><li><a href="PriceGuideOptions.html">PriceGuideOptions</a></li><li><a href="RequestParams.html">RequestParams</a></li><li><a href="Subset.html">Subset</a></li><li><a href="SubsetEntry.html">SubsetEntry</a></li><li><a href="SubsetOptions.html">SubsetOptions</a></li><li><a href="Superset.html">Superset</a></li><li><a href="SupersetEntry.html">SupersetEntry</a></li><li><a href="SupersetOptions.html">SupersetOptions</a></li></ul><h3><a href="global.html">Global</a></h3>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BrickLinkApiError.html">BrickLinkApiError</a></li><li><a href="BricklinkRequest.html">BricklinkRequest</a></li><li><a href="CatalogItem.html">CatalogItem</a></li><li><a href="Category.html">Category</a></li><li><a href="Client.html">Client</a></li><li><a href="Color.html">Color</a></li><li><a href="Condition.html">Condition</a></li><li><a href="Inventory.html">Inventory</a></li><li><a href="ItemImage.html">ItemImage</a></li><li><a href="ItemType.html">ItemType</a></li><li><a href="KnownColor.html">KnownColor</a></li><li><a href="OAuthHelper.html">OAuthHelper</a></li><li><a href="PriceDetail.html">PriceDetail</a></li><li><a href="PriceGuide.html">PriceGuide</a></li><li><a href="PriceGuideOptions.html">PriceGuideOptions</a></li><li><a href="RequestParams.html">RequestParams</a></li><li><a href="Subset.html">Subset</a></li><li><a href="SubsetEntry.html">SubsetEntry</a></li><li><a href="SubsetOptions.html">SubsetOptions</a></li><li><a href="Superset.html">Superset</a></li><li><a href="SupersetEntry.html">SupersetEntry</a></li><li><a href="SupersetOptions.html">SupersetOptions</a></li></ul><h3><a href="global.html">Global</a></h3>
 </nav>
 
 <br class="clear">

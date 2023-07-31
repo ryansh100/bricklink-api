@@ -8,7 +8,7 @@ test.before(() => {
 });
 
 test('Can get a list of categories', (t) => {
-  let request = Color.all();
+  const request = Color.all();
   return BL.send(request).then((colors) => {
     t.true(colors.length > 0, 'Returns a list of colors');
     t.not(colors[0].color_name, '', 'Sets the color name');
@@ -17,7 +17,7 @@ test('Can get a list of categories', (t) => {
 });
 
 test('Can get a single color', (t) => {
-  let request = Color.get(27);
+  const request = Color.get(27);
   return BL.send(request).then((color) => {
     t.is(color.color_name, 'Rust', 'Gets the correct color');
   });
