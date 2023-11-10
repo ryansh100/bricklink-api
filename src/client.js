@@ -1,4 +1,3 @@
-import { OAuthHelper } from './oAuthHelper';
 import { CatalogItem } from './catalogItem/catalogItem';
 import { PriceGuide } from './catalogItem/priceGuide';
 import { KnownColor } from './catalogItem/knownColor';
@@ -8,6 +7,7 @@ import { Superset } from './catalogItem/supersets';
 import { logger } from './logger';
 import { BricklinkRequest } from './request';
 import { BrickLinkApiError } from './brickLinkApiError';
+import { OAuth } from 'oauth';
 
 /**
  * Create a client to perform
@@ -38,6 +38,16 @@ export class Client {
       options.endpoint || 'https://api.bricklink.com/api/store/v1/';
     /** @type {Function[]} */
     this.requestQueue = [];
+    /** @type {object} */
+    this._oauth = new OAuth(
+      null,
+      null,
+      this.consumer_key,
+      this.consumer_secret,
+      '1.0',
+      null,
+      'HMAC-SHA1',
+    );
   }
 
   /**
@@ -87,10 +97,12 @@ export class Client {
       init.body = JSON.stringify(req.resource);
     }
 
-    const oauthHelper = new OAuthHelper(this.consumer_key, this.token);
-    oauthHelper.sign(resourceURL, req, this.consumer_secret, this.token_secret);
-
-    init.headers['authorization'] = oauthHelper.header;
+    init.headers['Authorization'] = this._oauth.authHeader(
+      resourceURL,
+      this.token,
+      this.token_secret,
+      req.method,
+    );
 
     const promise = fetch(resourceURL, init)
       .then((response) => response.json())

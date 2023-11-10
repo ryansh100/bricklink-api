@@ -26,8 +26,7 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { OAuthHelper } from './oAuthHelper';
-import { CatalogItem } from './catalogItem/catalogItem';
+            <pre class="prettyprint source linenums"><code>import { CatalogItem } from './catalogItem/catalogItem';
 import { PriceGuide } from './catalogItem/priceGuide';
 import { KnownColor } from './catalogItem/knownColor';
 import { ItemImage } from './catalogItem/itemImage';
@@ -36,6 +35,7 @@ import { Superset } from './catalogItem/supersets';
 import { logger } from './logger';
 import { BricklinkRequest } from './request';
 import { BrickLinkApiError } from './brickLinkApiError';
+import { OAuth } from 'oauth';
 
 /**
  * Create a client to perform
@@ -66,6 +66,16 @@ export class Client {
       options.endpoint || 'https://api.bricklink.com/api/store/v1/';
     /** @type {Function[]} */
     this.requestQueue = [];
+    /** @type {object} */
+    this._oauth = new OAuth(
+      null,
+      null,
+      this.consumer_key,
+      this.consumer_secret,
+      '1.0',
+      null,
+      'HMAC-SHA1',
+    );
   }
 
   /**
@@ -115,10 +125,12 @@ export class Client {
       init.body = JSON.stringify(req.resource);
     }
 
-    const oauthHelper = new OAuthHelper(this.consumer_key, this.token);
-    oauthHelper.sign(resourceURL, req, this.consumer_secret, this.token_secret);
-
-    init.headers['authorization'] = oauthHelper.header;
+    init.headers['Authorization'] = this._oauth.authHeader(
+      resourceURL,
+      this.token,
+      this.token_secret,
+      req.method,
+    );
 
     const promise = fetch(resourceURL, init)
       .then((response) => response.json())
@@ -240,7 +252,7 @@ export class Client {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BrickLinkApiError.html">BrickLinkApiError</a></li><li><a href="BricklinkRequest.html">BricklinkRequest</a></li><li><a href="CatalogItem.html">CatalogItem</a></li><li><a href="Category.html">Category</a></li><li><a href="Client.html">Client</a></li><li><a href="Color.html">Color</a></li><li><a href="Condition.html">Condition</a></li><li><a href="Inventory.html">Inventory</a></li><li><a href="ItemImage.html">ItemImage</a></li><li><a href="ItemType.html">ItemType</a></li><li><a href="KnownColor.html">KnownColor</a></li><li><a href="OAuthHelper.html">OAuthHelper</a></li><li><a href="PriceDetail.html">PriceDetail</a></li><li><a href="PriceGuide.html">PriceGuide</a></li><li><a href="PriceGuideOptions.html">PriceGuideOptions</a></li><li><a href="RequestParams.html">RequestParams</a></li><li><a href="Subset.html">Subset</a></li><li><a href="SubsetEntry.html">SubsetEntry</a></li><li><a href="SubsetOptions.html">SubsetOptions</a></li><li><a href="Superset.html">Superset</a></li><li><a href="SupersetEntry.html">SupersetEntry</a></li><li><a href="SupersetOptions.html">SupersetOptions</a></li></ul><h3><a href="global.html">Global</a></h3>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BrickLinkApiError.html">BrickLinkApiError</a></li><li><a href="BricklinkRequest.html">BricklinkRequest</a></li><li><a href="CatalogItem.html">CatalogItem</a></li><li><a href="Category.html">Category</a></li><li><a href="Client.html">Client</a></li><li><a href="Color.html">Color</a></li><li><a href="Condition.html">Condition</a></li><li><a href="Inventory.html">Inventory</a></li><li><a href="ItemImage.html">ItemImage</a></li><li><a href="ItemType.html">ItemType</a></li><li><a href="KnownColor.html">KnownColor</a></li><li><a href="PriceDetail.html">PriceDetail</a></li><li><a href="PriceGuide.html">PriceGuide</a></li><li><a href="PriceGuideOptions.html">PriceGuideOptions</a></li><li><a href="RequestParams.html">RequestParams</a></li><li><a href="Subset.html">Subset</a></li><li><a href="SubsetEntry.html">SubsetEntry</a></li><li><a href="SubsetOptions.html">SubsetOptions</a></li><li><a href="Superset.html">Superset</a></li><li><a href="SupersetEntry.html">SupersetEntry</a></li><li><a href="SupersetOptions.html">SupersetOptions</a></li></ul><h3><a href="global.html">Global</a></h3>
 </nav>
 
 <br class="clear">
