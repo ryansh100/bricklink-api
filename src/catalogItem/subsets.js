@@ -26,6 +26,8 @@ export class SubsetEntry {
     this.extra_quantity = data.extra_quantity || 0;
     /** @type {boolean} */
     this.is_alternate = data.is_alternate || false;
+    /** @type {boolean} */
+    this.is_counterpart = data.is_counterpart || false;
   }
 }
 /**
