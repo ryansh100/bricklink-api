@@ -1,6 +1,6 @@
 {
   "name": "bricklink-api",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A node module for connecting to the Bricklink API.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -57,7 +57,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "oauth": "^0.10.0"
+    "oauth": "^0.10.2"
   },
   "ava": {
     "files": [
