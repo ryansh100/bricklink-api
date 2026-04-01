@@ -21,7 +21,7 @@
     "oauth2"
   ],
   "author": "Ryan Hafer",
-  "license": "SEE LICENCE IN LICENSE",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/ryansh100/bricklink-api/issues"
   },

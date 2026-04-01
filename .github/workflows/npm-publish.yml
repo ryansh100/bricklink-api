@@ -5,16 +5,14 @@ name: NPM Publish Release
 
 on:
   release:
-    types: [created]
-
-permissions:
-  id-token: write
-  contents: read
+    types: [published]
 
 jobs:
   publish:
-    needs: build
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
@@ -28,4 +26,4 @@ jobs:
           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
           TOKEN: ${{ secrets.TOKEN }}
           TOKEN_SECRET: ${{ secrets.TOKEN_SECRET }}
-      - run: npm publish
+      - run: npm publish --provenance --access public
