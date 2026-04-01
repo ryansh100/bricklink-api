@@ -8,26 +8,11 @@ on:
     types: [created]
 
 permissions:
-  id-token: write # Required for OIDC
+  id-token: write
   contents: read
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: npm ci
-      - run: npm run test:ci
-        env:
-          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
-          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
-          TOKEN: ${{ secrets.TOKEN }}
-          TOKEN_SECRET: ${{ secrets.TOKEN_SECRET }}
-
-  publish-npm:
+  publish:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -37,4 +22,10 @@ jobs:
           node-version: '18'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
+      - run: npm run test:ci
+        env:
+          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+          TOKEN: ${{ secrets.TOKEN }}
+          TOKEN_SECRET: ${{ secrets.TOKEN_SECRET }}
       - run: npm publish
