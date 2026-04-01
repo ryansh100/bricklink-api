@@ -57,7 +57,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "oauth": "^0.10.0"
+    "oauth": "^0.10.2"
   },
   "ava": {
     "files": [
