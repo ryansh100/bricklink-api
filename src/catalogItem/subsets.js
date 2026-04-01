@@ -13,6 +13,7 @@ export class SubsetEntry {
    * @param {number} [data.quantity] The number of items in the subset entry.
    * @param {number} [data.extra_quantity] The number of extra items included in the subset.
    * @param {boolean} [data.is_alternate] Indicator that the item is an alternate.
+   * @param {boolean} [data.is_counterpart] Indicator that the item is a counterpart.
    */
   constructor(data) {
     data = data || {};
