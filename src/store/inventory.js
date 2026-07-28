@@ -1,4 +1,4 @@
-import { BricklinkRequest } from '../request';
+import { BricklinkRequest } from '../request.js';
 
 const fixedPointNumberZero = '0.0000';
 /**

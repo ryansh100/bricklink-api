@@ -1,4 +1,4 @@
-import { BricklinkRequest } from '../request';
+import { BricklinkRequest } from '../request.js';
 
 /**
  * Represents a color object

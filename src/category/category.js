@@ -1,4 +1,4 @@
-import { BricklinkRequest } from '../request';
+import { BricklinkRequest } from '../request.js';
 
 /**
  * Represents a Category
@@ -38,7 +38,12 @@ export class Category {
     let method = BricklinkRequest.GET;
     let uri = `/categories/${categoryId}`;
 
-    return new BricklinkRequest(method, uri, null, (data) => new Category(data));
+    return new BricklinkRequest(
+      method,
+      uri,
+      null,
+      (data) => new Category(data),
+    );
   }
 
   /**

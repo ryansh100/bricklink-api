@@ -1,4 +1,4 @@
-import { BricklinkRequest } from '../request';
+import { BricklinkRequest } from '../request.js';
 
 /**
  * Represents a Catalog Item.
@@ -58,7 +58,7 @@ export class CatalogItem {
    * @return {BricklinkRequest} A request that is ready to execute with a client.
    */
   static get(itemType, itemNumber) {
-    const  method = BricklinkRequest.GET;
+    const method = BricklinkRequest.GET;
     const uri = `/items/${itemType}/${itemNumber}`;
 
     return new BricklinkRequest(method, uri, null, (data) => {

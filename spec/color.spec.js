@@ -1,6 +1,6 @@
 import test from 'ava';
-import { Client, Color } from '../src/';
-import { config } from './test.config';
+import { Client, Color } from '../src/index.js';
+import { config } from './test.config.js';
 
 let BL;
 test.before(() => {
