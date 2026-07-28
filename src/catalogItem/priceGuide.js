@@ -1,5 +1,5 @@
-import { BricklinkRequest, RequestParams } from '../request';
-import { CatalogItem } from './catalogItem';
+import { BricklinkRequest, RequestParams } from '../request.js';
+import { CatalogItem } from './catalogItem.js';
 
 /**
  * Specific sale price details for a givent item.
@@ -37,13 +37,13 @@ export class PriceGuide {
    * @param {object} [data] Data returned from an API response.
    */
   constructor(data) {
-    /** 
+    /**
      * item The item that belongs to the price guide.
      * @type {CatalogItem}
      */
     this.item = data.item ? new CatalogItem(data.item) : new CatalogItem();
-    /** 
-     * new_or_used Whether or not the price guide is new or used condition. 
+    /**
+     * new_or_used Whether or not the price guide is new or used condition.
      * @type {string}
      */
     this.new_or_used = data.new_or_used || '';
@@ -113,7 +113,7 @@ export class PriceGuideOptions extends RequestParams {
 
     data = data || {};
     /**
-     * The color Identification numbe of the item 
+     * The color Identification numbe of the item
      * @type {number|null}
      */
     this.color_id = data.color_id || null;
@@ -122,8 +122,8 @@ export class PriceGuideOptions extends RequestParams {
      * @type {string}
      */
     this.guide_type = data.guide_type || 'stock';
-    /** 
-     * Indicates the condition of items that are included in the statistics. Acceptable values are: "N": new item (default) and "U": used item 
+    /**
+     * Indicates the condition of items that are included in the statistics. Acceptable values are: "N": new item (default) and "U": used item
      * @type {string}
      */
     this.new_or_used = data.new_or_used || 'N';

@@ -1,4 +1,4 @@
-import { BricklinkRequest } from '../request';
+import { BricklinkRequest } from '../request.js';
 
 /**
  * Represents an image for a specific color of a catalog item.

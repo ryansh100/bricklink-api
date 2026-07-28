@@ -1,12 +1,12 @@
-import { CatalogItem } from './catalogItem/catalogItem';
-import { PriceGuide } from './catalogItem/priceGuide';
-import { KnownColor } from './catalogItem/knownColor';
-import { ItemImage } from './catalogItem/itemImage';
-import { Subset } from './catalogItem/subsets';
-import { Superset } from './catalogItem/supersets';
-import { logger } from './logger';
-import { BricklinkRequest } from './request';
-import { BrickLinkApiError } from './brickLinkApiError';
+import { CatalogItem } from './catalogItem/catalogItem.js';
+import { PriceGuide } from './catalogItem/priceGuide.js';
+import { KnownColor } from './catalogItem/knownColor.js';
+import { ItemImage } from './catalogItem/itemImage.js';
+import { Subset } from './catalogItem/subsets.js';
+import { Superset } from './catalogItem/supersets.js';
+import { logger } from './logger.js';
+import { BricklinkRequest } from './request.js';
+import { BrickLinkApiError } from './brickLinkApiError.js';
 import { OAuth } from 'oauth';
 
 /**

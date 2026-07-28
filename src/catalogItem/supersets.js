@@ -1,5 +1,5 @@
-import { BricklinkRequest, RequestParams } from '../request';
-import { CatalogItem } from './catalogItem';
+import { BricklinkRequest, RequestParams } from '../request.js';
+import { CatalogItem } from './catalogItem.js';
 
 /**
  * Represents entries of a superset item.

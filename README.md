@@ -19,37 +19,6 @@ which your application will be using the API. You can also use 0.0.0.0 to match
 any IP address (such as a cloud solution); however, you would need to keep the keys and secrets secure.
 
 ```javascript
-var api = require('bricklink-api');
-var Client = api.Client,
-    ItemType = api.ItemType;
-
-var bricklink = new Client({
-    "consumer_key": "<ConsumerKey>",
-    "consumer_secret": "<ConsumerSecret>",
-    "token": "<TokenValue>",
-    "token_secret": "<TokenSecret>"
-  });
-
-bricklink.getCatalogItem(ItemType.Part, '3001')
-  .then(function(part){
-    console.log(part);
-  });
-
-\\ Alternate Usage:
-
-var CatalogItem = api.CatalogItem;
-var req = CatalogItem.get(ItemType.Part, '3001');
-bricklink.send(req)
-  .then(function(part){
-    console.log(part);
-  });
-```
-
-## ES6 Support
-
-Read basic usage.
-
-```javascript
 import {Client, ItemType, CatalogItem} from 'bricklink-api';
 
 const bricklink = new Client({

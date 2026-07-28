@@ -1,6 +1,6 @@
 import test from 'ava';
-import { Client, Condition, Inventory } from '../src/';
-import { config } from './test.config';
+import { Client, Condition, Inventory } from '../src/index.js';
+import { config } from './test.config.js';
 
 const BL = new Client(config);
 
