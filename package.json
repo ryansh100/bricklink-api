@@ -1,6 +1,6 @@
 {
   "name": "bricklink-api",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A node module for connecting to the Bricklink API.",
   "type": "module",
   "main": "./dist/index.js",
