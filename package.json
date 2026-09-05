@@ -1,6 +1,6 @@
 {
   "name": "bricklink-api",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A node module for connecting to the Bricklink API.",
   "type": "module",
   "main": "./dist/index.js",
@@ -49,6 +49,7 @@
     "ava": "^8.0.1",
     "dotenv": "^16.3.1",
     "husky": "^8.0.3",
+    "js-yaml": "3.15.0",
     "jsdoc": "^4.0.2",
     "nyc": "^18.0.0",
     "prettier": "^3.0.0",
@@ -58,6 +59,9 @@
   },
   "dependencies": {
     "oauth": "^0.10.2"
+  },
+  "overrides": {
+    "js-yaml": "3.15.0"
   },
   "ava": {
     "files": [
